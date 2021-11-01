@@ -3,5 +3,7 @@ Brainstorming ideas for our dataset based webapp:
 Unions:
 Lots of data on unions, already quite a few similar apps but theyre bad. Also
 consider minnesota organizations/public charities/etc.
+https://guides.library.cornell.edu/StatisticalSources/laborunionstats
+https://www.unionstats.com/
 
 

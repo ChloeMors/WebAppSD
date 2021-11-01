@@ -1,0 +1,40 @@
+Chloe Morscheck, Jake Martens, requirements analysis and wireframes assignment, Nov 1
+
+
+Union Data
+Department of Labor union financial data: 
+https://www.dol.gov/agencies/olms/public-disclosure-room
+This data from the Department of Labor lets us view and print reports filed by unions, union officers and employees, employers, and labor relations consultants for the year 2000 and after
+The download page contains a guide that includes descriptions for understanding columns in each file. The data appears to be well-cleaned and organized.
+We will work with the data from 2021 for our web app, which would help users find unions based on region and industry
+NLRB Current Reports
+https://www.nlrb.gov/reports/graphs-data/recent-filings
+All current reports of unfair labor practices, with location, union, dates, and allegations
+This data set provides information for our page detailing labor violation cases currently filed against a given company.
+USBLS Work Stoppages
+https://www.bls.gov/wsp/
+Tables of all work stoppages with union, worker numbers, dates, etc. from 1993-present (XLSX)
+This data set provides information for our strikes page, helping users to find ongoing protests and work stoppages in their area.
+Union stats: 
+http://www.unionstats.com/
+General info about wages by various demographic identifiers. Data is available as HTML or Excel files. We will only use this data if we have enough time to implement our stretch goal for state pages.
+
+
+Requirements:
+Story: Sam has moved to Minnesota and wants to join a company with union representation.
+Implementation: A map of the country is present on the home page, where users can click on a state to view a list of unions in the state, as well as labor violation cases in the state. They can then click on an advanced search button to be navigated to either the unions page or the cases page, with the location filter for Minnesota already filled in. 
+
+Story: Sock is looking for work as an electrician and wants to learn about unions representing their industry.
+Implementation: Sock navigates to the unions page and can select an industry from a drop down menu. This menu returns a list of unions that represent electricians.
+
+Story: Sock found unions from the industry they were looking for. They then rephrase their search to include the region they desire.
+Implementation: From the unions page, search by industry and state filters using a dropdown menu. This menu returns a list of unions that represent electricians in the specified state. This list has links to union website.
+
+Story: A company has recruited Payton for an entry-level position, and they would like to check this company’s history of labor violations before accepting the offer.
+Implementation: Payton navigates to the cases page, executes search function that returns a list of all labor violations filed against the company matching search string.
+
+Story: Morgan is an activist hoping to support workers on strike in their region.
+Implementation: Navigate to strike page and filter by region (drop down), are returned a list of ongoing strikes and their info. 
+
+Story: Denver is already involved in the AAA union for actors, and would like to see all local chapters. 
+Implementation: Denver navigates to the unions page, and does a search by union name (or union abbreviation), and is returned a list of all local chapters of the union. 
