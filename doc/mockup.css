@@ -1,0 +1,113 @@
+/*
+    Chloe Morscheck and Jake Martens
+*/
+
+body {
+    margin: 0px;
+    background-color: whitesmoke;
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    padding-left: 20px;
+}
+
+h2 {
+    padding-left: 20px;
+}
+
+h3 {
+    padding-left: 20px;
+}
+
+p {
+    padding-left: 20px;
+}
+
+img {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    mix-blend-mode: multiply;
+    background:transparent;
+}
+/* Navigation bar */
+ul.navbar {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #a50000;
+}
+
+ul.navbar li {
+    font-size: 32px;
+    float:right;
+    color: whitesmoke;
+}
+
+.sitename {
+    float:left;
+    text-align: left;
+    padding: 14px 16px;
+}
+
+ul.navbar li a {
+    color: whitesmoke;
+    display: block;
+    text-align: right;
+    padding: 14px 45px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: rgb(56, 56, 56);
+    color: white;
+}
+/* Split screen for home page*/
+
+.split {
+    height: 90%;
+    position:fixed;
+    z-index: 1;
+    top: 65px;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left-home {
+    width: 60%;
+    left: 0;
+}
+.right-home {
+    width: 40%;
+    right: 0;
+    outline: solid;
+    outline-offset: -10px;
+    outline-color: black;
+    padding-left: 20px;
+}
+
+.left-search {
+    width: 40%;
+    left: 0;
+    outline: solid;
+    outline-offset: -10px;
+    outline-color: black;
+    padding-left: 20px;
+}
+.right-search {
+    width: 60%;
+    right: 0;
+    padding-left: 20px;
+}
+
+form {
+    padding-left: 20px;
+    padding-top: 20px;
+}
