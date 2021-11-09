@@ -17,6 +17,8 @@ app.register_blueprint(api.api, url_prefix='/api')
 def home():
     return flask.render_template('index.html')
 
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('A books-and-authors application, including API & DB')
     parser.add_argument('host', help='the host to run on')

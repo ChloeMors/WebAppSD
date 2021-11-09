@@ -21,15 +21,22 @@ def get_connection():
                             user=config.user,
                             password=config.password)
 
+
+@api.route('/help')
+def get_help():
+    return json.dumps(["get help"])
+
+
 @api.route('/unions/') 
-def get_authors():
+def get_unions():
     '''
     /unions/?[state_abbr=state_abbr]
     '''
 
     state_abbr = flask.request.args.get('state_abbr')
-    query = '''SELECT * FROM unions
-            WHERE unions.region = "{}"'''.format(state_abbr)
+    
+    query = """SELECT * FROM unions
+            WHERE unions.region = '{}';""".format(state_abbr)
 
     union_list = []
     try:
@@ -55,5 +62,5 @@ def get_authors():
         connection.close()
     except Exception as e:
         print(e, file=sys.stderr)
-
+    print(union_list)
     return json.dumps(union_list)
