@@ -71,7 +71,7 @@ Union name ,
 import csv
 
 in_file = open('lm_data_data_2021.txt')
-out_file = open('union_data.txt', 'w')
+out_file = open('union_data.csv', 'w')
 csv_reader = csv.reader(in_file, delimiter='|')
 csv_writer = csv.writer(out_file, delimiter='|')
 id = 0
