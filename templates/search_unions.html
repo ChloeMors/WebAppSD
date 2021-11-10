@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Unions</title>
+    <link rel="stylesheet" href="mockup.css" type="text/css" />
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="mockup3.html">Cases</a></li>
+        <li><a href="mockup4.html">Strikes</a></li>
+        <li><a href="search_unions.html">Unions</a></li>
+        <li style="float:left"><a href="mockup1.html">Union Finder</a></li>
+    </ul>
+    <div class="split left">
+        <h1>Search Unions:</h1>
+        <form>
+            <label for="By Name">Union name:</label><br>
+            <input type="text" id="By Name" name="By Name"><br>
+            <label for="State">State:</label><br>
+            <select name="State" id="state_selector">
+                <option value="OR">Oregon</option>
+                <option value="Massachusetts">Massachusetts</option>
+            </select><br>
+            <label for="Industry">Industry:</label><br>
+            <select name="Industry" id="Industry">
+                <option value="Agriculture">Agriculture</option>
+                <option value="Arts">Arts</option>
+            </select>
+            <br><br>
+            <input type="submit" id="submit_button" value="Submit">
+
+        </form>
+    </div>
+    <div class="split right">
+        <h1>Results:</h1>
+        <p id="matching_unions"></p>
+        <!--<h2> AAA </h2>
+        <p> Description of Union</p>
+        <h2> AAA </h2>
+        <p> Description of Union</p>
+        <h2> AAA </h2>
+        <p> Description of Union</p>-->
+    </div>
+</body>
