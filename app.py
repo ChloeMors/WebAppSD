@@ -18,6 +18,10 @@ def home():
     return flask.render_template('index.html')
 
 
+@app.route('/search_unions/') 
+def union_search():
+    return flask.render_template('search_unions.html')
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('A books-and-authors application, including API & DB')

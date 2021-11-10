@@ -13,7 +13,7 @@ function initialize() {
 function onSubmitButtonClicked() {
     let stateSelector = document.getElementById('state_selector');
     let state = stateSelector.value;
-    let url = 'http://localhost:5000/union/?state_abbr='
+    let url = 'http://localhost:5000/api/unions/?state_abbr='
                 + state;
 
     fetch(url, {method: 'get'})
@@ -22,7 +22,16 @@ function onSubmitButtonClicked() {
 
     .then(function(unions) {
         let resultsElement = document.getElementById('matching_unions');
-        resultsElement.innerHTML = 'Results: ' + unions;
+        
+        let selectorBody = '';
+        for (let k = 0; k < unions.length; k++) {
+            let union = unions[k];
+            selectorBody += '<b>' + union['union_name'] + '</b>' + ' '
+                                + union['abbr'] + ', ' + union['members']+ ' ' + union['street_adr'] + ' ' + union['city']
+                                + ', ' + union['region'] + ' ' + union['zip'] + '<br>';
+        }
+
+        resultsElement.innerHTML = selectorBody;
     })
 
     .catch(function(error) {
