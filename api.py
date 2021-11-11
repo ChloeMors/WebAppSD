@@ -26,11 +26,11 @@ def get_connection():
 def get_help():
     return json.dumps(["get help"])
 
-
+# Do these routes need to match the app routes?
 @api.route('/unions/') 
 def get_unions():
     '''
-    /unions/?[state_abbr=state_abbr]
+    /search_unions/?[state_abbr=state_abbr]
     '''
 
     state_abbr = flask.request.args.get('state_abbr')
