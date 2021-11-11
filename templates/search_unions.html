@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Search Unions</title>
-    <link rel="stylesheet" href="../static/mockup.css" type="text/css" />
-    <script type="text/javascript" src="../static/webapp.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <title>Search Unions</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='webapp.css') }}">
+        <script type="text/javascript" src="{{ url_for('static', filename='webapp.js') }}" ></script>
+    </head>
 <body>
     <ul class="navbar">
-        <li><a href="mockup3.html">Cases</a></li>
-        <li><a href="mockup4.html">Strikes</a></li>
-        <li><a href="search_unions.html">Unions</a></li>
-        <li style="float:left"><a href="index.html">Union Finder</a></li>
+        <li><a href="/search_cases">Cases</a></li>
+        <li><a href="/search_strikes">Strikes</a></li>
+        <li><a href="/search_unions">Unions</a></li>
+        <li style="float:left"><a href="/">Union Finder</a></li>
     </ul>
     <div class="split left">
         <h1>Search Unions:</h1>
@@ -84,11 +84,5 @@
     <div class="split right">
         <h1>Results:</h1>
         <p id="matching_unions"></p>
-        <!--<h2> AAA </h2>
-        <p> Description of Union</p>
-        <h2> AAA </h2>
-        <p> Description of Union</p>
-        <h2> AAA </h2>
-        <p> Description of Union</p>-->
     </div>
 </body>

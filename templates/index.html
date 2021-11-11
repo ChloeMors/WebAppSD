@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Union Finder</title>
-    <link rel="stylesheet" type="text/css" href="../static/mockup.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='webapp.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='webapp.js') }}" ></script>
 </head>
+
 <body>
     <ul class="navbar">
-        <li><a href="mockup3.html">Cases</a></li>
-        <li><a href="mockup4.html">Strikes</a></li>
-        <li><a href="search_unions">Unions</a></li>
-        <li style="float:left"><a href="mockup1.html">Union Finder</a></li>
+        <li><a href="/search_cases">Cases</a></li>
+        <li><a href="/search_strikes">Strikes</a></li>
+        <li><a href="/search_unions">Unions</a></li>
+        <li style="float:left"><a href="/">Union Finder</a></li>
     </ul>
     <div class="split right">
         <h1>Chapters near you</h1>
-        <a href="mockup5.html"><img src="https://www.pngfind.com/pngs/m/502-5023792_united-states-map-transparent-background-hd-png-download.png"></a>
+        <a href="/state"><img src="https://www.pngfind.com/pngs/m/502-5023792_united-states-map-transparent-background-hd-png-download.png"></a>
         <p> This map will be clickable, and each state will take you to a state page, similar to Mockup 5</p>
     </div>
     <div class="split left">

@@ -17,10 +17,26 @@ app.register_blueprint(api.api, url_prefix='/api')
 def home():
     return flask.render_template('index.html')
 
-
-@app.route('/search_unions/') 
-def union_search():
+@app.route('/search_unions')
+def search_unions():
     return flask.render_template('search_unions.html')
+
+@app.route('/search_cases') 
+def search_cases():
+    return flask.render_template('search_cases.html')
+
+@app.route('/search_strikes') 
+def search_strikes():
+    return flask.render_template('search_strikes.html')
+
+@app.route('/state') 
+def state():
+    return flask.render_template('state.html')
+
+
+
+
+
 
 
 if __name__ == '__main__':
