@@ -10,9 +10,11 @@ function initialize() {
     element.onclick = onSubmitButtonClicked;
 }
 
+// how do we specify how this works on all the different pages?
 function onSubmitButtonClicked() {
     let stateSelector = document.getElementById('state_selector');
     let state = stateSelector.value;
+    // Below the url references the api url, not the app
     let url = 'http://localhost:5000/api/unions/?state_abbr='
                 + state;
 
