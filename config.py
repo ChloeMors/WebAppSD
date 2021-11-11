@@ -1,3 +1,3 @@
 database = 'union_data'
-user = 'chloemorscheck'
-password = 'chloemorscheck'
+user = 'jakemartens'
+password = 'erts4500'
