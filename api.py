@@ -62,5 +62,4 @@ def get_unions():
         connection.close()
     except Exception as e:
         print(e, file=sys.stderr)
-    print(union_list)
     return json.dumps(union_list)
