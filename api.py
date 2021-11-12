@@ -3,7 +3,7 @@
     Chloe Morscheck and Jake Martens
     9 November 2021
 
-    Tiny Flask API to support the tiny books web application.
+    Flask API to support the web application.
 '''
 import sys
 import flask
@@ -27,6 +27,7 @@ def get_help():
     return json.dumps(["get help"])
 
 # Do these routes need to match the app routes?
+# this query currently supports state search only, not the industry or name search
 @api.route('/unions/') 
 def get_unions():
     '''

@@ -8,13 +8,15 @@ window.onload = initialize;
 function initialize() {
     let element = document.getElementById('submit_button');
     element.onclick = onSubmitButtonClicked;
+    // This is where we should insert the states and industries into the drop downs
 }
 
 // how do we specify how this works on all the different pages?
 function onSubmitButtonClicked() {
     let stateSelector = document.getElementById('state_selector');
     let state = stateSelector.value;
-    // Below the url references the api url, not the app
+    // Below the url references the api url, not the app - which is right 
+    // because we need to request the data from the api ??
     let url = 'http://localhost:5000/api/unions/?state_abbr='
                 + state;
 
