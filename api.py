@@ -28,17 +28,21 @@ def get_help():
 
 # Do these routes need to match the app routes?
 # this query currently supports state search only, not the industry or name search
+# this dataset doesnt even have industry
 @api.route('/unions/') 
 def get_unions():
     '''
     /search_unions/?[state_abbr=state_abbr]
     '''
-
     state_abbr = flask.request.args.get('state_abbr')
-    
+    name = flask.request.args.get('name_query')
+    if not name:
+        name = ''
+    name = name.upper()
     query = """SELECT * FROM unions
-            WHERE unions.region = '{}';""".format(state_abbr)
-
+            WHERE unions.region LIKE '%{}%'
+            AND unions.union_name LIKE '%{}%';""".format(state_abbr, name)
+    print(name)
     union_list = []
     try:
         connection = get_connection()
@@ -61,6 +65,9 @@ def get_unions():
             union_list.append(union)
         cursor.close()
         connection.close()
+        #print(union_list)
+        if union_list == []:
+            union_list = ["None"]
     except Exception as e:
         print(e, file=sys.stderr)
     return json.dumps(union_list)
@@ -70,13 +77,13 @@ def get_strikes():
     '''
     /search_strikes/?[state_abbr=state_abbr]
     '''
-    
+    # NOTE currently the data set uses full state names not state abbreviations - this needs to be fixed
     state_abbr = flask.request.args.get('state_abbr')
     
     query = """SELECT * FROM strikes
             WHERE strikes.state = '{}';""".format(state_abbr)
 
-    strike_list = [] 
+    strike_list = ["hello"] 
     try:
         connection = get_connection()
         cursor = connection.cursor()
@@ -99,6 +106,7 @@ def get_strikes():
                     "demands":row[14]}
    
             strike_list.append(strike)
+        strike_list.append("Hello results here")
         cursor.close()
         connection.close()
     except Exception as e:
