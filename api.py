@@ -29,10 +29,11 @@ def get_help():
 # Do these routes need to match the app routes?
 # this query currently supports state search only, not the industry or name search
 # this dataset doesnt even have industry
+# also, name matches to name not abbr
 @api.route('/unions/') 
 def get_unions():
     '''
-    /search_unions/?[state_abbr=state_abbr]
+    /unions/?[state_abbr=state_abbr][name_query=name_query]
     '''
     state_abbr = flask.request.args.get('state_abbr')
     name = flask.request.args.get('name_query')
