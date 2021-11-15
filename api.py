@@ -66,7 +66,7 @@ def get_unions():
     return json.dumps(union_list)
 
 @api.route('/strikes/') 
-def get_unions():
+def get_strikes():
     '''
     /search_strikes/?[state_abbr=state_abbr]
     '''
@@ -98,9 +98,9 @@ def get_unions():
                     "end_date":row[13],
                     "demands":row[14]}
    
-            strike_list.append(union)
+            strike_list.append(strike)
         cursor.close()
         connection.close()
     except Exception as e:
         print(e, file=sys.stderr)
-    return json.dumps(union_list)
+    return json.dumps(strike_list)
