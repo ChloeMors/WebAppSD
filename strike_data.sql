@@ -21,4 +21,4 @@ CREATE TABLE strikes (
     end_date text,
     demands text);
 
-\copy unions from 'strike_data.csv' DELIMITER '|' CSV NULL AS 'NULL'
+\copy strikes from 'strikes_data.csv' DELIMITER '|' CSV NULL AS 'NULL'

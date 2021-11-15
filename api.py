@@ -64,3 +64,43 @@ def get_unions():
     except Exception as e:
         print(e, file=sys.stderr)
     return json.dumps(union_list)
+
+@api.route('/strikes/') 
+def get_unions():
+    '''
+    /search_strikes/?[state_abbr=state_abbr]
+    '''
+    
+    state_abbr = flask.request.args.get('state_abbr')
+    
+    query = """SELECT * FROM strikes
+            WHERE strikes.state = '{}';""".format(state_abbr)
+
+    strike_list = [] 
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query)
+        for row in cursor:
+            strike = {"id":row[0], 
+                    "employer":row[1],  
+                    "org":row[2],
+                    "local":row[3],
+                    "industry":row[4],
+                    "BUS":row[5],
+                    "locales":row[6],
+                    "address":row[7],
+                    "city":row[8],
+                    "state":row[9],
+                    "zip":row[10],
+                    "participants":row[11],
+                    "start_date":row[12],
+                    "end_date":row[13],
+                    "demands":row[14]}
+   
+            strike_list.append(union)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+    return json.dumps(union_list)

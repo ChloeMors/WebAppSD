@@ -21,29 +21,6 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: strikes; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.strikes (
-    id integer,
-    employer text,
-    org text,
-    local text,
-    industry text,
-    bus text,
-    locals text,
-    street_adr text,
-    city text,
-    state text,
-    zip text,
-    participants text,
-    start_date text,
-    end_date text,
-    demands text
-);
-
-
---
 -- Name: unions; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -62,35 +39,6 @@ CREATE TABLE public.unions (
     region text,
     zip text
 );
-
-
---
--- Data for Name: strikes; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.strikes (id, employer, org, local, industry, bus, locals, street_adr, city, state, zip, participants, start_date, end_date, demands) FROM stdin;
-0	Cumberland County Schools	None	None	Educational Services	None	1	2465 Gillespie St	Fayetteville	North Carolina	28306	40	11/09/2021	None	Pay, Staffing
-1	Keolis North America - Regional Transportation Commission Washoe	Teamsters (IBT)	533	Transportation and Warehousing	200	1	2050 Villanova Drive	Reno	Nevada	89502	None	11/09/2021	None	Pay
-2	Sutter Health - Sutter Delta Medical Center	Service Employees International Union (SEIU)	United Healthcare Workers West	Health Care and Social Assistance	350	1	3901 Lone Tree Way	Antioch	California	94509	None	11/08/2021	None	Staffing
-3	Howard County Public School System	None	None	Educational Services	None	1	10910 Clarksville Pike	Ellicott City	Maryland	21042	80	11/08/2021	11/08/2021	Pay
-4	Blue Circle Rehab and Nursing	Service Employees International Union (SEIU)	SEIU Healthcare Missouri	Health Care and Social Assistance	None	1	2939 Magazine Street	St. Louis	Missouri	63106	25	11/06/2021	None	Pay, Healthcare, Health and safety, Staffing
-5	Diversity Thrift - Diversity Richmond	None	None	Retail Trade	None	1	1407 Sherwood Ave	Richmond	Virginia	23220	15	11/06/2021	None	Pay, Staffing, End to sexual harassment; Mandatory training
-6	Bojangles	Fight for 15 - SEIU	NC Raise Up	Accommodation and Food Services	None	1	606 W US Hwy 19 E	Burnsville	North Carolina	28714	13	11/06/2021	None	COVID-19 protocols, Health and safety, $15 minimum wage
-7	Republic Services	Teamsters (IBT)	270	Administrative and Support and Waste Management	18	1	804 L and A Rd	Metairie	Louisiana	70001	None	11/05/2021	None	Pay, Health and safety
-8	Columbia University	Graduate Workers of Columbia - UAW	2110	Educational Services	3000	1	3000 Broadway	New York	New York	10027	None	11/03/2021	None	Pay, Healthcare, First contract
-9	Friendship Dairies - Saputo	Teamsters (IBT)	264	Manufacturing	250	1	6701 Co Rd 20	Friendship	New York	14739	None	11/03/2021	None	Healthcare, Seniority benefits
-10	Cabell Huntington Hospital - Mountain Health Network	Service Employees International Union (SEIU)	1199 WKO	Health Care and Social Assistance	1000	1	1340 Hal Greer Boulevard	Huntington	West Virginia	25701	None	11/03/2021	None	Pay, Healthcare, Staffing
-11	Scranton School District	Scranton Federation of Teachers - AFT	1147	Educational Services	800	7	700 Orchard Street	Scranton	Pennsylvania	18505	None	11/03/2021	None	Pay, Healthcare
-12	Scranton School District	Scranton Federation of Teachers - AFT	1147	Educational Services	800	7	2200 Prospect Avenue	Scranton	Pennsylvania	18505	None	11/03/2021	None	Pay, Healthcare
-13	Scranton School District	Scranton Federation of Teachers - AFT	1147	Educational Services	800	7	1500 N. Lincoln Avenue	Scranton	Pennsylvania	18508	None	11/03/2021	None	Pay, Healthcare
-14	Scranton School District	Scranton Federation of Teachers - AFT	1147	Educational Services	800	7	840 Prescott Avenue	Scranton	Pennsylvania	18510	None	11/03/2021	None	Pay, Healthcare
-15	Scranton School District	Scranton Federation of Teachers - AFT	1147	Educational Services	800	7	1000 N. Everett Avenue	Scranton	Pennsylvania	18504	None	11/03/2021	None	Pay, Healthcare
-16	Scranton School District	Scranton Federation of Teachers - AFT	1147	Educational Services	800	7	1401 Fellows Street	Scranton	Pennsylvania	18504	None	11/03/2021	None	Pay, Healthcare
-17	Scranton School District	Scranton Federation of Teachers - AFT	1147	Educational Services	800	7	63 Munchak Way	Scranton	Pennsylvania	18508	None	11/03/2021	None	Pay, Healthcare
-18	Geneva Area City School District	Ohio Education Association - NEA	Geneva Area Teachers Association	Educational Services	145	4	1301 South Ridge Rd E	Geneva	Ohio	44041	None	11/03/2021	11/04/2021	End to synchronous learning
-19	Geneva Area City School District	Ohio Education Association - NEA	Geneva Area Teachers Association	Educational Services	145	4	3030 OH-307	Austinburg	Ohio	44010	None	11/03/2021	11/04/2021	End to synchronous learning
-20	Geneva Area City School District	Ohio Education Association - NEA	Geneva Area Teachers Association	Educational Services	145	4	341 OH-534	Geneva	Ohio	44041	None	11/03/2021	11/04/2021	End to synchronous learning
-\.
 
 
 --
