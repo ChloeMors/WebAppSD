@@ -7,12 +7,17 @@ window.onload = initialize;
 
 function initialize() {
     let elementUnions = document.getElementById('submit_button');
-    elementUnions.onclick = onSubmitButtonUnionsClicked;
+    
     // The following funciton call does not ever occur on the strikes page. 
     // It works if the above lines are commented out but not otherwise
     // and i dont know why
     let elementStrike = document.getElementById('submit_button_strikes');
-    elementStrike.onclick = onSubmitButtonStrikesClicked;
+    
+    if (elementUnions) {
+        elementUnions.onclick = onSubmitButtonUnionsClicked;
+    } else if (elementStrike) {
+        elementStrike.onclick = onSubmitButtonStrikesClicked;
+    }
     // This is where we should insert the states and industries into the drop downs
 }
 
