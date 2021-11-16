@@ -11,7 +11,7 @@ import json
 import config
 import psycopg2
 
-api = flask.Blueprint('api', __name__)
+api = flask.Blueprint('api', __name__, template_folder='templates')
 
 def get_connection():
     ''' Returns a connection to the database described in the
@@ -24,7 +24,7 @@ def get_connection():
 
 @api.route('/help')
 def get_help():
-    return json.dumps(["get help"])
+    return flask.render_template('help.html')
 
 # Do these routes need to match the app routes?
 # this query currently supports state search only, not the industry or name search
@@ -43,7 +43,6 @@ def get_unions():
     query = """SELECT * FROM unions
             WHERE unions.region LIKE '%{}%'
             AND unions.union_name LIKE '%{}%';""".format(state_abbr, name)
-    print(name)
     union_list = []
     try:
         connection = get_connection()
@@ -76,15 +75,20 @@ def get_unions():
 @api.route('/strikes/') 
 def get_strikes():
     '''
-    /search_strikes/?[state_abbr=state_abbr]
+    /strikes/?[state_abbr=state_abbr][industry=industry]
     '''
     # NOTE currently the data set uses full state names not state abbreviations - this needs to be fixed
     state_abbr = flask.request.args.get('state_abbr')
-    
+    industry = flask.request.args.get('industry')
+    if not industry:
+        industry = ''
+    if not state_abbr:
+        state_abbr = ''
     query = """SELECT * FROM strikes
-            WHERE strikes.state = '{}';""".format(state_abbr)
+            WHERE strikes.state LIKE '%{}%'
+            AND strikes.industry LIKE '%{}%';""".format(state_abbr, industry)
 
-    strike_list = ["hello"] 
+    strike_list = [] 
     try:
         connection = get_connection()
         cursor = connection.cursor()
@@ -107,9 +111,10 @@ def get_strikes():
                     "demands":row[14]}
    
             strike_list.append(strike)
-        strike_list.append("Hello results here")
         cursor.close()
         connection.close()
+        if strike_list == []:
+            strike_list = ["None"]
     except Exception as e:
         print(e, file=sys.stderr)
     return json.dumps(strike_list)

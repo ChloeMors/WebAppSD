@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Help</title>
+    </head>
+<body>
+<p>
+    <h1>REQUEST: /unions</h1>
+
+    <h2>GET parameters: </h2>
+    <p>state_abbr (Optional, default: '') -- return only unions located
+	within this state <br>
+    name_query (Optional, default: '') -- return only unions whose name
+	contains this string</p>
+
+<h2>REPONSE: a JSON list of dictionaries, each representing one union. Dictionaries
+Have the following fields:</h2><p>
+    id -- (INTEGER) the ID of the union in our database <br>
+    union_name -- (TEXT) the name of the union<br>
+    abbr -- (TEXT) the abbreviation of the union name<br>
+    unit -- (TEXT) ?<br>
+    est_date -- (TEXT) date of establishment of union<br>
+    members -- (TEXT) number of union members<br>
+    first_name -- (TEXT) first name of union contact<br>
+    last_name -- (TEXT) last name of union contact<br>
+    build_num -- (TEXT) building number of union location<br>
+    street_adr -- (TEXT) street address of union location<br>
+    city -- (TEXT) city of union location<br>
+    region -- (TEXT) state of union location<br>
+    zip -- (TEXT) zip code of union location</p>
+
+<h2>EXAMPLE(S):</h2><p>
+    /unions/?state_abbr=AL&name_query=CARPENTERS%20IND<br>
+
+	[{"id": 484, "union_name": "CARPENTERS IND", "abbr": "CJA", "unit": "", 
+	"est_date": "2007-06-07", "members": "654", "first_name": "TIMOTHY", 
+	"last_name": "BURNS", "build_num": "", "street_adr": "4300 HELTON DRIVE", 
+	"city": "FLORENCE", "region": "AL", "zip": "356306212"}, 
+	{"id": 520, "union_name": "CARPENTERS IND", "abbr": "CJA", "unit": "", 
+	"est_date": "2011-10-03", "members": "526", "first_name": "LLOYD", 
+	"last_name": "HICKS", "build_num": "", "street_adr": "100 COMMERCE DRIVE", 
+	"city": "PELHAM", "region": "AL", "zip": "35124 "}]</p>
+
+
+
+<h1>REQUEST:  /strikes</h1>
+
+<h2>GET parameters:</h2><p>
+    state_abbr (Optional, default: '') -- return only strikes located
+	within this state<br>
+    name_query (Optional, default: '') -- return only strikes whose company
+	contains this string</p>
+
+<h2>REPONSE:</h2><p>
+    id  -- (INTEGER) the ID of the strike in our database<br>
+    employer -- (TEXT) the employer of the striking workers<br>
+    org -- (TEXT) the labor organization representing the workers<br>
+    local -- (TEXT) local name of org<br>
+    industry -- (TEXT) industry of company<br>
+    BUS -- (TEXT) Bargaining unit size <br>
+    locales -- (TEXT) how many locations are on strike<br>
+    address -- (TEXT) location of strike<br>
+    city -- (TEXT) city of strike<br>
+    state -- (TEXT) state of strike<br>
+    zip -- (TEXT) zip code of strike<br>
+    participants -- (TEXT) approximate number of participants in strike <br>
+    start_date -- (TEXT) start date of strike<br>
+    end_date -- (TEXT) end date of strike<br>
+    demands -- (TEXT) demands of workers on strike</p>
+
+<h2>EXAMPLE(S):</h2>
+
+
+
+REQUEST: 
+GET parameters:
+REPONSE:
+EXAMPLE(S):
+
+REQUEST: 
+GET parameters:
+REPONSE:
+EXAMPLE(S):
+
+REQUEST: 
+GET parameters:
+REPONSE:
+EXAMPLE(S):
+</p>
+
+    
+</body>

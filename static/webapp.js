@@ -61,14 +61,16 @@ function onSubmitButtonUnionsClicked() {
 function onSubmitButtonStrikesClicked() {
     let stateSelector = document.getElementById('state_selector');
     let state = stateSelector.value;
+    let industrySelector = document.getElementById('Industry');
+    let industry = industrySelector.value;
     // Below the url references the api url, not the app - which is right 
     // because we need to request the data from the api ??
     let url = 'http://localhost:5000/api/strikes/?state_abbr='
-                + state;
+                + state + '&industry=' + industry;
 
     // The below two lines do not get called so im assuming this isnt getting called
-    let resultsElement = document.getElementById('matching_strikes');
-    resultsElement.innerHTML = "Hello";
+    //let resultsElement = document.getElementById('matching_strikes');
+    //resultsElement.innerHTML = "Hello";
     fetch(url, {method: 'get'})
 
     .then((response) => response.json())
@@ -76,14 +78,17 @@ function onSubmitButtonStrikesClicked() {
     .then(function(strikes) {
         let resultsElement = document.getElementById('matching_strikes');
         
-        let selectorBody = 'Hello';
-        for (let k = 0; k < strikes.length; k++) {
-            let strike = strikes[k];
-            selectorBody += '<b>' + strike['employer'] + '</b>' + 'Number of Participants: '
-                                + strike['participants'] + ', ' + strike['start_date']+ ' to' + strike['end_date'] + ', demands:' + strike['demands']
+        let selectorBody = '';
+        if (strikes == "None") {
+            selectorBody = "No unions match search criteria."
+        } else {
+            for (let k = 0; k < strikes.length; k++) {
+                let strike = strikes[k];
+                selectorBody += '<b>' + strike['employer'] + '</b>' + 'Number of Participants: '
+                                + strike['participants'] + ', started on ' + strike['start_date']+ ' to' + strike['end_date'] + ', demands:' + strike['demands']
                                 + ', ' + strike['city'] + ' ' + strike['state'] + '<br>';
+            }
         }
-
         resultsElement.innerHTML = selectorBody;
     })
     
