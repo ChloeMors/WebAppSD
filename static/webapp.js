@@ -129,9 +129,14 @@ function onSubmitButtonStrikesClicked() {
         } else {
             for (let k = 0; k < strikes.length; k++) {
                 let strike = strikes[k];
-                selectorBody += '<b>' + strike['employer'] + '</b>' + 'Number of Participants: '
-                                + strike['participants'] + ', started on ' + strike['start_date']+ ' to' + strike['end_date'] + ', demands:' + strike['demands']
-                                + ', ' + strike['city'] + ' ' + strike['state'] + '<br>';
+                if (strike['end_date'] == 'None'){
+                    var end_date_string  = 'present'
+                } else {
+                    var end_date_string  = strike['end_date']
+                }
+                selectorBody += '<b>' + strike['employer'] + '</b><br>Number of Participants: ' + strike['participants']
+                + '<br>Started on ' + strike['start_date']+ ' to ' + end_date_string + '<br> Demands: ' + strike['demands'] 
+                + '<br> Location: ' + strike['city'] + ', ' + strike['state'] + '<br>';
             }
         }
         resultsElement.innerHTML = selectorBody;
@@ -162,7 +167,7 @@ function onIndexLoad(){
                     var end_date_string  = strike['end_date']
                 }
                 selectorBody += '<b>' + strike['employer'] + '</b><br>' + 'Started on ' + strike['start_date']+ ' to ' 
-                + end_date_string + '<br> Demands:' + strike['demands'] + '<br> Location: ' + strike['city'] + ' ' 
+                + end_date_string + '<br> Demands: ' + strike['demands'] + '<br> Location: ' + strike['city'] + ', ' 
                 + strike['state'] + '<br>';
             }
         }

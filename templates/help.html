@@ -5,7 +5,6 @@
         <title>Help</title>
     </head>
 <body>
-<p>
     <h1>REQUEST: /unions</h1>
 
     <h2>GET parameters: </h2>
@@ -15,7 +14,7 @@
 	contains this string</p>
 
 <h2>REPONSE: a JSON list of dictionaries, each representing one union. Dictionaries
-Have the following fields:</h2><p>
+have the following fields:</h2><p>
     id -- (INTEGER) the ID of the union in our database <br>
     union_name -- (TEXT) the name of the union<br>
     abbr -- (TEXT) the abbreviation of the union name<br>
@@ -86,21 +85,47 @@ Have the following fields:</h2><p>
         "end_date": "None", "demands": "Pay, Healthcare"}, ... ] </p>
 
 
-REQUEST: 
-GET parameters:
-REPONSE:
-EXAMPLE(S):
+        <h1>REQUEST: /cases</h1>
 
-REQUEST: 
-GET parameters:
-REPONSE:
-EXAMPLE(S):
+        <h2>GET parameters: </h2>
+        <p>state_abbr (Optional, default: '') -- return only cases located
+        within this state <br>
+        name_query (Optional, default: '') -- return only cases against companies
+        whose name includes this string</p>
+    
+    <h2>REPONSE: a JSON list of dictionaries, each representing one case. Dictionaries
+    have the following fields:</h2><p>
+        'id': row[0],
+                    'case_name': row[1],
+                    'case_number':row[2],
+                    'city':row[3],
+                    'territory':row[4],
+                    'date_filed':row[5],
+                    'date_closed':row[6],
+                    'region':row[7],
+                    'current_status':row[8],
+                    'reason_closed':row[9],
+                    'representative':row[10]}
+        id -- (INTEGER) the ID of the case in our database <br>
+        case_name -- (TEXT) the name of the employer against whom case is filed<br>
+        case_number -- (TEXT) reference number to case's legal proceedings<br>
+        city -- (TEXT) city where case is filed<br>
+        territory -- (TEXT) territory (in this case, state) where case is filed<br>
+        date_filed -- (TEXT) date when case was filed<br>
+        date_closed -- (TEXT) date when case was closed, or ongoing<br>
+        region -- (TEXT) location of court handling case<br>
+        current_status -- (TEXT) refers to whether case is open or closed<br>
+        reason_closed -- (TEXT) explanation for why case was closed<br>
+        representative -- (TEXT) person or organization filing claim</p>
+    
+    <h2>EXAMPLE(S):</h2><p>
+        cases/?state_abbr=CA&name_query=Wellpath<br>
+    
+        [{"id": 21, "case_name": "Wellpath at San Luis Obispo County Jail", "case_number": 
+        "31-RC-286145", "city": "San Luis Obispo", "territory": "CA", "date_filed": "11/12/2021",
+         "date_closed": "", "region": "Region 31, Los Angeles, California", "current_status": "Open", 
+         "reason_closed": "", "representative": ""}]</p>
 
-REQUEST: 
-GET parameters:
-REPONSE:
-EXAMPLE(S):
-</p>
 
     
 </body>
