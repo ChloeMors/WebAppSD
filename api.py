@@ -8,6 +8,8 @@
 import sys
 import flask
 import json
+
+from werkzeug.datastructures import CharsetAccept
 import config
 import psycopg2
 
@@ -118,3 +120,45 @@ def get_strikes():
     except Exception as e:
         print(e, file=sys.stderr)
     return json.dumps(strike_list)
+
+@api.route('/cases/') 
+def get_cases():
+    '''
+    /cases/?[state_abbr=state_abbr][name_query=name_query]
+    '''
+    state_abbr = flask.request.args.get('state_abbr')
+    name = flask.request.args.get('name_query')
+    if not name:
+        name = ''
+    if not state_abbr:
+        state_abbr =''
+    name = name.upper()
+    state_abbr = state_abbr.upper()
+    query = """SELECT * FROM cases
+            WHERE cases.territory LIKE '%{}%'
+            AND cases.case_name ILIKE '%{}%';""".format(state_abbr, name)
+    case_list = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query)
+        for row in cursor:
+            case = {'id': row[0],
+                    'case_name': row[1],
+                    'case_number':row[2],
+                    'city':row[3],
+                    'territory':row[4],
+                    'date_filed':row[5],
+                    'date_closed':row[6],
+                    'region':row[7],
+                    'current_status':row[8],
+                    'reason_closed':row[9],
+                    'representative':row[10]}
+            case_list.append(case)
+        cursor.close()
+        connection.close()
+        if case_list == []:
+            case_list = ["None"]
+    except Exception as e:
+        print(e, file=sys.stderr)
+    return json.dumps(case_list)
