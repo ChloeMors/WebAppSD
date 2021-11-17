@@ -87,6 +87,7 @@ ul.navbar li a:hover {
 .left {
     width: 40%;
     left: 0;
+    /*border-right-style: solid;*/
     outline: solid;
     outline-offset: -10px;
     outline-color: black;
