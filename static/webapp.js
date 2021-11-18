@@ -6,7 +6,7 @@
 window.onload = initialize;
 
 function initialize() {
-    let elementUnions = document.getElementById('submit_button_unions');
+    
     
     // The following funciton call does not ever occur on the strikes page. 
     // It works if the above lines are commented out but not otherwise
@@ -16,8 +16,13 @@ function initialize() {
     
     if (document.title == 'Union Finder'){
         onIndexLoad();
-    } else if (elementUnions) {
-        elementUnions.onclick = onSubmitButtonUnionsClicked;
+        initializeMap();
+    } else if (document.title = 'Search Unions') {
+        if (window.location.hash){
+            onUnionLoad(true)
+        } else {
+            onUnionLoad(false)
+        }
     } else if (elementStrike) {
         elementStrike.onclick = onSubmitButtonStrikesClicked;
     } else if (elementCases) {
@@ -177,4 +182,56 @@ function onIndexLoad(){
     .catch(function(error) {
         console.log(error);
     });
+}
+/*
+var extraStateInfo = {
+    MN: {population: 5640000, jeffhaslivedthere: true, fillColor: '#2222aa'},
+    CA: {population: 39500000, jeffhaslivedthere: true, fillColor: '#2222aa'},
+    NM: {population: 2100000, jeffhaslivedthere: false, fillColor: '#2222aa'},
+    OH: {population: 0, jeffhaslivedthere: false, fillColor: '#aa2222'}
+};*/
+function initializeMap() {
+    var map = new Datamap({ element: document.getElementById('map-container'), // where in the HTML to put the map
+                            scope: 'usa', // which map?
+                            projection: 'equirectangular', // what map projection? 'mercator' is also an option
+                            done: onMapDone, // once the map is loaded, call this function
+                            /*data: extraStateInfo, // here's some data that will be used by the popup template*/
+                            fills: { defaultFill: '#999999' },
+                            geographyConfig: {
+                                //popupOnHover: false, // You can disable the hover popup
+                                highlightOnHover: true, // You can disable the color change on hover
+                                popupTemplate: hoverPopupTemplate, // call this to obtain the HTML for the hover popup
+                                borderColor: '#eeeeee', // state/country border color
+                                highlightFillColor: '#337AFF', // color when you hover on a state/country
+                                highlightBorderColor: '#000000', // border color when you hover on a state/country
+                            }
+                          });
+}
+
+// This gets called once the map is drawn, so you can set various attributes like
+// state/country click-handlers, etc.
+function onMapDone(dataMap) {
+    dataMap.svg.selectAll('.datamaps-subunit').on('click', onStateClick);
+}
+
+
+function hoverPopupTemplate(geography, data) {
+    var template = '<div class="hoverpopup"><strong>' + geography.properties.name + '</strong><br>'
+                    + '</div>';
+
+    return template;
+}
+
+function onStateClick(geography) {
+    window.location.href = '/search_unions#' + geography.id;
+}
+
+function onUnionLoad(first_load) {
+    if (first_load) {
+        var hash = window.location.hash.substring(1);
+        document.getElementById('state_selector').value = hash;
+        onSubmitButtonUnionsClicked();
+    } 
+    let elementUnions = document.getElementById('submit_button_unions');
+    elementUnions.onclick = onSubmitButtonUnionsClicked;
 }

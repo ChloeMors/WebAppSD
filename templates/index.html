@@ -5,6 +5,11 @@
     <title>Union Finder</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='webapp.css') }}">
     <script type="text/javascript" src="{{ url_for('static', filename='webapp.js') }}" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='datamaps.usa.min.js') }}" ></script>
+    
+
 </head>
 
 <body>
@@ -14,13 +19,12 @@
         <li><a href="/search_unions">Unions</a></li>
         <li style="float:left"><a href="/">Union Finder</a></li>
     </ul>
-    <div class="split right">
-        <h1>Chapters near you</h1>
-        <a href="/state"><img src="https://www.pngfind.com/pngs/m/502-5023792_united-states-map-transparent-background-hd-png-download.png"></a>
-        <p> This map will be clickable, and each state will take you to a state page, similar to Mockup 5</p>
-    </div>
     <div class="split left">
         <h1>Ongoing strikes</h1>
         <p id="ongoing_strikes"></p>
+    </div>
+    <div class="split right">
+        <h1>Chapters near you</h1>
+        <div id="map-container"></div>
     </div>
 </body>
