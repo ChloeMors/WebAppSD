@@ -17,15 +17,15 @@ function initialize() {
     if (document.title == 'Union Finder'){
         onIndexLoad();
         initializeMap();
-    } else if (document.title = 'Search Unions') {
+    } else if (document.title == 'Search Unions') {
         if (window.location.hash){
             onUnionLoad(true)
         } else {
             onUnionLoad(false)
         }
-    } else if (elementStrike) {
+    } else if (document.title == 'Search Strikes') {
         elementStrike.onclick = onSubmitButtonStrikesClicked;
-    } else if (elementCases) {
+    } else if (document.title == 'Search Cases') {
         elementCases.onclick = onSubmitButtonCasesClicked;
     }
     // This is where we should insert the states and industries into the drop downs
