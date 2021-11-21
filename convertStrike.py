@@ -61,13 +61,17 @@ for row in csv_reader:
         if first:
             first=False
         else:
-            if strike["Employer"] == "General Electric":
-                print(strike["Employer"] + " " + strike["Org"] + " " + strike["Local"] + " " + strike["Industry"] + " " + strike["Bargaining Unit Size"] + " " + strike["Number of Locations"] + " " + strike["Address"] + " " + strike["City"] + " " + strike["State"] + " " + strike["Zip Code"] + " " + strike["Participants"] + " " + strike["Start Date"] + " " + strike["End Date"] + " " + strike["Worker Demands"])
+            #if strike["Employer"] == "United Launch Alliance":
+                #print(strike["Employer"] + " " + strike["Org"] + " " + strike["Local"] + " " + strike["Industry"] + " " + strike["Bargaining Unit Size"] + " " + strike["Number of Locations"] + " " + strike["Address"] + " " + strike["City"] + " " + strike["State"] + " " + strike["Zip Code"] + " " + strike["Participants"] + " " + strike["Start Date"] + " " + strike["End Date"] + " " + strike["Worker Demands"])
             # IN some cases, the following line doesn't actually write in all of these frields and I have no idea why. The above section prints them all succesffuly (gen elec is one that is continueously getting written impropperly)
             csv_writer.writerow([strike["id"], strike["Employer"], strike["Org"],strike["Local"],strike["Industry"],strike["Bargaining Unit Size"],strike["Number of Locations"],strike["Address"],strike["City"],strike["State"],strike["Zip Code"],strike["Participants"],strike["Start Date"],strike["End Date"],strike["Worker Demands"]])
+            #if strike["Employer"] == "United Launch Alliance" or strike['Employer'] == "General Electric":
+            #strikeString = strike["Employer"] + "|" + strike["Org"] + "|" + strike["Local"] + "|" + strike["Industry"] + "|" + strike["Bargaining Unit Size"] + "|" + strike["Number of Locations"] + "|" + strike["Address"] + "|" + strike["City"] + "|" + strike["State"] + "|" + strike["Zip Code"] + "|" + strike["Participants"] + "|" + strike["Start Date"] + "|" + strike["End Date"] + "|" + strike["Worker Demands"]
+            #csv_writer.writerow(strikeString)
+            #print(strikeString)
             id += 1
-            if id == 21:
-                stop = True
+            #if id == 21:
+            #    stop = True
         strike = {"id":id, "Employer":"None", "Org":"None","Local":"None","Industry":"None","Bargaining Unit Size":"None","Number of Locations":"None","Address":"None","City":"None","State":"None","Zip Code":"None","Participants":"None","Start Date":"None","End Date":"None","Worker Demands":"None"}
     elif row[0] == "To":
         continue
