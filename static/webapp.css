@@ -88,6 +88,23 @@ a.hidden_link:hover {
     background-color: rgb(56, 56, 56);
     color:white;
 }
+
+.button {
+    background-color: #a50000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    float:right;
+    margin-right: 20px;
+    cursor:pointer;
+  }
+
+  .button:hover {
+    background-color: rgb(56, 56, 56);
+  }
 /* Split screen for home page*/
 
 .split {
