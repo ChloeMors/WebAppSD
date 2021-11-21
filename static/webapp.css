@@ -73,6 +73,21 @@ ul.navbar li a:hover {
     background-color: rgb(56, 56, 56);
     color: white;
 }
+
+.active {
+    background-color: #790101;
+}
+
+/* For two heading links on homepage*/
+a.hidden_link {
+    color:inherit;
+    text-decoration: inherit;
+}
+
+a.hidden_link:hover {
+    background-color: rgb(56, 56, 56);
+    color:white;
+}
 /* Split screen for home page*/
 
 .split {
