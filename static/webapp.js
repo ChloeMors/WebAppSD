@@ -35,12 +35,16 @@ function initialize() {
 function onSubmitButtonUnionsClicked() {
     let stateSelector = document.getElementById('state_selector');
     let state = stateSelector.value;
+    let citySelector = document.getElementById('by_city');
+    let city = citySelector.value;
     let nameSelector = document.getElementById('by_name');
     let name = by_name.value;
+    let membersSelector = document.getElementById('members_selector');
+    let members = membersSelector.value;
     // Below the url references the api url, not the app - which is right 
     // because we need to request the data from the api ??
     let url = 'http://localhost:5000/api/unions/?state_abbr='
-                + state + '&name_query=' + name ;
+                + state + '&city=' + city + '&name_query=' + name + '&members=' + members;
 
     fetch(url, {method: 'get'})
 

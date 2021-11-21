@@ -35,16 +35,24 @@ def get_help():
 @api.route('/unions/') 
 def get_unions():
     '''
-    /unions/?[state_abbr=state_abbr][name_query=name_query]
+    /unions/?[state_abbr=state_abbr][city=city][name_query=name_query]
     '''
     state_abbr = flask.request.args.get('state_abbr')
     name = flask.request.args.get('name_query')
+    city = flask.request.args.get('city')
+    members = flask.request.args.get('members')
     if not name:
         name = ''
     name = name.upper()
     query = """SELECT * FROM unions
             WHERE unions.region LIKE '%{}%'
-            AND unions.union_name LIKE '%{}%';""".format(state_abbr, name)
+            AND unions.city ILIKE '%{}%'
+            AND unions.union_name LIKE '%{}%'""".format(state_abbr, city, name)
+    if members == 'max':
+        query = query + """ AND unions.members > 1000000"""
+    elif members != 'default':
+        query = query + """ AND unions.members < {}""".format(members)
+    query = query + ';'
     union_list = []
     try:
         connection = get_connection()

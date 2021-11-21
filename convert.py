@@ -80,7 +80,10 @@ for row in csv_reader:
 	if first:
 		first = False
 	else:
-		csv_writer.writerow([id, row[0], row[1], row[4], row[5], row[22], row[44], row[45], row[46], row[47], row[48], row[49], row[50]])
+		number_of_members = row[22]
+		if number_of_members == '':
+			number_of_members = 0
+		csv_writer.writerow([id, row[0], row[1], row[4], row[5], number_of_members, row[44], row[45], row[46], row[47], row[48], row[49], row[50]])
 		id = id + 1
 
 in_file.close()
