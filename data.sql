@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.4
--- Dumped by pg_dump version 13.4
+-- Dumped from database version 14.0
+-- Dumped by pg_dump version 14.0
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -72,7 +72,7 @@ CREATE TABLE public.unions (
     abbr text,
     unit text,
     est_date text,
-    members integer,
+    members text,
     first_name text,
     last_name text,
     build_num text,
@@ -8236,6 +8236,7 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 8145	Service Employees International Union Healthcare Illinois & Indiana	13-CA-254711	Chicago	IL	01/15/2020		Region 13, Chicago, Illinois	Open		
 8146	SMITHFIELD FOODS	18-CA-254648	Sioux Falls	SD	01/15/2020		Region 18, Minneapolis, Minnesota	Open		
 8203	Atlantic Veal & Lamb	29-CA-254026	Brooklyn	NY	01/02/2020		Region 29, Brooklyn, New York	Open		
+8204	UNITED PARCEL SERVICE	09-CA-254033	Cincinnati	OH	01/02/2020		Region 09, Cincinnati, Ohio	Open		
 8147	Pro Custom Solar LLC d/b/a Momentum Solar	22-CA-254647	South Plainfield	NJ	01/15/2020		Region 22, Newark, New Jersey	Open		
 8148	Securitas Security Services USA, Inc.	20-CA-254671	Hilo	HI	01/15/2020		Region 20, San Francisco, California	Open		
 8149	International Brotherhood of Teamsters, Local 492 (Netflix, Inc.)	28-CB-254596	Albuquerque	NM	01/14/2020		Region 28, Phoenix, Arizona	Open		
@@ -8292,7 +8293,6 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 8200	Midwest Welding and Mechanical LLC	18-CA-254084	Sioux City	IA	01/03/2020		Region 18, Minneapolis, Minnesota	Open		
 8201	United States Postal Service	16-CA-254127	Galveston	TX	01/03/2020		Region 16, Fort Worth, Texas	Open		
 8202	United States Steel Corp.	08-CA-254028	Lorain	OH	01/02/2020		Region 08, Cleveland, Ohio	Open		
-8204	UNITED PARCEL SERVICE	09-CA-254033	Cincinnati	OH	01/02/2020		Region 09, Cincinnati, Ohio	Open		
 8205	Kaiser Permanente South Bay Medical Center	31-CA-254072	Harbor City	CA	01/02/2020		Region 31, Los Angeles, California	Open		
 8206	Nevada Gold Mines LLC dba Nevada Gold Mines, a perfectly clear successor to Newmont USA Limited dba Newmont Mining Corp.	32-CA-254059	Elko	NV	01/02/2020		Region 32, Oakland, California	Open		
 8207	Nevada Ready Mix	28-CA-254051	Las Vegas	NV	01/02/2020		Region 28, Phoenix, Arizona	Open		
@@ -8509,6 +8509,7 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 8417	NP Lake Mead LLC d/b/a Fiesta Henderson Casino Hotel	28-CA-251083	Henderson	NV	11/01/2019		Region 28, Phoenix, Arizona	Open		
 8418	Sheet Metal Air Rail and Transportation Workers, Local 1715 (Transit Management of Charlotte, Inc)	10-CB-251012	Charlotte	NC	11/01/2019		Region 10, Atlanta, Georgia	Open		
 8474	DIVERSIFIED PROTECTION CORP.	09-CA-250130	Cincinnati	OH	10/17/2019		Region 09, Cincinnati, Ohio	Open		
+8475	DIVERSIFIED PROTECTION CORP.	09-CA-250132	Cincinnati	OH	10/17/2019		Region 09, Cincinnati, Ohio	Open		
 8419	SHEET METAL, AIR RAIL AND TRANSPORTATION, LOCAL 24 (Dualite Company)	09-CB-251016	Williamsburg	OH	10/31/2019		Region 09, Cincinnati, Ohio	Open		
 8420	Full-Fill Industries LLC	25-CA-251084	Henning	IL	10/31/2019		Region 25, Indianapolis, Indiana	Open		
 8421	TRANSCANADA USA SERVICES, INC.	09-CA-250979	Charleston	WV	10/31/2019		Region 09, Cincinnati, Ohio	Open		
@@ -8564,7 +8565,6 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 8471	Thryv, Inc.	20-CA-250250	San Francisco	CA	10/18/2019		Region 20, San Francisco, California	Open		
 8472	Bridgestone Americas Tire Operations, LLC	10-CA-250141	La Vergne	TN	10/18/2019		Region 10, Atlanta, Georgia	Open		
 8473	Kingsland/Winstar	29-RC-250173	Maspeth	NY	10/18/2019		Region 29, Brooklyn, New York	Open		
-8475	DIVERSIFIED PROTECTION CORP.	09-CA-250132	Cincinnati	OH	10/17/2019		Region 09, Cincinnati, Ohio	Open		
 8476	I.B.E.W., LOCAL 827	22-CB-250259	Englewood	NJ	10/17/2019		Region 22, Newark, New Jersey	Open		
 8477	Owens Corning Summit, Illinois Roofing Plant	13-CA-249994	Summit Argo	IL	10/16/2019		Region 13, Chicago, Illinois	Open		
 8478	Garland Symphony Orchestra Association, Las Colinas Symphony Orchestra Association, and Symphony Arlington, Joint Employers	16-CA-250090	Irving	TX	10/16/2019		Region 16, Fort Worth, Texas	Open		
@@ -8618,6 +8618,7 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 8526	Centurylink	12-CA-249225	Ocala	FL	10/02/2019		Region 12, Tampa, Florida	Open		
 8527	UNITE HERE, Local 2850 (Compass Group of North America dba Levy Restaurants)	32-CB-249260	Oakland	CA	10/01/2019		Region 32, Oakland, California	Open		
 8528	Rhino Northwest, LLC	19-CA-249290	Tacoma	WA	10/01/2019		Region 19, Seattle, Washington	Open		
+8586	FCA US, LLC	07-CA-248482	Sterling Heights	MI	09/18/2019		Region 07, Detroit, Michigan	Open		
 8529	Cemex Construction Materials Pacific LLC	28-CA-249413	Oxnard	CA	10/01/2019		Region 28, Phoenix, Arizona	Open		
 8530	Full Spectrum Processing, Inc.	04-CA-249187	Philadelphia	PA	10/01/2019		Region 04, Philadelphia, Pennsylvania	Open		
 8531	The American Bottling Company d/b/a Keurig Dr Pepper	13-CA-249097	Chicago	IL	09/30/2019		Region 13, Chicago, Illinois	Open		
@@ -8674,7 +8675,6 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 8582	Fresh Express, Inc.	32-CA-248564	Salinas	CA	09/19/2019		Region 32, Oakland, California	Open		
 8583	Columbia College Chicago	13-AC-248521	Chicago	IL	09/19/2019		Region 13, Chicago, Illinois	Open		
 8584	GEO Group, Inc.	16-CA-248622	Pearsall	TX	09/19/2019		Region 16, Fort Worth, Texas	Open		
-8586	FCA US, LLC	07-CA-248482	Sterling Heights	MI	09/18/2019		Region 07, Detroit, Michigan	Open		
 8587	International Longshoreman's Association, Local 1329	01-CB-248495	Providence	RI	09/18/2019		Region 01, Boston, Massachusetts	Open		
 8588	United States Postal Service	19-CA-248598	Great Falls	MT	09/18/2019		Region 19, Seattle, Washington	Open		
 8589	INTERNATIONAL UNION, UNITED AUTOMOBILE, AEROSPACE AND AGRICULTURAL IMPLEMENT WORKERS OF AMERICA, AFL-CIO (UAW) LOCAL 862 (Ford Kentucky Truck Plant)	09-CB-248519	LOUISVILLE	KY	09/18/2019		Region 09, Cincinnati, Ohio	Open		
@@ -8731,6 +8731,7 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 8640	Abbott Northwestern Hospital	18-CA-247701	Minneapolis	MN	09/05/2019		Region 18, Minneapolis, Minnesota	Open		
 8641	United Auto Workers Local 2209 (General Motors Corporation)	25-CB-247835	Roanoke	IN	09/05/2019		Region 25, Indianapolis, Indiana	Open		
 8642	Pfanstiehl	13-CA-247694	Waukegan	IL	09/05/2019		Region 13, Chicago, Illinois	Open		
+8697	United States Postal Service	01-CA-246825	Providence	RI	08/19/2019		Region 01, Boston, Massachusetts	Open		
 8643	International Brotherhood of Electrical Workers, Local 21 (AT&T Teleholdings, Inc. and its Subsidiary Michigan Bell Telephone Company)	13-CB-247757	Naperville	IL	09/05/2019		Region 13, Chicago, Illinois	Open		
 8644	LRW Investment Corp d/b/a Joe's Parking and Wally Park	21-CA-247735	Los Angeles	CA	09/05/2019		Region 21, Los Angeles, California	Open		
 8645	Teamsters Local 743 (University of Chicago)	13-CB-247618	Chicago	IL	09/04/2019		Region 13, Chicago, Illinois	Open		
@@ -8785,7 +8786,6 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 8694	Burrink Commercial Services Inc.	13-CA-246967	South Holland	IL	08/21/2019		Region 13, Chicago, Illinois	Open		
 8695	Kellogg Company	15-CA-246972	Memphis	TN	08/21/2019		Region 15, New Orleans, Louisiana	Open		
 8696	Multicare Health System d/b/a Legacy Urgent Care	19-CA-247051	Tacoma	WA	08/20/2019		Region 19, Seattle, Washington	Open		
-8697	United States Postal Service	01-CA-246825	Providence	RI	08/19/2019		Region 01, Boston, Massachusetts	Open		
 8698	Puget Sound Energy	19-CA-246796	Bellevue	WA	08/19/2019		Region 19, Seattle, Washington	Open		
 8699	Frontier Communications	10-CA-246787	Marion	NC	08/19/2019		Region 10, Atlanta, Georgia	Open		
 8700	American Federation for Children, Inc.	28-CA-246878	Glendale	AZ	08/16/2019		Region 28, Phoenix, Arizona	Open		
@@ -8837,6 +8837,7 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 8746	UNITED STATES POSTAL SERVICE	09-CA-245607	Charleston	WV	07/29/2019		Region 09, Cincinnati, Ohio	Open		
 8747	Verizon	02-CA-245791	Bronx	NY	07/29/2019		Region 02, New York, New York	Open		
 9177	Warrior Met Coal, Inc.	10-CA-237221	Brookwood	AL	03/06/2019		Region 10, Atlanta, Georgia	Open		
+9495	The Boeing Company	10-CA-229197	North Charleston	SC	10/15/2018		Region 10, Atlanta, Georgia	Open		
 8748	Renaissance Hotel Bloomington	18-CA-245620	Bloomington	MN	07/29/2019		Region 18, Minneapolis, Minnesota	Open		
 8749	J.G. Kern Enterprises, Inc.	07-CA-245744	Sterling Heights	MI	07/29/2019		Region 07, Detroit, Michigan	Open		
 8750	LABORERS' INTERNATIONAL UNION OF NORTH AMERICA (LIUNA) LOCAL 423 (Shelly & Sands Inc.)	09-CB-245673	Columbus	OH	07/29/2019		Region 09, Cincinnati, Ohio	Open		
@@ -9583,7 +9584,6 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 9491	Adient, Inc.	08-CA-229560	Northwood	OH	10/19/2018		Region 08, Cleveland, Ohio	Open		
 9492	Western Wall Systems LLC	28-CA-229618	Las Vegas	NV	10/18/2018		Region 28, Phoenix, Arizona	Open		
 9493	Healthcare Services Group, Inc.	19-CA-229727	Butte	MT	10/18/2018		Region 19, Seattle, Washington	Open		
-9495	The Boeing Company	10-CA-229197	North Charleston	SC	10/15/2018		Region 10, Atlanta, Georgia	Open		
 9496	The Boeing Company	10-CA-229208	North Charleston	SC	10/15/2018		Region 10, Atlanta, Georgia	Open		
 9497	Mueller Water Products	25-CA-229212	Decatur	IL	10/15/2018		Region 25, Indianapolis, Indiana	Open		
 9498	USPS	02-CA-229309	New York	NY	10/12/2018		Region 02, New York, New York	Open		
@@ -10108,6 +10108,7 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 10016	United States Postal Service	16-CA-210792	Houston	TX	11/29/2017		Region 16, Fort Worth, Texas	Open		
 10017	United States Postal Service	16-CA-210933	Houston	TX	11/29/2017		Region 16, Fort Worth, Texas	Open		
 10018	United States Postal Service	16-CA-210908	Houston	TX	11/29/2017		Region 16, Fort Worth, Texas	Open		
+10130	Lakeland Bus Lines Inc.	22-CA-203785	Dover	NJ	08/02/2017		Region 22, Newark, New Jersey	Open		
 10019	PERKINS  MANAGEMENT SERVICES COMPANY	13-CA-210664	Chicago	IL	11/29/2017		Region 13, Chicago, Illinois	Open		
 10020	Arcelor Mittal Steel	25-CA-210658	Chesterton	IN	11/29/2017		Region 25, Indianapolis, Indiana	Open		
 10021	Enright Seeding, Inc.	25-CA-210670	Davenport	IA	11/29/2017		Region 25, Indianapolis, Indiana	Open		
@@ -10218,7 +10219,6 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 10127	Ford Motor Company	08-CA-203795	Avon	OH	08/07/2017		Region 08, Cleveland, Ohio	Open		
 10128	FCA US LLC	08-CA-203727	Toledo	OH	08/04/2017		Region 08, Cleveland, Ohio	Open		
 10129	Amerisafe Services Inc.	14-CA-203562	Wichita	KS	08/02/2017		Region 14, Saint Louis, Missouri	Open		
-10130	Lakeland Bus Lines Inc.	22-CA-203785	Dover	NJ	08/02/2017		Region 22, Newark, New Jersey	Open		
 10131	U.S. Pipe and Foundry	10-CA-203493	Bessemer	AL	08/01/2017		Region 10, Atlanta, Georgia	Open		
 10132	Columbia Sussex Corp. d/b/a Hilton Anchorage	19-CA-203675	Anchorage	AK	08/01/2017		Region 19, Seattle, Washington	Open		
 10133	Healthcare Services Group, Inc. @ Windsor Monterey Care Center	32-CA-203483	Monterey	CA	07/31/2017		Region 32, Oakland, California	Open		
@@ -10430,6 +10430,7 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 10339	NBC Universal Media LLC	02-UC-189945	New York	NY	12/16/2016		Region 02, New York, New York	Open		
 10340	Orchids Paper Products Co.	14-CA-190022	Pryor	OK	12/16/2016		Region 14, Saint Louis, Missouri	Open		
 10341	World Service West	31-CA-190161	Gardena	CA	12/16/2016		Region 31, Los Angeles, California	Open		
+10492	W.B. MASON CO., INC.	01-CA-177383	Boston	MA	06/01/2016		Region 01, Boston, Massachusetts	Open		
 10342	Betteroads Asphalt, LLC and Betterecycling Corporation, single employer	12-CA-189888	SAN JUAN	PR	12/15/2016		Region 12, Tampa, Florida	Open		
 10343	COUNTY AGENCY INC., AND ESPLANADE PARTNERS LTD. d/b/a ESPLANADE VENTURE PARTNERSHIP d/b/a THE ESPLANADE HOTEL, JOINT EMPLOYERS and 305 WEST END HOLDINGS, LLC d/b/a 305 WEST END AVENUE OPERATING, LLC AND ULTIMATE CARE MANAGEMEN6T ASSISTED LIVING MANAGEMENT6, LLC, A DIVISION OF THE ENGEL BURMAN GROUP d/b/a ULTIMATE CARE MANAGEMENT, LLC, JOINT EMPLOYERS	02-CA-189863	New York	NY	12/13/2016		Region 02, New York, New York	Open		
 10344	STRONGSTEEL OF ALABAMA	15-CA-189655	Andalusia	AL	12/12/2016		Region 15, New Orleans, Louisiana	Open		
@@ -10527,6 +10528,7 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 10436	Natural Life Inc. d/b/a Heart and Weight Institute	28-CA-181573	Las Vegas	NV	08/05/2016		Region 28, Phoenix, Arizona	Open		
 10437	UNITED STATES POSTAL SERVICE	16-CA-181511	Rowlett	TX	08/04/2016		Region 16, Fort Worth, Texas	Open		
 10438	RDM Concrete Masonry, LLC, Collective Concrete & Masonry and REMCO Concrete, LLC, alter ego	22-CA-181515	JACKSON	NJ	08/04/2016		Region 22, Newark, New Jersey	Open		
+10493	Atlanticare Management LLC (d/b/a Putnam Ridge Nursing Home)	02-CA-177329	Brewster	NY	05/27/2016		Region 02, New York, New York	Open		
 10439	Consulate Healthcare, d/b/a Bay Breeze d/b/a Consulate of Kissimmee d/b/a Consulate of North Ft. Myers d/b/a Consulate of West Altamonte d/b/a Consulate of West Palm Beach d/b/a Franco d/b/a Grand Oaks d/b/a Hillcrest d/b/a Lake Mary d/b/a Oaktree d/b/a The Palms d/b/a The Parks d/b/a Plantation Bay d/b/a Renaissance d/b/a Rio Pinar d/b/a Rosewood d/b/a Springhill	12-CA-181427	Maitland	FL	08/03/2016		Region 12, Tampa, Florida	Open		
 10440	MONDELEZ GLOBAL, LLC	22-CA-181423	FAIR LAWN	NJ	08/03/2016		Region 22, Newark, New Jersey	Open		
 10441	Capitol Tranportation, Inc.	12-CA-181123	SAN JUAN	PR	07/28/2016		Region 12, Tampa, Florida	Open		
@@ -10580,8 +10582,6 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 10489	United States Postal Service	16-CA-177829	Houston	TX	06/06/2016		Region 16, Fort Worth, Texas	Open		
 10490	UNITED STATES POSTAL SERVICE	16-CA-177530	Houston	TX	06/02/2016		Region 16, Fort Worth, Texas	Open		
 10491	Huber Specialty Hydrates, LLC	15-CA-177324	Benton	AR	06/01/2016		Region 15, New Orleans, Louisiana	Open		
-10492	W.B. MASON CO., INC.	01-CA-177383	Boston	MA	06/01/2016		Region 01, Boston, Massachusetts	Open		
-10493	Atlanticare Management LLC (d/b/a Putnam Ridge Nursing Home)	02-CA-177329	Brewster	NY	05/27/2016		Region 02, New York, New York	Open		
 10494	Michigan Bell Telephone Company	07-CA-177201	Grand Rapids	MI	05/26/2016		Region 07, Detroit, Michigan	Open		
 10495	We Three Kings, Inc.	10-CA-177103	Charleston	SC	05/26/2016		Region 10, Atlanta, Georgia	Open		
 10496	RoHoHo, Inc.	10-CA-177085	Charleston	SC	05/26/2016		Region 10, Atlanta, Georgia	Open		
@@ -10692,6 +10692,7 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 10601	Blanchard Refining Company LLC (Marathon Petroleum, Galveston Bay Refinery)	16-CA-167837	Texas City	TX	01/14/2016		Region 16, Fort Worth, Texas	Open		
 10602	BLANCHARD REFINING COMPANY LLC (MARATHON PETROLEUM, GALVESTON BAY REFINERY)	16-CA-167857	Texas City	TX	01/14/2016		Region 16, Fort Worth, Texas	Open		
 10603	United States Postal Service	16-CA-167611	Houston	TX	01/13/2016		Region 16, Fort Worth, Texas	Open		
+10649	Temple University Hospital	04-RC-162716	Philadelphia	PA	10/27/2015		Region 04, Philadelphia, Pennsylvania	Open		Pennsylvania Association of Staff Nurses and Allied Professionals (PASNAP)
 10604	DHSC, LLC, d/b/a AFFINITY MEDICAL CENTER, COMMUNITY HEALTH SYSTEMS, INC., HOSPITAL OF BARSTOW INC., d/b/a BARSTOW COMMUNITY HOSPITAL, WATSONVILLE HOSPITAL CORPORATION d/b/a WATSONVILLE COMMUNITY HOSPITAL, COMMUNITY HEALTH SYSTEMS, INC. and/or COMMUNITY HEALTH SYSTEMS PROFESSIONAL SERVICES CORPORATION, LLC, a single employer and/or joint employers	08-CA-167313	Massillon	OH	01/11/2016		Region 08, Cleveland, Ohio	Open		
 10605	Community Health Systems, Inc., et al., and Barstow Community Hospital	31-CA-167522	Barstow	CA	01/08/2016		Region 31, Los Angeles, California	Open		
 10606	Providence Regional Medical Center Everett	19-CA-167498	Everett	WA	01/08/2016		Region 19, Seattle, Washington	Open		
@@ -10737,7 +10738,6 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 10646	QUAKER OATS, CO.	25-CA-162915	DANVILLE	IL	10/29/2015		Region 25, Indianapolis, Indiana	Open		
 10647	ABM Onsite Services-West, Inc.	19-CA-162921	Portland	OR	10/29/2015		Region 19, Seattle, Washington	Open		
 10648	W.B. MASON CO., INC.	01-CA-162884	BOSTON	MA	10/28/2015		Region 01, Boston, Massachusetts	Open		
-10649	Temple University Hospital	04-RC-162716	Philadelphia	PA	10/27/2015		Region 04, Philadelphia, Pennsylvania	Open		Pennsylvania Association of Staff Nurses and Allied Professionals (PASNAP)
 10650	Frontline Security Services, Inc.	05-CA-162945	Landover	MD	10/26/2015		Region 05, Baltimore, Maryland	Open		
 10651	T-Mobile USA	14-CA-162644	Wichita	KS	10/26/2015		Region 14, Saint Louis, Missouri	Open		
 10652	Village Red Restaurant Corp. d/b/a Waverly Restaurant, and Waverly Realty LLC, a Single Employer	02-CA-162509	New York	NY	10/22/2015		Region 02, New York, New York	Open		
@@ -10841,6 +10841,8 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 10750	United States Postal Service	20-CA-152164	San Francisco	CA	05/12/2015		Region 20, San Francisco, California	Open		
 10751	United States Postal Service	20-CA-152172	San Francisco	CA	05/12/2015		Region 20, San Francisco, California	Open		
 10752	United States Postal Service	20-CA-152144	San Francisco	CA	05/12/2015		Region 20, San Francisco, California	Open		
+10805	Univision de Puerto Rico	12-CA-145245	GUAYNABO	PR	01/28/2015		Region 12, Tampa, Florida	Open		
+10806	DURHAM SCHOOL SERVICES, L.P.	15-CA-145094	Milton	FL	01/26/2015		Region 15, New Orleans, Louisiana	Open		
 10753	A&K SIGNAL AND UTILITY COMPANY, LLC and its alter ego and/or successor AZ UTILITY AND SIGNAL, LLC, a single-integrated enterprise and/or single employer, and MUHAMMAD TANVIR ZAMAN KAYANI, Individually, and ALI ZAMAN KAYANI, Individually, and SUMERA SIAL KAYANI, Individually, and SANYA KAYANI, Individually	28-CA-151930	Phoenix	AZ	05/08/2015		Region 28, Phoenix, Arizona	Open		
 10754	Saint Luke's Memorial Hospital	12-CA-151844	Ponce	PR	05/07/2015		Region 12, Tampa, Florida	Open		
 10755	AmeriStar Casino East Chicago, LLC	13-CA-151766	East Chicago	IN	05/07/2015		Region 13, Chicago, Illinois	Open		
@@ -10893,8 +10895,6 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 10802	HAYNES INTERNATIONAL, INC.	25-CA-145566	Kokomo	IN	02/03/2015		Region 25, Indianapolis, Indiana	Open		
 10803	United States Postal Service	02-CA-145553	New York	NY	02/02/2015		Region 02, New York, New York	Open		
 10804	Stericycle, Inc.	04-CA-145466	Morgantown	PA	01/30/2015		Region 04, Philadelphia, Pennsylvania	Open		
-10805	Univision de Puerto Rico	12-CA-145245	GUAYNABO	PR	01/28/2015		Region 12, Tampa, Florida	Open		
-10806	DURHAM SCHOOL SERVICES, L.P.	15-CA-145094	Milton	FL	01/26/2015		Region 15, New Orleans, Louisiana	Open		
 10807	ENVIROMENTAL CONTRACTORS, KLEICZEWSKI CORPORATION AND BE CONSTRUCTION	22-CA-145173	WEST ORANGE	NJ	01/23/2015		Region 22, Newark, New Jersey	Open		
 10808	Consolidated Edison of New York	02-CA-144952	New York	NY	01/23/2015		Region 02, New York, New York	Open		
 10809	Pas LLC	13-CA-144968	Chicago	IL	01/23/2015		Region 13, Chicago, Illinois	Open		
@@ -11412,6 +11412,279 @@ COPY public.strikes (id, employer, org, local, industry, bus, locals, street_adr
 18	Geneva Area City School District	Ohio Education Association - NEA	Geneva Area Teachers Association	Educational Services	145	4	1301 South Ridge Rd E	Geneva	Ohio	44041	None	11/03/2021	11/04/2021	End to synchronous learning
 19	Geneva Area City School District	Ohio Education Association - NEA	Geneva Area Teachers Association	Educational Services	145	4	3030 OH-307	Austinburg	Ohio	44010	None	11/03/2021	11/04/2021	End to synchronous learning
 20	Geneva Area City School District	Ohio Education Association - NEA	Geneva Area Teachers Association	Educational Services	145	4	341 OH-534	Geneva	Ohio	44041	None	11/03/2021	11/04/2021	End to synchronous learning
+21	Geneva Area City School District	Ohio Education Association - NEA	Geneva Area Teachers Association	Educational Services	145	4	755 Austin Rd	Geneva	Ohio	44041	None	11/03/2021	11/04/2021	End to synchronous learning
+22	Jon Donaire Desserts - Rich Products	Bakery, Confectionery, Tobacco Workers and Grain Millers' International Union (BCTGM)	37	Manufacturing	140	1	12805 Busch Pl	Santa Fe Springs	California	90670	None	11/03/2021	None	Pay
+23	Garlock Sealing Technologies	International Association of Machinists (IAM)	588	Manufacturing	300	1	1666 Division St	Palmyra	New York	14522	None	11/01/2021	11/04/2021	Pay
+24	Anderson Community Schools	Anderson Federation of Teachers - AFT	None	Educational Services	500	1	1600 Hillcrest Ave	Anderson	Indiana	46011	100	11/01/2021	11/03/2021	Pay, Healthcare
+25	ArcelorMittal	United Steelworkers (USW)	3057	Manufacturing	500	1	132 W Main St	Shelby	Ohio	44875	None	10/31/2021	None	Healthcare, Retirement benefits; Paid time off
+26	Puerto Rico Police Bureau	Sindicato de Policias Puertorriqueños (SPP)	None	Public Administration	11500	1	601 Roosevelt Ave	San Juan	Puerto Rico	00907	1900	10/29/2021	10/31/2021	Retirement benefits
+27	Wake County Public School System	North Carolina Association of Educators - NEA	None	Educational Services	None	1	5625 Dillard Drive	Cary	North Carolina	27518	150	10/29/2021	None	Pay
+28	Gopuff	None	None	Retail Trade	None	1	537 N 3rd St	Philadelphia	Pennsylvania	19123	None	10/29/2021	None	Pay, More hours
+29	Student Transportation Services New Mexico - Las Cruces Public Schools	Las Cruces Transportation Federation - AFT	6341	Transportation and Warehousing, Educational Services	None	1	533 N 17th St	Las Cruces	New Mexico	88005	25	10/28/2021	10/28/2021	Pay, Health and safety, Staffing, Improved sick leave benefits
+30	Harvard University	Harvard Graduate Student Union - UAW	5118	Educational Services	2000	1	1 Oxford St	Cambridge	Massachusetts	02138	None	10/27/2021	10/29/2021	Pay, Healthcare, Meaningful grievance procedure
+31	Chipotle Mexican Grill	Service Employees International Union (SEIU)	32BJ	Accommodation and Food Services	None	1	4009 Broadway	New York	New York	10032	12	10/27/2021	10/27/2021	Pay, Staffing, Fair scheduling
+32	The School District of Lee County	Florida Education Association - NEA, AFT	Support Personnel Association of Lee County	Educational Services	None	1	2855 Colonial Blvd	Fort Myers	Florida	33966	83	10/25/2021	10/25/2021	Pay, Healthcare
+33	Moog	None	None	Manufacturing	None	1	7021 Seneca St	Elma	New York	14059	None	10/25/2021	10/25/2021	Against vaccine mandate
+34	United Launch Alliance	None	None	Manufacturing, Professional, Scientific and Technical Services	None	1	1001 Red Hat Rd	Decatur	Alabama	35601	40	10/25/2021	10/26/2021	Against vaccine mandate
+35	Charles County Public Schools	American Federation of State, County and Municipal Employees (AFSCME)	None	Educational Services	None	1	5980 Radio Station Road	La Plata	Maryland	20646	30	10/22/2021	None	Pay, Healthcare
+36	General Electric	Communication Workers of America (CWA)	301	Utilities, Manufacturing	700	1	1 River Rd	Schenectady	New York	12306	200	10/22/2021	10/22/2021	Against vaccine mandate
+37	Union Day School	None	None	Educational Services	None	1	3000 Tilley Morris Rd	Weddington	North Carolina	28104	None	10/21/2021	10/25/2021	School board accountability; Reinstate fired principal
+38	General Electric	None	None	Utilities, Manufacturing	None	1	300 Garlington Rd	Greenville	South Carolina	29615	None	10/21/2021	10/21/2021	Against vaccine mandate
+39	Netflix	None	None	Information	None	1	1341 Vine St	Los Angeles	California	90028	30	10/20/2021	10/20/2021	Health and safety, Racial justice, Invest more in trans talent and content
+40	NYC Taxi and Limousine Commission	New York Taxi Workers Alliance (NYTWA)	None	Transportation and Warehousing	None	1	City Hall Park	New York	New York	10007	10	10/20/2021	11/03/2021	Pay, Medallion debt relief
+41	Abbott Northwestern - WestHealth - Allina Health	Minnesota Nurses Association	None	Health Care and Social Assistance	50	1	2855 Campus Dr	Plymouth	Minnesota	55441	None	10/17/2021	10/20/2021	Pay
+42	Instacart	Gig Workers Collective	None	Other Services (except Public Administration)	None	1	50 Beale St	San Francisco	California	94105	None	10/16/2021	10/16/2021	Pay, Occupational death benefits
+43	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	825 SW Irvinedale	Ankeny	Iowa	50023	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+44	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	928 E Vine St	Ottumwa	Iowa	52501	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+45	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	18600 S John Deere Rd	Dubuque	Iowa	52001	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+46	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	1175 E 90th St	Davenport	Iowa	52807	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+47	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	300 W Commercial St	Waterloo	Iowa	50704	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+48	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	3500 E Donald St	Waterloo	Iowa	50703	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+49	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	2000 Westfield Ave	Waterloo	Iowa	50701	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+50	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	1600 1st Ave E	Milan	Illinois	61264	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+51	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	1100 13th Ave	Moline	Illinois	61244	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+52	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	501 River Dr	Moline	Illinois	61265	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+53	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	2624 N, US-169	Coffeyville	Kansas	67337	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+54	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	6101 E Stapleton Dr N	Denver	Colorado	80216	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+55	John Deere	United Auto Workers (UAW)	None	Manufacturing	10100	13	180 Westridge Pkwy	McDonough	Georgia	30253	None	10/14/2021	None	Pay, Retirement benefits; Establish fair work rules
+56	Stericycle	Teamsters (IBT)	377; 20	Administrative and Support and Waste Management	None	2	1901 Pine Ave SE	Warren	Ohio	44483	80	10/13/2021	None	Healthcare
+57	Stericycle	Teamsters (IBT)	377; 20	Administrative and Support and Waste Management	None	2	1301 East Alexis Road	Toledo	Ohio	43612	80	10/13/2021	None	Healthcare
+58	Sunrise Northeast	Service Employees International Union (SEIU)	1199 New England	Health Care and Social Assistance	185	4	729 Montauk Ave	New London	Connecticut	06320	None	10/12/2021	None	Pay, Healthcare, Retirement benefits
+59	Sunrise Northeast	Service Employees International Union (SEIU)	1199 New England	Health Care and Social Assistance	185	4	80 Whitney St	Hartford	Connecticut	06105	None	10/12/2021	None	Pay, Healthcare, Retirement benefits
+60	Sunrise Northeast	Service Employees International Union (SEIU)	1199 New England	Health Care and Social Assistance	185	4	372 Bailey Hill Rd	Danielson	Connecticut	06239	None	10/12/2021	None	Pay, Healthcare, Retirement benefits
+61	Sunrise Northeast	Service Employees International Union (SEIU)	1199 New England	Health Care and Social Assistance	185	4	474 CT-87	Columbia	Connecticut	06237	None	10/12/2021	None	Pay, Healthcare, Retirement benefits
+62	Bullitt County Public Schools	None	None	Educational Services	None	1	1040 KY-44	Shepherdsville	Kentucky	40165	30	10/12/2021	None	Pay
+63	Calvert County Public Schools - Student Transportation	None	None	Transportation and Warehousing, Educational Services	None	1	1305 Dares Beach Road	Prince Frederick	Maryland	20678	25	10/11/2021	10/31/2021	Pay, Healthcare
+64	None	Voces de la Frontera	None	None	None	1	517 E Wisconsin Ave	Milwaukee	Wisconsin	53202	None	10/11/2021	10/11/2021	Racial justice, Immigration reform
+65	Washington State Ferries	Inlandboatmen's Union of the Pacific - ILWU	None	Transportation and Warehousing, Public Administration	890	1	2901 3rd Ave	Seattle	Washington	98121	28	10/08/2021	10/09/2021	Accommodation request for vaccine mandate
+66	North Shore Music Theatre	International Alliance of Theatrical Stage Employees (IATSE)	11	Arts, Entertainment and Recreation	None	1	54 Dunham Rd	Beverly	Massachusetts	01915	30	10/06/2021	None	Pay, First contract, Job Security
+67	Kellogg's	Bakery, Confectionery, Tobacco and Grain Millers Union (BCTGM)	3G; 374G; 50G; 252G	Manufacturing	1400	4	2168 Frisco Ave	Memphis	Tennessee	38114	None	10/05/2021	None	Pay, Healthcare, Retirement benefits; Maintain paid time off
+68	Kellogg's	Bakery, Confectionery, Tobacco and Grain Millers Union (BCTGM)	3G; 374G; 50G; 252G	Manufacturing	1400	4	9601 F St	Omaha	Nebraska	68127	None	10/05/2021	None	Pay, Healthcare, Retirement benefits; Maintain paid time off
+69	Kellogg's	Bakery, Confectionery, Tobacco and Grain Millers Union (BCTGM)	3G; 374G; 50G; 252G	Manufacturing	1400	4	2050 State Rd	Lancaster	Pennsylvania	17601	None	10/05/2021	None	Pay, Healthcare, Retirement benefits; Maintain paid time off
+207	Bleyer Industries	Service Employees International Union (SEIU)	Workers United Local 9	Manufacturing	21	1	436 N Industrial Dr	Mt Union	Pennsylvania	17066	None	05/11/2021	05/13/2021	Pay
+70	Kellogg's	Bakery, Confectionery, Tobacco and Grain Millers Union (BCTGM)	3G; 374G; 50G; 252G	Manufacturing	1400	4	425 Porter St	Battle Creek	Michigan	49014	None	10/05/2021	None	Pay, Healthcare, Retirement benefits; Maintain paid time off
+71	McKenzie-Willamette Medical Center	Service Employees International Union (SEIU)	49	Health Care and Social Assistance	400	1	1460 G St, Springfield, OR 97477	Springfield	Oregon	97477	None	10/05/2021	10/07/2021	Pay, Healthcare, COVID-19 protocols, Health and safety, Staffing, Job Security
+72	Frontier Communications	Communications Workers of America (CWA)	District 9	Information	2000	1	7354 Slater Ave	Huntington Beach	California	92647	None	10/05/2021	10/05/2021	Pay, Healthcare, Job Security
+73	Sutter Health - Sutter Delta Medical Center	Service Employees International Union (SEIU)	United Healthcare Workers West	Health Care and Social Assistance	350	1	3901 Lone Tree Way	Antioch	California	94509	None	10/04/2021	10/08/2021	Staffing
+74	Erie Strayer Company	Ironworkers	851	Manufacturing	42	1	1851 Rudolph Ave	Erie	Pennsylvania	16502	None	10/04/2021	None	Pay, Healthcare
+75	Annapolis Bus Company - Student Transportation of America	None	None	Transportation and Warehousing	None	1	2404 Nichols Rd	Annapolis	Maryland	21401	35	10/04/2021	10/06/2021	Pay, COVID-19 protocols, Health and safety, Paid time off; Union recognition
+76	Village of Robbins	Robbins Police Department Union	None	Public Administration	14	1	3323 W 137th St	Robbins	Illinois	60472	12	10/02/2021	10/04/2021	Pay, Health and safety, Staffing
+77	Catholic Health	Communication Workers of America (CWA)	1133	Health Care and Social Assistance	2200	1	565 Abbott Rd	Buffalo	New York	14220	None	10/01/2021	11/09/2021	Healthcare, Staffing
+78	Sulzer Pumps, Inc.	International Association of Machinists (IAM)	598	Manufacturing	50	1	1305 Main St	Barboursville	West Virginia	25504	None	10/01/2021	10/16/2021	Job Security, Seniority rights
+79	Special Metals	United Steelworkers (USW)	40	Manufacturing	450	1	3200 Riverside Dr	Huntington	West Virginia	25705	None	10/01/2021	None	Pay, Healthcare
+80	Chipotle Mexican Grill	Service Employees International Union (SEIU)	32BJ	Accommodation and Food Services	None	1	9015 Queens Blvd	Elmhurst	New York	11373	None	10/01/2021	None	Pay
+81	Flagship Facility Services - Denver International Airport	Service Employees International Union (SEIU)	105	Administrative and Support and Waste Management	350	1	8500 Peña Blvd, Denver, CO 80249	Denver	Colorado	80249	None	10/01/2021	10/01/2021	Pay, Staffing
+82	Keolis North America - Regional Transportation Commission Washoe	Teamsters (IBT)	533	Transportation and Warehousing	200	1	2050 Villanova Drive	Reno	Nevada	89502	None	09/27/2021	10/19/2021	COVID-19 protocols, Health and safety, Fair scheduling
+83	San Antonio Symphony	Musicians of the San Antonio Symphony (MOSAS)	None	Arts, Entertainment and Recreation	72	1	115 Auditorium Cir	San Antonio	Texas	78205	None	09/27/2021	None	Pay, Healthcare, Job Security
+84	Metropolitan School District of Pike Township	None	None	Educational Services	None	1	6901 Zionsville Road	Indianapolis	Indiana	46268	22	09/27/2021	09/28/2021	Pay
+85	Pizza Man	None	None	Accommodation and Food Services	None	1	2523 E. Belleview Place	Milwaukee	Wisconsin	53211	12	09/24/2021	09/25/2021	Health and safety
+86	El Milagro	Arise Chicago Worker Center	None	Manufacturing, Accommodation and Food Services	None	1	3050 W. 26th St.	Chicago	IL	60623	50	09/23/2021	09/23/2021	Pay, COVID-19 protocols, Health and safety, Staffing, End to sexual harassment
+87	Senior Aerospace SSP	United Auto Workers (UAW)	509	Manufacturing	300	1	2980 N San Fernando Blvd	Burbank	California	91504	None	09/23/2021	10/06/2021	Healthcare
+88	KONE	The International Association of Machinists and Aerospace Workers (IAM)	1191	Manufacturing	None	1	2266 US-6	Coal Valley	Illinois	61240	24	09/20/2021	None	Pay, Retirement benefits
+89	Kaiser Permanente	International Union of Operating Engineers (IUOE)	39	Health Care and Social Assistance	700	5	2425 Geary Blvd	San Francisco	California	94115	None	09/18/2021	None	Pay, Reduced travel time
+90	Kaiser Permanente	International Union of Operating Engineers (IUOE)	39	Health Care and Social Assistance	700	5	3600 Broadway	Oakland	California	94611	None	09/18/2021	None	Pay, Reduced travel time
+91	Kaiser Permanente	International Union of Operating Engineers (IUOE)	39	Health Care and Social Assistance	700	5	901 Nevin Ave	Richmond	California	94801	None	09/18/2021	None	Pay, Reduced travel time
+92	Kaiser Permanente	International Union of Operating Engineers (IUOE)	39	Health Care and Social Assistance	700	5	1100 Veterans Blvd	Redwood City	California	94063	None	09/18/2021	None	Pay, Reduced travel time
+93	Kaiser Permanente	International Union of Operating Engineers (IUOE)	39	Health Care and Social Assistance	700	5	401 Bicentennial Way	Santa Rosa	California	95403	None	09/18/2021	None	Pay, Reduced travel time
+94	Associated General Contractors of America (AGC)	United Brotherhood of Carpenters (UBC)	None	Construction	None	3	1 Microsoft Way	Redmond	Washington	98052	2000	09/16/2021	10/05/2021	Pay, Healthcare, Retirement benefits
+95	Associated General Contractors of America (AGC)	United Brotherhood of Carpenters (UBC)	None	Construction	None	3	10301 Willows Road NE	Redmond	Washington	98052	2000	09/16/2021	10/05/2021	Pay, Healthcare, Retirement benefits
+96	Associated General Contractors of America (AGC)	United Brotherhood of Carpenters (UBC)	None	Construction	None	3	620 Boren Ave N	Seattle	Washington	98109	2000	09/16/2021	10/05/2021	Pay, Healthcare, Retirement benefits
+97	Bon Appetit - San Francisco Giants	UNITE HERE	2	Arts, Entertainment and Recreation, Accommodation and Food Services	None	1	24 Willie Mays Plaza	San Francisco	California	94107	200	09/16/2021	09/16/2021	Pay, COVID-19 protocols, Health and safety
+98	HMS Host - Phoenix Sky Harbor International Airport	UNITE HERE	11	Accommodation and Food Services	None	1	3400 E Sky Harbor Blvd	Phoenix	Arizona	85034	None	09/15/2021	09/15/2021	Staffing
+99	Redbank Valley School District	Pennsylvania State Education Association - NEA	Redbank Valley Education Association (RVEA)	Educational Services	80	1	910 Broad St	New Bethlehem	Pennsylvania	16242	None	09/13/2021	10/19/2021	Pay, Healthcare
+100	Heaven Hill Distillery	United Food and Commercial Workers (UFCW)	23-D	Manufacturing	420	1	1311 Gilkey Run Rd	Bardstown	Kentucky	40004	None	09/11/2021	10/23/2021	Pay, Keep regular work schedule
+101	DeKalb County School District	None	None	Educational Services	None	1	1701 Mountain Industrial Boulevard	Stone Mountain	Georgia	30083	35	09/10/2021	09/10/2021	COVID-19 protocols, Health and safety
+102	ZF International	United Auto Workers (UAW)	None	Manufacturing	None	1	2900 Busha Highway	Marysville	Michigan	48040	340	09/09/2021	09/16/2021	Union recognition
+103	SERV Behavioral Health Mercer County	American Federation of State, County and Municipal Employees (AFSCME)	Council 63	Health Care and Social Assistance	50	1	20 Scotch Rd	Ewing Township	New Jersey	08628	None	09/06/2021	09/06/2021	First contract
+104	Oakland University	American Association of University Professors (AAUP)	None	Educational Services	880	1	2200 N Squirrel Rd	Rochester	Michigan	48309	None	09/02/2021	09/03/2021	Pay, More control over academic programs
+105	Blue Circle Rehab and Nursing	Service Employees International Union (SEIU)	SEIU Healthcare Missouri	Health Care and Social Assistance	None	1	2939 Magazine St	St. Louis	Missouri	63106	25	09/02/2021	09/02/2021	Pay, Healthcare, $15 minimum wage
+106	Stanford University	Student Collective Action Against Residential Education (SCAARE)	None	Educational Services	None	1	450 Serra Mall	Stanford	California	94305	350	09/02/2021	None	Pay, COVID-19 protocols, Health and safety
+107	Savannah-Chatham County Public Schools	Teamsters (IBT)	728	Public Administration	218	1	2219 Gamble Road	Savannah	Georgia	31405	54	09/02/2021	09/06/2021	Pay, COVID-19 protocols, Health and safety
+108	Coca Cola	Teamsters (IBT)	957	Manufacturing	None	1	1000 Coca-Cola Blvd	Huber Heights	Ohio	45424	None	09/02/2021	09/03/2021	None
+109	Saint Francis Ministries	None	None	Health Care and Social Assistance	None	1	3311 N 93rd Street	Omaha	Nebraska	68134	4	09/01/2021	09/08/2021	Staffing
+110	Sysco	Teamsters (IBT)	703	Wholesale Trade	None	1	250 Wieboldt Dr	Des Plaines	Illinois	60016	325	08/30/2021	09/02/2021	Pay, Sympathy strike
+111	Freddy's Frozen Custard & Steakburgers	Fight For 15 - SEIU	NC Raise Up	Accommodation and Food Services	None	1	3303 Watkins Road	Durham	North Carolina	27707	None	08/20/2021	08/20/2021	COVID-19 protocols, Health and safety, $15 minimum wage
+112	Redstone 8 Cinemas - Metropolitan Theatres	None	None	Arts, Entertainment and Recreation	None	1	6030 North Market St	Park City	Utah	84098	8	08/18/2021	08/31/2021	Pay, $15 minimum wage
+113	Columbia Building Services; Final Touch Commercial Cleaning	Service Employees International Union (SEIU)	26	Administrative and Support and Waste Management	None	1	Nicollet Ave & 8th St S	Minneapolis	Minnesota	55402	40	08/16/2021	08/26/2021	Pay, Health and safety, Improved training
+114	SamTrans	Amalgamated Transit Union (ATU)	1574	Transportation and Warehousing, Public Administration	400	1	1250 San Carlos Ave	San Carlos	California	94074	None	08/16/2021	08/17/2021	Contract negotiations
+115	The New York TImes	The NewsGuild of New York - CWA	New York Times Tech Guild	Information	600	1	620 Eighth Avenue	New York	New York	10018	300	08/11/2021	08/11/2021	Against impediments to unionization
+116	Nabisco	Bakery, Confectionery, Tobacco Workers and Grain Millers' International Union (BCTGM)	364; 26; 358; 1; 42	Manufacturing	None	6	100 NE Columbia Blvd	Portland	Oregon	97211	1050	08/10/2021	09/18/2021	Pay, Healthcare, Job Security, Fair scheduling
+117	Nabisco	Bakery, Confectionery, Tobacco Workers and Grain Millers' International Union (BCTGM)	364; 26; 358; 1; 42	Manufacturing	None	6	17775 E 30th Ave	Aurora	Colorado	80011	1050	08/10/2021	09/18/2021	Pay, Healthcare, Job Security, Fair scheduling
+118	Nabisco	Bakery, Confectionery, Tobacco Workers and Grain Millers' International Union (BCTGM)	364; 26; 358; 1; 42	Manufacturing	None	6	6002 S Laburnum Ave	Richmond	Virginia	23231	1050	08/10/2021	09/18/2021	Pay, Healthcare, Job Security, Fair scheduling
+119	Nabisco	Bakery, Confectionery, Tobacco Workers and Grain Millers' International Union (BCTGM)	364; 26; 358; 1; 42	Manufacturing	None	6	7300 S Kedzie Ave	Chicago	Illinois	60629	1050	08/10/2021	09/18/2021	Pay, Healthcare, Job Security, Fair scheduling
+120	Nabisco	Bakery, Confectionery, Tobacco Workers and Grain Millers' International Union (BCTGM)	364; 26; 358; 1; 42	Manufacturing	None	6	221 S Swift Rd	Addison	Illinois	60101	1050	08/10/2021	09/18/2021	Pay, Healthcare, Job Security, Fair scheduling
+121	Nabisco	Bakery, Confectionery, Tobacco Workers and Grain Millers' International Union (BCTGM)	364; 26; 358; 1; 42	Manufacturing	None	6	6300 Brook Hollow Pkwy	Norcross	Georgia	30071	1050	08/10/2021	09/18/2021	Pay, Healthcare, Job Security, Fair scheduling
+122	Powerback Rehabilitation - ProMedica	Service Employees International Union (SEIU)	SEIU Healthcare Pennsylvania	Health Care and Social Assistance	None	1	1526 Lombard St	Philadelphia	Pennsylvania	19146	None	08/06/2021	08/06/2021	Healthcare
+123	Jack in the Box	Fight for 15 - SEIU	Fight for 15 Nor Cal	Accommodation and Food Services	None	1	4849 Madison Ave	Sacramento	California	95841	None	08/04/2021	None	Pay
+124	Keolis North America - Regional Transportation Commission Washoe	Teamsters (IBT)	533	Transportation and Warehousing	200	1	2050 Villanova Drive	Reno	Nevada	89502	None	08/03/2021	08/13/2021	Healthcare
+125	McDonald's	Fight for 15 - SEIU	Fight for $15 LA	Accommodation and Food Services	None	1	101 W. Manchester Avenue	Los Angeles	California	90003	6	08/03/2021	08/03/2021	Health and safety
+126	New Car Dealer Committee	International Association of Machinists (IAM)	701	Retail Trade	800	1	16269 Van Dam Rd	South Holland	Illinois	60473	None	08/02/2021	09/26/2021	Pay, Healthcare
+127	Cascade Behavioral Health	Service Employees International Union (SEIU)	1199NW	Health Care and Social Assistance	None	1	12844 Military Rd S	Tukwila	Washington	98168	None	08/02/2021	11/05/2021	Health and safety, Staffing
+128	Henry Frerk Sons	Teamsters (IBT)	786	Retail Trade	None	1	3135 W Belmont Ave	Chicago	Illinois	60618	12	08/02/2021	None	None
+129	DoorDash	None	None	Accommodation and Food Services	None	1	303 2nd St	San Francisco	California	94107	None	07/31/2021	07/31/2021	Pay
+130	Activision Blizzard	None	None	Information	None	1	3 Blizzard	Irvine	California	92618-3628	200	07/28/2021	07/28/2021	Against sexual harrasment and descrimination; Workplace culture
+131	Lawrence Livermore National Laboratory	Society of Professionals, Scientists, and Engineers - CWA	9119	Professional, Scientific and Technical Services	235	1	7000 East Ave	Livermore	California	94550	None	07/27/2021	07/29/2021	Scheduling
+132	Community First Medical Center	National Nurses Organizing Committee/National Nurses United (NNOC/NNU)	None	Health Care and Social Assistance	200	1	5645 W Addison St	Chicago	Illinois	60634	None	07/26/2021	07/26/2021	COVID-19 protocols, Health and safety, Staffing
+133	VNA of Boston (BVNA)	Massachusetts Nurses Association	None	Health Care and Social Assistance	39	1	150 Mt Vernon St	Boston	Massachusetts	02125	None	07/26/2021	08/01/2021	Pay, Healthcare, First contract, Staffing
+134	Aviary Cafe	None	None	Accommodation and Food Services	None	1	2144 E Republic Rd	Springfield	Missouri	65807	7	07/25/2021	07/26/2021	Pay, Healthcare, Staffing
+135	Fleishers Craft Butchery	None	None	Retail Trade	None	4	1325 3rd Ave	New York	New York	10021	15	07/23/2021	None	Racial justice
+136	Fleishers Craft Butchery	None	None	Retail Trade	None	4	192 5th Avenue	Brooklyn	New York	11217	15	07/23/2021	None	Racial justice
+137	Fleishers Craft Butchery	None	None	Retail Trade	None	4	160 E. Putnam Ave	Cos Cob	Connecticut	06807	15	07/23/2021	None	Racial justice
+138	Fleishers Craft Butchery	None	None	Retail Trade	None	4	580 Riverside Ave	Westport	Connecticut	06880	15	07/23/2021	None	Racial justice
+139	Negociado de Transporte y otros Servicios Públicos (NTSP)	Frente Amplio de Camioneros de Puerto Rico	None	Transportation and Warehousing	None	1	None	None	Puerto Rico	None	400	07/21/2021	07/22/2021	Pay
+140	Uber; Lyft	Rideshare Drivers United	None	Transportation and Warehousing	None	3	1455 Market St	San Francisco	California	94103	None	07/21/2021	07/21/2021	Passage of the PRO Act
+141	Uber; Lyft	Rideshare Drivers United	None	Transportation and Warehousing	None	3	1 World Way	Los Angeles	California	90045	None	07/21/2021	07/21/2021	Passage of the PRO Act
+142	Uber; Lyft	Rideshare Drivers United	None	Transportation and Warehousing	None	3	1240 W. Morena Blvd	San Diego	California	92110	None	07/21/2021	07/21/2021	Passage of the PRO Act
+143	Krab Kingz	None	None	Accommodation and Food Services	None	1	5860 Delmar Blvd	St. Louis	Missouri	63112	None	07/20/2021	07/20/2021	$15 minimum wage
+144	City of Pelham	None	None	Public Administration	None	1	108 Hand Ave W	Pelham	Georgia	31779	None	07/20/2021	None	Pay
+145	Luis Ayala Colón Sucrs, Inc.	International Longshoremen’s Association (ILA)	1740	Transportation and Warehousing	None	1	PR-1	San Juan	Puerto Rico	00901	None	07/20/2021	08/04/2021	Job Security, Work needs to be completed by union members
+146	Fullerton Auto Group	United Auto Workers (UAW)	259	Retail Trade	None	1	1034 US Highway 22 East	Somerville	New Jersey	08876	None	07/19/2021	07/23/2021	Sign previously agreed on contract
+147	Williamstown Theatre Festival	None	None	Arts, Entertainment and Recreation	None	1	225 South St	Williamstown	Massachusetts	01267	6	07/14/2021	07/14/2021	Pay, Health and safety, Scheduling
+148	Keck Medicine of USC	California Nurses Association - NNU	None	Health Care and Social Assistance	1400	1	1500 San Pablo Street	Los Angeles	California	90033	None	07/13/2021	07/14/2021	Staffing
+149	Aramark	Teamsters (IBT)	346	Other Services (except Public Administration)	20	1	519 E 19th St	Hibbing	Minnesota	55746	None	07/13/2021	07/26/2021	Pay, Health and safety, Staffing
+150	PepsiCo	Teamsters (IBT)	142	Manufacturing	None	1	9300 Calumet Ave	Munster	Indiana	46321	130	07/12/2021	08/22/2021	Healthcare
+151	Frito-Lay - PepsiCo	Bakery, Confectionery, Tobacco Workers and Grain Millers' International Union (BCTGM)	218	Manufacturing	850	1	4236 SW Kirklawn Ave	Topeka	Kansas	66609	600	07/05/2021	07/25/2021	Pay, Scheduling
+152	Sheffield Barbers - Fort Lee	Laborers' International Union of North America (LIUNA)	None	Other Services (except Public Administration)	20	1	300 A Ave	Fort Lee	Virginia	23801	None	07/04/2021	10/29/2021	Pay
+153	National Aerospace Solutions	Air Engineering Metal Trades Council (AEMTC)	None	Manufacturing	600	1	Wattendorf Memorial Hwy	Tullahoma	Tennessee	37388	None	07/02/2021	07/16/2021	Pay, Healthcare, Disability insurance
+154	West Coast Berry Farms	Mixteco Indigena Community Organizing Project	None	Agriculture, Forestry, Fishing & Hunting	None	1	3070 Skyway Dr	Santa Maria	California	93455	100	07/01/2021	07/02/2021	Pay
+155	Bellingham Cold Storage	Teamsters (IBT)	231	Transportation and Warehousing	110	2	2825 Roeder Ave	Bellingham	Washington	98225	None	07/01/2021	07/14/2021	Pay, Healthcare, Retirement benefits
+156	Bellingham Cold Storage	Teamsters (IBT)	231	Transportation and Warehousing	110	2	600 Orchard Drive	Bellingham	Washington	98225	None	07/01/2021	07/14/2021	Pay, Healthcare, Retirement benefits
+157	The Dill Pickle Food Co-op	Industrial Workers of the World (IWW)	None	Retail Trade	65	1	2746 N Milwaukee Ave	Chicago	Illinois	60647	None	07/01/2021	07/02/2021	Abide by union contract; End to unjust discipline
+158	Highway Trailer Sales	International Association of Machinists (IAM)	778	Retail Trade	4	1	1850 Southern Rd	Kansas City	Missouri	64120	None	07/01/2021	07/12/2021	Pay, Job Security
+159	SMG Exposition Services - ASM Global	International Alliance of Theatrical Stage Employees (IATSE)	59	Arts, Entertainment and Recreation	None	1	355 Plaza Dr	Secaucus	New Jersey	07094	None	06/30/2021	None	Pay, Healthcare
+160	City of Elizabeth City, NC	None	None	Public Administration	None	1	306 E. Colonial Avenue	Elizabeth City	North Carolina	27909	None	06/29/2021	06/30/2021	Pay
+161	Jack in the Box	Fight for 15 - SEIU	Fight for 15 Nor Cal	Accommodation and Food Services	None	1	4849 Madison Ave	Sacramento	California	95841	None	06/29/2021	07/01/2021	Health and safety
+162	Department of Public Works - City of New Orleans	None	None	Public Administration	None	1	1300 Perdido St	New Orleans	Louisiana	70112	10	06/28/2021	06/28/2021	Pay, Health and safety
+163	Portillo's Restaurant Group	Arise Chicago Worker Center	None	Manufacturing, Wholesale Trade	None	1	380 S Rohlwing Rd	Addison	Illinois	60101	17	06/28/2021	07/05/2021	Pay, Health and safety, Staffing
+164	Voodoo Doughnut	Industrial Workers of the World (IWW)	Doughnut Workers United	Accommodation and Food Services	None	1	22 SW 3rd Ave	Portland	Oregon	97204	10	06/27/2021	06/28/2021	Health and safety
+165	Greenleaf	United Food and Commercial Workers (UFCW)	328	Retail Trade	None	1	1637 W Main Rd	Portsmouth	Rhode Island	02871	20	06/26/2021	06/26/2021	Reinstatement of fired union activist
+166	Cook County; Cook County Health	Service Employees International Union (SEIU)	73	Health Care and Social Assistance, Public Administration	2500	3	1969 W Ogden Ave	Chicago	Illinois	60612	2000	06/25/2021	07/13/2021	Pay, Healthcare, COVID-19 protocols
+167	Cook County; Cook County Health	Service Employees International Union (SEIU)	73	Health Care and Social Assistance, Public Administration	2500	3	500 E 51st St	Chicago	Illinois	60615	2000	06/25/2021	07/13/2021	Pay, Healthcare, COVID-19 protocols
+168	Cook County; Cook County Health	Service Employees International Union (SEIU)	73	Health Care and Social Assistance, Public Administration	2500	3	2800 S California Ave	Chicago	Illinois	60608	2000	06/25/2021	07/13/2021	Pay, Healthcare, COVID-19 protocols
+169	Cook County Health	National Nurses United (NNU)	None	Health Care and Social Assistance	1200	3	1969 W Ogden Ave	Chicago	Illinois	60612	900	06/24/2021	06/24/2021	Healthcare, Staffing
+170	Cook County Health	National Nurses United (NNU)	None	Health Care and Social Assistance	1200	3	500 E 51st St	Chicago	Illinois	60615	900	06/24/2021	06/24/2021	Healthcare, Staffing
+171	Cook County Health	National Nurses United (NNU)	None	Health Care and Social Assistance	1200	3	2800 S California Ave	Chicago	Illinois	60608	900	06/24/2021	06/24/2021	Healthcare, Staffing
+172	Bellingham Cold Storage	Teamsters (IBT)	231	Transportation and Warehousing	110	2	2825 Roeder Ave	Bellingham	Washington	98225	None	06/18/2021	06/19/2021	Pay, Healthcare, Retirement benefits
+173	Bellingham Cold Storage	Teamsters (IBT)	231	Transportation and Warehousing	110	2	600 Orchard Drive	Bellingham	Washington	98225	None	06/18/2021	06/19/2021	Pay, Healthcare, Retirement benefits
+208	Washingtonian	None	None	Information	None	1	1828 L Street NW	Washington	District of Columbia	20036	None	05/07/2021	05/07/2021	COVID-19 protocols, Health and safety
+174	RAT IN THE KITCHEN - Fourth State Productions	International Alliance of Theatrical Stage Employees (IATSE)	None	Arts, Entertainment and Recreation	None	1	1050 Techwood Dr NW	Atlanta	Georgia	30318	None	06/17/2021	06/21/2021	Healthcare, Union recognition
+175	Hooters	None	None	Accommodation and Food Services	None	1	15838 South Fwy	Pearland	Texas	77584	12	06/16/2021	06/17/2021	Health and safety
+176	Custom Hoists	United Steelworkers (USW)	7008	Manufacturing	70	1	771 Co Rd 30A	Ashland	Ohio	44805	70	06/14/2021	07/25/2021	Pay, Health and safety, Job Security
+177	Federal Industries	The International Association of Machinists and Aerospace Workers (IAM)	1406	Manufacturing	86	1	215 Federal Ave	Belleville	Wisconsin	53508	None	06/14/2021	None	Pay, Healthcare
+178	Asbury Park School District	New Jersey Education Association - NEA	Asbury Park Education Association	Educational Services	None	1	1003 Sunset Ave	Asbury Park	New Jersey	07712	100	06/11/2021	06/11/2021	Protest hiring of interim superintendent
+179	CBM Florida	Service Employees International Union (SEIU)	32BJ	Administrative and Support and Waste Management	None	1	8600 NW 36th St	Miami	Florida	33166	None	06/11/2021	None	Pay, Sick leave
+180	New River Valley Plant - Volvo Trucks	United Auto Workers (UAW)	2069	Manufacturing	2900	1	4881 Cougar Trail Rd	Dublin	Virginia	24084	None	06/08/2021	07/15/2021	Pay, Healthcare, Health and safety, Scheduling
+181	Cummins Inc.	The International Association of Machinists and Aerospace Workers (IAM)	1546	Manufacturing	33	1	14775 Wicks Blvd	San Leandro	California	94577	None	06/08/2021	None	Healthcare
+182	V. SUAREZ GROUP	Camioneros Unidos	None	Transportation and Warehousing	80	1	Industrial Luchetti 300 PR-5	Bayamón	Puerto Rico	00961	None	06/08/2021	07/22/2021	Pay
+183	Urban Prep Academies	American Federation of Teachers (AFT)	Chicago Teachers Union (CTU)	Educational Services	34	3	6201 S Stewart Ave	Chicago	Illinois	60621	34	06/07/2021	06/09/2021	Pay, Special education resources; One-year contract
+184	Urban Prep Academies	American Federation of Teachers (AFT)	Chicago Teachers Union (CTU)	Educational Services	34	3	521 E 35th St	Chicago	Illinois	60616	34	06/07/2021	06/09/2021	Pay, Special education resources; One-year contract
+185	Urban Prep Academies	American Federation of Teachers (AFT)	Chicago Teachers Union (CTU)	Educational Services	34	3	425 S. Wabash Ave	Chicago	Illinois	60605	34	06/07/2021	06/09/2021	Pay, Special education resources; One-year contract
+186	Flint Community Schools	Michigan Education Association - NEA	United Teachers of Flint	Educational Services	None	1	1040 Saginaw St	Flint	Michigan	48503	None	06/07/2021	06/07/2021	Health and safety
+187	South Carolina Department of Juvenile Justice	None	None	Public Administration	None	1	4460 Broad River Road	Columbia	South Carolina	29210	25	06/04/2021	06/06/2021	Pay, Health and safety, Staffing, Shorter hours
+188	Casa Latina	Office and Professional Employees International Union (OPEIU)	8	Other Services (except Public Administration)	18	1	317 17th Ave S	Seattle	Washington	98144	5	06/04/2021	06/13/2021	End to sexual harassment
+189	Kalispell Regional Medical Center - Logan Health	Service Employees International Union (SEIU)	1199NW	Health Care and Social Assistance	650	1	310 Sunnyview Ln	Kalispell	Montana	59901	400	06/01/2021	06/04/2021	Pay, Staffing
+190	Dianne Morales for NYC Mayor	Mayorales Union	None	Other Services (except Public Administration)	None	1	49 W 38th Street	New York	New York	10018	45	05/27/2021	None	Pay, Racial justice, Union recognition; End to sexual harassment
+191	McDonald's - Michell Enterprises; Goldenhawk	Service Employees International Union (SEIU)	32BJ	Accommodation and Food Services	None	1	I-95 Branford Service Plaza Northbound	Branford	Connecticut	06405	None	05/27/2021	05/27/2021	Pay, Union recognition; Recall laid off workers
+192	Johnson Brothers Distributing	Teamsters (IBT)	251	Transportation and Warehousing	12	1	120 Moscrip Ave	North Kingstown	Rhode Island	02852	None	05/26/2021	None	Pay, Healthcare, First contract, Retirement benefits
+193	Chinese Hospital	California Nurses Association - NNU	None	Health Care and Social Assistance	100	1	845 Jackson St	San Francisco	California	94133	None	05/25/2021	05/26/2021	First contract, Staffing, Meal and break relief
+194	Signatory Painting Contractors Organization (SPCO)	International Union of Painters and Allied Trades (IUPAT)	10	Construction	440	2	3905 SE 91st Ave	Portland	Oregon	97266	None	05/21/2021	06/30/2021	Pay, Healthcare, Sympathy strike
+195	Signatory Painting Contractors Organization (SPCO)	International Union of Painters and Allied Trades (IUPAT)	10	Construction	440	2	SW Taylor St & SW 17th	Portland	Oregon	97205	None	05/21/2021	06/30/2021	Pay, Healthcare, Sympathy strike
+196	Modern Times Beer Oakland	None	None	Accommodation and Food Services	None	1	2410 Valdez St	Oakland	California	94612	None	05/19/2021	05/22/2021	End to sexual harassment at company
+197	Top Chef Family Style	International Alliance of Theatrical Stage Employees (IATSE)	600	Arts, Entertainment and Recreation	90	1	6255 Sunset Blvd.	Los Angeles	California	90028	None	05/19/2021	05/19/2021	Union recognition
+198	McDonald's	Fight for 15 - SEIU	None	Accommodation and Food Services	None	1	2700 W Capital	Milwaukee	Wisconsin	53205	None	05/19/2021	05/19/2021	$15 minimum wage
+199	Unifrax	United Steelworkers (USW)	2058	Manufacturing	180	1	55 Pirson Pkwy	Tonawanda	New York	14150	None	05/18/2021	06/18/2021	Pay, Retirement benefits
+200	JuiceLand	Juiceland Workers Rights	None	Accommodation and Food Services	None	5	3120 Palm Way	Austin	Texas	78758	None	05/16/2021	05/24/2021	Pay, Health and safety, Racial justice, End to sexism within the company
+201	JuiceLand	Juiceland Workers Rights	None	Accommodation and Food Services	None	5	1109 E. 5th Street	Austin	Texas	78702	None	05/16/2021	05/24/2021	Pay, Health and safety, Racial justice, End to sexism within the company
+202	JuiceLand	Juiceland Workers Rights	None	Accommodation and Food Services	None	5	5521 Balcones Drive	Austin	Texas	78731	None	05/16/2021	05/24/2021	Pay, Health and safety, Racial justice, End to sexism within the company
+203	JuiceLand	Juiceland Workers Rights	None	Accommodation and Food Services	None	5	1801 E 51st	Austin	Texas	78723	None	05/16/2021	05/24/2021	Pay, Health and safety, Racial justice, End to sexism within the company
+204	JuiceLand	Juiceland Workers Rights	None	Accommodation and Food Services	None	5	2828 Guadalupe Street	Austin	Texas	78705	None	05/16/2021	05/24/2021	Pay, Health and safety, Racial justice, End to sexism within the company
+205	MV Transportation - MetroAccess Paratransit	Amalgamated Transit Union (ATU)	689	Transportation and Warehousing	100	1	6505 Belcrest Rd	Hyattsville	Maryland	20782	None	05/14/2021	05/14/2021	Pay, Get rid of private management
+206	Shikellamy School District	Pennsylvania State Education Association - NEA	Shikellamy Education Support Professionals Association (SESPA)	Educational Services	63	1	200 Island Blvd	Sunbury	Pennsylvania	17801	None	05/14/2021	05/28/2021	Pay, Healthcare
+209	Greene Kleen of South Florida	Service Employees International Union (SEIU)	32BJ	Administrative and Support and Waste Management	None	1	1450 NW 82nd Ave	Doral	Florida	33126	None	05/06/2021	05/06/2021	Union recognition
+210	Centerra Integrated Services	Service Employees International Union (SEIU)	32BJ	Transportation and Warehousing	10	1	1730 Vultee St	Allentown	Pennsylvania	18103	None	05/04/2021	05/04/2021	Pay, Healthcare, Staffing, Job Security
+211	Shaw's Supermarkets - Albertsons	Teamsters (IBT)	340	Retail Trade	None	2	205 Spencer Dr	Wells	Maine	04090	70	05/03/2021	05/05/2021	Job Security, Retirement benefits
+212	Shaw's Supermarkets - Albertsons	Teamsters (IBT)	340	Retail Trade	None	2	290 Payne Rd	Scarborough	Maine	04074	70	05/03/2021	05/05/2021	Job Security, Retirement benefits
+213	University of California	Cops Off Campus Coalition	None	Educational Services	None	2	960 Embarcadero del Norte	Isla Vista	California	93117	None	05/03/2021	05/03/2021	Racial justice
+214	University of California	Cops Off Campus Coalition	None	Educational Services	None	2	405 Hilgard Ave	Los Angeles	California	90095	None	05/03/2021	05/03/2021	Racial justice
+215	Goodwill Northern New England	None	None	Other Services (except Public Administration)	None	1	64 Harvest Ln	Williston	Vermont	05495	12	05/03/2021	05/03/2021	Pay, Staffing
+216	The University of Texas at Austin	None	None	Educational Services	None	1	110 Inner Campus Drive	Austin	Texas	78705	56	05/01/2021	None	Racial justice
+217	IHOP	Siembra NC	None	Accommodation and Food Services	None	1	1295 Silas Creek Pkwy	Winston-Salem	North Carolina	27127	19	05/01/2021	05/17/2021	Pay
+218	Grosse Pointe Public School System	Michigan Education Association - NEA	Grosse Pointe Education Association	Educational Services	590	1	707 Vernier Rd	Grosse Pointe Woods	Michigan	48236	116	04/28/2021	04/28/2021	COVID-19 protocols, Health and safety
+219	Oregon Institute of Technology	American Association of University Professors (AAUP)	Oregon Tech Chapter	Educational Services	200	2	3201 Campus Dr	Klamath Falls	Oregon	97601	None	04/26/2021	05/04/2021	Pay, Clearly-defined workload
+220	Oregon Institute of Technology	American Association of University Professors (AAUP)	Oregon Tech Chapter	Educational Services	200	2	27500 SW Parkway Ave	Wilsonville	Oregon	97070	None	04/26/2021	05/04/2021	Pay, Clearly-defined workload
+221	New York University	Graduate Student Organizing Committee - UAW	2110	Educational Services	2200	1	70 Washington Square S	New York	New York	10012	None	04/26/2021	05/14/2021	Pay, Healthcare, Health and safety, Job Security
+222	Greenville Public School District	None	None	Educational Services	None	1	412 South Main Street	Greenville	Mississippi	38701	19	04/26/2021	04/27/2021	Pay, Work hours
+223	Kenyon College	Kenyon Student Worker Organizing Committee (K-SWOC)	None	Educational Services	None	1	106 College Park Dr	Gambier	Ohio	43022	160	04/26/2021	05/07/2021	Union recognition
+224	Ohio Valley Environmental Coalition (OVEC)	Industrial Workers of the World (IWW)	None	Other Services (except Public Administration)	6	1	725 14th St W	Huntington	West Virginia	25704	5	04/22/2021	04/22/2021	Union recognition; Revoke unjust suspension of union activist
+225	Tyler Memorial Hospital - Commonwealth Health	Service Employees International Union (SEIU)	SEIU Healthcare Pennsylvania	Health Care and Social Assistance	84	1	5950 State Rte 6	Tunkhannock	Pennsylvania	18657	None	04/21/2021	04/24/2021	Pay, Staffing
+226	Scheppers Distributing	Teamsters (IBT)	833	Transportation and Warehousing	None	2	1306 Hathman Pl	Columbia	Missouri	65201	24	04/19/2021	None	Pay
+227	Scheppers Distributing	Teamsters (IBT)	833	Transportation and Warehousing	None	2	2300 St Marys Blvd	Jefferson City	Missouri	65109	24	04/19/2021	None	Pay
+228	United Metro Energy	Teamsters (IBT)	553	Utilities	24	1	500 Kingsland Ave	Brooklyn	New York	11222	None	04/19/2021	None	Pay, Healthcare, First contract, Retirement benefits; Rehire terminated workers
+229	New River Valley Plant - Volvo Trucks	United Auto Workers (UAW)	2069	Manufacturing	2900	1	4881 Cougar Trail Rd	Dublin	Virginia	24084	None	04/17/2021	04/30/2021	Pay, Healthcare, Health and safety, Job Security, Scheduling, Retirement benefits
+230	Barton Memorial Hospital	California Nurses Association - NNU	None	Health Care and Social Assistance	155	1	2170 South Ave	South Lake Tahoe	California	96150	None	04/16/2021	04/18/2021	Pay, Staffing
+231	Ziff Davis	The NewsGuild - CWA	Ziff Davis Creators Guild	Information	None	1	114 5th Ave	New York	New York	10011	None	04/15/2021	04/15/2021	Pay, First contract
+232	KIRCHHOFF Automotive	United Auto Workers (UAW)	3000	Manufacturing	None	1	1200 E. Chicago Blvd	Tecumseh	Michigan	49286	None	04/13/2021	04/13/2021	Pay, Health and safety
+233	Universal Logistics Holdings	Teamsters (IBT); International Longshore and Warehouse Union (ILWU)	13 (ILWU)	Transportation and Warehousing	None	2	2880 E Las Hermanas St	Compton	California	90221	None	04/12/2021	04/15/2021	Sympathy strike; Union recognition; Classify workers as employees; Rehire terminated workers
+234	Universal Logistics Holdings	Teamsters (IBT); International Longshore and Warehouse Union (ILWU)	13 (ILWU)	Transportation and Warehousing	None	2	\\t425 S. Palos Verdes St.	San Pedro	California	90731	None	04/12/2021	04/15/2021	Sympathy strike; Union recognition; Classify workers as employees; Rehire terminated workers
+235	East Baton Rouge Parish Public Schools	Louisiana Association of Educators - NEA	East Baton Rouge Parish Association of Educators	Educational Services	3328	5	4510 Bawell St	Baton Rouge	Louisiana	70808	600	04/12/2021	04/12/2021	Pay, Scheduling
+236	East Baton Rouge Parish Public Schools	Louisiana Association of Educators - NEA	East Baton Rouge Parish Association of Educators	Educational Services	3328	5	10100 Goodwood Blvd	Baton Rouge	Louisiana	70815	600	04/12/2021	04/12/2021	Pay, Scheduling
+237	East Baton Rouge Parish Public Schools	Louisiana Association of Educators - NEA	East Baton Rouge Parish Association of Educators	Educational Services	3328	5	7447 Sumrall Dr	Baton Rouge	Louisiana	70812	600	04/12/2021	04/12/2021	Pay, Scheduling
+238	East Baton Rouge Parish Public Schools	Louisiana Association of Educators - NEA	East Baton Rouge Parish Association of Educators	Educational Services	3328	5	14939 Tiger Bend Rd	Baton Rouge	Louisiana	70817	600	04/12/2021	04/12/2021	Pay, Scheduling
+239	East Baton Rouge Parish Public Schools	Louisiana Association of Educators - NEA	East Baton Rouge Parish Association of Educators	Educational Services	3328	5	15755 Jefferson Hwy	Baton Rouge	Louisiana	70817	600	04/12/2021	04/12/2021	Pay, Scheduling
+240	Unifi Service	None	None	Transportation and Warehousing	None	1	5225 U.S. Highway 10 W	Missoula	Montana	59808	7	04/12/2021	04/24/2021	Pay
+241	Amazon	Amazonians United	Amazonians United Chicagoland	Transportation and Warehousing, Information	None	1	3507 W. 51st St.	Chicago	Illinois	60632	None	04/07/2021	04/07/2021	Pay, Staffing, Scheduling
+242	Memnon Archiving Services	Communication Workers of America (CWA)	4818	Professional, Scientific and Technical Services	None	1	2719 E 10th St	Bloomington	Indiana	47408	30	04/06/2021	04/07/2021	Pay, Job Security
+243	New York University	EG TAs for Fairer Pay	None	Educational Services	107	1	6 MetroTech Center	Brooklyn	New York	11201	None	04/05/2021	04/10/2021	Pay, Fair workload
+244	Warrior Met Coal	United Mine Workers of America (UMWA)	None	Mining	1100	1	16243 AL-216	Brookwood	Alabama	35444	None	04/01/2021	None	Pay, Benefits
+245	Allegheny Technologies	United Steelworkers (USW)	None	Manufacturing	1300	9	100 River Road	Brackenridge	Pennsylvania	15014	None	03/30/2021	07/18/2021	Pay, Healthcare, Job Security
+246	Allegheny Technologies	United Steelworkers (USW)	None	Manufacturing	1300	9	242 Allvac Lane	Latrobe	Pennsylvania	15650	None	03/30/2021	07/18/2021	Pay, Healthcare, Job Security
+247	Allegheny Technologies	United Steelworkers (USW)	None	Manufacturing	1300	9	1300 Pacific Avenue	Natrona Heights	Pennsylvania	15065	None	03/30/2021	07/18/2021	Pay, Healthcare, Job Security
+248	Allegheny Technologies	United Steelworkers (USW)	None	Manufacturing	1300	9	130 Lincoln Avenue	Vandergrift	Pennsylvania	15690	None	03/30/2021	07/18/2021	Pay, Healthcare, Job Security
+249	Allegheny Technologies	United Steelworkers (USW)	None	Manufacturing	1300	9	500 Green Street	Washington	Pennsylvania	15301	None	03/30/2021	07/18/2021	Pay, Healthcare, Job Security
+250	Allegheny Technologies	United Steelworkers (USW)	None	Manufacturing	1300	9	695 Ohio St, Lockport	Lockport	New York	14094	None	03/30/2021	07/18/2021	Pay, Healthcare, Job Security
+251	Allegheny Technologies	United Steelworkers (USW)	None	Manufacturing	1300	9	1500 W Main St	Louisville	Ohio	44641	None	03/30/2021	07/18/2021	Pay, Healthcare, Job Security
+252	Allegheny Technologies	United Steelworkers (USW)	None	Manufacturing	1300	9	1357 E Rodney French Blvd	New Bedford	Massachusetts	02744	None	03/30/2021	07/18/2021	Pay, Healthcare, Job Security
+253	Allegheny Technologies	United Steelworkers (USW)	None	Manufacturing	1300	9	271 Railroad Hill St	Waterbury	Connecticut	06708	None	03/30/2021	07/18/2021	Pay, Healthcare, Job Security
+254	Prysmian Group	United Auto Workers (UAW)	3057	Manufacturing	None	1	9975 US-80 Sherwood Drive	Scottsville	Texas	75688	40	03/27/2021	None	Pay
+255	San Francisco Maintenance Contractors Association	Service Employees International Union (SEIU)	87	Administrative and Support and Waste Management	None	1	415 Mission St	San Francisco	California	94105	700	03/24/2021	03/27/2021	Pay, COVID-19 protocols, Health and safety, Seniority; Rehire laid off workers
+256	ITV America - ITV Studios	Writers Guild of America East (WGAE)	None	Arts, Entertainment and Recreation	None	1	15303 Ventura Blvd	Sherman Oaks	California	91403	9	03/24/2021	04/05/2021	Healthcare, Pension benefits
+257	Bradken	United Steelworkers (USW)	6943	Manufacturing	131	1	307 S. 4th Street	Atchison	Kansas	66002	None	03/22/2021	04/07/2021	Seniority
+258	American Beauty - American Gonzo Food Corp	None	None	Accommodation and Food Services	None	1	425 Rose Ave	Venice	California	90291	6	03/19/2021	None	Pay
+259	Fortune Magazine	The NewsGuild of New York - CWA	31003	Information	35	1	40 Fulton Street	New York	New York	10038	None	03/16/2021	03/16/2021	Pay, Racial justice
+260	Kenyon College	Kenyon Student Worker Organizing Committee (K-SWOC)	None	Educational Services	None	1	106 College Park Dr	Gambier	Ohio	43022	140	03/16/2021	03/16/2021	COVID-19 protocols, Union recognition
+261	Coca-Cola Northeast	Teamsters (IBT)	170	Manufacturing	80	1	2 Sassacus Drive	Westborough	Massachusetts	01581	80	03/15/2021	03/30/2021	Seniority
+262	Columbia University	Graduate Workers of Columbia - UAW	2110	Educational Services	3000	1	3000 Broadway	New York	New York	10027	None	03/15/2021	05/13/2021	Pay, Healthcare, First contract
+263	7UP- Keurig Dr Pepper	Teamsters (IBT)	337	Manufacturing	77	1	12201 Beech Daly	Redford Charter Twp	Michigan	48239	None	03/11/2021	04/02/2021	Pay, Racial justice
+264	St. Vincent Hospital - Tenet Healthcare	Massachusetts Nurses Association	None	Health Care and Social Assistance	800	1	123 Summer Street	Worcester	Massachusetts	01608	None	03/08/2021	None	Pay, Staffing
+265	CTtransit	Amalgamated Transit Union (ATU)	281	Transportation and Warehousing	200	1	140 Pond Lily Avenue	New Haven	Connecticut	06515	50	03/08/2021	03/09/2021	COVID-19 protocols, Health and safety
+266	St. Charles Medical Center - Bend	American Federation of Teachers (AFT)	Oregon Federation of Nurses and Health Professionals	Health Care and Social Assistance	150	1	2500 NE Neff Road	Bend	Oregon	97701	150	03/04/2021	03/14/2021	Pay, First contract
+267	Bourbonnais Elementary School District 53	Illinois Education Association - NEA	Bourbonnais Education Association	Educational Services	167	6	281 W. John Casey Road	Bourbonnais	Illinois	60914	167	03/04/2021	03/11/2021	Pay, Healthcare, Retirement benefits
+268	Bourbonnais Elementary School District 53	Illinois Education Association - NEA	Bourbonnais Education Association	Educational Services	167	6	200 W. John Casey Rd.	Bourbonnais	Illinois	60914	167	03/04/2021	03/11/2021	Pay, Healthcare, Retirement benefits
+269	Bourbonnais Elementary School District 53	Illinois Education Association - NEA	Bourbonnais Education Association	Educational Services	167	6	1690 Career Center Rd.	Bourbonnais	Illinois	60914	167	03/04/2021	03/11/2021	Pay, Healthcare, Retirement benefits
+270	Bourbonnais Elementary School District 53	Illinois Education Association - NEA	Bourbonnais Education Association	Educational Services	167	6	601 W. Bethel Dr	Bourbonnais	Illinois	60914	167	03/04/2021	03/11/2021	Pay, Healthcare, Retirement benefits
+271	Bourbonnais Elementary School District 53	Illinois Education Association - NEA	Bourbonnais Education Association	Educational Services	167	6	325 N. Convent	Bourbonnais	Illinois	60914	167	03/04/2021	03/11/2021	Pay, Healthcare, Retirement benefits
+272	Bourbonnais Elementary School District 53	Illinois Education Association - NEA	Bourbonnais Education Association	Educational Services	167	6	321 N. Convent	Bourbonnais	Illinois	60914	167	03/04/2021	03/11/2021	Pay, Healthcare, Retirement benefits
+273	Valvoline St. Louis	Teamsters (IBT)	618	Manufacturing	25	1	3536 S. 1st St.	St. Louis	Missouri	63118	None	03/01/2021	04/23/2021	Healthcare
+274	Tacoma Public Schools	Tacoma Education Association-Washington Education Association-NEA	Safe Return Tacoma	Educational Services	2000	1	601 South 8th Street	Tacoma	Washington	98405	61	02/24/2021	02/24/2021	COVID-19 protocols, Health and safety
+275	McKesson Pharmaceutical	United Food and Commercial Workers (UFCW)	655	Wholesale Trade	None	1	1 Commerce Drive	O'Fallon	Missouri	63366	75	02/20/2021	03/14/2021	Pay, Less mandatory overtime
+276	The Rawlin at Riverbend Memory Care	Service Employees International Union (SEIU)	503	Health Care and Social Assistance	None	1	3491 Game Farm Road	Springfield	Oregon	97477	26	02/16/2021	03/02/2021	COVID-19 protocols, Health and safety, Staffing, Union recognition; Training
+277	Burlingame Long Term Care	American Federation of State, County and Municipal Employees (AFSCME)	829	Health Care and Social Assistance	170	1	1100 Trousdale Drive	Burlingame	California	94010	None	02/11/2021	02/12/2021	Pay, Healthcare, COVID-19 protocols, Health and safety
+278	Metropolitan Transit Authority	Transport Workers Union of America (TWU)	100	Transportation and Warehousing	None	1	871 5th Avenue	Brooklyn	New York	11232	None	02/11/2021	02/11/2021	Health and safety, Unjust discipline
+279	SFM Janitorial Services	Service Employees International Union (SEIU)	32BJ	Administrative and Support and Waste Management	None	1	100 SE 2nd St	Miami	Florida	33131	None	02/11/2021	02/12/2021	Pay, Health and safety, Union recognition; Free employee parking
+280	Mobilization for Justice	United Auto Workers (UAW)	Legal Services Staff Association	Professional, Scientific and Technical Services	None	1	100 Williams Street	New York	New York	10038	None	02/09/2021	02/09/2021	Pay, COVID-19 protocols, Health and safety, Racial justice
+281	South Whitehall Township	Teamsters (IBT)	773	Public Administration	29	1	4444 Walbert Avenue	Allentown	Pennsylvania	18104	29	02/05/2021	03/01/2021	Job Security, Work hours
+282	Building Zone Industries	Ironworkers; International Union of Operating Engineers (IUOE)	433 (Ironworkers); 12 (IUOE)	Construction	None	1	N Rice Avenue	Oxnard	California	93030	75	02/04/2021	None	Pay, Hiring nonunion labor
+283	Keystone Oaks School District	Pennsylvania State Education Association - NEA	Keystone Oaks Education Association	Educational Services	171	5	1000 Kelton Avenue	Pittsburgh	Pennsylvania	15216	150	02/01/2021	02/07/2021	Pay
+284	Keystone Oaks School District	Pennsylvania State Education Association - NEA	Keystone Oaks Education Association	Educational Services	171	5	1002 Kelton Avenue	Pittsburgh	Pennsylvania	15216	150	02/01/2021	02/07/2021	Pay
+285	Keystone Oaks School District	Pennsylvania State Education Association - NEA	Keystone Oaks Education Association	Educational Services	171	5	881 Greentree Road	Pittsburgh	Pennsylvania	15220	150	02/01/2021	02/07/2021	Pay
+286	Keystone Oaks School District	Pennsylvania State Education Association - NEA	Keystone Oaks Education Association	Educational Services	171	5	3200 Annapolis Avenue	Pittsburgh	Pennsylvania	15216	150	02/01/2021	02/07/2021	Pay
+287	Keystone Oaks School District	Pennsylvania State Education Association - NEA	Keystone Oaks Education Association	Educational Services	171	5	3724 Myrtle Avenue	Pittsburgh	Pennsylvania	15234	150	02/01/2021	02/07/2021	Pay
+288	Condé Nast DBA The New Yorker	The NewsGuild of New York - CWA	The New Yorker Union - CWA 31003	Information	110	1	1 World Trade Center	New York	New York	10007	100	01/21/2021	01/21/2021	Pay
+289	Borgers USA	Service Employees International Union (SEIU)	Chicago and Midwest Regional Joint Board of Workers United	Wholesale Trade	None	1	400 Industrial Pkwy	Norwalk	Ohio	44857	None	01/21/2021	01/30/2021	Pay, Health and safety, Union recognition; Sexual harassment
+290	Marathon Petroleum	Teamsters (IBT)	120	Manufacturing	200	1	201 Factory Street	St Paul Park	Minnesota	55071	200	01/21/2021	01/21/2021	Health and safety, Staffing, Job Security
+291	Bellevue School District	Washington Education Association - NEA	Bellevue Education Association	Educational Services	1400	1	12111 NE 1st Street	Bellevue	Washington	98005	None	01/19/2021	01/25/2021	COVID-19 protocols, Health and safety
+292	Hunts Point Terminal Market	Teamsters (IBT)	202	Wholesale Trade	1400	1	101 Food Center Drive	Bronx	New York	10474	1400	01/17/2021	01/23/2021	Pay, COVID-19 protocols, Health and safety
+293	Peoria Unified School District	West Valley Alliance Teachers Union	None	Educational Services	2100	1	6330 W. Thunderbird Road	Glendale	Arizona	85306	600	01/11/2021	01/11/2021	COVID-19 protocols, Health and safety
 \.
 
 
@@ -11469,10 +11742,9 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 46	BLDG AND CONSTRN TRADES DEPT AFL-CIO	BCTD	BERKS COUNTY	1970-12-01	1117	WILLIAM	DORWARD		20 MORGAN DRIVE	READING	PA	19608    
 47	BLDG AND CONSTRN TRADES DEPT AFL-CIO	BCTD	ST PAUL	1970-12-01	9896	DONALD L	MULLIN II	ROOM 203	353 WEST 7TH STREET	ST PAUL	MN	55102    
 48	BLDG AND CONSTRN TRADES DEPT AFL-CIO	BCTD	NORTH GEORGIA	1970-12-01	19	RANDY	BEALL		501 PULLIAM ST SW STE 511	ATLANTA	GA	303122721
-49	BLDG AND CONSTRN TRADES DEPT AFL-CIO	BCTD	CALIFORNIA	1970-12-01	0	ROBERT	HUNTER		1231 I STREET, STE 302	SACRAMENTO	CA	958142933
+49	BLDG AND CONSTRN TRADES DEPT AFL-CIO	BCTD	CALIFORNIA	1970-12-01		ROBERT	HUNTER		1231 I STREET, STE 302	SACRAMENTO	CA	958142933
 50	BLDG AND CONSTRN TRADES DEPT AFL-CIO	BCTD	DE KALB COUNTY	1970-12-01	18	BCTC	DEKALB COUNTY	PO BOX 866		DEKALB	IL	60115    
 51	BLDG AND CONSTRN TRADES DEPT AFL-CIO	BCTD	KANAWHA COUNTY	1970-12-01	14	FRED	CHANDLER		600 LEON SULLIVAN WAY	CHARLESTON	WV	253011219
-274	CARPENTERS IND	CJA		1987-09-01	901	Shawn	Walker		1901 Susan Drive	ARLINGTON	TX	76010    
 52	BLDG AND CONSTRN TRADES DEPT AFL-CIO	BCTD	SOUTH CENTRAL WISCONSIN	1970-12-01	4000	JACLYN	WEITZEL	ROOM 204	1602 SOUTH PARK STREET	MADISON	WI	537152108
 53	BLDG AND CONSTRN TRADES DEPT AFL-CIO	BCTD	SOUTHWESTERN MICHIGAN	1970-12-01	14	JAMES	CALLAHAN		1473 NORTH 30TH ST	GALESBURG	MI	49053    
 54	BLDG AND CONSTRN TRADES DEPT AFL-CIO	BCTD	MISSOURI STATE	1970-12-01	80	MATTHEW	TROESSER		131 E. HIGH STREET, STE 201	JEFFERSON CITY	MO	65101    
@@ -11695,6 +11967,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 271	CARPENTERS IND	CJA		1984-11-01	2035	JAMES	ROSEMEYER		28874 W IL RT 120, SUITE A	LAKEMOOR	IL	60051    
 272	CARPENTERS IND	CJA		1989-02-01	8	JEFFREY	PUESCHNER		113 SOUTH CEDAR AVENUE	MARSHFIELD	WI	54449    
 273	CARPENTERS IND	CJA		1989-08-01	395	Efrain	Villatoro		1928 Back Creek Dr	Charlotte	NC	28213    
+274	CARPENTERS IND	CJA		1987-09-01	901	Shawn	Walker		1901 Susan Drive	ARLINGTON	TX	76010    
 275	CARPENTERS IND	CJA		1988-11-01	364	Chad	Helm		2029 CAIRO ROAD	PADUCAH	KY	420012421
 276	CARPENTERS IND	CJA		1988-11-01	3751	EDDY L.	LUNA		1050 MATTOX ROAD	HAYWARD	CA	94541    
 277	CARPENTERS IND	CJA		1988-11-01	3573	PATRICK	MULLIGAN		2085 THIRD ST	SAN FRANCISCO	CA	94107    
@@ -11962,7 +12235,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 539	CARPENTERS IND	CJA		2016-08-25	1120	DARREN	BONASS		1803 SPRING GARDEN STREET	PHILADELPHIA	PA	19130    
 540	CARPENTERS IND	CJA		2016-08-25	4112	GARRETT	HANNIGAN		1803 SPRING GARDEN STREET	PHILADELPHIA	PA	19130    
 541	CARPENTERS IND	CJA		2016-08-26	3341	CONRAD	CARRASCO		4547 W MCDOWELL ROAD	PHOENIX	AZ	850354159
-542	CARPENTERS IND	CJA		2017-02-01	0	WILLIAM	SPROULE		1803 SPRING GARDEN STREET	PHILADELPHIA	PA	19130    
+542	CARPENTERS IND	CJA		2017-02-01		WILLIAM	SPROULE		1803 SPRING GARDEN STREET	PHILADELPHIA	PA	19130    
 543	CARPENTERS IND	CJA		2017-01-27	1030	JAMES	HOGUE		123 WISES GROVE RD	NEW BRIGHTON	PA	15066    
 544	CARPENTERS IND	CJA		2016-12-23	803	JOE	ELLIOTT		609 Broadway Ave	BRIDGEPORT	WV	26330    
 545	CARPENTERS IND	CJA		2016-12-20	1272	MICHAEL	GOSS		1718 HEILMANDALE ROAD	LEBANON	PA	17046    
@@ -12101,7 +12374,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 678	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	1908	Alexander	Bryant		1530 BILL WILLIAMS AVE	KNOXVILLE	TN	37917    
 679	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	262	DAVID	THOMPKINS		10829 COUNTRY OSTRICH RD	PENSACOLA	FL	32534    
 680	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	22	JODY	GUSTAFSON	P.O. BOX 235	124 SEVEN MILE DRIVE	GLENDIVE	MT	593300235
-681	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	0	Robert	Hegwood		9521 N 147th Pl	Waverly	NE	68462    
+681	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01		Robert	Hegwood		9521 N 147th Pl	Waverly	NE	68462    
 682	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	120	Ryan	Kirby		4508 Quail rd.	Brodhead	KY	40409    
 683	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	75	DONALD	WELLS	PO BOX 2352		PALATKA	FL	321782352
 684	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	1074	ZACHARY T	CASSIDY		201 SE 24TH ST	FORT LAUDERDALE	FL	333163911
@@ -12157,7 +12430,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 734	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	24	MIKE	DAVIES		9225 S. ROBERTS ROAD APT.3C	HICKORY HILLS	IL	60457    
 735	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	10	JESSE	BURMAN	BOX 3		MILES CITY	MT	593010003
 736	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	1720	DAVID	MAURO		1701 LESLIE ST	SAN MATEO	CA	94402    
-1592	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	251	JAMES	COLE		2574 LINDAWOOD COVE	MEMPHIS	TN	38118    
 737	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	555	JERRY	AKERS		8229 MATSON CIRCLE	TRUSSVILLE	AL	351735218
 738	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	1430	JAMES	RUSH		1405 SPRUCE STREET, SUITE G	RIVERSIDE	CA	92507    
 739	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	1420	Paul	Flynn		4322 Ricketts Ave	Bartonville	IL	61607    
@@ -12267,7 +12539,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 843	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	29	Bill	Rost	PO BOX 159	28 SUNSET TRAIL	BAKER	MT	593130159
 844	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	1701	ROLAND	CARTER		3606 STEWART ROAD	FORESTVILLE	MD	207474740
 845	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	2922	RICHARD	MUTTIK		3455 GERMANTOWN PIKE	COLLEGEVILLE	PA	194261503
-1650	LABORERS 	LIUNA		1976-08-01	1196	KEON	SHIM	3366 COLLINS FERRY ROAD		MORGANTOWN	WV	26505    
 846	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	403	John	Novak	SUITE 201	6100 SOUTH BROADWAY	LORAIN	OH	44053    
 847	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	394	DALLAS	NUNN		6111 JACKSBORO HWY	WICHITA FALLS	TX	76302    
 848	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	2153	ROY	GROSSWILER		807 LIME CITY ROAD	ROSSFORD	OH	43460    
@@ -12278,6 +12549,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 853	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	1261	SUSAN	BLUE		4903 COMMERCE CT	MCFARLAND	WI	53558    
 854	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	320	Michael	Henderson		2509 FM 2004	Texas City	TX	77591    
 855	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	583	NATHAN	KNOTT		2911 W PARRISH AVENUE	OWENSBORO	KY	42301    
+965	ENGINEERS, PROF AND TECH, AFL-CIO	PTE		1970-12-01	43	MARTIN P	FOLEY		58 ANDREW ST	LYNN	MA	01901    
 856	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	649	SCOTT	JENSEN		2657 Route 17M	Goshen	NY	10924    
 857	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	558	KRISTOPHER	HOWARD		136 CHAMBEAU DRIVE	FORT WAYNE	IN	46805    
 858	ELECTRICAL WORKERS IBEW AFL-CIO	IBEW		1970-12-01	164	JOSE	MARQUEZ		120 ACADEMY ST	JERSEY CITY	NJ	07302    
@@ -12333,6 +12605,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 908	ENGINEERS, OPERATING, AFL-CIO	IUOE	JNESO - BISHOP MCCARTHY RESIDENCE	2015-10-05	22	KIMBERLY	TRASK		118 ARNOLD DRIVE	MILLVILLE	NJ	08332    
 909	ENGINEERS, OPERATING, AFL-CIO	IUOE		1985-08-01	3479	DAVID	MONSOUR		2722 COUNTY ROAD D  EAST	WHITE BEAR LAKE	MN	55110    
 910	ENGINEERS, OPERATING, AFL-CIO	IUOE	NORTHEASTERN STATE	1980-08-01	74769	DANIEL	MCGRAW		44-40 11TH STREET	LONG ISLAND CITY	NY	11101    
+4166	PLUMBERS AFL-CIO	PPF		1970-12-01	3995	JEFF	OWEN		597 MONSTER ROAD SW	RENTON	WA	980572974
 911	ENGINEERS, OPERATING, AFL-CIO	IUOE	NEW YORK STATE	1980-08-01	37478	DANIEL	MCGRAW		44-40 11TH STREET	LONG ISLAND CITY	NY	11101    
 912	ENGINEERS, OPERATING, AFL-CIO	IUOE	JNESO  BIR-RN	1989-08-01	23	Christine	Salmon		438 S 4th Ave	Galloway	NJ	082059501
 913	ENGINEERS, OPERATING, AFL-CIO	IUOE	JNESO  ST MICHAELS	1989-08-01	273	SHANTA	CARTER	P.O. BOX 4364		EAST ORANGE	NJ	07019    
@@ -12387,7 +12660,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 962	ENGINEERS, PROF AND TECH, AFL-CIO	PTE		1977-01-01	47	MICHAEL	VINDICK	PO BOX 129		CAMDEN	NJ	08101    
 963	ENGINEERS, PROF AND TECH, AFL-CIO	PTE	CENTRAL STATES	1983-08-01	5	TINA	ZELLMER		9033 W CLEVELAND AVE	WEST ALLIS	WI	53227    
 964	ENGINEERS, PROF AND TECH, AFL-CIO	PTE		1970-12-01	59255	PAUL	SHEARON	SUITE 701	501 3RD STREET NW	WASHINGTON	DC	20001    
-965	ENGINEERS, PROF AND TECH, AFL-CIO	PTE		1970-12-01	43	MARTIN P	FOLEY		58 ANDREW ST	LYNN	MA	01901    
 966	ENGINEERS, PROF AND TECH, AFL-CIO	PTE		1970-12-01	131	MARTIN	DAVISON		61 FREEMANS BRIDGE ROAD	GLENVILLE	NY	12302    
 967	ENGINEERS, PROF AND TECH, AFL-CIO	PTE	SPEEA	1970-12-01	17397	MICHELLE	COOPER		15205 52ND. AVE. S.	Seattle	WA	981882336
 968	EROS LABORERS NUMBER ONE	UNAFF	LOCAL 1	1983-05-01	8	LAUREL	LAMB		409 E 7TH STREET	DELL RAPIDS	SD	570221645
@@ -12407,7 +12679,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 982	FIRE FIGHTERS AFL-CIO	IAFF		1970-12-01	28	Joseph	Tompey	PO BOX 516	420 NJ-34	COLTS NECK	NJ	07722    
 983	FIRE FIGHTERS AFL-CIO	IAFF		1970-12-01	6	IAFF 297	ANDREW FIRE DEPT		11304 C Golden Eagle Pl	Waldorf	MD	206035990
 984	FIRE FIGHTERS AFL-CIO	IAFF		1970-12-01	8	Tony	Peterson	PO BOX 02013		DOVER AFB	DE	199022013
-985	FIRE FIGHTERS AFL-CIO	IAFF		1970-12-01	0	WAYNE	POSTON	P.O. BOX 518		EDWARDS	CA	93523    
+985	FIRE FIGHTERS AFL-CIO	IAFF		1970-12-01		WAYNE	POSTON	P.O. BOX 518		EDWARDS	CA	93523    
 986	FIRE FIGHTERS AFL-CIO	IAFF		1970-12-01	158	BEAU	GRAHAM	PO BOX 131378		SAN DIEGO	CA	921701378
 987	FIRE FIGHTERS AFL-CIO	IAFF		1988-03-01	24	SHERRY	TUREK		712 CHESTNUT ST	TRAINER	PA	190615007
 988	FIRE FIGHTERS AFL-CIO	IAFF		1991-11-01	265	ALAN	JACOBSEN	PO BOX 1385		PEARL CITY	HI	967828385
@@ -12440,6 +12712,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1015	FLIGHT ATTENDANTS ASN, CWA	AFA	ALASKA AIRLINES	1996-10-08	838	TIMOTHY	GREEN	AFA-CWA	501 3RD STREET NW	WASHINGTON	DC	200012797
 1016	FLIGHT ATTENDANTS ASN, CWA	AFA	ENVOY AIR	1996-10-08	976	ROBERT	BARROW	AFA-CWA	501 3RD STREET NW	WASHINGTON	DC	200012797
 1017	FLIGHT ATTENDANTS ASN, CWA	AFA	SPIRIT AIRLINES	2019-06-14	716	LIZA	SANCHEZ	10TH FLOOR	501 3RD STREET NW	WASHINGTON	DC	200012797
+4167	PLUMBERS AFL-CIO	PPF		1970-12-01	303	D.  MICHAEL	DOOLAN		116 HARVEY CT	EAST PEORIA	IL	61611    
 1018	FLIGHT ATTENDANTS ASN, CWA	AFA	MESA AIRLINES	2011-09-20	316	TRENACE	HAGANS	AFA-CWA	501 3RD STREET NW	WASHINGTON	DC	200012797
 1019	FLIGHT ATTENDANTS ASN, CWA	AFA	FRONTIER AIRLINES	2018-03-27	453	MICHAEL	RICE	AFA-CWA, 10TH FLOOR	501 3RD STREET NW	WASHINGTON	DC	200012797
 1020	FLIGHT ATTENDANTS ASN, CWA	AFA	EDVMEC - ENDEAVOR AIR	2000-07-06	1187	JATAWNE	WELLS	AFA-CWA	501 3RD STREET NW	WASHINGTON	DC	200012797
@@ -12709,8 +12982,9 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1284	GOVERNMENT EMPLOYEES AFGE AFL-CIO	AFGE	NATIONAL SSA-BHA LOCALS	1988-05-01	0	RICHARD	COUTURE		21 WARREN ST	SOUTHBRIDGE	MA	015502743
 1285	GOVERNMENT EMPLOYEES AFGE AFL-CIO	AFGE	VA	1988-07-01	54	YETTA	ARMSTRONG	PO Box 173		CLEMENTON	NJ	08021    
 1286	GOVERNMENT EMPLOYEES AFGE AFL-CIO	AFGE		2005-11-28	444	ANTHONY	KOEPPEL		5912 MONROE HWY	BALL	LA	71405    
+1339	SECURITY POLICE, FIRE PROF, IND	SPFPA	AMALGAMATED LOCAL 120	2012-06-11	39	LOCAL	120		651 DELAWARE	DETROIT	MI	48202    
 1287	GOVERNMENT EMPLOYEES AFGE AFL-CIO	AFGE	BOP, HEADQUARTERS OFFICE STAFF	1987-11-01	60	Aimee	Brown-Durand	2nd Floor, Room 2043	400 First Street NW	WASHINGTON	DC	20534    
-1288	GOVERNMENT EMPLOYEES AFGE AFL-CIO	AFGE	DEPARTMENT OF EDUCATION LOCALS	1987-12-01	0	CATHIE	MCQUISTON		80 F STREET, NW	WASHINGTON	DC	20001    
+1288	GOVERNMENT EMPLOYEES AFGE AFL-CIO	AFGE	DEPARTMENT OF EDUCATION LOCALS	1987-12-01		CATHIE	MCQUISTON		80 F STREET, NW	WASHINGTON	DC	20001    
 1289	GOVERNMENT EMPLOYEES AFGE AFL-CIO	AFGE		1991-09-01	333	KEN	MCKILLIP	P.O.  BOX  818		MOLINE	IL	612660818
 1290	GOVERNMENT EMPLOYEES AFGE AFL-CIO	AFGE		1996-06-12	827	LATRICIA	McCARTHY	340485	AFGE Local 1004	FORT SAM HOUSTON	TX	782340485
 1291	GOVERNMENT EMPLOYEES AFGE AFL-CIO	AFGE	6TH DISTRICT VA	1991-12-01	5710	WILLIE	HAYWOOD		10701 EAST BLVD	CLEVELAND	OH	44106    
@@ -12761,7 +13035,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1336	SECURITY POLICE, FIRE PROF, IND	SPFPA	AMALGAMATED LOCAL 830	2012-04-06	109	LOCAL	830		158 N. SYCAMORE STREET	FLORENCE	AZ	85132    
 1337	SECURITY POLICE, FIRE PROF, IND	SPFPA		2007-12-11	36	LOCAL	248		5621 GRUBB RD	ODESSA	MO	64076    
 1338	SECURITY POLICE, FIRE PROF, IND	SPFPA		1997-09-23	108	MICHAEL	OWENS		5005 COLTFIELD LANE, #102	VIRGINIA BEACH	VA	23455    
-1339	SECURITY POLICE, FIRE PROF, IND	SPFPA	AMALGAMATED LOCAL 120	2012-06-11	39	LOCAL	120		651 DELAWARE	DETROIT	MI	48202    
 1340	SECURITY POLICE, FIRE PROF, IND	SPFPA	AMALGAMATED LOCAL UNION	2019-05-06	0	LOCAL	510		C/O 25510 KELLY ROAD	ROSEVILLE	MI	48066    
 1341	SECURITY POLICE, FIRE PROF, IND	SPFPA	AMALGAMATED LOCAL UNION	2019-05-06	103	LOCAL	299		25510 KELLY ROAD	ROSEVILLE	MI	48066    
 1342	SECURITY POLICE, FIRE PROF, IND	SPFPA	AAMALGAMATED LOCAL UNION 467	2018-10-10	33	LOCAL	467		5404 AUTH ROAD #106	CAMP SPRINGS	MD	20746    
@@ -12797,7 +13070,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1372	SECURITY POLICE, FIRE PROF, IND	SPFPA		1992-06-01	42	LOCAL	268		2600 COUNT ROAD 769a	BRAZORIA	TX	774228447
 1373	SECURITY POLICE, FIRE PROF, IND	SPFPA		1992-02-01	14	RONDELL	HARRIS		4958 PAINTERS STREET	NEW ORLEANS	LA	701225124
 1374	SECURITY POLICE, FIRE PROF, IND	SPFPA		1990-09-01	19	LOCAL	538		45 RIDGEFIELD AVE	WATERBURY	CT	06705    
-4158	PLUMBERS AFL-CIO	PPF		1970-12-01	1669	MATT	LIENEN		4600 46TH STREET	ROCK ISLAND	IL	612017143
 1375	SECURITY POLICE, FIRE PROF, IND	SPFPA		1997-08-14	21	LOCAL	888		6001 CROWN JEWEL ST	LAS VEGAS	NV	89130    
 1376	SECURITY POLICE, FIRE PROF, IND	SPFPA		1993-11-01	5	LOCAL	823		1244 E. MONROE STREET	PHOENIX	AZ	85034    
 1377	SECURITY POLICE, FIRE PROF, IND	SPFPA		1990-03-01	3	SPFPA LOCAL	726		2700 SPRING CREEK DRIVE	BENTON	AR	72015    
@@ -12922,6 +13194,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1496	INDUSTRIAL TRADE UNIONS, IUJAT	NOITU	ALUMINUM & METAL WORKERS OF N. AMERICA	1970-12-01	296	PEDRO	PACHECO		148-06 HILLSIDE AVENUE	JAMAICA	NY	114359977
 1497	INDUSTRIAL TRADE UNIONS, IUJAT	NOITU	UNITED ASSOC. OF WORKERS OF AMERICA	2004-11-17	2285	GERARD	JONES		148-06 HILLSIDE AVENUE	JAMAICA	NY	11435    
 1498	INDUSTRIAL WORKERS UNION NFIU	NIW		1970-12-01	19	JOY	MILLARD		4309 SW 9TH ST	DES MOINES	IA	50315    
+1829	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	10	Bobbie	Mcmillion	511		Cleveland	MS	38773    
 1499	INTERNATIONAL BROTHERHOOD OF TRADE	UNAFF	UNIONS   LU 122	1996-12-23	54	MICHAEL	MANSFIELD	# 440	230 PARK AVENUE	NEW YORK	NY	10169    
 1500	IRON WORKERS AFL-CIO	BSOIW		2017-05-19	1484	MICHAEL	BAUMANN		36046 W. MICHIGAN AVE	WAYNE	MI	48184    
 1501	IRON WORKERS AFL-CIO	BSOIW	NORTH CENTRAL STATES	1978-05-01	7	MICHAEL	BAKER		20515 Nicholas Circle Ste 5	ELKHORN	NE	680220850
@@ -12994,7 +13267,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1568	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	159	James	Acton		2700 Kindustry Park Rd	Keokuk	IA	52632    
 1569	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	2340	TODD	VILLA		7720 WEST INDUSTRIAL DRIVE	FOREST PARK	IL	60130    
 1570	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	409	STUART	RENDLEMAN		2424 CAIRO RD	PADUCAH	KY	42001    
-1571	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	0	Fred B.	Maddox		2828 4TH AVENUE SOUTH	BIRMINGHAM	AL	35233    
+1571	IRON WORKERS AFL-CIO	BSOIW		1970-12-01		Fred B.	Maddox		2828 4TH AVENUE SOUTH	BIRMINGHAM	AL	35233    
 1572	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	289	WILLIAM	HAYES		47-10 32ND PLACE 3RD FLOOR	LONG ISLAND CITY	NY	11101    
 1573	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	5754	KEITH	HARKEY		17495 HURLEY ST.	CITY OF INDUSTRY	CA	91744    
 1574	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	285	SCOTT	GARDNER		650 TRABOLD ROAD	ROCHESTER	NY	146242532
@@ -13007,7 +13280,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1581	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	489	IRONWORKERS	LU 550		618 HIGH AVENUE NW	CANTON	OH	44703    
 1582	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	347	JEFFREY	STEELE		2524 BAYLOR SE	ALBUQUERQUE	NM	87106    
 1583	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	411	Matthew	Nesbitt		500 WEST GENESEE STREET	SYRACUSE	NY	132042302
-1584	IRON WORKERS AFL-CIO	BSOIW	ST LOUIS AND VICINITY	1970-12-01	0	David	Beard	SUITE 1025	212 N. KINGSHIGHWAY BLVD.	ST LOUIS	MO	63108    
+1584	IRON WORKERS AFL-CIO	BSOIW	ST LOUIS AND VICINITY	1970-12-01		David	Beard	SUITE 1025	212 N. KINGSHIGHWAY BLVD.	ST LOUIS	MO	63108    
 1585	IRON WORKERS AFL-CIO	BSOIW	PACIFIC NORTHWEST	1970-12-01	7741	STEVE	PENDERGRASS	SUITE 100	110 MAIN STREET	EDMONDS	WA	98020    
 1586	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	486	DONALD	WANAMAKER	IRON WORKERS AFL-CIO LU 502	168 W. RIDGE PIKE STE 107B	LIMERICK	PA	19468    
 1587	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	2166	ROBERT	WALSH	GROUND FL	451 PARK AVENUE S	NEW YORK	NY	10016    
@@ -13015,6 +13288,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1589	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	986	Mark	Fritts		604 N GREAT SOUTHWEST PKWY	ARLINGTON	TX	760115425
 1590	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	1012	HERMAN	ADAMS		6153 AIRLINE HIGHWAY	BATON ROUGE	LA	708053206
 1591	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	367	ROBERT	COLE		10 Main Street	Whitesboro	NY	13492    
+1592	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	251	JAMES	COLE		2574 LINDAWOOD COVE	MEMPHIS	TN	38118    
 1593	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	1109	RICHARD M.	SWEENEY		26 E FLEMING PIKE	HAMMONTON	NJ	08037    
 1594	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	202	PHILLIP	BRIANT		1044 SW 22nd Street	OKLAHOMA CITY	OK	73109    
 1595	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	167	SCOTT	BRYDGES		412 39TH STREET	NIAGARA FALLS	NY	14303    
@@ -13034,7 +13308,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1609	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	927	ROBERT	DUFFIELD		109 SELIG DRIVE S.W.	ATLANTA	GA	30336    
 1610	IRON WORKERS AFL-CIO	BSOIW	NEW ENGLAND STATES	1970-12-01	5324	SHAWN	NEHILEY	PO BOX 96		SOUTH BOSTON	MA	02127    
 1611	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	346	DIRK	ENGER		1901 SELMARTEN	AURORA	IL	605051333
-1612	IRON WORKERS AFL-CIO	BSOIW	CALIFORNIA & VICINITY	1970-12-01	0	DAVID	OSBORNE	SUITE C	1660 SAN PABLO AVENUE	PINOLE	CA	94564    
+1612	IRON WORKERS AFL-CIO	BSOIW	CALIFORNIA & VICINITY	1970-12-01		DAVID	OSBORNE	SUITE C	1660 SAN PABLO AVENUE	PINOLE	CA	94564    
 1613	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	212	Bill	Bradley		9616 KENTUCKY STREET	JACKSONVILLE	FL	32218    
 1614	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	542	ERIK	SCHMIDLI	SUITE 201	7007 WASHINGTON AVENUE	WHITTIER	CA	90602    
 1615	IRON WORKERS AFL-CIO	BSOIW		1970-12-01	1201	JAMES	STEMMLER		6570 AMERIPLEX DRIVE	PORTAGE	IN	46368    
@@ -13072,6 +13346,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1647	LABORERS 	LIUNA		1970-12-01	2475	ROBERT	ABBOTT		4803 SOUTH M STREET	TACOMA	WA	984083506
 1648	LABORERS 	LIUNA		1974-08-01	398	THOMAS	DAVIDSON		2261 SOUTH REDWOOD RD STE D	SALT LAKE CITY	UT	84119    
 1649	LABORERS 	LIUNA		1970-12-01	129	ALICE	ZVACEK	PO BOX 15146		KANSAS CITY	MO	641062846
+1650	LABORERS 	LIUNA		1976-08-01	1196	KEON	SHIM	3366 COLLINS FERRY ROAD		MORGANTOWN	WV	26505    
 1651	LABORERS 	LIUNA		1977-12-01	113	MICHAEL	CIALLELLA		163 WASHINGTON AVE 2ND FLOOR	BELLEVILLE	NJ	07109    
 1652	LABORERS 	LIUNA		1989-02-01	52	GUELLY	CLUCK	P.O. BOX 950765	6500 AIR CARGO RD	OKLAHOMA CITY	OK	73169    
 1653	LABORERS 	LIUNA		1970-12-01	0	ROBERT J.	GREEN		P.O. BOX 540	CASEYVILLE	IL	62232    
@@ -13124,220 +13399,220 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1700	LABORERS 	LIUNA		2005-10-20	795	Andrei	Rolle		2020 NW 32nd Street	Pompano Beach	FL	33064    
 1701	LABORERS 	LIUNA	GREAT LAKES REGION ORGANIZING COMMITTEE	2005-06-29	53262	TERRENCE	HEALY	SUITE 1212	8770 W. BRYN MAWR	CHICAGO	IL	606313545
 1702	LEGAL STAFF ASSOCIATION	UNAFF		1980-11-01	32	LAURA	DELANEY	NYSUT	800 TROY-SCHENECTADY ROAD	LATHAM	NY	121102455
-1703	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	0	PAUL A.	TOMS		2211 E. 54TH. ST.	INDIANAPOLIS	IN	462203435
+1703	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01		PAUL A.	TOMS		2211 E. 54TH. ST.	INDIANAPOLIS	IN	462203435
 1704	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	97	CECIL	MOSELY	P.O. BOX 575	300 N 10TH ST	KILLEEN	TX	76540    
-1705	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TURNERS FALLS, MASSACHUSETTS	1970-12-01	0	SANDRA	AREGOOD		PO BOX 771	TURNSERS FALLS	MA	013760771
-1706	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NIAGARA, WISCONSIN	1970-12-01	0	JACOB	WILDHAGEN		617 WASHINGTON AVE	NIAGARA	WI	541519998
-1707	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SCOTT CITY, KANSAS	1970-12-01	0	JILL	CHELEMEDOS		1411 S COLLEGE ST	SCOTT CITY	KS	678711947
-1708	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ZEELAND, MICHIGAN	1970-12-01	0	MICHAEL	KLINGE		2645 CREEK VIEW DR	ZEELAND	MI	494649014
-1709	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE LINDEN, MICHIGAN	1970-12-01	0	VACANT	VACANT		600 CALUMET ST	LAKE LINDEN	MI	499459998
-1710	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BREAUS BRIDGE, LOUISIANA	1970-12-01	0	CELESTINE	GEORGE		211 MARY ANN ST	ST MARTINVILLE	LA	705823731
-1711	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COMMERCE, GEORGIA	1970-12-01	0	DEBORAH	AMELL		311 WESLEY CHAPEL DR	DANIELSVILLE	GA	306332054
+1705	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TURNERS FALLS, MASSACHUSETTS	1970-12-01		SANDRA	AREGOOD		PO BOX 771	TURNSERS FALLS	MA	013760771
+1706	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NIAGARA, WISCONSIN	1970-12-01		JACOB	WILDHAGEN		617 WASHINGTON AVE	NIAGARA	WI	541519998
+1707	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SCOTT CITY, KANSAS	1970-12-01		JILL	CHELEMEDOS		1411 S COLLEGE ST	SCOTT CITY	KS	678711947
+1708	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ZEELAND, MICHIGAN	1970-12-01		MICHAEL	KLINGE		2645 CREEK VIEW DR	ZEELAND	MI	494649014
+1709	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE LINDEN, MICHIGAN	1970-12-01		VACANT	VACANT		600 CALUMET ST	LAKE LINDEN	MI	499459998
+1710	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BREAUS BRIDGE, LOUISIANA	1970-12-01		CELESTINE	GEORGE		211 MARY ANN ST	ST MARTINVILLE	LA	705823731
+1711	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COMMERCE, GEORGIA	1970-12-01		DEBORAH	AMELL		311 WESLEY CHAPEL DR	DANIELSVILLE	GA	306332054
 1712	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MASSACHUSETTS	1970-12-01	9765	MICHAEL	MURRAY		259 WALES ST	ABINGTON	MA	02351    
-1713	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WALTON, KENTUCKY	1970-12-01	0	R	SLAYBACK JR		25 BEDINGER AVE	WALTON	KY	410941005
-1714	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FLORA, INDIANA	1976-04-01	0	KENNETH	COX		416 S DIVISION ST	FLORA	IN	469291342
-1715	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FRANKLIN, INDIANA	1970-12-01	0	ARTHUR	BRIGGS		1623 WOODSIDE CIR	FRANKLIN	IN	461319238
+1713	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WALTON, KENTUCKY	1970-12-01		R	SLAYBACK JR		25 BEDINGER AVE	WALTON	KY	410941005
+1714	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FLORA, INDIANA	1976-04-01		KENNETH	COX		416 S DIVISION ST	FLORA	IN	469291342
+1715	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FRANKLIN, INDIANA	1970-12-01		ARTHUR	BRIGGS		1623 WOODSIDE CIR	FRANKLIN	IN	461319238
 1716	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	11	ALAINA	NELSON		100 WASHINGTON AVE	FRANKFORT	IN	46041    
-1717	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GREENCASTLE, INDIANA	1970-12-01	0	JANE	BRIONES		8 E WALNUT ST	GREENCASTLE	IN	461359998
-1718	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROWNSBURG, INDIANA	1970-12-01	0	KELLY	CLIFFORD		1169 SPRING MILL DR	AVON	IN	461238742
-1719	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROWNSTONWN, INDIANA	1970-12-01	0	MATTHEW	ROHR		201 S SUGAR ST	BROWNSTOWN	IN	472209998
-1720	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BUTLER, INDIANA	1970-12-01	0	CHARTL	YATES		112 S FEDERAL WAY	BUTLER	IN	467211345
-1721	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLAY CITY, INDIANA	1976-04-01	0	MARK	DAY		605 W 7TH ST	CLAY CITY	IN	478411219
-1722	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SONORA, CALIFORNIA	1970-12-01	0	VACANT	VACANT		PO BOX 4130	SONORA	CA	953704130
-1723	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARRINGTON, NORTH DAKOTA	1970-12-01	0	CURTIS	MEYER		1142 WOLF CREEK CT	FRUITA	CO	815213072
-1724	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOLEY, ALABAMA	1970-12-01	0	CARL	RAY		7376 FAIRMONT DR	FOLEY	AL	365354056
-1725	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SITKA, ALASKA	1970-12-01	0	PHILIP	DUMAG		PO BOX 1346	SITKA	AK	998351346
-1726	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARION, ALABAMA	1970-12-01	0	JEROME	SMITH		306 PICKENS ST	MARION	AL	367569998
-1727	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ANDREWS, SOUTH CAROLINA	1970-12-01	0	ROBERT	ELMORE JR		124 BENNY RD	ANDREWS	SC	295106280
-1728	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHESTER, SOUTH CAROLINA	1970-12-01	0	RODERICK	MATTHEWS		131 SALUDA ST	CHESTER	SC	297069998
+1717	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GREENCASTLE, INDIANA	1970-12-01		JANE	BRIONES		8 E WALNUT ST	GREENCASTLE	IN	461359998
+1718	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROWNSBURG, INDIANA	1970-12-01		KELLY	CLIFFORD		1169 SPRING MILL DR	AVON	IN	461238742
+1719	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROWNSTONWN, INDIANA	1970-12-01		MATTHEW	ROHR		201 S SUGAR ST	BROWNSTOWN	IN	472209998
+1720	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BUTLER, INDIANA	1970-12-01		CHARTL	YATES		112 S FEDERAL WAY	BUTLER	IN	467211345
+1721	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLAY CITY, INDIANA	1976-04-01		MARK	DAY		605 W 7TH ST	CLAY CITY	IN	478411219
+1722	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SONORA, CALIFORNIA	1970-12-01		VACANT	VACANT		PO BOX 4130	SONORA	CA	953704130
+1723	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARRINGTON, NORTH DAKOTA	1970-12-01		CURTIS	MEYER		1142 WOLF CREEK CT	FRUITA	CO	815213072
+1724	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOLEY, ALABAMA	1970-12-01		CARL	RAY		7376 FAIRMONT DR	FOLEY	AL	365354056
+1725	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SITKA, ALASKA	1970-12-01		PHILIP	DUMAG		PO BOX 1346	SITKA	AK	998351346
+1726	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARION, ALABAMA	1970-12-01		JEROME	SMITH		306 PICKENS ST	MARION	AL	367569998
+1727	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ANDREWS, SOUTH CAROLINA	1970-12-01		ROBERT	ELMORE JR		124 BENNY RD	ANDREWS	SC	295106280
+1728	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHESTER, SOUTH CAROLINA	1970-12-01		RODERICK	MATTHEWS		131 SALUDA ST	CHESTER	SC	297069998
 1729	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	10	Erica	Bywater	1326	1960 Brockie Ave	Heyburn	ID	83336    
-1730	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RUPERT, IDAHO	1970-12-01	0	BRIAN	BLACK		724 F ST	RUPERT	ID	833509998
-1731	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DEMAREST, NEW JERSEY	1970-12-01	0	MICHAEL	ANDIORIO		126 HARENBURGH AVE	DEMAREST	NJ	076279998
-1732	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JOHN DAY, OREGON	1974-10-01	0	ELNA	BLANCHET		29259 MARKET ROAD	CALDWELL	ID	836078609
-1733	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TIDIOUTE, PENNSYLVANIA	1970-12-01	0	KENNETH	ANDERSON		10 WALNUT ST	TIDIOUTE	PA	163511212
-1734	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NYSSA, OREGON	1970-12-01	0	RALPH	OLIVER		219 GOOD AVE	NYSSA	OR	979133835
-1735	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	REEDSPORT, ORGEON	1970-12-01	0	PATRICIA	HAUSMANN		301 FIR AVE	REEDSPORT	OR	974671424
-1736	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHERIDAN, OREGON	1970-12-01	0	TAMARA	TURPIN		137 SE SHERIDAN RD	SHERIDAN	OR	973781947
-1737	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SULLIVAN, INDIANA	1970-12-01	0	LEXIE	NOLTING		103 E WASHINGTON ST	SULLIVAN	IN	478829998
-1738	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EDINBURG, INDIANA	1970-12-01	0	DAVID	BURTON		102 S WALNUT	EDINBURG	IN	461241424
-1739	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINAMAC, INDIANA	1970-12-01	0	BRIAN	BERKSHIRE		209 E PEARL ST	WINAMAC	IN	469969998
-1740	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINCHESTER, INDIANA	1970-12-01	0	WENDY	SLICK		130 N MERIDIAN ST	WINCHESTER	IN	473941630
-1741	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JEFFERSON, IOWA	1970-12-01	0	MINDY	FORD		106 W HARRISON	JEFFERSON	IA	501292106
-1742	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KENDALLVILLE, INDIANA	1970-12-01	0	THOMAS	GATTON		695 FAIR ST	KENDALLVILLE	IN	467559998
-1743	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KENTLAND, INDIANA	1970-12-01	0	HAROLD	DIETER		3574 E BROOKSIDE DR	LAFAYETTE	IN	479096227
-1744	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LA GRANDE, INDIANA	1970-12-01	0	CORINNE	JOHNSON		300 S DETROIT	LA GRANGE	IN	467619998
-1745	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LIBERTY, INDIANA	1970-12-01	0	STEPHEN	HUNTER		29 E UNION ST	LIBERTY	IN	473539998
-1746	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LIGONIER, INDIANA	1970-12-01	0	CRAIG	WEIMER		201 S MAIN	LIGONIER	IN	467671901
-1747	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CROTHERSVILLE, INDIANA	1970-12-01	0	CASEY	ALFORD		302 E MAIN ST	CROTHERSVILLE	IN	472291220
-1748	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CRESCO, IOWA	1970-12-01	0	ANN	SHINDELAR		2878 172ND ST	FORT ATKINSON	IA	521447453
+1730	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RUPERT, IDAHO	1970-12-01		BRIAN	BLACK		724 F ST	RUPERT	ID	833509998
+1731	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DEMAREST, NEW JERSEY	1970-12-01		MICHAEL	ANDIORIO		126 HARENBURGH AVE	DEMAREST	NJ	076279998
+1732	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JOHN DAY, OREGON	1974-10-01		ELNA	BLANCHET		29259 MARKET ROAD	CALDWELL	ID	836078609
+1733	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TIDIOUTE, PENNSYLVANIA	1970-12-01		KENNETH	ANDERSON		10 WALNUT ST	TIDIOUTE	PA	163511212
+1734	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NYSSA, OREGON	1970-12-01		RALPH	OLIVER		219 GOOD AVE	NYSSA	OR	979133835
+1735	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	REEDSPORT, ORGEON	1970-12-01		PATRICIA	HAUSMANN		301 FIR AVE	REEDSPORT	OR	974671424
+1736	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHERIDAN, OREGON	1970-12-01		TAMARA	TURPIN		137 SE SHERIDAN RD	SHERIDAN	OR	973781947
+1737	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SULLIVAN, INDIANA	1970-12-01		LEXIE	NOLTING		103 E WASHINGTON ST	SULLIVAN	IN	478829998
+1738	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EDINBURG, INDIANA	1970-12-01		DAVID	BURTON		102 S WALNUT	EDINBURG	IN	461241424
+1739	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINAMAC, INDIANA	1970-12-01		BRIAN	BERKSHIRE		209 E PEARL ST	WINAMAC	IN	469969998
+1740	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINCHESTER, INDIANA	1970-12-01		WENDY	SLICK		130 N MERIDIAN ST	WINCHESTER	IN	473941630
+1741	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JEFFERSON, IOWA	1970-12-01		MINDY	FORD		106 W HARRISON	JEFFERSON	IA	501292106
+1742	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KENDALLVILLE, INDIANA	1970-12-01		THOMAS	GATTON		695 FAIR ST	KENDALLVILLE	IN	467559998
+1743	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KENTLAND, INDIANA	1970-12-01		HAROLD	DIETER		3574 E BROOKSIDE DR	LAFAYETTE	IN	479096227
+1744	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LA GRANDE, INDIANA	1970-12-01		CORINNE	JOHNSON		300 S DETROIT	LA GRANGE	IN	467619998
+1745	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LIBERTY, INDIANA	1970-12-01		STEPHEN	HUNTER		29 E UNION ST	LIBERTY	IN	473539998
+1746	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LIGONIER, INDIANA	1970-12-01		CRAIG	WEIMER		201 S MAIN	LIGONIER	IN	467671901
+1747	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CROTHERSVILLE, INDIANA	1970-12-01		CASEY	ALFORD		302 E MAIN ST	CROTHERSVILLE	IN	472291220
+1748	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CRESCO, IOWA	1970-12-01		ANN	SHINDELAR		2878 172ND ST	FORT ATKINSON	IA	521447453
 1749	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	732	PHILLIP	CAPUANO		702 S BROADWAY	SANTA ANA	CA	927015644
 1750	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	2148	MARVIN	BOLIN	3RD FL	2310 MASON ST	SAN FRANCISCO	CA	941331800
-1751	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AUSTIN, INDIANA	1970-12-01	0	CHARLES	LAPP		1701 E CROTHERSVILLE RD	AUSTIN	IN	471028037
-1752	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BATESVILLE, INDIANA	1970-12-01	0	ROBERT	ERTEL		182 N COONHUNTERS RD	BATESVILLE	IN	470067956
-1753	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MC ADOO, PENNSYLVANIA	1970-12-01	0	EARL	KITE JR		40 KINGS RD	DRUMS	PA	182221824
-1754	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTGOMERY, PENNSYLVANIA	1970-12-01	0	VACANT	VACANT		1 HENRY HAND DR	MONTGOMERY	PA	177529998
-1755	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MAHANOY, PENNSYLVANIA	1970-12-01	0	SCOTT	HUDSON		39 E PINE ST	MAHANOY CITY	PA	179489998
-1756	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RIDGWAY, PENNSYLVANIA	1970-12-01	0	CRAIG	LUKEHART		18 S MILL AVE	RIDGWAY	PA	158531058
-1757	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT MARYS, PENNSYLVANIA	1975-10-01	0	ROGER	CARLSON		201 CHESTNUT ST	SAINT MARYS	PA	158571790
-1758	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SALTSBURG, PENNSYLVANIA	1970-12-01	0	JOSHUA	BOARTS		207 POINT ST	SALTSBURG	PA	156819998
-1759	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCHESTER, INDIANA	1970-12-01	0	VACANT	VACANT		601 E 9TH ST	ROCHESTER	IN	469759998
-1760	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WANAQUE, NEW JERSEY	1970-12-01	0	JOSEPH	CARAMELLA		143 OLD DUTCH HOLLOW RD	MONROE	NY	109504545
-1761	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NAPPANEE, INDIANA	1970-12-01	0	JEFF	BOSTIC		2403 N MEMORY LN	WARSAW	IN	465509998
-1762	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	N MANCHESTER, INDIANA	1975-11-01	0	REX	HOLLOWAY		202 E 2ND ST	N MANCHESTER	IN	469621803
+1751	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AUSTIN, INDIANA	1970-12-01		CHARLES	LAPP		1701 E CROTHERSVILLE RD	AUSTIN	IN	471028037
+1752	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BATESVILLE, INDIANA	1970-12-01		ROBERT	ERTEL		182 N COONHUNTERS RD	BATESVILLE	IN	470067956
+1753	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MC ADOO, PENNSYLVANIA	1970-12-01		EARL	KITE JR		40 KINGS RD	DRUMS	PA	182221824
+1754	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTGOMERY, PENNSYLVANIA	1970-12-01		VACANT	VACANT		1 HENRY HAND DR	MONTGOMERY	PA	177529998
+1755	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MAHANOY, PENNSYLVANIA	1970-12-01		SCOTT	HUDSON		39 E PINE ST	MAHANOY CITY	PA	179489998
+1756	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RIDGWAY, PENNSYLVANIA	1970-12-01		CRAIG	LUKEHART		18 S MILL AVE	RIDGWAY	PA	158531058
+1757	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT MARYS, PENNSYLVANIA	1975-10-01		ROGER	CARLSON		201 CHESTNUT ST	SAINT MARYS	PA	158571790
+1758	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SALTSBURG, PENNSYLVANIA	1970-12-01		JOSHUA	BOARTS		207 POINT ST	SALTSBURG	PA	156819998
+1759	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCHESTER, INDIANA	1970-12-01		VACANT	VACANT		601 E 9TH ST	ROCHESTER	IN	469759998
+1760	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WANAQUE, NEW JERSEY	1970-12-01		JOSEPH	CARAMELLA		143 OLD DUTCH HOLLOW RD	MONROE	NY	109504545
+1761	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NAPPANEE, INDIANA	1970-12-01		JEFF	BOSTIC		2403 N MEMORY LN	WARSAW	IN	465509998
+1762	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	N MANCHESTER, INDIANA	1975-11-01		REX	HOLLOWAY		202 E 2ND ST	N MANCHESTER	IN	469621803
 1763	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	15	JUSTIN	HERNDON		321 N CHESTNUT ST	SEYMOUR	IN	472742105
-1764	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEATHERLY, PENNSYLVANIA	1970-12-01	0	SANDRA	SNYDER		3591 QUAKAKE RD	WEATHERLY	PA	182553223
-1765	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHINA GROVE, NORTH CAROLINA	1970-12-01	0	SHAWN	CHANCE		200 S BOSTIAN ST	CONCORD	NC	280232438
-1766	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MAYODAN, NORTH CAROLINA	1970-12-01	0	MICHAEL	SHELTON II		1000 W MAIN ST	MAYODAN	NC	270272532
-1767	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RED SPRINGS, NORTH CAROLINA	1970-12-01	0	ROBERT	COUNCIL		162 RICHARDSON COUNCIL DR	TAR HEEL	NC	283928595
-1768	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT PAULS, NORTH CAROLINA	1970-12-01	0	LINDA	WHITE		320 W BROAD ST	SAINT PAULS	NC	283841536
-1769	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRUNSWICK, MISSOURI	1970-12-01	0	EDWARD	REICHERT		101 W BROADWAY	BRUNSWICK	MO	652369998
-1770	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHARLES CITY, IOWA	1970-12-01	0	DIANE	NEHL		811 E MAIN ST	NEW HAMPTON	IA	506591541
-1771	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHARITON, IOWA	1970-12-01	0	LORI	LUEDTKE		126 S GRAND	CHARITON	IA	500490010
-1772	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLOOMFIELD, IOWA	1970-12-01	0	ERIC	LANDMEIER		202 W JEFFERSON ST	BLOOMFIELD	IA	525372068
-1773	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	APPLETON CITY, MISSOURI	1975-12-01	0	JOSEPHINE	CAUTHON		401 E TWYMAN ST	EL DORADO SPRINGS	MO	647441939
-1774	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROOKFIELD, MISSOURI	1970-12-01	0	CYNTHIA	PENDLETON		210 W BOSTON ST	BROOKFIELD	MO	646289998
-1775	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	IOWA FALLS, IOWA	1970-12-01	0	CHRISTOPHER	SIEMS		10637 HWY S45	IOWA FALLS	IA	501268847
-1776	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELDON, MISSOURI	1970-12-01	0	GREGORY	JARRETT		474 GAGEVILLE RD	ELDON	MO	650265121
-1777	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELSBERRY, MISSOURI	1970-12-01	0	BILLY	LANNING		PO BOX 11	SILEX	MO	633770011
-1778	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LE MARS, IOWA	1970-12-01	0	BRIAN	STOOS		481 13TH ST SW	LE MARS	IA	510318886
-1779	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE CITY, IOWA	1970-12-01	0	BONNIE	ENABNIT		202 E JEFFERSON ST	LAKE CITY	IA	514496500
-1780	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GARNER, IOWA	1970-12-01	0	LUCAS	JOHNSON		190 3RD ST E	GARNER	IA	504381244
-1781	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOREST CITY, IOWA	1970-12-01	0	DICK	WELP		406 N BEST ST	FOREST CITY	IA	504361306
+1764	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEATHERLY, PENNSYLVANIA	1970-12-01		SANDRA	SNYDER		3591 QUAKAKE RD	WEATHERLY	PA	182553223
+1765	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHINA GROVE, NORTH CAROLINA	1970-12-01		SHAWN	CHANCE		200 S BOSTIAN ST	CONCORD	NC	280232438
+1766	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MAYODAN, NORTH CAROLINA	1970-12-01		MICHAEL	SHELTON II		1000 W MAIN ST	MAYODAN	NC	270272532
+1767	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RED SPRINGS, NORTH CAROLINA	1970-12-01		ROBERT	COUNCIL		162 RICHARDSON COUNCIL DR	TAR HEEL	NC	283928595
+1768	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT PAULS, NORTH CAROLINA	1970-12-01		LINDA	WHITE		320 W BROAD ST	SAINT PAULS	NC	283841536
+1769	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRUNSWICK, MISSOURI	1970-12-01		EDWARD	REICHERT		101 W BROADWAY	BRUNSWICK	MO	652369998
+1770	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHARLES CITY, IOWA	1970-12-01		DIANE	NEHL		811 E MAIN ST	NEW HAMPTON	IA	506591541
+1771	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHARITON, IOWA	1970-12-01		LORI	LUEDTKE		126 S GRAND	CHARITON	IA	500490010
+1772	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLOOMFIELD, IOWA	1970-12-01		ERIC	LANDMEIER		202 W JEFFERSON ST	BLOOMFIELD	IA	525372068
+1773	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	APPLETON CITY, MISSOURI	1975-12-01		JOSEPHINE	CAUTHON		401 E TWYMAN ST	EL DORADO SPRINGS	MO	647441939
+1774	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROOKFIELD, MISSOURI	1970-12-01		CYNTHIA	PENDLETON		210 W BOSTON ST	BROOKFIELD	MO	646289998
+1775	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	IOWA FALLS, IOWA	1970-12-01		CHRISTOPHER	SIEMS		10637 HWY S45	IOWA FALLS	IA	501268847
+1776	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELDON, MISSOURI	1970-12-01		GREGORY	JARRETT		474 GAGEVILLE RD	ELDON	MO	650265121
+1777	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELSBERRY, MISSOURI	1970-12-01		BILLY	LANNING		PO BOX 11	SILEX	MO	633770011
+3551	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	82	JASON	MCCOWN	PO BOX 42		DILLER	NE	68342    
+1778	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LE MARS, IOWA	1970-12-01		BRIAN	STOOS		481 13TH ST SW	LE MARS	IA	510318886
+1779	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE CITY, IOWA	1970-12-01		BONNIE	ENABNIT		202 E JEFFERSON ST	LAKE CITY	IA	514496500
+1780	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GARNER, IOWA	1970-12-01		LUCAS	JOHNSON		190 3RD ST E	GARNER	IA	504381244
+1781	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOREST CITY, IOWA	1970-12-01		DICK	WELP		406 N BEST ST	FOREST CITY	IA	504361306
 1782	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	21	Anthony	Bleuer	PO BOX 1153		BETTENDORF	IA	527221153
-1783	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CANNON FALLS, MINNESOTA	1986-11-01	0	TIMOTHY	ANDERSON		30400 71ST AVE WAY	CANNON FALLS	MN	550094010
-1784	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EVELETH, MINNESOTA	1970-12-01	0	THOMAS	BENKUSKY		421 JONES ST	EVELETH	MN	557341591
-1785	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HUTCHINSON, MINNESOTA	1970-12-01	0	MAUREEN	FROEMMING		21175 CSAH 9	DARWIN	MN	553246570
-1786	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	INTL FALLS, MINNESOTA	1970-12-01	0	RICHARD	ROADFELDT		400 4TH ST	INTERNATIONAL FALLS	MN	566491311
-1787	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KASSON, MINNESOTA	1970-12-01	0	TIMOTHY	MILLER		61361 265TH AVE	MANTORVILLE	MN	559556001
-1788	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LE CENTER, MINNESOTA	1970-12-01	0	LORI	HENZE		750 E MEADOW VIEW LN	LE CENTER	MN	560571755
-1789	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANCHESTER, OHIO	1970-12-01	0	JAMES	CRAWFORD		301 PIKE ST	MANCHESTER	OH	451441232
-1790	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LEIPSIC, OHIO	1970-12-01	0	RANDALL	COBLE		21204 RD C20	CONTINENTAL	OH	458319243
-1791	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ACKLEY, IOWA	1970-12-01	0	MICHELLE	HOOK		706 1ST ST	ACKLEY	IA	506011555
-1792	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KELLOGG, IDAHO	1970-12-01	0	HILARY	GROVES		302 S DIVISION ST	KELLOGG	ID	838379998
+1783	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CANNON FALLS, MINNESOTA	1986-11-01		TIMOTHY	ANDERSON		30400 71ST AVE WAY	CANNON FALLS	MN	550094010
+1784	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EVELETH, MINNESOTA	1970-12-01		THOMAS	BENKUSKY		421 JONES ST	EVELETH	MN	557341591
+1785	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HUTCHINSON, MINNESOTA	1970-12-01		MAUREEN	FROEMMING		21175 CSAH 9	DARWIN	MN	553246570
+1786	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	INTL FALLS, MINNESOTA	1970-12-01		RICHARD	ROADFELDT		400 4TH ST	INTERNATIONAL FALLS	MN	566491311
+1787	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KASSON, MINNESOTA	1970-12-01		TIMOTHY	MILLER		61361 265TH AVE	MANTORVILLE	MN	559556001
+1788	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LE CENTER, MINNESOTA	1970-12-01		LORI	HENZE		750 E MEADOW VIEW LN	LE CENTER	MN	560571755
+1789	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANCHESTER, OHIO	1970-12-01		JAMES	CRAWFORD		301 PIKE ST	MANCHESTER	OH	451441232
+1790	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LEIPSIC, OHIO	1970-12-01		RANDALL	COBLE		21204 RD C20	CONTINENTAL	OH	458319243
+1791	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ACKLEY, IOWA	1970-12-01		MICHELLE	HOOK		706 1ST ST	ACKLEY	IA	506011555
+1792	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KELLOGG, IDAHO	1970-12-01		HILARY	GROVES		302 S DIVISION ST	KELLOGG	ID	838379998
 1793	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	3900	LAWRENCE	BROWN		774 VALENCIA STREET	LOS ANGELES	CA	900174397
-1794	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRANGEVILLE, IDAHO	1970-12-01	0	VALERIE	STONE		817 S A ST	GRANGEVILLE	ID	835301503
-1795	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRESTON, IDAHO	1970-12-01	0	PAUL	BUMGARNER		55 E ONEIDA ST	PRESTON	ID	832639998
-1796	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT ANTHONY, IDAHO	1970-12-01	0	VACANT	VACANT		50 W 1ST N	SAINT ANTHONY	ID	834459998
-1797	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AYDEN, NORTH CAROLINA	1970-12-01	0	TOMMY	GRADY		452 2ND ST	AYDEN	NC	285137179
-1798	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHERRYVILLE, NORTH CAROLINA	1970-12-01	0	KEVIN	SIMS		107 N MULBERRY ST	CHERRYVILLE	NC	280212853
-1799	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAUKON, IOWA	1970-12-01	0	PERRY	HESSE		1134 TEEPLE CREEK RD	WAUKON	IA	521727511
-1800	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SUMNER, IOWA	1970-12-01	0	SYDNIE	PETERSON		1014 N RAILROAD ST	SUMNER	IA	506741135
-1801	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STORY CITY, IOWA	1970-12-01	0	MARVIN	MORGART		723 PARK AVE	STORY CITY	IA	502481115
-1802	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPIRIT LAKE, IOWA	1970-12-01	0	CRYSTAL	BLAIR		706 12TH ST	SPIRIT LAKE	IA	513601308
-1803	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SIBLEY, IOWA	1970-12-01	0	CHRISTOPHER	ZOET		412 9TH STREET	SIBLEY	IA	512491851
-1804	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHELDON, IOWA	1970-12-01	0	TODD	SOHN		PO BOX 63	SUTHERLAND	IA	510580063
-1805	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCK RAPIDS, IOWA	1970-12-01	0	KEITH	KEIZER		217 N 2ND AVE	ROCK RAPIDS	IA	512460072
-1806	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PELLA, IOWA	1970-12-01	0	CHARLES	MCBIRNIE		801 FRANKLIN ST	PELLA	IA	502191603
-1807	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OSCEOLA, IOWA	1970-12-01	0	DONALD	MCCLONEY		215 S PARK ST	OSCEOLA	IA	502131440
-1808	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ONAWA, IOWA	1970-12-01	0	JON	BERENS		1017 IOWA AVE	ONAWA	IA	510401544
-1809	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MT PLEASANT, IOWA	1970-12-01	0	JAMES	STEBBINS		306 S HARRISON ST	MOUNT PLEASANT	IA	526412333
-1810	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WOODBINE, IOWA	1970-12-01	0	VACANT	VACANT		405 LINCOLNWAY ST	WOODBINE	IA	515799998
-1811	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SOUTH HILL, VIRGINIA	1970-12-01	0	ANNA	SHELL		216 E FERRELL ST	SOUTH HILL	VA	239702104
-1812	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLUE EARTH, MINNESOTA	1970-12-01	0	ANTHONY	JOHNSON		130 N MAIN ST	BLUE EARTH	MN	560131937
-1813	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CALEDONIA, MINNESOTA	1970-12-01	0	VILAS	DOERING		PO BOX 34	SPRING GROVE	MN	559740034
-1814	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHYTEVILLE, VIRGINIA	1970-12-01	0	SAMUEL	POOLE II		380 W MAIN ST	WYTHEVILLE	VA	243829998
-1815	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TONKAWA, OKLAHOMA	1970-12-01	0	NOAH	SPRINGER		1510 DONALD AVE	PONCA CITY	OK	746041409
-1816	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AITKIN, MINNESOTA	1970-12-01	0	MICHAEL	LAIRD		15 MINNESOTA AVE N	AITKIN	MN	564311407
-1817	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WILSON, ARKANSAS	1970-12-01	0	JIMMY	FRANKS		183 WESTERN AVE	BRANSON	MO	656168618
-1818	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARIANNA, ARKANSAS	1970-12-01	0	JOHN	BROWN		1 W MISSISSIPPI ST	MARIANNA	AR	723609998
-1819	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MCGEHEE, ARKANSAS	1970-12-01	0	MONTA	KELLEBREW		104 S 1ST ST	MC GEHEE	AR	716549998
-1820	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARLINTON, WEST VIRGINIA	1970-12-01	0	WILLIAM	MCMANN		1004 2ND AVE	MARLINTON	WV	249541010
-1821	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MILTON, WEST VIRGINIA	1970-12-01	0	CLEMENT	COUNTS IV		1720 CRESTMONT DR	HUNTINGTON	WV	257015313
-1822	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PAULDING, OHIO	1970-12-01	0	BRENT	ANKNEY		121 W JACKSON ST	PAULDING	OH	458791265
-1823	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALMA, MICHIGAN	1970-12-01	0	KAREN	WILHELM		2262 W PIERCE RD	ITHACA	MI	488479628
-1824	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RICHWOOD, OHIO	1970-12-01	0	JOHN	ADAMS		1062 WATKINS GLEN CT	MARYSVILLE	OH	430408362
-1825	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MECHANICSBUR, OHIO	1970-12-01	0	DAVID	BOSTICK		4698 WING RD	MECHANICSBURG	OH	430449520
-1826	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHITMIRE, SOUTH CAROLINA	1970-12-01	0	JUANITA	WILLIAMS		205 MAIN ST	WHITMIRE	SC	291781367
-1827	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RULEVILLE, MISSISSIPPI	1970-12-01	0	SUSAN	EUBANKS		4 POVERTY RD	RULEVILLE	MS	387719741
+1794	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRANGEVILLE, IDAHO	1970-12-01		VALERIE	STONE		817 S A ST	GRANGEVILLE	ID	835301503
+1795	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRESTON, IDAHO	1970-12-01		PAUL	BUMGARNER		55 E ONEIDA ST	PRESTON	ID	832639998
+1796	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT ANTHONY, IDAHO	1970-12-01		VACANT	VACANT		50 W 1ST N	SAINT ANTHONY	ID	834459998
+1797	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AYDEN, NORTH CAROLINA	1970-12-01		TOMMY	GRADY		452 2ND ST	AYDEN	NC	285137179
+1798	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHERRYVILLE, NORTH CAROLINA	1970-12-01		KEVIN	SIMS		107 N MULBERRY ST	CHERRYVILLE	NC	280212853
+1799	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAUKON, IOWA	1970-12-01		PERRY	HESSE		1134 TEEPLE CREEK RD	WAUKON	IA	521727511
+1800	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SUMNER, IOWA	1970-12-01		SYDNIE	PETERSON		1014 N RAILROAD ST	SUMNER	IA	506741135
+1801	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STORY CITY, IOWA	1970-12-01		MARVIN	MORGART		723 PARK AVE	STORY CITY	IA	502481115
+1802	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPIRIT LAKE, IOWA	1970-12-01		CRYSTAL	BLAIR		706 12TH ST	SPIRIT LAKE	IA	513601308
+1803	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SIBLEY, IOWA	1970-12-01		CHRISTOPHER	ZOET		412 9TH STREET	SIBLEY	IA	512491851
+1804	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHELDON, IOWA	1970-12-01		TODD	SOHN		PO BOX 63	SUTHERLAND	IA	510580063
+1805	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCK RAPIDS, IOWA	1970-12-01		KEITH	KEIZER		217 N 2ND AVE	ROCK RAPIDS	IA	512460072
+1806	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PELLA, IOWA	1970-12-01		CHARLES	MCBIRNIE		801 FRANKLIN ST	PELLA	IA	502191603
+1807	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OSCEOLA, IOWA	1970-12-01		DONALD	MCCLONEY		215 S PARK ST	OSCEOLA	IA	502131440
+1808	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ONAWA, IOWA	1970-12-01		JON	BERENS		1017 IOWA AVE	ONAWA	IA	510401544
+1809	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MT PLEASANT, IOWA	1970-12-01		JAMES	STEBBINS		306 S HARRISON ST	MOUNT PLEASANT	IA	526412333
+1810	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WOODBINE, IOWA	1970-12-01		VACANT	VACANT		405 LINCOLNWAY ST	WOODBINE	IA	515799998
+1811	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SOUTH HILL, VIRGINIA	1970-12-01		ANNA	SHELL		216 E FERRELL ST	SOUTH HILL	VA	239702104
+1812	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLUE EARTH, MINNESOTA	1970-12-01		ANTHONY	JOHNSON		130 N MAIN ST	BLUE EARTH	MN	560131937
+1813	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CALEDONIA, MINNESOTA	1970-12-01		VILAS	DOERING		PO BOX 34	SPRING GROVE	MN	559740034
+1814	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHYTEVILLE, VIRGINIA	1970-12-01		SAMUEL	POOLE II		380 W MAIN ST	WYTHEVILLE	VA	243829998
+1815	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TONKAWA, OKLAHOMA	1970-12-01		NOAH	SPRINGER		1510 DONALD AVE	PONCA CITY	OK	746041409
+1816	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AITKIN, MINNESOTA	1970-12-01		MICHAEL	LAIRD		15 MINNESOTA AVE N	AITKIN	MN	564311407
+1817	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WILSON, ARKANSAS	1970-12-01		JIMMY	FRANKS		183 WESTERN AVE	BRANSON	MO	656168618
+1818	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARIANNA, ARKANSAS	1970-12-01		JOHN	BROWN		1 W MISSISSIPPI ST	MARIANNA	AR	723609998
+1819	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MCGEHEE, ARKANSAS	1970-12-01		MONTA	KELLEBREW		104 S 1ST ST	MC GEHEE	AR	716549998
+1820	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARLINTON, WEST VIRGINIA	1970-12-01		WILLIAM	MCMANN		1004 2ND AVE	MARLINTON	WV	249541010
+1821	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MILTON, WEST VIRGINIA	1970-12-01		CLEMENT	COUNTS IV		1720 CRESTMONT DR	HUNTINGTON	WV	257015313
+1822	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PAULDING, OHIO	1970-12-01		BRENT	ANKNEY		121 W JACKSON ST	PAULDING	OH	458791265
+1823	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALMA, MICHIGAN	1970-12-01		KAREN	WILHELM		2262 W PIERCE RD	ITHACA	MI	488479628
+1824	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RICHWOOD, OHIO	1970-12-01		JOHN	ADAMS		1062 WATKINS GLEN CT	MARYSVILLE	OH	430408362
+1825	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MECHANICSBUR, OHIO	1970-12-01		DAVID	BOSTICK		4698 WING RD	MECHANICSBURG	OH	430449520
+1826	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHITMIRE, SOUTH CAROLINA	1970-12-01		JUANITA	WILLIAMS		205 MAIN ST	WHITMIRE	SC	291781367
+1827	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RULEVILLE, MISSISSIPPI	1970-12-01		SUSAN	EUBANKS		4 POVERTY RD	RULEVILLE	MS	387719741
 1828	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	27	NICK	GERTEIS	PO BOX 1333	822 TAYLOR ST	STARKVILLE	MS	397601333
-1829	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	10	Bobbie	Mcmillion	511		Cleveland	MS	38773    
-1830	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	INMAN, SOUTH CAROLINA	1970-12-01	0	KYLE	MATHIS		132 STONEHEDGE DR	INMAN	SC	293497184
-1831	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	YORK, SOUTH CAROLINA	1970-12-01	0	LOIS	WEBB		909 LIBERTY ST E	YORK	SC	297452689
-1832	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROOKHAVEN, MISSISSIPPI	1970-12-01	0	VERNELSA	SMITH		1491 NOLA RD	MONTICELLO	MS	396548518
-1833	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SEYMOUR, IOWA	1970-12-01	0	VACANT	VACANT		230 N 4TH ST	SEYMOUR	IA	525901378
-1834	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW ROCKFORD, NORTH DAKOTA	1974-10-01	0	VACANT	VACANT		827 1ST AVE N	NEW ROCKFORD	ND	583569998
-1835	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PROVIDENCE, KENTUCKY	1970-12-01	0	LISA	GUESS		107 E MAIN ST	PROVIDENCE	KY	424509998
-1836	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OAKES, NORTH DAKOTA	1970-12-01	0	KATHRYN	KRAMER		321 MAIN ST N	LAMOURE	ND	584580303
+1830	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	INMAN, SOUTH CAROLINA	1970-12-01		KYLE	MATHIS		132 STONEHEDGE DR	INMAN	SC	293497184
+1831	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	YORK, SOUTH CAROLINA	1970-12-01		LOIS	WEBB		909 LIBERTY ST E	YORK	SC	297452689
+1832	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROOKHAVEN, MISSISSIPPI	1970-12-01		VERNELSA	SMITH		1491 NOLA RD	MONTICELLO	MS	396548518
+1833	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SEYMOUR, IOWA	1970-12-01		VACANT	VACANT		230 N 4TH ST	SEYMOUR	IA	525901378
+1834	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW ROCKFORD, NORTH DAKOTA	1974-10-01		VACANT	VACANT		827 1ST AVE N	NEW ROCKFORD	ND	583569998
+1835	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PROVIDENCE, KENTUCKY	1970-12-01		LISA	GUESS		107 E MAIN ST	PROVIDENCE	KY	424509998
+1836	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OAKES, NORTH DAKOTA	1970-12-01		KATHRYN	KRAMER		321 MAIN ST N	LAMOURE	ND	584580303
 1837	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	30	JOHN	SIMBAHON		PO BOX 1040	WAIANAE	HI	967921040
-1838	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MEMPHIS, TEXAS	1970-12-01	0	VACANT	VACANT		700 W MAIN ST	MEMPHIS	TX	792459998
-1839	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAPELLO, IOWA	1970-12-01	0	CARRIE	SAMPSON		776 E COUNTY RD 2300	NAUVOO	IL	623542219
-1840	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SLATON, TEXAS	1970-12-01	0	DENNIS	HORN		150 W LYNN ST	SLATON	TX	793649998
+1838	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MEMPHIS, TEXAS	1970-12-01		VACANT	VACANT		700 W MAIN ST	MEMPHIS	TX	792459998
+1839	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAPELLO, IOWA	1970-12-01		CARRIE	SAMPSON		776 E COUNTY RD 2300	NAUVOO	IL	623542219
+1840	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SLATON, TEXAS	1970-12-01		DENNIS	HORN		150 W LYNN ST	SLATON	TX	793649998
 1841	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	10	MICHAEL	STEPHENS		1345 W. MCNEILL STREET	STEPHENVILLE	TX	764010282
-1842	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TEAGUE, TEXAS	1970-12-01	0	WILLIAM	ADAMS		7107 FARM RD 744	CORSICANA	TX	751108541
-1843	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHEROKEE, IOWA	1970-12-01	0	DONALD	ROETHLER		420 W WILLOW ST	CHEROKEE	IA	510121775
-1844	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLUMBUS JUNCTION, IOWA	1970-12-01	0	DAN	HEYVAERT		204 2ND ST	COLUMBUS JUNCTION	IA	527389998
-1845	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SABINA, OHIO	1970-12-01	0	DAVID	PATTON		101 MORGAN ST	SABINA	OH	451691443
-1846	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHADYSIDE, OHIO	1970-12-01	0	DENNIS	ZEROSKI		3989 LINCOLN AVE	SHADYSIDE	OH	439473289
+1842	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TEAGUE, TEXAS	1970-12-01		WILLIAM	ADAMS		7107 FARM RD 744	CORSICANA	TX	751108541
+1843	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHEROKEE, IOWA	1970-12-01		DONALD	ROETHLER		420 W WILLOW ST	CHEROKEE	IA	510121775
+1844	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLUMBUS JUNCTION, IOWA	1970-12-01		DAN	HEYVAERT		204 2ND ST	COLUMBUS JUNCTION	IA	527389998
+1845	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SABINA, OHIO	1970-12-01		DAVID	PATTON		101 MORGAN ST	SABINA	OH	451691443
+1846	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHADYSIDE, OHIO	1970-12-01		DENNIS	ZEROSKI		3989 LINCOLN AVE	SHADYSIDE	OH	439473289
 1847	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	7	JOHN	MATRONIA		305 EAST 3RD STREET	UHRICHSVILLE	OH	446830000
-1848	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	UPPER SANDUSKY, OHIO	1970-12-01	0	MARK	DEWITT		466 S HAZEL ST	UPPER SANDUSKY	OH	433511572
-1849	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST LAFAYETTE, OHIO	1970-12-01	0	VINCENT	WILLIAMS		224 RIVERCREST DR.	COSHOCTON	OH	438129764
-1850	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROOKHAVEN L I, NEW YORK	1970-12-01	0	RONALD	KINSELLA		16 MEADOW LN	BROOKHAVEN	NY	117199630
+1848	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	UPPER SANDUSKY, OHIO	1970-12-01		MARK	DEWITT		466 S HAZEL ST	UPPER SANDUSKY	OH	433511572
+1849	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST LAFAYETTE, OHIO	1970-12-01		VINCENT	WILLIAMS		224 RIVERCREST DR.	COSHOCTON	OH	438129764
+1850	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROOKHAVEN L I, NEW YORK	1970-12-01		RONALD	KINSELLA		16 MEADOW LN	BROOKHAVEN	NY	117199630
 1851	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	339	JOHN	MITCHELL	PO BOX 3343		LAKELAND	FL	338023343
-1852	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHITEVILLE, NORTH CAROLINA 	1970-12-01	0	JULIUS	THOMAS		PO BOX 163	CHADBOURN	NC	284310163
-1853	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WILLIAMSTON, NORTH CAROLINA	1970-12-01	0	JOHN	GARGARO		104 BENJAMIN CIR	WASHINGTON	NC	278898742
-1854	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLAYTON, NEW MEXICO	1970-12-01	0	KIMBERLY	HEIMANN		1 WALNUT ST	CLAYTON	NM	884153047
-1855	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRANTS, NEW MEXICO	1970-12-01	0	DAVID	RODRIGUEZ		2024 ZUNI CANYON RD	GRANTS	NM	870203755
-1856	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOLLOMAN AFB, NEW MEXICO	1975-12-01	0	JAMES	FUENTES JR		402 ROSALIA LN	TULAROSA	NM	883522658
-1857	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MALONE, NEW YORK	1970-12-01	0	JEANNE	LAVOIE		115 COLLEGE AVE	MALONE	NY	129532418
+1852	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHITEVILLE, NORTH CAROLINA 	1970-12-01		JULIUS	THOMAS		PO BOX 163	CHADBOURN	NC	284310163
+1853	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WILLIAMSTON, NORTH CAROLINA	1970-12-01		JOHN	GARGARO		104 BENJAMIN CIR	WASHINGTON	NC	278898742
+1854	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLAYTON, NEW MEXICO	1970-12-01		KIMBERLY	HEIMANN		1 WALNUT ST	CLAYTON	NM	884153047
+1855	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRANTS, NEW MEXICO	1970-12-01		DAVID	RODRIGUEZ		2024 ZUNI CANYON RD	GRANTS	NM	870203755
+1856	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOLLOMAN AFB, NEW MEXICO	1975-12-01		JAMES	FUENTES JR		402 ROSALIA LN	TULAROSA	NM	883522658
+1857	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MALONE, NEW YORK	1970-12-01		JEANNE	LAVOIE		115 COLLEGE AVE	MALONE	NY	129532418
 1858	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	3	DONALD	GRAY		34 GARDINER PLACE	WALTON	NY	138569998
-1859	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHENANDOAH, IOWA	1970-12-01	0	STEVEN	JOHNSON		501 W LOWELL AVE	SHENANDOAH	IA	516011261
-1860	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WESTBY, WISCONSIN	1970-12-01	0	VACANT	VACANT		102 MELBY ST	WESTBY	WI	546671012
-1861	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARLISLE, KENTUCKY	1970-12-01	0	FRANKLIN	HUGHES		214 N ELM ST	CARLISLE	KY	403111113
-1862	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	IRVINE, KENTUCKY	1970-12-01	0	STEVE	ADAMS		230 MAIN ST	IRVINE	KY	403369998
-1863	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAZARD, KENTUCKY	1970-12-01	0	LARRY	NEACE		PO BOX 104	HAZARD	KY	417020104
-1864	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARLAN, KENTUCKY	1970-12-01	0	SHANNON	SMITH		207 HIGHWAY 1601	EVARTS	KY	408286316
+1859	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHENANDOAH, IOWA	1970-12-01		STEVEN	JOHNSON		501 W LOWELL AVE	SHENANDOAH	IA	516011261
+1860	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WESTBY, WISCONSIN	1970-12-01		VACANT	VACANT		102 MELBY ST	WESTBY	WI	546671012
+1861	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARLISLE, KENTUCKY	1970-12-01		FRANKLIN	HUGHES		214 N ELM ST	CARLISLE	KY	403111113
+1862	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	IRVINE, KENTUCKY	1970-12-01		STEVE	ADAMS		230 MAIN ST	IRVINE	KY	403369998
+1863	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAZARD, KENTUCKY	1970-12-01		LARRY	NEACE		PO BOX 104	HAZARD	KY	417020104
+1864	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARLAN, KENTUCKY	1970-12-01		SHANNON	SMITH		207 HIGHWAY 1601	EVARTS	KY	408286316
 1865	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	3	WAYNE	OLSON		522 THOMPSON STREET	BOTTINEAU	ND	583181458
-1866	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DEVILS LAKE, NORTH DAKOTA	1970-12-01	0	TODD	CURTIS		1010 6TH ST NE	DEVILS LAKE	ND	583012716
-1867	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARVEY, NORTH DAKOTA	1970-12-01	0	JASON	GROSSMAN		708 ADAMS AVE	HARVEY	ND	583419998
+1866	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DEVILS LAKE, NORTH DAKOTA	1970-12-01		TODD	CURTIS		1010 6TH ST NE	DEVILS LAKE	ND	583012716
+1867	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARVEY, NORTH DAKOTA	1970-12-01		JASON	GROSSMAN		708 ADAMS AVE	HARVEY	ND	583419998
 1868	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	15	SHAYLA M.	WINEGART	PO BOX 1718		PAMPA	TX	790661718
 1869	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	142	THOMAS	DEVERY	PO BOX -830314		Richardson	TX	750830314
-1870	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PERRYTON, TEXAS	1976-07-01	0	ROSE	RABE		2009 HARVARD DR	PERRYTON	TX	790705023
-1871	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST, TEXAS	1970-12-01	0	FRANKIE	PAVELKA		212 BERGER RD	WEST	TX	766912301
-1872	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RAYMOND, WASHINGTON 	1970-12-01	0	CLAIRE	SIDES		406 DURYEA ST	RAYMOND	WA	985779998
-1873	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WATERVILLE, MINNESOTA	1970-12-01	0	JOSEPH	GROSE		125 3RD ST N	WATERVILLE	MN	560961442
-1874	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OLIVIA, MINNESOTA	1970-12-01	0	LARRY	LANDIN		204 S 1ST ST	OLIVIA	MN	562771401
-1875	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ORTONVILLE, MINNESOTA	1975-12-01	0	KEVIN	GABLE		104 JACKSON AVE	ORTONVILLE	MN	562781400
-1876	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PARK RAPIDS, MINNESOTA	1970-12-01	0	MARK	MERFELD		15769 CONIFER CIR	PARK RAPIDS	MN	564702842
-1877	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PERHAM, MINNESOTA	1970-12-01	0	PATRICIA	CARRLSON		100 3RD AVE NW	PERHAM	MN	565739998
-1878	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WACONIA, MINNESOTA	1970-12-01	0	GREGG	SCHROEDER		1422 COURTLAND W	WACONIA	MN	553871264
-1879	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MADISON, MINNESOTA	1970-12-01	0	DANIEL	VOORHEES		711 1ST ST W	MADISON	MN	562561334
-1880	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MELROSE, MINNESOTA	1970-12-01	0	WILLIAM	MASSMANN		520 COUNTY ROAD 170	MELROSE	MN	563528271
-1881	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTEVIDEO, MINNESOTA	1970-12-01	0	MARK	PETERSON		917 WILLIAMS AVE	MONTEVIDEO	MN	562652257
-1882	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTGOMERY, MINNESOTA	1970-12-01	0	BRENT	THOMPSON		153 ELM AVE SE	MONTGOMERY	MN	560691628
-1883	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MORRIS, MINNESOTA	1970-12-01	0	PATRICK	SCHNEIDER		105 E 6TH ST	MORRIS	MN	562671210
-1884	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BURNS, OREGON	1970-12-01	0	MARTHA	WENSENK		151 W JOHNSON ST	BURNS	OR	977209384
-1885	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DONIPHAN, MISSOURI	1970-12-01	0	CHARLES	HUDSON		1900 RIPLEY 160W21	DONIPHAN	MO	639355808
-1886	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRESTONSBURG, KENTUCKY	1970-12-01	0	ROY	HALEY		634 RIVERSIDE DR	PRESTONSBURG	KY	416537747
-1887	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOUNT STERLING, KENTUCKY	1970-12-01	0	MICHAEL	COCKRELL		108 W LOCUST ST	MOUNT STERLING	KY	403539998
-1888	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MORGANFIELD, KENTUCKY	1970-12-01	0	KENNETH	FOWLER		604 GADWALL LN	HENDERSON	KY	424208842
-1889	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOREHEAD, KENTUCKY	1970-12-01	0	VACANT	VACANT		700 W 1ST ST	MOREHEAD	KY	403519998
-1890	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LEITCHFIELD, KENTUCKY	1975-12-01	0	JAVIER	RODARTE		210 S MAIN ST	LEITCHFIELD	KY	427549998
-1891	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VERSAILLES, MISSOURI	1970-12-01	0	CHRISTOPHER	ANDERSEN		404 W WASHINGTON ST	VERSAILLES	MO	650841504
-1892	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BOONEVILLE, ARKANSAS	1970-12-01	0	RAYMOND	GALARZA JR		111 S BROADWAY AVE	BOONEVILLE	AR	729279998
-1893	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHELBINA, MISSOURI	1970-12-01	0	RODNEY	WEST		606 BLUE BIRD LN	SHELBINA	MO	634681067
+1870	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PERRYTON, TEXAS	1976-07-01		ROSE	RABE		2009 HARVARD DR	PERRYTON	TX	790705023
+1871	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST, TEXAS	1970-12-01		FRANKIE	PAVELKA		212 BERGER RD	WEST	TX	766912301
+1872	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RAYMOND, WASHINGTON 	1970-12-01		CLAIRE	SIDES		406 DURYEA ST	RAYMOND	WA	985779998
+1873	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WATERVILLE, MINNESOTA	1970-12-01		JOSEPH	GROSE		125 3RD ST N	WATERVILLE	MN	560961442
+1874	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OLIVIA, MINNESOTA	1970-12-01		LARRY	LANDIN		204 S 1ST ST	OLIVIA	MN	562771401
+1875	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ORTONVILLE, MINNESOTA	1975-12-01		KEVIN	GABLE		104 JACKSON AVE	ORTONVILLE	MN	562781400
+1876	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PARK RAPIDS, MINNESOTA	1970-12-01		MARK	MERFELD		15769 CONIFER CIR	PARK RAPIDS	MN	564702842
+1877	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PERHAM, MINNESOTA	1970-12-01		PATRICIA	CARRLSON		100 3RD AVE NW	PERHAM	MN	565739998
+1878	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WACONIA, MINNESOTA	1970-12-01		GREGG	SCHROEDER		1422 COURTLAND W	WACONIA	MN	553871264
+1879	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MADISON, MINNESOTA	1970-12-01		DANIEL	VOORHEES		711 1ST ST W	MADISON	MN	562561334
+1880	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MELROSE, MINNESOTA	1970-12-01		WILLIAM	MASSMANN		520 COUNTY ROAD 170	MELROSE	MN	563528271
+1881	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTEVIDEO, MINNESOTA	1970-12-01		MARK	PETERSON		917 WILLIAMS AVE	MONTEVIDEO	MN	562652257
+1882	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTGOMERY, MINNESOTA	1970-12-01		BRENT	THOMPSON		153 ELM AVE SE	MONTGOMERY	MN	560691628
+1883	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MORRIS, MINNESOTA	1970-12-01		PATRICK	SCHNEIDER		105 E 6TH ST	MORRIS	MN	562671210
+1884	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BURNS, OREGON	1970-12-01		MARTHA	WENSENK		151 W JOHNSON ST	BURNS	OR	977209384
+1885	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DONIPHAN, MISSOURI	1970-12-01		CHARLES	HUDSON		1900 RIPLEY 160W21	DONIPHAN	MO	639355808
+1886	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRESTONSBURG, KENTUCKY	1970-12-01		ROY	HALEY		634 RIVERSIDE DR	PRESTONSBURG	KY	416537747
+1887	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOUNT STERLING, KENTUCKY	1970-12-01		MICHAEL	COCKRELL		108 W LOCUST ST	MOUNT STERLING	KY	403539998
+1888	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MORGANFIELD, KENTUCKY	1970-12-01		KENNETH	FOWLER		604 GADWALL LN	HENDERSON	KY	424208842
+1889	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOREHEAD, KENTUCKY	1970-12-01		VACANT	VACANT		700 W 1ST ST	MOREHEAD	KY	403519998
+1890	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LEITCHFIELD, KENTUCKY	1975-12-01		JAVIER	RODARTE		210 S MAIN ST	LEITCHFIELD	KY	427549998
+1891	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VERSAILLES, MISSOURI	1970-12-01		CHRISTOPHER	ANDERSEN		404 W WASHINGTON ST	VERSAILLES	MO	650841504
+1892	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BOONEVILLE, ARKANSAS	1970-12-01		RAYMOND	GALARZA JR		111 S BROADWAY AVE	BOONEVILLE	AR	729279998
+1893	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHELBINA, MISSOURI	1970-12-01		RODNEY	WEST		606 BLUE BIRD LN	SHELBINA	MO	634681067
 1894	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	39	RIchard	Boone	PO BOX 1051		POPLAR BLUFF	MO	639021051
-1895	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRINKLEY, ARKANSAS	1970-12-01	0	BRIAN	PRINCE		201 N MAIN ST	BRINKLEY	AR	720219998
-1896	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLARKSVILLE, ARKANSAS	1970-12-01	0	LARRY	CRAWFORD		200 W SEVIER ST	CLARKSVILLE	AR	728309998
-1897	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CORNING, ARKANSAS	1970-12-01	0	JAMES	MASON		1007 11TH ST	CORNING	AR	724223148
-1898	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EARLE, ARKANSAS	1970-12-01	0	VACANT	VACANT		700 EXCHANGE ST	EARLE	AR	723319998
-1899	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALBANY, MISSOURI	1970-12-01	0	SHERMAN	STEPHENS		22072 E 350TH ST	BETHANY	MO	644248344
+1895	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRINKLEY, ARKANSAS	1970-12-01		BRIAN	PRINCE		201 N MAIN ST	BRINKLEY	AR	720219998
+1896	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLARKSVILLE, ARKANSAS	1970-12-01		LARRY	CRAWFORD		200 W SEVIER ST	CLARKSVILLE	AR	728309998
+1897	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CORNING, ARKANSAS	1970-12-01		JAMES	MASON		1007 11TH ST	CORNING	AR	724223148
+1898	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EARLE, ARKANSAS	1970-12-01		VACANT	VACANT		700 EXCHANGE ST	EARLE	AR	723319998
+1899	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALBANY, MISSOURI	1970-12-01		SHERMAN	STEPHENS		22072 E 350TH ST	BETHANY	MO	644248344
 1900	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JUNIPER BRANCH	1970-12-01	18	JOHN	LACY		333 N. MAIN STREET	CEDAR CITY	UT	84721    
-1901	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPRINGVILLE, UTAH	1970-12-01	0	JENNIFER	GLADDEN		1441 W 300 N	SPRINGVILLE	UT	846635872
-1902	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STAMPS, ARKANSAS	1970-12-01	0	VACANT	VACANT		110 THOMAS ST	STAMPS	AR	718609998
+1901	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPRINGVILLE, UTAH	1970-12-01		JENNIFER	GLADDEN		1441 W 300 N	SPRINGVILLE	UT	846635872
+1902	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STAMPS, ARKANSAS	1970-12-01		VACANT	VACANT		110 THOMAS ST	STAMPS	AR	718609998
 1903	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	40	Craig	Westbrooks	P.O. Box 602	105 SOUTH MAIN STREET	HOPKINSVILLE	KY	422410602
-1904	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CASTLE ROCK, WASHINGTON	1970-12-01	0	DOROTHY	ADAMS		1965 WESTSIDE HWY UNIT 12	KELSO	WA	986265908
-1905	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PARAGOULD, ARKANSAS	1970-12-01	0	ORLAN	MEARS		200 W COURT	PARAGOULD	AR	724504338
-1906	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRESCOTT, ARKANSAS	1970-12-01	0	DEBORAH	BOECKMAN		207 E ELM	PRESCOTT	AR	718572148
-1907	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WALDRON, ARKANSAS	1970-12-01	0	WENDLL	RICE		2789 LINK RD	WALDRON	AR	729587178
-1908	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WARREN ARKANSAS	1970-12-01	0	NEVA	LAWSON		1318 S WILMAR RD	WILMAR	AR	716757011
-1909	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WYNNE, ARKANSAS	1970-12-01	0	VANTTINE	COCHRAN		1010 OUIDA ST S	WYNNE	AR	723963613
-1910	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DE WITT, ARKANSAS	1970-12-01	0	SHON	MATHEWS		221 W CROSS ST	DE WITT	AR	720429998
-1911	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GURDON, ARKANSAS	1970-12-01	0	JAMES	RHODES		3277 HIGHWAY 299	ROSSTON	AR	718588802
-1912	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE VILLAGE, ARKANSAS	1970-12-01	0	JARED	JONES		206 S COKLEY ST	LAKE VILLAGE	AR	716539998
-1913	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARION, ARKANSAS	1970-12-01	0	JOHN	STEELE		195 SHILOH DR	MARION	AR	723642123
-1914	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MAKED TREE, ARKANSAS	1970-12-01	0	CHARLES	WILLIAMS		616 NORMANDY ST	MARKED TREE	AR	723652615
-1915	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PALMYRA, MISSOURI	1970-12-01	0	ERIN	WILSON		323 S MAIN ST	PALMYRA	MO	634619998
-1916	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONROE CITY, MISSOURI	1970-12-01	0	DENNIS	TYNER		416 N MAIN ST	MONROE CITY	MO	634569998
+1904	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CASTLE ROCK, WASHINGTON	1970-12-01		DOROTHY	ADAMS		1965 WESTSIDE HWY UNIT 12	KELSO	WA	986265908
+1905	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PARAGOULD, ARKANSAS	1970-12-01		ORLAN	MEARS		200 W COURT	PARAGOULD	AR	724504338
+1906	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRESCOTT, ARKANSAS	1970-12-01		DEBORAH	BOECKMAN		207 E ELM	PRESCOTT	AR	718572148
+1907	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WALDRON, ARKANSAS	1970-12-01		WENDLL	RICE		2789 LINK RD	WALDRON	AR	729587178
+1908	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WARREN ARKANSAS	1970-12-01		NEVA	LAWSON		1318 S WILMAR RD	WILMAR	AR	716757011
+1909	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WYNNE, ARKANSAS	1970-12-01		VANTTINE	COCHRAN		1010 OUIDA ST S	WYNNE	AR	723963613
+1910	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DE WITT, ARKANSAS	1970-12-01		SHON	MATHEWS		221 W CROSS ST	DE WITT	AR	720429998
+1911	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GURDON, ARKANSAS	1970-12-01		JAMES	RHODES		3277 HIGHWAY 299	ROSSTON	AR	718588802
+1912	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE VILLAGE, ARKANSAS	1970-12-01		JARED	JONES		206 S COKLEY ST	LAKE VILLAGE	AR	716539998
+1913	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARION, ARKANSAS	1970-12-01		JOHN	STEELE		195 SHILOH DR	MARION	AR	723642123
+1914	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MAKED TREE, ARKANSAS	1970-12-01		CHARLES	WILLIAMS		616 NORMANDY ST	MARKED TREE	AR	723652615
+1915	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PALMYRA, MISSOURI	1970-12-01		ERIN	WILSON		323 S MAIN ST	PALMYRA	MO	634619998
+1916	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONROE CITY, MISSOURI	1970-12-01		DENNIS	TYNER		416 N MAIN ST	MONROE CITY	MO	634569998
 1917	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	4	Mark	Jines		1810 Marion Drive	Louisiana	MO	633532154
 1918	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	7	ROBERT	BARKDOLL		31240 HWY BB	LEBANON	MO	655365097
 1919	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CONNECTICUT	1970-12-01	4692	CAROL	EMMER		165 windy drive	WATERBURY	CT	06705    
@@ -13349,767 +13624,767 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 1925	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PENNSYLVANIA	1970-12-01	13206	GEARY	WERTZ		1416 Rosebud Rd	Southampton	PA	189663370
 1926	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WYOMING	1970-12-01	276	Megan	Garretson	Po Box 333		Sheridan	WY	828010333
 1927	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST VIRGINIA	1970-12-01	1267	LONNIE	CARPENTER	PO BOX 295		GLASGOW	WV	250860295
-1928	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW ALBANY, OHIO	1970-12-01	0	JEREMY	GRAVES		801 EAST BANKHEAD ST	NEW ALBANY	MS	386525202
-1929	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OAK HILL, OHIO	1970-12-01	0	MITCHELL	COSTILOW		1989 JOHN HOOPS RD	JACKSON	OH	456408807
-1930	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HELENA, ARKANSAS	1970-12-01	0	WILMA	FRAZIER		422 PHILLIPS ROAD 358	POPLAR GROVE	AR	723749318
-1931	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CUMBERLAND, KENTUCKY	1970-12-01	0	LESLIE	MAYFIELD		126 ROGERS LN	BAXTER	KY	408068200
-1932	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	0	MICHAEL	MITCHELL		45 TUNNELL LN	GREENSBURG	KY	427439998
-1933	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	POCAHONTAS, ARKANSAS	1970-12-01	0	MICHAEL	SPURLOCK		501 BROADWAY ST	POCAHONTAS	AR	724559998
-1934	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	APALACHICOLA, FLORIDA	1975-12-01	0	GEORGE	THOMPSON		20 AVENUE D STE 101	APALACHICOLA	FL	323202700
-1935	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MILAN, MISSOURI	1970-12-01	0	VACANT	VACANT		100 E 4TH ST	MILAN	MO	635569997
-1936	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOUNTAIN VIEW, MISSOURI	1970-12-01	0	OZELLA	WALKER		PO BOX 1420	MOUNTAIN VIEW	MO	655481420
+1928	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW ALBANY, OHIO	1970-12-01		JEREMY	GRAVES		801 EAST BANKHEAD ST	NEW ALBANY	MS	386525202
+1929	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OAK HILL, OHIO	1970-12-01		MITCHELL	COSTILOW		1989 JOHN HOOPS RD	JACKSON	OH	456408807
+1930	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HELENA, ARKANSAS	1970-12-01		WILMA	FRAZIER		422 PHILLIPS ROAD 358	POPLAR GROVE	AR	723749318
+1931	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CUMBERLAND, KENTUCKY	1970-12-01		LESLIE	MAYFIELD		126 ROGERS LN	BAXTER	KY	408068200
+1932	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01		MICHAEL	MITCHELL		45 TUNNELL LN	GREENSBURG	KY	427439998
+1933	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	POCAHONTAS, ARKANSAS	1970-12-01		MICHAEL	SPURLOCK		501 BROADWAY ST	POCAHONTAS	AR	724559998
+1934	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	APALACHICOLA, FLORIDA	1975-12-01		GEORGE	THOMPSON		20 AVENUE D STE 101	APALACHICOLA	FL	323202700
+1935	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MILAN, MISSOURI	1970-12-01		VACANT	VACANT		100 E 4TH ST	MILAN	MO	635569997
+1936	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOUNTAIN VIEW, MISSOURI	1970-12-01		OZELLA	WALKER		PO BOX 1420	MOUNTAIN VIEW	MO	655481420
 1937	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	12	Anthony	Capaldo		214 S 2nd St	Keokuk	IA	52632    
-1938	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	REXBURG, IDAHO	1970-12-01	0	CURTIS	MUELLER		681 BLUE WILLOW CIR	REXBURG	ID	834405055
-1939	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TIPTON, IOWA	1970-12-01	0	CHASE	SCOTT		512 LYNN ST	TIPTON	IA	527729998
-1940	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RUGBY, NORTH DAKOTA	1970-12-01	0	TAMMY	BROSSART		205 2ND ST SE	RUGBY	ND	583689998
-1941	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	0	PENNIE	REINKE		143 3RD ST NE	VALLEY CITY	ND	580729998
-1942	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DOUGLAS, WYOMING	1970-12-01	0	MATTHEW	KLOUDA		129 N 3RD ST	DOUGLAS	WY	826339998
+1938	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	REXBURG, IDAHO	1970-12-01		CURTIS	MUELLER		681 BLUE WILLOW CIR	REXBURG	ID	834405055
+1939	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TIPTON, IOWA	1970-12-01		CHASE	SCOTT		512 LYNN ST	TIPTON	IA	527729998
+1940	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RUGBY, NORTH DAKOTA	1970-12-01		TAMMY	BROSSART		205 2ND ST SE	RUGBY	ND	583689998
+1941	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01		PENNIE	REINKE		143 3RD ST NE	VALLEY CITY	ND	580729998
+1942	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DOUGLAS, WYOMING	1970-12-01		MATTHEW	KLOUDA		129 N 3RD ST	DOUGLAS	WY	826339998
 1943	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	7	Jamie	Austin	PO BOX 1031		GREEN RIVER	WY	829351031
-1944	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	0	TAMARA	MITCHELL		PO BOX 282	RAWLINGS	WY	823010282
+1944	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01		TAMARA	MITCHELL		PO BOX 282	RAWLINGS	WY	823010282
 1945	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KANSAS	1970-12-01	2492	IKE	DONN		260 E WALNUT ST	COLBY	KS	67701    
 1946	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	IOWA	1970-12-01	1741	KEITH	BROWN		5336 E KENYON CR	DES MOINES	IA	503202728
 1947	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MISSISSIPPI	1970-12-01	731	ADAM	WELCH		3613 EASTBROOK ROAD	NATCHEZ	MS	391204803
 1948	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	35	Catherine	Cummings	P.O. BOX 3216		N. ATTLEBORO	MA	027613216
-1949	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COCHRAN, GEORGIA	1970-12-01	0	GALE	KEMP		105 N 2ND ST	COCHRAN	GA	310148744
-1950	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAMILLA, GEORGIA	1970-12-01	0	JULIAN	STOUDENMIRE		5316 SANDERS RD	JACKSONVILLE	FL	322771334
-1951	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAWKINSVILLE, GEORGIA	1970-12-01	0	LENNON	GRIFFIN		PO BOX 394	HAWKINSVILLE	GA	310360394
-1952	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARTWELL, GEORGIA	1970-12-01	0	KELLIE	CHILDERS		184 W FRANKLIN ST	HARTWELL	GA	306431595
-1953	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOMMERVILLE, GEORGIA	1970-12-01	0	STEVEN	MAXWELL		57 E DAME AVE	HOMERVILLE	GA	316349998
-1954	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LYONS, GEORGIA	1970-12-01	0	GREGORY	HACKLE		1090 OLD NORMANTOWN RD	LYONS	GA	304362034
+1949	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COCHRAN, GEORGIA	1970-12-01		GALE	KEMP		105 N 2ND ST	COCHRAN	GA	310148744
+1950	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAMILLA, GEORGIA	1970-12-01		JULIAN	STOUDENMIRE		5316 SANDERS RD	JACKSONVILLE	FL	322771334
+1951	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAWKINSVILLE, GEORGIA	1970-12-01		LENNON	GRIFFIN		PO BOX 394	HAWKINSVILLE	GA	310360394
+1952	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARTWELL, GEORGIA	1970-12-01		KELLIE	CHILDERS		184 W FRANKLIN ST	HARTWELL	GA	306431595
+1953	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOMMERVILLE, GEORGIA	1970-12-01		STEVEN	MAXWELL		57 E DAME AVE	HOMERVILLE	GA	316349998
+1954	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LYONS, GEORGIA	1970-12-01		GREGORY	HACKLE		1090 OLD NORMANTOWN RD	LYONS	GA	304362034
 1955	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	16	RANDALL	MCDONALD		170 GARETT WAY	MILLEDGEVILLE	GA	310612405
-1956	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANCHESTER, GEORGIA	1970-12-01	0	RICKY	THURMAN		415 W MAIN ST	MANCHESTER	GA	318169998
-1957	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT MARYS, GEORGIA	1970-12-01	0	HENRY	PEEPLES JR		724 CHARLIE SMITH SR HWY	SAINT MARYS	GA	315589998
-1958	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCKMART, GEORGIA	1970-12-01	0	JAMES	WHITE		130 E ELM ST	ROCKMART	GA	301539998
-1959	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PELHAM, GEORGIA	1970-12-01	0	CRAIG	PRESLEY		111 N LEGION DR SW	PELHAM	GA	317795857
-1960	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTEZUMA, GEORGIA	1970-12-01	0	NAPOLEON	HILL JR		110 CABOT ST	MONTEZUMA	GA	310639998
-1961	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TALLAPOOSA, GEORGIA	1970-12-01	0	JIMMY	THROWER		56 STEADMAN RD	TALLAPOOSA	GA	301762564
-1962	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TRIO, GEORGIA	1970-12-01	0	AMANDA	VEATCH		14366 HWY 27	TRION	GA	307539998
+1956	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANCHESTER, GEORGIA	1970-12-01		RICKY	THURMAN		415 W MAIN ST	MANCHESTER	GA	318169998
+1957	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT MARYS, GEORGIA	1970-12-01		HENRY	PEEPLES JR		724 CHARLIE SMITH SR HWY	SAINT MARYS	GA	315589998
+1958	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCKMART, GEORGIA	1970-12-01		JAMES	WHITE		130 E ELM ST	ROCKMART	GA	301539998
+1959	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PELHAM, GEORGIA	1970-12-01		CRAIG	PRESLEY		111 N LEGION DR SW	PELHAM	GA	317795857
+1960	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTEZUMA, GEORGIA	1970-12-01		NAPOLEON	HILL JR		110 CABOT ST	MONTEZUMA	GA	310639998
+1961	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TALLAPOOSA, GEORGIA	1970-12-01		JIMMY	THROWER		56 STEADMAN RD	TALLAPOOSA	GA	301762564
+1962	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TRIO, GEORGIA	1970-12-01		AMANDA	VEATCH		14366 HWY 27	TRION	GA	307539998
 1963	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	22	DASHAWN	JOHNSON	P.O. BOX 1642		TUCKER	GA	300851642
-1964	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WARRENTON, GEORGIA	1970-12-01	0	EDWIN	NORRIS		1610 IVEY RD	WARRENTON	GA	308285057
-1965	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VIDALIA, GEORGIA	1970-12-01	0	TIMOTHY	TOOLE		310 CHURCH ST	VIDALIA	GA	304749998
-1966	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SALISBURY, MISSOURI	1970-12-01	0	CHRISTOPHER	SCHNETZLER I		110 E 4TH ST	SALISBURY	MO	652819998
-1967	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SANTA ROSA, NEW MEXICO	1970-12-01	0	CLIFFORD	SENA II		120 S 5TH ST	SANTA ROSA	NM	884359998
-1968	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GUYMON, OKLAHOMA	1970-12-01	0	JACKIE	HOPKINS		PO BOX 506	GRUVER	TX	790400506
-1969	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATOKA, OKLAHOMA	1970-12-01	0	KIMBERLY	FINCH		401 E COURT	ATOKA	OK	745259998
-1970	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PARIS, MISSOURI	1970-12-01	0	JASON	THOMAS		307 N WASHINGTON ST	PARIS	MO	652759998
-1971	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MINDEN, NEBRASKA	1970-12-01	0	GERALD	WAGNITZ		728 E 6TH ST	MINDEN	NE	689591318
-1972	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WILLOWS, CALIFORNIA	1970-12-01	0	DAVID	EVANS		20 SAN RAMON DR	CHICO	CA	959731054
-1973	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	YREKA, CALIFORNIA	1970-12-01	0	VACANT	VACANT		401 S BROADWAY ST	YREKA	CA	960979800
-1974	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ONEILL, NEBRASKA	1970-12-01	0	JERRY	EVANS		217 S MAPLE ST	AINSWORTH	NE	692101741
-1975	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEBRASKA CITY, NEBRASKA	1970-12-01	0	LEONARD	VARVARO		508 CENTRAL AVE	NEBRASKA CITY	NE	684102416
+1964	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WARRENTON, GEORGIA	1970-12-01		EDWIN	NORRIS		1610 IVEY RD	WARRENTON	GA	308285057
+1965	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VIDALIA, GEORGIA	1970-12-01		TIMOTHY	TOOLE		310 CHURCH ST	VIDALIA	GA	304749998
+1966	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SALISBURY, MISSOURI	1970-12-01		CHRISTOPHER	SCHNETZLER I		110 E 4TH ST	SALISBURY	MO	652819998
+1967	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SANTA ROSA, NEW MEXICO	1970-12-01		CLIFFORD	SENA II		120 S 5TH ST	SANTA ROSA	NM	884359998
+1968	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GUYMON, OKLAHOMA	1970-12-01		JACKIE	HOPKINS		PO BOX 506	GRUVER	TX	790400506
+1969	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATOKA, OKLAHOMA	1970-12-01		KIMBERLY	FINCH		401 E COURT	ATOKA	OK	745259998
+1970	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PARIS, MISSOURI	1970-12-01		JASON	THOMAS		307 N WASHINGTON ST	PARIS	MO	652759998
+1971	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MINDEN, NEBRASKA	1970-12-01		GERALD	WAGNITZ		728 E 6TH ST	MINDEN	NE	689591318
+1972	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WILLOWS, CALIFORNIA	1970-12-01		DAVID	EVANS		20 SAN RAMON DR	CHICO	CA	959731054
+1973	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	YREKA, CALIFORNIA	1970-12-01		VACANT	VACANT		401 S BROADWAY ST	YREKA	CA	960979800
+1974	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ONEILL, NEBRASKA	1970-12-01		JERRY	EVANS		217 S MAPLE ST	AINSWORTH	NE	692101741
+1975	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEBRASKA CITY, NEBRASKA	1970-12-01		LEONARD	VARVARO		508 CENTRAL AVE	NEBRASKA CITY	NE	684102416
 1976	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	3	TINA	DEBOER		1928 G STREET	FAIRBURY	NE	683521234
-1977	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AUBURN, NEBRASKA	1970-12-01	0	DOUGLAS	MARTIN		1320 COURTHOUSE AVE	AUBURN	NE	683059998
-1978	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ASHBURN, GEORGIA	1970-12-01	0	VACANT	VACANT		218 E COLLEGE AVE	ASHBURN	GA	317149998
+1977	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AUBURN, NEBRASKA	1970-12-01		DOUGLAS	MARTIN		1320 COURTHOUSE AVE	AUBURN	NE	683059998
+1978	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ASHBURN, GEORGIA	1970-12-01		VACANT	VACANT		218 E COLLEGE AVE	ASHBURN	GA	317149998
 1979	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	25	John	McIntyre		2766 HAMILTON MILL DR	BUFORD	GA	30519    
-1980	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BREMEN, GEORGIA	1970-12-01	0	TONYA	NELSON		101 TALLAPOOSA ST	BREMEN	GA	301101833
-1981	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BARNESVILLE, GEORGIA	1970-12-01	0	VACANT	VACANT		138 FORSYTH ST	BARNESVILLE	GA	302041426
-1982	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DONALSONVILLE, GEORGIA	1970-12-01	0	CELESTE	MCLAUGHLIN		2153 BETHEL RD	BAINBRIDGE	GA	398176955
-1983	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLAKELY, GEORGIA	1970-12-01	0	EDWARD	POWELL		124 EVERGREEN AVE	BLAKELY	GA	398233118
-1984	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW ROADS, LOUISIANA	1970-12-01	0	TAMMY	PINSONAT		148 NEW ROADS ST	NEW ROADS	LA	707609998
-1985	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CORNING, CALIFORNIA	1970-12-01	0	LISA	MARTINEZ		1217 YOLO ST	CORNING	CA	960219998
-1986	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DUNSMUIR, CALIFORNIA	1970-12-01	0	ROBERT	GREENFIELD		PO BOX 486	MESA	AZ	852080486
-1987	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT JOSEPH, MICHIGAN	1970-12-01	0	VACANT	VACANT		205 MAIN ST	SAINT JOSEPH	MI	490850415
-1988	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ISHPEMING	1970-12-01	0	PETER	MEGLATHERY		211 N 2ND ST	ISHPEMING	MI	498491812
+1980	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BREMEN, GEORGIA	1970-12-01		TONYA	NELSON		101 TALLAPOOSA ST	BREMEN	GA	301101833
+1981	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BARNESVILLE, GEORGIA	1970-12-01		VACANT	VACANT		138 FORSYTH ST	BARNESVILLE	GA	302041426
+1982	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DONALSONVILLE, GEORGIA	1970-12-01		CELESTE	MCLAUGHLIN		2153 BETHEL RD	BAINBRIDGE	GA	398176955
+1983	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLAKELY, GEORGIA	1970-12-01		EDWARD	POWELL		124 EVERGREEN AVE	BLAKELY	GA	398233118
+1984	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW ROADS, LOUISIANA	1970-12-01		TAMMY	PINSONAT		148 NEW ROADS ST	NEW ROADS	LA	707609998
+1985	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CORNING, CALIFORNIA	1970-12-01		LISA	MARTINEZ		1217 YOLO ST	CORNING	CA	960219998
+1986	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DUNSMUIR, CALIFORNIA	1970-12-01		ROBERT	GREENFIELD		PO BOX 486	MESA	AZ	852080486
+1987	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT JOSEPH, MICHIGAN	1970-12-01		VACANT	VACANT		205 MAIN ST	SAINT JOSEPH	MI	490850415
+1988	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ISHPEMING	1970-12-01		PETER	MEGLATHERY		211 N 2ND ST	ISHPEMING	MI	498491812
 1989	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	13	Joseph	Palzewicz	P.O. Box 1101		MENOMINEE	MI	498587101
-1990	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	QUINCY, MICHIGAN	1970-12-01	0	DANIEL	NEWELL		173 SUMMIT DR	ALLEGAN	MI	490108627
-1991	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PLAINFIELD, CONNECTICUT	1976-04-01	0	JEREMIAH	MASON		143 PROSPECT AVE	DANIELDSON	CT	062392738
-1992	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHATFIELD, MINNESOTA	1970-12-01	0	CHRISTIAN	ELLIS		245 MAIN ST N	CHATIELD	MN	559231170
-1993	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CANBY, MINNESOTA	1970-12-01	0	STEVEN	HUNT		220 SAINT OLAF AVE N	CANBY	MN	562201374
-1994	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOUTZDALE, PENNSYLVANIA	1970-12-01	0	VACANT	VACANT		721 MCATEER ST	HOUTZDALE	PA	166519998
-1995	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLOUNTSTOWN, FLORIDA	1970-12-01	0	EDWARD	MIELE		16185 SE PEAR ST	BLOUNTSTOWN	FL	324242492
-1996	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NORWOOD, NEW JERSEY	1970-12-01	0	LAMONT	COLEMAN		239 RAILROAD AVE	NORWOOD	NJ	076489998
+1990	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	QUINCY, MICHIGAN	1970-12-01		DANIEL	NEWELL		173 SUMMIT DR	ALLEGAN	MI	490108627
+1991	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PLAINFIELD, CONNECTICUT	1976-04-01		JEREMIAH	MASON		143 PROSPECT AVE	DANIELDSON	CT	062392738
+1992	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHATFIELD, MINNESOTA	1970-12-01		CHRISTIAN	ELLIS		245 MAIN ST N	CHATIELD	MN	559231170
+1993	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CANBY, MINNESOTA	1970-12-01		STEVEN	HUNT		220 SAINT OLAF AVE N	CANBY	MN	562201374
+1994	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOUTZDALE, PENNSYLVANIA	1970-12-01		VACANT	VACANT		721 MCATEER ST	HOUTZDALE	PA	166519998
+1995	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLOUNTSTOWN, FLORIDA	1970-12-01		EDWARD	MIELE		16185 SE PEAR ST	BLOUNTSTOWN	FL	324242492
+1996	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NORWOOD, NEW JERSEY	1970-12-01		LAMONT	COLEMAN		239 RAILROAD AVE	NORWOOD	NJ	076489998
 1997	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	53	MICHAEL	LODA		205 JEFFERSON ST	PERTH AMBOY	NJ	088614105
-1998	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SANDPOINT, IDAHO	1970-12-01	0	CHRISTOPHER	CARR		204 N 4TH AVE	SANDPOINT	ID	838649998
-1999	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEISER, IDAHO	1970-12-01	0	PATRICK	POWELL		2010 SHAWN AVE	WEISER	ID	836722612
-2000	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATLANTA, TEXAS	1970-12-01	0	GEORGE	WALLER		1278 FM 251 N	ATLANTA	TX	755518401
-2001	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ANTHONY, KANSAS	1970-12-01	0	ARLENE	TRACY		121 W STEADMAN ST	ANTHONY	KS	670039998
-2002	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ARKANSAS CITY, KANSAS	1970-12-01	0	DEBORA	SEXTON		1817 N 11TH ST	ARKANSAS CITY	KS	670051722
-2003	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHANUTE, KANSAS	1970-12-01	0	TAHNEE	LAZZERS		102 N LINCOLN AVE	CHANUTE	KS	667209998
-2004	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	QUINCY, FLORIDA	1970-12-01	0	REGINALD	LEWIS		PO BOX 74	SNEADS	FL	324600074
-2005	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EUTAW, ALABAMA	1970-12-01	0	ZACH	THOMAS		227 PRAIRIE AVE	EUTAW	AL	034625110
-2006	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HALEYVILLE, ALABAMA	1970-12-01	0	MARY	DICKINSON		3616 CHIPPENHAM DR	BIRMINGHAM	AL	352425870
-2007	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OCILLA, GEORGIA	1970-12-01	0	CAREY	MCCLELLAND		210 S IRWIN AVE	OCILLA	GA	317749998
-2008	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TENNILLE, GEORGIA	1970-12-01	0	VACANT	VACANT		131 SMITH ST	TENNILLE	GA	310899998
-2009	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SWAINSBORO, GEORGIA	1970-12-01	0	MICHAEL	TURNER		1518 GA HWY 23 N	MILLEN	GA	304424236
-2010	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PERRY, GEORGIA	1970-12-01	0	CHARLES	FRYE		213 WIMBLETON CIR	WARNER ROBINS	GA	310931061
-2011	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTICELLO, CALIFORNIA	1970-12-01	0	MARY	MURPHY		5882 FULLERTON PHILLIPS RD	MONTICELLO	GA	310645240
-2012	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAVONIA, GEORGIA	1986-08-01	0	DAVID	HOWELL		611 GROGAN ST	LAVONIA	GA	305531441
-2013	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EATONTON, GEORGIA	1970-12-01	0	VERONICA	DYOUS		410 E SUMTER ST	EATONTON	GA	310241455
+1998	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SANDPOINT, IDAHO	1970-12-01		CHRISTOPHER	CARR		204 N 4TH AVE	SANDPOINT	ID	838649998
+1999	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEISER, IDAHO	1970-12-01		PATRICK	POWELL		2010 SHAWN AVE	WEISER	ID	836722612
+2000	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATLANTA, TEXAS	1970-12-01		GEORGE	WALLER		1278 FM 251 N	ATLANTA	TX	755518401
+2001	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ANTHONY, KANSAS	1970-12-01		ARLENE	TRACY		121 W STEADMAN ST	ANTHONY	KS	670039998
+2002	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ARKANSAS CITY, KANSAS	1970-12-01		DEBORA	SEXTON		1817 N 11TH ST	ARKANSAS CITY	KS	670051722
+2003	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHANUTE, KANSAS	1970-12-01		TAHNEE	LAZZERS		102 N LINCOLN AVE	CHANUTE	KS	667209998
+2004	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	QUINCY, FLORIDA	1970-12-01		REGINALD	LEWIS		PO BOX 74	SNEADS	FL	324600074
+2005	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EUTAW, ALABAMA	1970-12-01		ZACH	THOMAS		227 PRAIRIE AVE	EUTAW	AL	034625110
+2006	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HALEYVILLE, ALABAMA	1970-12-01		MARY	DICKINSON		3616 CHIPPENHAM DR	BIRMINGHAM	AL	352425870
+2007	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OCILLA, GEORGIA	1970-12-01		CAREY	MCCLELLAND		210 S IRWIN AVE	OCILLA	GA	317749998
+2008	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TENNILLE, GEORGIA	1970-12-01		VACANT	VACANT		131 SMITH ST	TENNILLE	GA	310899998
+2009	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SWAINSBORO, GEORGIA	1970-12-01		MICHAEL	TURNER		1518 GA HWY 23 N	MILLEN	GA	304424236
+2010	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PERRY, GEORGIA	1970-12-01		CHARLES	FRYE		213 WIMBLETON CIR	WARNER ROBINS	GA	310931061
+2011	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTICELLO, CALIFORNIA	1970-12-01		MARY	MURPHY		5882 FULLERTON PHILLIPS RD	MONTICELLO	GA	310645240
+2012	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAVONIA, GEORGIA	1986-08-01		DAVID	HOWELL		611 GROGAN ST	LAVONIA	GA	305531441
+2013	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EATONTON, GEORGIA	1970-12-01		VERONICA	DYOUS		410 E SUMTER ST	EATONTON	GA	310241455
 2014	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	10	Jennifer	Harper		1120 Iron Rd	Douglas	GA	31535    
-2015	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BISHOP, CALIFORNIA	1970-12-01	0	HUMBERTO	SANTANAAVILA		PO BOX 424	BISHOP	CA	935150424
+2015	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BISHOP, CALIFORNIA	1970-12-01		HUMBERTO	SANTANAAVILA		PO BOX 424	BISHOP	CA	935150424
 2016	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRAWLEY LETTER CARRIERS	1970-12-01	15	OCTAVIO	CARRIILLO		401 MAIN STREET	BRAWLEY	CA	922272400
-2017	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EASTLAND, TEXAS	1970-12-01	0	JENEAN	WELLS		411 W MAIN ST	EASTLAND	TX	764489998
-2018	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DALHART, TEXAS	1970-12-01	0	CLINTON	SIMMONS		702 W 7TH ST	DALHART	TX	790229998
+2017	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EASTLAND, TEXAS	1970-12-01		JENEAN	WELLS		411 W MAIN ST	EASTLAND	TX	764489998
+2018	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DALHART, TEXAS	1970-12-01		CLINTON	SIMMONS		702 W 7TH ST	DALHART	TX	790229998
 2019	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	50	RICKY	GARCIA	P O BOX 9414		COLLEGE STATION	TX	778429414
-2020	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHILDRESS, TEXAS	1970-12-01	0	LILLY	MOORE-HARWELL		507 AVE F NW	CHILDRESS	TX	792019998
-2021	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRADY, TEXAS	1970-12-01	0	ROBERT	MEDRANO		229 S BLACKBURN ST	BRADY	TX	768259998
-2022	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JACKSON, OHIO	1970-12-01	0	JAMES	YATES		33929 STATE ROUTE 93	MCARTHUR	OH	456518496
-2023	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BREMEN, OHIO	1970-12-01	0	WILLIAM	HYNUS		11420 HIGHLAND PARK	LOGAN	OH	431388617
-2024	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLUFFTON, OHIO	1970-12-01	0	ANNETTE	PHILLIPS		117 N LAWN AVE	BLUFFTON	OH	458171276
-2025	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BYESVILLE, OHIO	1970-12-01	0	WILLIAM	SHIVERS		314 S 7TH ST	BYESVILLE	OH	437231204
-2026	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HALLS, TENNESSEE	1970-12-01	0	GREGORY	MCBROOM		320 SHARP ST	HALLS	TN	380401580
-2027	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GREENFIELD, TENNESSEE	1970-12-01	0	JEREMY	FINCH		4700 MAYBERRY RD	UNION CITY	TN	382617947
+2020	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHILDRESS, TEXAS	1970-12-01		LILLY	MOORE-HARWELL		507 AVE F NW	CHILDRESS	TX	792019998
+2021	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRADY, TEXAS	1970-12-01		ROBERT	MEDRANO		229 S BLACKBURN ST	BRADY	TX	768259998
+2022	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JACKSON, OHIO	1970-12-01		JAMES	YATES		33929 STATE ROUTE 93	MCARTHUR	OH	456518496
+2023	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BREMEN, OHIO	1970-12-01		WILLIAM	HYNUS		11420 HIGHLAND PARK	LOGAN	OH	431388617
+2024	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLUFFTON, OHIO	1970-12-01		ANNETTE	PHILLIPS		117 N LAWN AVE	BLUFFTON	OH	458171276
+2025	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BYESVILLE, OHIO	1970-12-01		WILLIAM	SHIVERS		314 S 7TH ST	BYESVILLE	OH	437231204
+2026	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HALLS, TENNESSEE	1970-12-01		GREGORY	MCBROOM		320 SHARP ST	HALLS	TN	380401580
+2027	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GREENFIELD, TENNESSEE	1970-12-01		JEREMY	FINCH		4700 MAYBERRY RD	UNION CITY	TN	382617947
 2028	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	10	KURT	ONKS		1002 SOUTHWEST AVENUE	JOHNSON CITY	TN	37604    
-2029	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHESAPEAKE, OHIO	1970-12-01	0	JOSEPH	WHITE		607 3RD AVE	CHESAPEAKE	OH	456191082
-2030	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARDINGTON, OHIO	1970-12-01	0	RUTH	BROWN		201 S MARION ST	CARDINGTON	OH	433159998
-2031	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GENOA, ILLINOIS	1970-12-01	0	CHRISTINE	HOLLEY		705 PEARSON DR	GENOA	IL	601351366
-2032	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DU QUOIN, ILLINOIS	1970-12-01	0	ALLEN	ROGERS		304 E MAIN ST	DU QUOIN	IL	628329997
-2033	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BERKELEY SPRINGS, W VIRGINIA	1970-12-01	0	GLORIA	KUYKENDALL		101 HOT ROD LANE	BERKELEY SPRINGS	WV	254116871
-2034	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLONIAL BCH, VIRGINIA	1970-12-01	0	EDWIN	WESTON JR		85 MONROE ST	MONTROSS	VA	225202739
-2035	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CISCO, TEXAS	1970-12-01	0	MANUEL	FLORES		611 W 6TH ST	CISCO	TX	764373010
+2029	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHESAPEAKE, OHIO	1970-12-01		JOSEPH	WHITE		607 3RD AVE	CHESAPEAKE	OH	456191082
+2030	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARDINGTON, OHIO	1970-12-01		RUTH	BROWN		201 S MARION ST	CARDINGTON	OH	433159998
+2031	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GENOA, ILLINOIS	1970-12-01		CHRISTINE	HOLLEY		705 PEARSON DR	GENOA	IL	601351366
+2032	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DU QUOIN, ILLINOIS	1970-12-01		ALLEN	ROGERS		304 E MAIN ST	DU QUOIN	IL	628329997
+2033	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BERKELEY SPRINGS, W VIRGINIA	1970-12-01		GLORIA	KUYKENDALL		101 HOT ROD LANE	BERKELEY SPRINGS	WV	254116871
+2034	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLONIAL BCH, VIRGINIA	1970-12-01		EDWIN	WESTON JR		85 MONROE ST	MONTROSS	VA	225202739
+2035	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CISCO, TEXAS	1970-12-01		MANUEL	FLORES		611 W 6TH ST	CISCO	TX	764373010
 2036	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	9	TAMMY	HULL	350 ARBOR DR		CHRISTIANSBURG	VA	240736557
-2037	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HILL CITY, KANSAS	1970-12-01	0	BECKY	LINDEN		112 E MAIN ST	HILL CITY	KS	676429998
-2038	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARROLLTON, ILLINOIS	1970-12-01	0	JAMES	WATERS		432 4TH ST	CARROLLTON	IL	620161348
-2039	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTICELLO, ILLINOIS	1970-12-01	0	ROBERT	ROSS		104 W LIVINGSTON ST	MONTICELLO	IL	618569998
-2040	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MENDOTTA, ILLINOIS	1970-12-01	0	KAREN	EASTMAN		804 N 2199TH RD	TONICA	IL	613709673
-2041	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	POINT PLEASANT, WEST VIRGINIA	1970-12-01	0	MARK	GEORGI		329 MAIN ST	POINT PLEASANT	WV	255509998
-2042	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW PRAGUE, MINNESOTA	1970-12-01	0	DARRELL	MEYER		124 MAIN ST E	NEW PRAGUE	MN	560712440
-2043	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KENYON, MINNESOTA	1970-12-01	0	PAUL	SMITH		830 RUBY CT	WANAMINGO	MN	559836237
-2044	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOOSTON, MINNESOTA	1970-12-01	0	FLYN	BAILIE		119 2ND ST NW	FOSSTON	MN	565429998
-2045	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FARIBAULT, MINNESOTA	1970-12-01	0	TRAVIS	DEGROOT		28 3RD ST NE	FARIBAULT	MN	550219992
-2046	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLANTON, ALABAMA	1970-12-01	0	CYNTHIA	MARTIN		608 6TH ST	CLANTON	AL	350459998
-2047	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRINCETON, ILLINOIS	1970-12-01	0	DEBORAH	VAN CLEVE		326 S MAIN ST	PRINCETON	IL	613569800
-2048	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GIRARD, KANSAS	1970-12-01	0	JEFFERY	MLEKUS		185 PEAK LN	GIRARD	KS	667432226
-2049	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MURFREESBORO, NORTH CAROLINA	1970-12-01	0	CLYDE	EVERETTE		115 N WYNN ST	MURFREESBORO	NC	278559998
-2050	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ASHEVILLE, NORTH CAROLINA	1970-12-01	0	EDNA	MEEKER		16 WENDOVER RD	ASHEVILLE	NC	288061538
-2051	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEPHI, UTAH	1970-12-01	0	TODD	ASHWORTH		10 N MAIN ST	NEPHI	UT	846484800
+2037	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HILL CITY, KANSAS	1970-12-01		BECKY	LINDEN		112 E MAIN ST	HILL CITY	KS	676429998
+2038	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARROLLTON, ILLINOIS	1970-12-01		JAMES	WATERS		432 4TH ST	CARROLLTON	IL	620161348
+2039	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTICELLO, ILLINOIS	1970-12-01		ROBERT	ROSS		104 W LIVINGSTON ST	MONTICELLO	IL	618569998
+2040	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MENDOTTA, ILLINOIS	1970-12-01		KAREN	EASTMAN		804 N 2199TH RD	TONICA	IL	613709673
+2041	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	POINT PLEASANT, WEST VIRGINIA	1970-12-01		MARK	GEORGI		329 MAIN ST	POINT PLEASANT	WV	255509998
+2042	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW PRAGUE, MINNESOTA	1970-12-01		DARRELL	MEYER		124 MAIN ST E	NEW PRAGUE	MN	560712440
+2043	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KENYON, MINNESOTA	1970-12-01		PAUL	SMITH		830 RUBY CT	WANAMINGO	MN	559836237
+2044	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOOSTON, MINNESOTA	1970-12-01		FLYN	BAILIE		119 2ND ST NW	FOSSTON	MN	565429998
+2045	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FARIBAULT, MINNESOTA	1970-12-01		TRAVIS	DEGROOT		28 3RD ST NE	FARIBAULT	MN	550219992
+2046	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLANTON, ALABAMA	1970-12-01		CYNTHIA	MARTIN		608 6TH ST	CLANTON	AL	350459998
+2047	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRINCETON, ILLINOIS	1970-12-01		DEBORAH	VAN CLEVE		326 S MAIN ST	PRINCETON	IL	613569800
+2048	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GIRARD, KANSAS	1970-12-01		JEFFERY	MLEKUS		185 PEAK LN	GIRARD	KS	667432226
+2049	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MURFREESBORO, NORTH CAROLINA	1970-12-01		CLYDE	EVERETTE		115 N WYNN ST	MURFREESBORO	NC	278559998
+2050	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ASHEVILLE, NORTH CAROLINA	1970-12-01		EDNA	MEEKER		16 WENDOVER RD	ASHEVILLE	NC	288061538
+2051	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEPHI, UTAH	1970-12-01		TODD	ASHWORTH		10 N MAIN ST	NEPHI	UT	846484800
 2052	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	6	BRIAN	HUTCHINGS	P.O. BOX 161		OWEGO	NY	13827    
-2053	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HORTON, KANSAS	1970-12-01	0	MELINDA	CADWELL		825 1ST AVE E	HORTON	KS	664399998
+2053	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HORTON, KANSAS	1970-12-01		MELINDA	CADWELL		825 1ST AVE E	HORTON	KS	664399998
 2054	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	828	Craig	Messier		PO BOX 358	SCHENECTADY	NY	123010358
-2055	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHINCOTEAGUE, VIRGINIA	1970-12-01	0	CLARENCE	BOWDEN		33411 WATTS BAY	WALLOPS ISLAND	VA	233372243
-2056	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TREMONT, UTAH	1970-12-01	0	ERON	ALEXANDER		111 S TREMONT ST	TREMONTON	UT	843373700
-2057	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPANISH FORK, UTAH	1970-12-01	0	OBIE	WING		372 E 9800 S	SALEM	UT	846539250
-2058	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RICHFIELD, UTAH	1970-12-01	0	BROOKE	BRUNSON		PO BOX 560136	SCIPIO	UT	846560136
-2059	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALTAVISTA, VIRGINIA	1970-12-01	0	KALEB	EADES		700 BROAD ST	ALTAVISTA	VA	245179998
-2060	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WOODSTOCK, VIRGINIA	1970-12-01	0	ROBERT	REYNOLDS		533 MOUNT OLIVE RD	TOMS BROOK	VA	226601929
-2061	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SMITHFIELD, VIRGINIA	1970-12-01	0	VACANT	VACANT		234 MAIN ST	SMITHFIELD	VA	234309998
-4664	UTILITY WORKERS AFL-CIO	UWU		1986-09-01	11	Craig	Goucher		293 Sunrise Dr.	Henreyville	PA	18332    
-2062	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PEARISBURG, VIRGINIA	1970-12-01	0	EDWARD	GILLISPIE		1838 CASCADE DR	PEMBROKE	VA	241363326
-2063	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ORANGE, VIRGINIA	1970-12-01	0	JOSEPH	COLLIER		129 W MAIN ST	ORANGE	VA	229609998
-2064	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NORTON, VIRGINIA	1970-12-01	0	DIEDRA	HYLTON		39 7TH ST NW	NORTON	VA	242739998
-2065	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NARROWS, VIRGINIA	1970-12-01	0	JAMES	WARNER		4084 WOLF CREEK RD	NARROWS	VA	241242602
-2066	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAWRENCEVILLE, VIRGINIA	1970-12-01	0	MICHAEL	HARRIS		1860 HALIFAX ST	EMPORIA	VA	238476480
-2067	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CREWE, VIRGINIA	1970-12-01	0	VACANT	VACANT		101 W TENNESSEE AVE	CREWE	VA	239309998
+2055	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHINCOTEAGUE, VIRGINIA	1970-12-01		CLARENCE	BOWDEN		33411 WATTS BAY	WALLOPS ISLAND	VA	233372243
+2056	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TREMONT, UTAH	1970-12-01		ERON	ALEXANDER		111 S TREMONT ST	TREMONTON	UT	843373700
+2057	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPANISH FORK, UTAH	1970-12-01		OBIE	WING		372 E 9800 S	SALEM	UT	846539250
+2058	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RICHFIELD, UTAH	1970-12-01		BROOKE	BRUNSON		PO BOX 560136	SCIPIO	UT	846560136
+2059	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALTAVISTA, VIRGINIA	1970-12-01		KALEB	EADES		700 BROAD ST	ALTAVISTA	VA	245179998
+2060	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WOODSTOCK, VIRGINIA	1970-12-01		ROBERT	REYNOLDS		533 MOUNT OLIVE RD	TOMS BROOK	VA	226601929
+2061	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SMITHFIELD, VIRGINIA	1970-12-01		VACANT	VACANT		234 MAIN ST	SMITHFIELD	VA	234309998
+2062	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PEARISBURG, VIRGINIA	1970-12-01		EDWARD	GILLISPIE		1838 CASCADE DR	PEMBROKE	VA	241363326
+2063	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ORANGE, VIRGINIA	1970-12-01		JOSEPH	COLLIER		129 W MAIN ST	ORANGE	VA	229609998
+2064	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NORTON, VIRGINIA	1970-12-01		DIEDRA	HYLTON		39 7TH ST NW	NORTON	VA	242739998
+2065	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NARROWS, VIRGINIA	1970-12-01		JAMES	WARNER		4084 WOLF CREEK RD	NARROWS	VA	241242602
+2066	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAWRENCEVILLE, VIRGINIA	1970-12-01		MICHAEL	HARRIS		1860 HALIFAX ST	EMPORIA	VA	238476480
+2067	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CREWE, VIRGINIA	1970-12-01		VACANT	VACANT		101 W TENNESSEE AVE	CREWE	VA	239309998
 2068	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NE COLORADO BRANCH	1970-12-01	13	KENNETH	BERGES		425 E 7TH STREET	JULESBURG	CO	807371205
-2069	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GUNNISON, COLORADO	1970-12-01	0	EDWIN	VARGAS		200 N WISCONSIN ST	GUNNISON	CO	812302626
-2070	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLACKWELL, OKLAHOMA	1970-12-01	0	ALFRED	WICKHAM		203 W BLACKWELL AVE	BLACKWELL	OK	746319998
-2071	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARTSHORNE, OKLAHOMA	1970-12-01	0	JAMES	PINGLETON		PO BOX 328	HAILEYVILLE	OK	745460328
-2072	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WOODWARD, OKLAHOMA	1970-12-01	0	THOMAS	ESTEP		PO BOX 6815	NALCREST	FL	338566815
+2069	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GUNNISON, COLORADO	1970-12-01		EDWIN	VARGAS		200 N WISCONSIN ST	GUNNISON	CO	812302626
+2070	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLACKWELL, OKLAHOMA	1970-12-01		ALFRED	WICKHAM		203 W BLACKWELL AVE	BLACKWELL	OK	746319998
+2071	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARTSHORNE, OKLAHOMA	1970-12-01		JAMES	PINGLETON		PO BOX 328	HAILEYVILLE	OK	745460328
+2072	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WOODWARD, OKLAHOMA	1970-12-01		THOMAS	ESTEP		PO BOX 6815	NALCREST	FL	338566815
 2073	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	49	Jacob	Evans	P.O. Box 609		Wilburton	OK	74578    
-2074	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SENECA, KANSAS	1970-12-01	0	KATHY	STALLBAUMER		607 MAIN ST	SENECA	KS	665389998
-2075	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PEABODY, KANSAS	1970-12-01	0	LEROY	STROTKAMP		312 N OLIVE ST	PEABODY	KS	668661124
-2076	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OSWEGO, KANSAS	1970-12-01	0	ALICIA	CONARD		8042 SW 122 TER	CHETOPA	KS	673368571
-2077	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OAKLEY, KANSAS	1970-12-01	0	ROBIN	BOESE		200 HUDSON AVE	OAKLEY	KS	677489998
-2078	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BELOIT, KANSAS	1970-12-01	0	JOHN	STARBUCK		201 E MAIN ST	BELOIT	KS	674209998
+2074	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SENECA, KANSAS	1970-12-01		KATHY	STALLBAUMER		607 MAIN ST	SENECA	KS	665389998
+2075	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PEABODY, KANSAS	1970-12-01		LEROY	STROTKAMP		312 N OLIVE ST	PEABODY	KS	668661124
+2076	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OSWEGO, KANSAS	1970-12-01		ALICIA	CONARD		8042 SW 122 TER	CHETOPA	KS	673368571
+2077	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OAKLEY, KANSAS	1970-12-01		ROBIN	BOESE		200 HUDSON AVE	OAKLEY	KS	677489998
+2078	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BELOIT, KANSAS	1970-12-01		JOHN	STARBUCK		201 E MAIN ST	BELOIT	KS	674209998
 2079	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	11	Nancy	Ballinger-Pullia		17719 K-192 Hwy.	Winchester	KS	66097    
-2080	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELKIN, NORTH CAROLINA	1970-12-01	0	TAMMY	CARTER		213 W MAIN ST	ELKIN	NC	286213489
-2081	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JONESVILLE, NORTH CAROLINA	1978-12-01	0	NANCY	BRYANT		127 N BRIDGE ST	JONESVILLE	NC	286422268
+2080	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELKIN, NORTH CAROLINA	1970-12-01		TAMMY	CARTER		213 W MAIN ST	ELKIN	NC	286213489
+2081	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JONESVILLE, NORTH CAROLINA	1978-12-01		NANCY	BRYANT		127 N BRIDGE ST	JONESVILLE	NC	286422268
 2082	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	696	ROCHELLE	TOLAR		1800 TILLERY PL SUITE D	RALEIGH	NC	276041381
 2083	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	10	Shannon	Reese		3385 Bowman Rd.	Granite Falls	NC	28630    
-2084	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PAYSON, UTAH	1970-12-01	0	NOLAN	JENSEN		955 E 100 N	PAYSON	UT	846515110
-2085	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LITTLE VALLEY, NEW YORK	1970-12-01	0	KEVIN	ANDREW		115 MAIN ST	LITTLE VALLEY	NY	147559998
-2086	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LE ROY NEW YORK	1970-12-01	0	KENNETH	ELLINGHAM		2 MAIN ST	LE ROY	NY	144829998
+2084	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PAYSON, UTAH	1970-12-01		NOLAN	JENSEN		955 E 100 N	PAYSON	UT	846515110
+2085	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LITTLE VALLEY, NEW YORK	1970-12-01		KEVIN	ANDREW		115 MAIN ST	LITTLE VALLEY	NY	147559998
+2086	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LE ROY NEW YORK	1970-12-01		KENNETH	ELLINGHAM		2 MAIN ST	LE ROY	NY	144829998
 2087	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	11	BRIAN	LITTLE		1800 MEIGHEN AVE	MOUNDSVILLE	WV	26041    
-2088	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LYNDEN, WASHINGTON	1974-10-01	0	KEVIN	SCHNETTER		PO BOX 1025	LYNDEN	WA	982646125
+2088	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LYNDEN, WASHINGTON	1974-10-01		KEVIN	SCHNETTER		PO BOX 1025	LYNDEN	WA	982646125
 2089	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	18	Brian	Eliana	PO BOX 426		KAILUA KONA	HI	967450426
-2090	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHENOA, ILLINOIS	1970-12-01	0	DAVID	EYMANN		511 SPRUCE ST	CHENOA	IL	617261348
-2091	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BELLVILLE, TEXAS	1970-12-01	0	SHARON	GOEBEL		11688 SCHAFFNER RD	SEALY	TX	774747245
-2092	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOMER, LOUISIANA	1970-12-01	0	VACANT	VACANT		612 N MAIN ST	HOMER	LA	710409998
-2093	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JASPER, ALABAMA	1970-12-01	0	REBEKAH	DUPREE		2101 3RD AVE S	JASPER	AL	355019998
-2094	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CRYSTAL RIVER, FLORIDA	1970-12-01	0	CHRISTOPHER	CRAIG		18 NE 4TH AVE	CRYSTAL RIVER	FL	344299998
-2095	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	INVERNESS, FLORIDA	1970-12-01	0	ROBERT	BALLARD		1558 E CLEVELAND ST	HERNANDO	FL	344426508
-2096	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLUMBUS, KANSAS	1970-12-01	0	MARTIN	DAINTY		PO BOX 71	WEIR	KS	667810071
-2097	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAWLEY, PENNSYLVANIA	1970-12-01	0	DANIEL	HARDING		72 HIGHLAND DR	HAWLEY	PA	184284512
-2098	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATHENS, PENNSYLVANIA	1970-12-01	0	NORMAN	FAIRBANKS		1049 COLLEGE PARK BLVD	VIRGINIA BEACH	VA	234644482
-2099	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CORTEZ, COLORADO	1970-12-01	0	MADELINE	ALVIS		25311 ROAD L	CORTEZ	CO	813218808
+2090	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHENOA, ILLINOIS	1970-12-01		DAVID	EYMANN		511 SPRUCE ST	CHENOA	IL	617261348
+2091	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BELLVILLE, TEXAS	1970-12-01		SHARON	GOEBEL		11688 SCHAFFNER RD	SEALY	TX	774747245
+2092	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOMER, LOUISIANA	1970-12-01		VACANT	VACANT		612 N MAIN ST	HOMER	LA	710409998
+2093	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JASPER, ALABAMA	1970-12-01		REBEKAH	DUPREE		2101 3RD AVE S	JASPER	AL	355019998
+2094	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CRYSTAL RIVER, FLORIDA	1970-12-01		CHRISTOPHER	CRAIG		18 NE 4TH AVE	CRYSTAL RIVER	FL	344299998
+2095	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	INVERNESS, FLORIDA	1970-12-01		ROBERT	BALLARD		1558 E CLEVELAND ST	HERNANDO	FL	344426508
+2096	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLUMBUS, KANSAS	1970-12-01		MARTIN	DAINTY		PO BOX 71	WEIR	KS	667810071
+2097	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAWLEY, PENNSYLVANIA	1970-12-01		DANIEL	HARDING		72 HIGHLAND DR	HAWLEY	PA	184284512
+2098	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATHENS, PENNSYLVANIA	1970-12-01		NORMAN	FAIRBANKS		1049 COLLEGE PARK BLVD	VIRGINIA BEACH	VA	234644482
+2099	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CORTEZ, COLORADO	1970-12-01		MADELINE	ALVIS		25311 ROAD L	CORTEZ	CO	813218808
 2100	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	9	STEPHANIE	TETLEY	P.O. BOX 933		CRAIG	CO	81626    
-2101	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAS ANIMAS, COLORADO	1970-12-01	0	JEFFREY	HANALEI		513 6TH ST	LAS ANIMAS	CO	810541716
-2102	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLOOMER, WISCONSIN	1970-12-01	0	CORRIE	NIBLETT		1622 MAIN ST	BLOOMER	WI	547241647
-2103	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAMP DOUGLAS, WISCONSIN	1970-12-01	0	VACANT	VACANT		119 MAIN ST	CAMP DOUGLAS	WI	546185005
-2104	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLUMBUS, WISCONSIN	1970-12-01	0	THOMAS	LEISING		211 S DICKASON BLVD	COLUMBUS	WI	539259999
-2105	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CRANDON, WISCONSIN	1970-12-01	0	CHARLES	ROGERS		601 N METONGA AVE	CRANDON	WI	545201161
-2106	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DARLINGTON, WISCONSIN	1970-12-01	0	RANDON	HUBER		320 WELLS ST	DARLINGTON	WI	535301473
-2107	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HURLEY, WISCONSIN	1970-12-01	0	SCOTT	CZERNESKI		5559 US HWY 2	HURLEY	WI	545340000
-2108	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CENTREVILLE, MARYLAND	1970-12-01	0	FRANKLIN	DULIN JR		202 E WATER ST	CENTREVILLE	MD	216179998
-2109	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STERLING, KANSAS	1970-12-01	0	LORI	FISCUS		746 NE 30TH ST	STAFFORD	KS	675787824
-2110	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PLAINVILLE, KANSAS	1970-12-01	0	CLAYTON	BROWN		111 S MAIN ST	PLAINVILLE	KS	676639998
+2101	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAS ANIMAS, COLORADO	1970-12-01		JEFFREY	HANALEI		513 6TH ST	LAS ANIMAS	CO	810541716
+2102	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLOOMER, WISCONSIN	1970-12-01		CORRIE	NIBLETT		1622 MAIN ST	BLOOMER	WI	547241647
+2103	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAMP DOUGLAS, WISCONSIN	1970-12-01		VACANT	VACANT		119 MAIN ST	CAMP DOUGLAS	WI	546185005
+2104	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLUMBUS, WISCONSIN	1970-12-01		THOMAS	LEISING		211 S DICKASON BLVD	COLUMBUS	WI	539259999
+2105	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CRANDON, WISCONSIN	1970-12-01		CHARLES	ROGERS		601 N METONGA AVE	CRANDON	WI	545201161
+2106	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DARLINGTON, WISCONSIN	1970-12-01		RANDON	HUBER		320 WELLS ST	DARLINGTON	WI	535301473
+2107	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HURLEY, WISCONSIN	1970-12-01		SCOTT	CZERNESKI		5559 US HWY 2	HURLEY	WI	545340000
+2108	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CENTREVILLE, MARYLAND	1970-12-01		FRANKLIN	DULIN JR		202 E WATER ST	CENTREVILLE	MD	216179998
+2109	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STERLING, KANSAS	1970-12-01		LORI	FISCUS		746 NE 30TH ST	STAFFORD	KS	675787824
+2110	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PLAINVILLE, KANSAS	1970-12-01		CLAYTON	BROWN		111 S MAIN ST	PLAINVILLE	KS	676639998
 2111	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	8	Brent	Nutter	PO BOX 235		MCPHERSON	KS	674600235
-2112	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANKATO, KANSAS	1970-12-01	0	KIPP	KELLER		109 S COMMERCIAL ST	MANKATO	KS	669569998
-2113	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LYONS, KANSAS	1970-12-01	0	LARRY	SEWELL		432 N 8TH ST	STERLING	KS	675791609
-2114	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARION, KANSAS	1970-12-01	0	MATTHEW	POWERS		816 MAPLE ST	MARION	KS	668611450
-2115	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OBERLIN, KANSAS	1976-04-01	0	PATRICIA	BROWN		135 E HALL ST	OBERLIN	KS	677499998
-2116	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WASHINGTON, KANSAS	1970-12-01	0	HELEN	HUBBARD		100 C ST	WASHINGTON	KS	669689998
-2117	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RAYNE, LOUISIANA	1970-12-01	0	ALVIN	JOCHUM		1017 N AVENUE L	CROWLEY	LA	705263838
-2118	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MINONK, ILLINOIS	1970-12-01	0	KERRY	JOHNSON		160 W 5TH ST	MINONK	IL	617609998
-2119	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARBOR BEACH, MICHIGAN	1970-12-01	0	BARBARA	SCHUH		110 SCHOOL ST	HARBOR BEACH	MI	484419998
-2120	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRAIRIE DU CHIEN, WISCONSIN	1970-12-01	0	ANGELA	FOLEY		120 S BEAUMONT RD	PRAIRIE DU CHIEN	WI	538219998
-2121	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RANDOLPH, WISCONSIN	1970-12-01	0	JOEL	WIERSMA		W11047 GLEN DR	BEAVER DAM	WI	539169154
-2122	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RICE LAKE, WISCONSIN	1970-12-01	0	CANDICE	MILLER		382 COUNTY RD F	PRAIRIE FARM	WI	547620000
-2123	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RIPON, WISCONSIN	1970-12-01	0	THOMAS	DAVIS		220 BLACKBURN ST	RIPON	WI	549719998
-2124	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MEDFORD, WISCONSIN	1970-12-01	0	TODD	ANDERSON		120 W BROADWAY AVE	MEDFORD	WI	544519998
-2125	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LITTLE CHUTE, WISCONSIN	1970-12-01	0	JOSEPH	SCHARENBROCH		514 GRANDE AVE	LITTLE CHUTE	WI	541401708
-2126	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEKOOSA, WISCONSIN	1974-10-01	0	TRACY	WIEDMEYER		1001 MARKET ST	NEKOOSA	WI	544579998
-2127	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW HOLSTEIN, WISCONSIN	1970-12-01	0	STEVEN	HOERL		1816 WISCONSIN AVE	NEW HOLSTEIN	WI	530619998
-2128	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OCONTO, WISCONSIN	1970-12-01	0	DIANE	MAYNARD		141 CONGRESS ST	OCONTO	WI	541539998
-2129	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PARK FALLS, WISCONSIN	1970-12-01	0	WAYNE	HERBST		109 1ST ST N	PARK FALLS	WI	545529998
-2130	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PEWAUKEE, WISCONSIN	1970-12-01	0	ANDREW	JENE		140 SIMMONS AVE	PEWAUKEE	WI	530727400
-2131	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PHILLIPS, WISCONSIN	1970-12-01	0	ERIC	NORUM		194 N AVON AVE	PHILLIPS	WI	545559998
-2132	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PLYMOUTH, WISCONSIN	1970-12-01	0	DIANE	MOENNING		W4604 COUNTY RD EH	ELKHART LAKE	WI	530201650
-2133	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PORT WASHINGTON, WISCONSIN	1970-12-01	0	KEVIN	KARRELS		104 E MAIN ST	PORT WASHINGTON	WI	530749998
-2134	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AMERY, WISCONSIN	1970-12-01	0	DUANE	RILEY		1048 85TH AVE	AMERY	WI	540015122
-2135	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BALCK RIVER FALLS, WISCONSIN	1970-12-01	0	MELINDA	KUBINA		108 FILLMORE ST	BLACK RIVER FALLS	WI	546151741
-2136	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FERRIS, TEXAS	1974-10-01	0	TIFFANEY	JACKSON		3614 HYDE PARK DR	MIDLOTHIAN	TX	760651576
-2137	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JUNCTION, TEXAS	1970-12-01	0	RHONDA	NIXON		612 COLLEGE ST	JUNCTION	TX	768499998
-2138	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LA GRANGE, TEXAS	1970-12-01	0	TODD	BROSCH		113 E COLORADO	LA GRANGE	TX	789459998
-2139	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEWBERRY, MICHIGAN	1970-12-01	0	JANET	HOLZ		216 E JOHN ST	NEWBERRY	MI	498689998
+2112	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANKATO, KANSAS	1970-12-01		KIPP	KELLER		109 S COMMERCIAL ST	MANKATO	KS	669569998
+2113	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LYONS, KANSAS	1970-12-01		LARRY	SEWELL		432 N 8TH ST	STERLING	KS	675791609
+2114	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARION, KANSAS	1970-12-01		MATTHEW	POWERS		816 MAPLE ST	MARION	KS	668611450
+2115	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OBERLIN, KANSAS	1976-04-01		PATRICIA	BROWN		135 E HALL ST	OBERLIN	KS	677499998
+2116	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WASHINGTON, KANSAS	1970-12-01		HELEN	HUBBARD		100 C ST	WASHINGTON	KS	669689998
+2117	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RAYNE, LOUISIANA	1970-12-01		ALVIN	JOCHUM		1017 N AVENUE L	CROWLEY	LA	705263838
+2118	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MINONK, ILLINOIS	1970-12-01		KERRY	JOHNSON		160 W 5TH ST	MINONK	IL	617609998
+2119	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARBOR BEACH, MICHIGAN	1970-12-01		BARBARA	SCHUH		110 SCHOOL ST	HARBOR BEACH	MI	484419998
+2120	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRAIRIE DU CHIEN, WISCONSIN	1970-12-01		ANGELA	FOLEY		120 S BEAUMONT RD	PRAIRIE DU CHIEN	WI	538219998
+2121	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RANDOLPH, WISCONSIN	1970-12-01		JOEL	WIERSMA		W11047 GLEN DR	BEAVER DAM	WI	539169154
+2122	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RICE LAKE, WISCONSIN	1970-12-01		CANDICE	MILLER		382 COUNTY RD F	PRAIRIE FARM	WI	547620000
+2123	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RIPON, WISCONSIN	1970-12-01		THOMAS	DAVIS		220 BLACKBURN ST	RIPON	WI	549719998
+2124	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MEDFORD, WISCONSIN	1970-12-01		TODD	ANDERSON		120 W BROADWAY AVE	MEDFORD	WI	544519998
+2125	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LITTLE CHUTE, WISCONSIN	1970-12-01		JOSEPH	SCHARENBROCH		514 GRANDE AVE	LITTLE CHUTE	WI	541401708
+2126	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEKOOSA, WISCONSIN	1974-10-01		TRACY	WIEDMEYER		1001 MARKET ST	NEKOOSA	WI	544579998
+2127	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW HOLSTEIN, WISCONSIN	1970-12-01		STEVEN	HOERL		1816 WISCONSIN AVE	NEW HOLSTEIN	WI	530619998
+2128	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OCONTO, WISCONSIN	1970-12-01		DIANE	MAYNARD		141 CONGRESS ST	OCONTO	WI	541539998
+2129	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PARK FALLS, WISCONSIN	1970-12-01		WAYNE	HERBST		109 1ST ST N	PARK FALLS	WI	545529998
+2130	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PEWAUKEE, WISCONSIN	1970-12-01		ANDREW	JENE		140 SIMMONS AVE	PEWAUKEE	WI	530727400
+2131	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PHILLIPS, WISCONSIN	1970-12-01		ERIC	NORUM		194 N AVON AVE	PHILLIPS	WI	545559998
+2132	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PLYMOUTH, WISCONSIN	1970-12-01		DIANE	MOENNING		W4604 COUNTY RD EH	ELKHART LAKE	WI	530201650
+2133	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PORT WASHINGTON, WISCONSIN	1970-12-01		KEVIN	KARRELS		104 E MAIN ST	PORT WASHINGTON	WI	530749998
+2134	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AMERY, WISCONSIN	1970-12-01		DUANE	RILEY		1048 85TH AVE	AMERY	WI	540015122
+2135	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BALCK RIVER FALLS, WISCONSIN	1970-12-01		MELINDA	KUBINA		108 FILLMORE ST	BLACK RIVER FALLS	WI	546151741
+2136	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FERRIS, TEXAS	1974-10-01		TIFFANEY	JACKSON		3614 HYDE PARK DR	MIDLOTHIAN	TX	760651576
+2137	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JUNCTION, TEXAS	1970-12-01		RHONDA	NIXON		612 COLLEGE ST	JUNCTION	TX	768499998
+2138	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LA GRANGE, TEXAS	1970-12-01		TODD	BROSCH		113 E COLORADO	LA GRANGE	TX	789459998
+2139	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEWBERRY, MICHIGAN	1970-12-01		JANET	HOLZ		216 E JOHN ST	NEWBERRY	MI	498689998
 2140	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	17	RICHARD	ANDERSON	PO BOX 57	101 WEST LUDINGTON	IRON MOUNTAIN	MI	498010057
-2141	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ONTONAGON, MICHIGAN	1970-12-01	0	DAVID	DRIER		19033 IMMO RD	ONTONAGON	MI	499539396
-2142	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT LOUIS, MICHIGAN	1970-12-01	0	CHARLES	MANEY		1031 E HIGH ST	MT PLEASANT	MI	488582866
-2143	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SANDUSKY, MICHIGAN	1970-12-01	0	ANGEL	PARROTT		1211 N GOETZ RD	CARSONVILLE	MI	484199328
-2144	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SEBEWAING, MICHIGAN	1970-12-01	0	JAMES	SIMMET		970 GREMEL RD	SEBEWAING	MI	487599706
-2145	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	UNION CITY, MICHIGAN	1970-12-01	0	JESSICA	LEE		123 ELLEN ST	UNION CITY	MI	490949998
-2146	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LANSE, MICHIGAN	1970-12-01	0	RYAN	DOVE		120 N MAIN ST	LANSE	MI	499469998
-2147	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOWELL, MICHIGAN	1970-12-01	0	SUZANNE	DOLL		120 N BROADWAY ST	LOWELL	MI	493319998
-2148	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPOONER, WISCONSIN	1970-12-01	0	JULIE	MCCANN		2473 28 1/2 ST	RICE LAKE	WI	548689093
-2149	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BANGOR, MICHIGAN	1974-10-01	0	PETER	PENNER JR		538 RAILROAD ST	BANGOR	MI	490131465
-2150	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CASS CITY, MICHIGAN	1970-12-01	0	DALE	BULLOCK		5695 ARGYLE RD	DECKER	MI	484269761
-2151	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CONSTANTINE, MICHIGAN	1970-12-01	0	CRYSTAL	GILBERT		340 S WASHINGTON ST	CONSTANTINE	MI	490429998
-2152	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CRYSTAL FALLS, MICHIGAN	1970-12-01	0	THERESA	MASHBURN		501 SUPERIOR AVE	CRYSTAL FALLS	MI	499201443
-2153	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DEADWOOD, SOUTH DAKOTA	1970-12-01	0	CHARLES	PICKETT		1124 LAUREL ST	WHITEWOOD	SD	577932106
-2154	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FLANDREAU, SOUTH DAKOTA	1970-12-01	0	KIM	WELBIG		47409 SD HIGHWAY 32	FLANDREAU	SD	570286723
-2155	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SWEETWATER, TENNESSEE	1970-12-01	0	GREGORY	MCCULLOCH		106 LAYMON CIR	SWEETWATER	TN	378745804
-2156	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPARTA, TENNESSEE	1970-12-01	0	EDRIC	PITTON		PO BOX 811	SPARTA	TN	385830811
-2157	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARIETTA, OKLAHOMA	1970-12-01	0	STEPHEN	SMITHERS		PO BOX 1114	LONE GROVE	OK	734431114
+2141	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ONTONAGON, MICHIGAN	1970-12-01		DAVID	DRIER		19033 IMMO RD	ONTONAGON	MI	499539396
+2142	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAINT LOUIS, MICHIGAN	1970-12-01		CHARLES	MANEY		1031 E HIGH ST	MT PLEASANT	MI	488582866
+2143	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SANDUSKY, MICHIGAN	1970-12-01		ANGEL	PARROTT		1211 N GOETZ RD	CARSONVILLE	MI	484199328
+2144	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SEBEWAING, MICHIGAN	1970-12-01		JAMES	SIMMET		970 GREMEL RD	SEBEWAING	MI	487599706
+2145	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	UNION CITY, MICHIGAN	1970-12-01		JESSICA	LEE		123 ELLEN ST	UNION CITY	MI	490949998
+2146	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LANSE, MICHIGAN	1970-12-01		RYAN	DOVE		120 N MAIN ST	LANSE	MI	499469998
+2147	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOWELL, MICHIGAN	1970-12-01		SUZANNE	DOLL		120 N BROADWAY ST	LOWELL	MI	493319998
+2148	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPOONER, WISCONSIN	1970-12-01		JULIE	MCCANN		2473 28 1/2 ST	RICE LAKE	WI	548689093
+2149	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BANGOR, MICHIGAN	1974-10-01		PETER	PENNER JR		538 RAILROAD ST	BANGOR	MI	490131465
+2150	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CASS CITY, MICHIGAN	1970-12-01		DALE	BULLOCK		5695 ARGYLE RD	DECKER	MI	484269761
+2151	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CONSTANTINE, MICHIGAN	1970-12-01		CRYSTAL	GILBERT		340 S WASHINGTON ST	CONSTANTINE	MI	490429998
+2152	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CRYSTAL FALLS, MICHIGAN	1970-12-01		THERESA	MASHBURN		501 SUPERIOR AVE	CRYSTAL FALLS	MI	499201443
+2153	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DEADWOOD, SOUTH DAKOTA	1970-12-01		CHARLES	PICKETT		1124 LAUREL ST	WHITEWOOD	SD	577932106
+2154	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FLANDREAU, SOUTH DAKOTA	1970-12-01		KIM	WELBIG		47409 SD HIGHWAY 32	FLANDREAU	SD	570286723
+2155	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SWEETWATER, TENNESSEE	1970-12-01		GREGORY	MCCULLOCH		106 LAYMON CIR	SWEETWATER	TN	378745804
+2156	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPARTA, TENNESSEE	1970-12-01		EDRIC	PITTON		PO BOX 811	SPARTA	TN	385830811
+2157	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARIETTA, OKLAHOMA	1970-12-01		STEPHEN	SMITHERS		PO BOX 1114	LONE GROVE	OK	734431114
 2158	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	11	NATIONAL	ASSOCIATION OF L	PO BOX 9111		YANKTON	SD	570789111
-2159	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BERESFORD, SOUTH DAKOTA	1970-12-01	0	CRAIG	RINGLING		304 S 1ST ST	BERESFORD	SD	570042206
-2160	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CENTERVILLE, TENNESSEE	1970-12-01	0	CECILY	HAITHCOAT		100 BROWN JCT	CENTERVILLE	TN	370339998
-2161	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLINTON, TENNESSEE	1970-12-01	0	SANDRA	SHELTON		105 LEACH LN	CLINTON	TN	377165792
-2162	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOUNTAIN INN, SOUTH CAROLINA	1970-12-01	0	JERRY	HENDERSON		1628 NEELY FERRY RD	SIMPSONVILLE	SC	296807017
-2163	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KERSHAW, SOUTH CAROLINA	1970-12-01	0	JON	STOVER		6999 HIGHWAY 341	KERSHAW	SC	290679747
-2164	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINNSBORO, SOUTH CAROLINA	1970-12-01	0	TOMMY	WILKES		144 N CONGRESS ST	WINNSBORO	SC	291801161
-2165	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SALUDA, SOUTH CAROLINA	1970-12-01	0	TAURUS	MORRIS		424 TRAVIS AVE	SALUDA	SC	291389998
-2166	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FREDERICKTOWN, OHIO	1974-10-01	0	HERBERT	PHILLIPS		6343 COUNTY ROAD 23	MOUNT GILEAD	OH	433389531
-2167	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GARRETTSVILLE, OHIO	1970-12-01	0	TIMOTHY	STREET		10809 NORTH ST	GARRETTSVILLE	OH	442319998
-2168	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LLANO, TEXAS	1970-12-01	0	RANDALL	SOLOMON		102 WILDFLOWER ST	BURNET	TX	786114096
-2169	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELGIN, TEXAS	1970-12-01	0	ERNEST	SCHNEIDER		205 NORWOOD LN	ELGIN	TX	786213132
-2170	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEWPORT, VERMONT	1970-12-01	0	BLAINE	BROWN		PO BOX 1111	ORLEANS	VT	058600111
-2171	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DENTON, MARYLAND	1970-12-01	0	STEVEN	BLANCHFIELD		503 MARKET ST	DENTON	MD	216299998
-2172	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SNOW HILL, MARYLAND	1970-12-01	0	VACANT	VACANT		306 N WASHINGTON ST	SNOW HILL	MD	218639998
+2159	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BERESFORD, SOUTH DAKOTA	1970-12-01		CRAIG	RINGLING		304 S 1ST ST	BERESFORD	SD	570042206
+2160	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CENTERVILLE, TENNESSEE	1970-12-01		CECILY	HAITHCOAT		100 BROWN JCT	CENTERVILLE	TN	370339998
+2161	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLINTON, TENNESSEE	1970-12-01		SANDRA	SHELTON		105 LEACH LN	CLINTON	TN	377165792
+2162	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOUNTAIN INN, SOUTH CAROLINA	1970-12-01		JERRY	HENDERSON		1628 NEELY FERRY RD	SIMPSONVILLE	SC	296807017
+2163	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KERSHAW, SOUTH CAROLINA	1970-12-01		JON	STOVER		6999 HIGHWAY 341	KERSHAW	SC	290679747
+2164	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINNSBORO, SOUTH CAROLINA	1970-12-01		TOMMY	WILKES		144 N CONGRESS ST	WINNSBORO	SC	291801161
+2165	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SALUDA, SOUTH CAROLINA	1970-12-01		TAURUS	MORRIS		424 TRAVIS AVE	SALUDA	SC	291389998
+2166	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FREDERICKTOWN, OHIO	1974-10-01		HERBERT	PHILLIPS		6343 COUNTY ROAD 23	MOUNT GILEAD	OH	433389531
+2167	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GARRETTSVILLE, OHIO	1970-12-01		TIMOTHY	STREET		10809 NORTH ST	GARRETTSVILLE	OH	442319998
+2168	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LLANO, TEXAS	1970-12-01		RANDALL	SOLOMON		102 WILDFLOWER ST	BURNET	TX	786114096
+2169	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELGIN, TEXAS	1970-12-01		ERNEST	SCHNEIDER		205 NORWOOD LN	ELGIN	TX	786213132
+2170	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEWPORT, VERMONT	1970-12-01		BLAINE	BROWN		PO BOX 1111	ORLEANS	VT	058600111
+2171	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DENTON, MARYLAND	1970-12-01		STEVEN	BLANCHFIELD		503 MARKET ST	DENTON	MD	216299998
+2172	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SNOW HILL, MARYLAND	1970-12-01		VACANT	VACANT		306 N WASHINGTON ST	SNOW HILL	MD	218639998
 2173	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	273	ANTHONY	GIOBBE		630 McLean Avenue	YONKERS	NY	10705    
-2174	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LIVINGSTON, MONTANA	1970-12-01	0	KENNETH	BISSON		230 JEFFERSON ST	LIVINGSTON	MT	590474202
-2175	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RUSHVILLE, INDIANA	1970-12-01	0	GERALD	FIELDS JR		5783 W DUNLAPSVILLE RD	CONNERSVILLE	IN	473319199
-2176	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NANTUCKET, MASSACHUSETTS	1970-12-01	0	DIANE	COOMBX		44 UNION ST	NANTUCKET	MA	025543854
-2177	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GREGORY, SOUTH DAKOTA	1970-12-01	0	DONALD	SMITH		216 W 7TH ST	GREGORY	SD	575331323
-2178	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINNER, SOUTH DAKOTA	1970-12-01	0	MALON	BURTZ		30310 PAHAPESTO BUTTES	WINNER	SD	575806803
-2179	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MADISONVILLE, TENNESSEE	1970-12-01	0	VACANT	VACANT		161 WARREN ST	MADISONVILLE	TN	373549998
-2180	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOUDON, TENNESSEE	1970-12-01	0	BLAKE	MCKINLEY		100 GREEN ST	LOUDON	TN	377746668
-2181	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOOKOUT MOUNTAIN, TENNESSEE	1970-12-01	0	ROMAN	HIGDON		824 SCENIC HWY	LOOKOUT MOUNTAIN	TN	373501470
-2182	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KENTON, TENNESSEE	1974-10-01	0	BONNIE	MASON		200 E CARROLL ST	KENTON	TN	382339998
-2183	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCKWOOD, TENNESSEE	1970-12-01	0	VACANT	VACANT		340 W ROCKWOOD ST	ROCKWOOD	TN	378549998
-2184	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCKFORD, TENNESSEE	1975-12-01	0	JANINE	MCMURRAY		3744 HOLLYBROOK RD	ROCKFORD	TN	378533434
+2174	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LIVINGSTON, MONTANA	1970-12-01		KENNETH	BISSON		230 JEFFERSON ST	LIVINGSTON	MT	590474202
+2175	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RUSHVILLE, INDIANA	1970-12-01		GERALD	FIELDS JR		5783 W DUNLAPSVILLE RD	CONNERSVILLE	IN	473319199
+2176	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NANTUCKET, MASSACHUSETTS	1970-12-01		DIANE	COOMBX		44 UNION ST	NANTUCKET	MA	025543854
+2177	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GREGORY, SOUTH DAKOTA	1970-12-01		DONALD	SMITH		216 W 7TH ST	GREGORY	SD	575331323
+2178	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINNER, SOUTH DAKOTA	1970-12-01		MALON	BURTZ		30310 PAHAPESTO BUTTES	WINNER	SD	575806803
+2179	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MADISONVILLE, TENNESSEE	1970-12-01		VACANT	VACANT		161 WARREN ST	MADISONVILLE	TN	373549998
+2180	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOUDON, TENNESSEE	1970-12-01		BLAKE	MCKINLEY		100 GREEN ST	LOUDON	TN	377746668
+2181	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOOKOUT MOUNTAIN, TENNESSEE	1970-12-01		ROMAN	HIGDON		824 SCENIC HWY	LOOKOUT MOUNTAIN	TN	373501470
+2182	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KENTON, TENNESSEE	1974-10-01		BONNIE	MASON		200 E CARROLL ST	KENTON	TN	382339998
+2183	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCKWOOD, TENNESSEE	1970-12-01		VACANT	VACANT		340 W ROCKWOOD ST	ROCKWOOD	TN	378549998
+2184	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCKFORD, TENNESSEE	1975-12-01		JANINE	MCMURRAY		3744 HOLLYBROOK RD	ROCKFORD	TN	378533434
 2185	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	42	GARY	BAGGETT	PO BOX 2686	825 S. CHURCH ST	MURFREESBORO	TN	371302686
 2186	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW YORK	1970-12-01	32000	CHARLES P.	HEEGE		347 WEST 41ST STREET	NEW YORK	NY	100366941
 2187	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALABAMA	1970-12-01	2547	Antonia	Shields		1550 Floyd Bradford Road	Trussville	AL	351733173
-2188	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROSEVILLE, OHIO	1970-12-01	0	MICHELLE	ERVIN		226 N MAIN ST	ROSEVILLE	OH	437779901
-2189	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GUSTINE, CALIFORNIA	1970-12-01	0	JOHN	CAETANO		431 6TH ST	GUSTINE	CA	953221520
-2190	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VAN WERT, OHIO	1970-12-01	0	PATRICK	WALTZ		314 E MAIN ST	VAN WERT	OH	458919998
-2191	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DENVER CITY, TEXAS	1970-12-01	0	SHELLI	WINGO		PO BOX 853	DENVER CITY	TX	793230853
-2192	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NOKOMIS, ILLINOIS	1970-12-01	0	GERALD	SCHMITZ		121 S PINE ST	NOKOMIS	IL	620759998
+2188	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROSEVILLE, OHIO	1970-12-01		MICHELLE	ERVIN		226 N MAIN ST	ROSEVILLE	OH	437779901
+2189	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GUSTINE, CALIFORNIA	1970-12-01		JOHN	CAETANO		431 6TH ST	GUSTINE	CA	953221520
+2190	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VAN WERT, OHIO	1970-12-01		PATRICK	WALTZ		314 E MAIN ST	VAN WERT	OH	458919998
+2191	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DENVER CITY, TEXAS	1970-12-01		SHELLI	WINGO		PO BOX 853	DENVER CITY	TX	793230853
+2192	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NOKOMIS, ILLINOIS	1970-12-01		GERALD	SCHMITZ		121 S PINE ST	NOKOMIS	IL	620759998
 2193	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	14	ROSE	DIXON		120 ROCKMAN RD	GROVER	NC	28073    
-2194	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RIVER FALLS, WISCONSIN	1970-12-01	0	WAYNE	NELSON		944 STEWARTON DR	WOODBURY	MN	551254802
-2195	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MAYVILLE, WISCONSIN	1970-12-01	0	CHERYL	DIETRICH		7 N SCHOOL RD	MAYVILLE	WI	053050998
-2196	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TRACY, MINNESOTA	1970-12-01	0	DAVID	ENGESSER		100 3RD ST	TRACY	MN	561751212
-2197	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAUPACA, WISCONSIN	1970-12-01	0	ALESHA	WILLIAMSON		306 S MAIN ST	WAUPACA	WI	549819998
-2198	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE MILLS, IOWA	1970-12-01	0	JASON	DENNIS		206 N MILL	LAKE MILLS	IA	504509998
-2199	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CALDWELL, OHIO	1970-12-01	0	JAMES	GEE		461 SHERIDAN ST	ZANESVILLE	OH	437012530
-2200	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	THOMSON, GEORGIA	1970-12-01	0	TINA	GREEN		403 MANASSAS DR	THOMSON	GA	308242525
+2194	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RIVER FALLS, WISCONSIN	1970-12-01		WAYNE	NELSON		944 STEWARTON DR	WOODBURY	MN	551254802
+2195	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MAYVILLE, WISCONSIN	1970-12-01		CHERYL	DIETRICH		7 N SCHOOL RD	MAYVILLE	WI	053050998
+2196	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TRACY, MINNESOTA	1970-12-01		DAVID	ENGESSER		100 3RD ST	TRACY	MN	561751212
+2197	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAUPACA, WISCONSIN	1970-12-01		ALESHA	WILLIAMSON		306 S MAIN ST	WAUPACA	WI	549819998
+2198	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE MILLS, IOWA	1970-12-01		JASON	DENNIS		206 N MILL	LAKE MILLS	IA	504509998
+2199	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CALDWELL, OHIO	1970-12-01		JAMES	GEE		461 SHERIDAN ST	ZANESVILLE	OH	437012530
+2200	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	THOMSON, GEORGIA	1970-12-01		TINA	GREEN		403 MANASSAS DR	THOMSON	GA	308242525
 2201	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	7	ANGELIA	CASANOVA		850 10TH ST	WORTHINGTON	MN	561872760
-2202	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PROSSER, WASHINGTON	1970-12-01	0	BRENDA	HULTBERG		1103 MEADE AVE	PROSSER	WA	993501366
+2202	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PROSSER, WASHINGTON	1970-12-01		BRENDA	HULTBERG		1103 MEADE AVE	PROSSER	WA	993501366
 2203	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	33	CARLOS	RODRIGUEZ	PO BOX 555		APOPKA	FL	327040555
-2204	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST UNION, IOWA	1970-12-01	0	GREGORY	JAQUIER		211 N VINE ST	WEST UNION	IA	521751269
-2205	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OSCODA, MICHIGAN	1970-12-01	0	MICHELE	BURCH		221 N STATE ST	OSCODA	MI	487501749
-2206	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARROLLTON, OHIO	1970-12-01	0	JOHN	MOODY		277 3RD ST SW	CARROLLTON	OH	446151537
-2207	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BALTIMORE, OHIO	1970-12-01	0	SHAWNA	KUPFER		317 N GRANVILLE ST	BALTIMORE	OH	431051315
-2208	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JOHNSTOWN, OHIO	1970-12-01	0	DAVID	STEELE		211 W COSHOCTON	JOHNSTOWN	OH	430312100
-2209	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OKOLONA, MISSISSIPPI	1970-12-01	0	TINA	SUTTON		319 W MAIN ST	OKOLONA	MS	388609998
-2210	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST BRANCH, MICHIGAN	1970-12-01	0	VACANT	VACANT		122 S THIRD ST	WEST BRANCH	MI	486619998
+2204	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST UNION, IOWA	1970-12-01		GREGORY	JAQUIER		211 N VINE ST	WEST UNION	IA	521751269
+2205	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OSCODA, MICHIGAN	1970-12-01		MICHELE	BURCH		221 N STATE ST	OSCODA	MI	487501749
+2206	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARROLLTON, OHIO	1970-12-01		JOHN	MOODY		277 3RD ST SW	CARROLLTON	OH	446151537
+2207	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BALTIMORE, OHIO	1970-12-01		SHAWNA	KUPFER		317 N GRANVILLE ST	BALTIMORE	OH	431051315
+2208	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JOHNSTOWN, OHIO	1970-12-01		DAVID	STEELE		211 W COSHOCTON	JOHNSTOWN	OH	430312100
+2209	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OKOLONA, MISSISSIPPI	1970-12-01		TINA	SUTTON		319 W MAIN ST	OKOLONA	MS	388609998
+2210	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST BRANCH, MICHIGAN	1970-12-01		VACANT	VACANT		122 S THIRD ST	WEST BRANCH	MI	486619998
 2211	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	19	Angela	Dailey	PO BOX 1491	826 Division St	Big Rapids	MI	49307    
-2212	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	0	STEPHANIE	WILSON		604 1ST ST W	HAMPTON	SC	299249998
-2213	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SIDNEY, NEBRASKA	1970-12-01	0	ROBERT	WESTMAN		844 ILLINOIS ST	SIDNEY	NE	691629998
+2212	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01		STEPHANIE	WILSON		604 1ST ST W	HAMPTON	SC	299249998
+2213	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SIDNEY, NEBRASKA	1970-12-01		ROBERT	WESTMAN		844 ILLINOIS ST	SIDNEY	NE	691629998
 2214	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	6	JOSEPH  W.	HOUK	PO BOX 75		TORRINGTON	WY	822400075
-2215	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OCONOMOWOC, WISCONSIN	1970-12-01	0	MICHAEL	IMBERGER		38 S MAIN ST	OCONOMOWOC	WI	530669998
-2216	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NESS CITY, KANSAS	1970-12-01	0	RITA	VAVRICKA		108 S KANSAS AVE	NESS CITY	KS	675609998
-2217	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JUNIPER, GEORGIA	1970-12-01	0	CHARLES	FRANCIS		10 ARMOUR RD	PHENIX CITY	AL	368693708
-2218	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTESANO, WASHINGTON	1970-12-01	0	DIANA	THOMAS		211 W PIONEER	MONTESANO	WA	985634410
+2215	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OCONOMOWOC, WISCONSIN	1970-12-01		MICHAEL	IMBERGER		38 S MAIN ST	OCONOMOWOC	WI	530669998
+2216	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NESS CITY, KANSAS	1970-12-01		RITA	VAVRICKA		108 S KANSAS AVE	NESS CITY	KS	675609998
+2217	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JUNIPER, GEORGIA	1970-12-01		CHARLES	FRANCIS		10 ARMOUR RD	PHENIX CITY	AL	368693708
+2218	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTESANO, WASHINGTON	1970-12-01		DIANA	THOMAS		211 W PIONEER	MONTESANO	WA	985634410
 2219	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WASHINGTON	1970-12-01	5045	HOLLY	CURATOLO	PO BOX 1925		Vancouver	WA	98668    
-2220	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINFIELD, KANSAS	1970-12-01	0	ERIC	COOPER		218 E 10TH AVE	WINFIELD	KS	671569998
-2221	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NORTH EAST, MARYLAND	1970-12-01	0	VACANT	VACANT		406 S MAIN ST	NORTH EAST	MD	219019998
-2222	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TILLAMOOK, OREGON	1970-12-01	0	RANDY	NIEMI		2200 1ST ST	TILLAMOOK	OR	971412441
-2223	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BENNETTSVILLE, SOUTH CAROLINA	1970-12-01	0	WILLIAM	JEFFCOAT		208 W MAIN ST	BENNETTSVILLE	SC	295129998
-2224	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANTI, UTAH	1970-12-01	0	VACANT	VACANT		140 N MAIN ST	MANTI	UT	846429998
-2225	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHIPLEY, FLORIDA	1970-12-01	0	RAYMOND	BIXBY		1276 CHURCH AVE	CHIPLEY	FL	324289998
-2226	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FORDYCE, ARKANSAS	1970-12-01	0	THERESA	CROWDER		801 W 4TH ST	FORDYCE	AR	717429998
-2227	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DE QUEEN, ARKANSAS	1970-12-01	0	CARLA	BARNES		175 BARNES LN	DE QUEEN	AR	718329012
+2220	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINFIELD, KANSAS	1970-12-01		ERIC	COOPER		218 E 10TH AVE	WINFIELD	KS	671569998
+2221	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NORTH EAST, MARYLAND	1970-12-01		VACANT	VACANT		406 S MAIN ST	NORTH EAST	MD	219019998
+2222	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TILLAMOOK, OREGON	1970-12-01		RANDY	NIEMI		2200 1ST ST	TILLAMOOK	OR	971412441
+2223	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BENNETTSVILLE, SOUTH CAROLINA	1970-12-01		WILLIAM	JEFFCOAT		208 W MAIN ST	BENNETTSVILLE	SC	295129998
+2224	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANTI, UTAH	1970-12-01		VACANT	VACANT		140 N MAIN ST	MANTI	UT	846429998
+2225	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHIPLEY, FLORIDA	1970-12-01		RAYMOND	BIXBY		1276 CHURCH AVE	CHIPLEY	FL	324289998
+2226	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FORDYCE, ARKANSAS	1970-12-01		THERESA	CROWDER		801 W 4TH ST	FORDYCE	AR	717429998
+2227	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DE QUEEN, ARKANSAS	1970-12-01		CARLA	BARNES		175 BARNES LN	DE QUEEN	AR	718329012
 2228	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	6	JENNIFER	BINK		108 ELM ST	BENNINGTON	VT	05201    
-2229	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SISSETON, SOUTH DAKOTA	1970-12-01	0	MARY	LOTZER		46146 120TH ST	SISSETON	SD	572627121
-2230	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	THAYER, MISSOURI	1970-12-01	0	RICKY	MARTIN		112 N 2ND ST	THAYER	MO	657911266
-2231	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	IDYLLWILD, CALIFORNIA	1976-04-01	0	RANDY	LISTON		840 WHITE OAKS DR	DIXON	IL	610219056
-2232	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AMERICAN FALLS, IDAHO	1970-12-01	0	YOLANDA	PEREZ		3986 COBBLE CT	POCATELLO	ID	832015977
-2233	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AUDUBON, IOWA	1970-12-01	0	TROY	HAGEDORN		200 E DIVISION ST N	AUDUBON	IA	500251505
-2234	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARCELINE, MISSOURI	1970-12-01	0	MARK	BURRIS		120 E RITCHIE AVE	MARCELINE	MO	646589998
-2235	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	IRONTON, MISSOURI	1970-12-01	0	SUE	MOORE		10205 PICKETT RD	POTOSI	MO	636649423
-2236	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALBIA, IOWA	1970-12-01	0	JAMES	OWENS		905 N A ST	ALBIA	IA	525311043
-2237	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JAFFREY, NEW HAMPSHIRE	1970-12-01	0	KENNETH	DURAND		272 FITZWILLIAM ROAD	JAFFREY	NH	034525914
-2238	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BELMOND, IOWA	1970-12-01	0	DENNIS	LOWENBERG		908 9TH ST NE	BELMOND	IA	504211634
-2239	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DECORAH, IOWA	1970-12-01	0	NADINE	SWANSON		PO BOX 123	MONONA	IA	521590123
-2240	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DUNLAP, IOWA	1970-12-01	0	MARSHA	WINGROVE		719 IOWA AVE	DUNLAP	IA	515291337
-2241	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAMBURG, IOWA	1970-12-01	0	VACANT	VACANT		308 F ST	HAMBURG	IA	516401310
-2242	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELLINWOOD, KANSAS	1970-12-01	0	JAMES	ELSEN		212 W 7TH ST	ELLINWOOD	KS	675261109
-2243	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HILLSBORO, KANSAS	1970-12-01	0	LEONARD	FRANTZ		878 250TH	HILLSBORO	KS	670638333
-2244	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FRANKLINGTON, NORTH CAROLINA	1970-12-01	0	WALLACE	STOREY JR		1290 LAKE ROYALE	LOUISBURG	NC	275497449
-2245	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAREY, OHIO	1970-12-01	0	JOHN	STEWARD		7923 CO HWY 38	UPPER SANDUSKY	OH	433519173
-2246	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MIDDLEPORT, OHIO	1970-12-01	0	LISA	WOODS		320 MILL ST	MIDDLEPORT	OH	457601181
-2247	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BERWICK, LOUISIANA	1970-12-01	0	VACANT	VACANT		101 GILMORE DR	BERWICK	LA	703429998
-2248	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINNFIELD, LOUISIANA	1970-12-01	0	MICHAEL	DEMPSEY		1402 HARRISONBURG RD	ATLANTA	LA	714042568
-2249	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPRINGFIELD, MINNESOTA	1970-12-01	0	KRISTIN	BAUMANN		18 W CENTRAL ST	SPRINGFIELD	MN	560879998
-2250	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RICH HILL, MISSOURI	1970-12-01	0	MEGAN	HUMBLE		301 E WALNUT ST	RICH HILL	MO	647791150
-2251	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DELL RAPIDS, SOUTH DAKOTA	1970-12-01	0	VALERIE	ALBERS		305 E 4TH ST	DELL RAPIDS	SD	570229998
-2252	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHILTON, WISCONSIN	1970-12-01	0	KRISTI	SPINDLER		57 E MAIN ST	CHILTON	WI	530149998
-2253	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SMACHOVER, ARKANSAS	1970-12-01	0	THOMAS	BERRY		2407 PERSHING HWY	EL DORADO	AR	717308813
+2229	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SISSETON, SOUTH DAKOTA	1970-12-01		MARY	LOTZER		46146 120TH ST	SISSETON	SD	572627121
+2230	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	THAYER, MISSOURI	1970-12-01		RICKY	MARTIN		112 N 2ND ST	THAYER	MO	657911266
+2231	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	IDYLLWILD, CALIFORNIA	1976-04-01		RANDY	LISTON		840 WHITE OAKS DR	DIXON	IL	610219056
+2232	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AMERICAN FALLS, IDAHO	1970-12-01		YOLANDA	PEREZ		3986 COBBLE CT	POCATELLO	ID	832015977
+2233	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AUDUBON, IOWA	1970-12-01		TROY	HAGEDORN		200 E DIVISION ST N	AUDUBON	IA	500251505
+2234	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARCELINE, MISSOURI	1970-12-01		MARK	BURRIS		120 E RITCHIE AVE	MARCELINE	MO	646589998
+2235	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	IRONTON, MISSOURI	1970-12-01		SUE	MOORE		10205 PICKETT RD	POTOSI	MO	636649423
+2236	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALBIA, IOWA	1970-12-01		JAMES	OWENS		905 N A ST	ALBIA	IA	525311043
+2237	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JAFFREY, NEW HAMPSHIRE	1970-12-01		KENNETH	DURAND		272 FITZWILLIAM ROAD	JAFFREY	NH	034525914
+2238	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BELMOND, IOWA	1970-12-01		DENNIS	LOWENBERG		908 9TH ST NE	BELMOND	IA	504211634
+2239	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DECORAH, IOWA	1970-12-01		NADINE	SWANSON		PO BOX 123	MONONA	IA	521590123
+2240	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DUNLAP, IOWA	1970-12-01		MARSHA	WINGROVE		719 IOWA AVE	DUNLAP	IA	515291337
+2241	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAMBURG, IOWA	1970-12-01		VACANT	VACANT		308 F ST	HAMBURG	IA	516401310
+2242	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELLINWOOD, KANSAS	1970-12-01		JAMES	ELSEN		212 W 7TH ST	ELLINWOOD	KS	675261109
+2243	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HILLSBORO, KANSAS	1970-12-01		LEONARD	FRANTZ		878 250TH	HILLSBORO	KS	670638333
+2244	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FRANKLINGTON, NORTH CAROLINA	1970-12-01		WALLACE	STOREY JR		1290 LAKE ROYALE	LOUISBURG	NC	275497449
+2245	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAREY, OHIO	1970-12-01		JOHN	STEWARD		7923 CO HWY 38	UPPER SANDUSKY	OH	433519173
+2246	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MIDDLEPORT, OHIO	1970-12-01		LISA	WOODS		320 MILL ST	MIDDLEPORT	OH	457601181
+2247	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BERWICK, LOUISIANA	1970-12-01		VACANT	VACANT		101 GILMORE DR	BERWICK	LA	703429998
+2248	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINNFIELD, LOUISIANA	1970-12-01		MICHAEL	DEMPSEY		1402 HARRISONBURG RD	ATLANTA	LA	714042568
+2249	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPRINGFIELD, MINNESOTA	1970-12-01		KRISTIN	BAUMANN		18 W CENTRAL ST	SPRINGFIELD	MN	560879998
+2250	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RICH HILL, MISSOURI	1970-12-01		MEGAN	HUMBLE		301 E WALNUT ST	RICH HILL	MO	647791150
+2251	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DELL RAPIDS, SOUTH DAKOTA	1970-12-01		VALERIE	ALBERS		305 E 4TH ST	DELL RAPIDS	SD	570229998
+2252	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHILTON, WISCONSIN	1970-12-01		KRISTI	SPINDLER		57 E MAIN ST	CHILTON	WI	530149998
+2253	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SMACHOVER, ARKANSAS	1970-12-01		THOMAS	BERRY		2407 PERSHING HWY	EL DORADO	AR	717308813
 2254	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	168	JEFF	KLESSIG	PO BOX 1165		WAUKESHA	WI	531871165
-2255	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ARCADIA, WISCONSIN	1970-12-01	0	ELJANE	ECKMAN		1495 E WILSON AVE	ARCADIA	WI	546121843
-2256	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BARRON, WISCONSIN	1970-12-01	0	KRISTEN	EIDEN		437 E LA SALLE AVE	BARRON	WI	548121518
-2257	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARTFORD CITY, INDIANA	1970-12-01	0	JOHN	ADKINS		781 ALDENHAM LN	ORMOND BEACH	FL	321741429
-2258	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHESTERTOWN, MARYLAND	1970-12-01	0	LORI	JOYNER		21226 GREEN LN	ROCK HALL	MD	216611635
-2259	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CRISFIELD, MARYLAND	1970-12-01	0	KENNETH	EVANS		10 HALL HWY	CRISFIELD	MD	218171206
-2260	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EASTON, MARYLAND	1970-12-01	0	CHRISTOPHER	ATHEY		127 WYE KNOT CT	QUEENSTOWN	MD	216581505
-2261	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FEDERALSBURG, MARYLAND	1970-12-01	0	LISA	RUIZ		122 MORRIS AVE	FEDERALSBURG	MD	216329998
-2262	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	INDIAN HEAD, MARYLAND	1970-12-01	0	TRINA	HEMSLEY		4050 INDIAN HEAD HWY	INDIAN HEAD	MD	206401824
-2263	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LEXINGTON PARK, MARYLAND	1970-12-01	0	CHRISTOPHER	THOMAS		21745 S CORAL DR	LEXINGTON PARK	MD	206539998
-2264	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RENSSELAER, INDIANA	1970-12-01	0	EVA	STEINKAMP		225 S VAN RENSSELAER ST	RENSSELAER	IN	479789998
-2265	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TRUTH OR CONSEQUENCE, NM	1970-12-01	0	JESSICA	HEARN		26 LAS PALOMAS RD	WILLIAMSBURG	NM	879429006
-2266	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOOGOOTEE, INDIANA	1970-12-01	0	KATHY	GEHLHAUSEN		203 NW 1ST ST	LOOGOOTEE	IN	475539998
-2267	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DAVIS, OKLAHOMA	1970-12-01	0	SHANA	BUMGARNER		1820 W 14TH ST	SULPHER	OK	730861206
-2268	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PIGGOTT, ARKANSAS	1970-12-01	0	SCOTT	BROWN		116 N 3RD AVE	PIGGOTT	AR	724542000
-2269	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BARBOURVILLE, KENTUCKY	1970-12-01	0	DARRELL	ROSE		122 N ALLISON AVE	BARBOURVILLE	KY	409069998
-2270	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAWRENCEBURG, KENTUCKY	1970-12-01	0	KAYODE	OGUNSANYA		1269 FOX CREEK RD	LAWRENCEBURG	KY	403422204
+2255	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ARCADIA, WISCONSIN	1970-12-01		ELJANE	ECKMAN		1495 E WILSON AVE	ARCADIA	WI	546121843
+2256	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BARRON, WISCONSIN	1970-12-01		KRISTEN	EIDEN		437 E LA SALLE AVE	BARRON	WI	548121518
+2257	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARTFORD CITY, INDIANA	1970-12-01		JOHN	ADKINS		781 ALDENHAM LN	ORMOND BEACH	FL	321741429
+2258	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHESTERTOWN, MARYLAND	1970-12-01		LORI	JOYNER		21226 GREEN LN	ROCK HALL	MD	216611635
+2259	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CRISFIELD, MARYLAND	1970-12-01		KENNETH	EVANS		10 HALL HWY	CRISFIELD	MD	218171206
+2260	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EASTON, MARYLAND	1970-12-01		CHRISTOPHER	ATHEY		127 WYE KNOT CT	QUEENSTOWN	MD	216581505
+2261	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FEDERALSBURG, MARYLAND	1970-12-01		LISA	RUIZ		122 MORRIS AVE	FEDERALSBURG	MD	216329998
+2262	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	INDIAN HEAD, MARYLAND	1970-12-01		TRINA	HEMSLEY		4050 INDIAN HEAD HWY	INDIAN HEAD	MD	206401824
+2263	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LEXINGTON PARK, MARYLAND	1970-12-01		CHRISTOPHER	THOMAS		21745 S CORAL DR	LEXINGTON PARK	MD	206539998
+2264	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RENSSELAER, INDIANA	1970-12-01		EVA	STEINKAMP		225 S VAN RENSSELAER ST	RENSSELAER	IN	479789998
+2265	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TRUTH OR CONSEQUENCE, NM	1970-12-01		JESSICA	HEARN		26 LAS PALOMAS RD	WILLIAMSBURG	NM	879429006
+2266	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOOGOOTEE, INDIANA	1970-12-01		KATHY	GEHLHAUSEN		203 NW 1ST ST	LOOGOOTEE	IN	475539998
+2267	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DAVIS, OKLAHOMA	1970-12-01		SHANA	BUMGARNER		1820 W 14TH ST	SULPHER	OK	730861206
+2268	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PIGGOTT, ARKANSAS	1970-12-01		SCOTT	BROWN		116 N 3RD AVE	PIGGOTT	AR	724542000
+2269	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BARBOURVILLE, KENTUCKY	1970-12-01		DARRELL	ROSE		122 N ALLISON AVE	BARBOURVILLE	KY	409069998
+2270	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAWRENCEBURG, KENTUCKY	1970-12-01		KAYODE	OGUNSANYA		1269 FOX CREEK RD	LAWRENCEBURG	KY	403422204
 2271	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	11	Terri	Frick	P O Box 872		BRENHAM	TX	77834    
-2272	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHASE CITY, VIRGINIA	1974-10-01	0	ANNE	KYLE		365 COURTHOUSE RD	CHASE CITY	VA	239245323
-2273	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PORTLAND, TENNESSEE	1970-12-01	0	AARON	EMBRY		105 HIGH ST	PORTLAND	TN	371481219
-2274	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATHENS, TENNESSEE	1970-12-01	0	JOHN	BAIZ		1299 CROWN ST NW	CLEVELAND	TN	373123509
-2275	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	APPALACHIA, VIRGINIA	1970-12-01	0	DON	ESTRIDGE		102 CHURCHTOWN RD	APPALACHIA	VA	242162304
+2272	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHASE CITY, VIRGINIA	1974-10-01		ANNE	KYLE		365 COURTHOUSE RD	CHASE CITY	VA	239245323
+2273	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PORTLAND, TENNESSEE	1970-12-01		AARON	EMBRY		105 HIGH ST	PORTLAND	TN	371481219
+2274	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATHENS, TENNESSEE	1970-12-01		JOHN	BAIZ		1299 CROWN ST NW	CLEVELAND	TN	373123509
+2275	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	APPALACHIA, VIRGINIA	1970-12-01		DON	ESTRIDGE		102 CHURCHTOWN RD	APPALACHIA	VA	242162304
 2276	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	14	TAMMY	FONDY	P.O. BOX 455		MONTROSE	CO	81402    
-2277	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ESSEX, CONNECTICUT	1970-12-01	0	JOHN	RUFFINO		12 MAIN ST	ESSEX	CT	064269998
+2277	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ESSEX, CONNECTICUT	1970-12-01		JOHN	RUFFINO		12 MAIN ST	ESSEX	CT	064269998
 2278	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	125	Madeline	Phillips		1140 POST ROAD	FAIRFIELD	CT	06824    
-2279	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINDSOR, ILLINOIS	1970-12-01	0	VACANT	VACANT		1105 MAINE ST	WINDSOR	IL	619579998
-2280	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SANDWICH, ILLINOIS	1970-12-01	0	MARY	GOODIN		22 N EDDY ST	SANDWICH	IL	605489998
-2281	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WARSAW, ILLINOIS	1975-12-01	0	JEFFREY	AUSTIN		520 MAIN ST	WARSAW	IL	623799998
-2282	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOLDENVILLE, OKLAHOMA	1970-12-01	0	CURTIS	TATUM		123 W 7TH ST	HOLDENVILLE	OK	748489998
+2279	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINDSOR, ILLINOIS	1970-12-01		VACANT	VACANT		1105 MAINE ST	WINDSOR	IL	619579998
+2280	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SANDWICH, ILLINOIS	1970-12-01		MARY	GOODIN		22 N EDDY ST	SANDWICH	IL	605489998
+2281	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WARSAW, ILLINOIS	1975-12-01		JEFFREY	AUSTIN		520 MAIN ST	WARSAW	IL	623799998
+2282	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOLDENVILLE, OKLAHOMA	1970-12-01		CURTIS	TATUM		123 W 7TH ST	HOLDENVILLE	OK	748489998
 2283	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	30	William	Schweickert	P.O. BOX 104		AURORA	IL	60507    
-2284	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANVILLE, RHODE ISLAND	1970-12-01	0	DENISE	SAVARD		30 RAILROAD ST	MANVILLE	RI	028389998
-2285	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ST JOHNSBURY, VERMONT	1970-12-01	0	DOUGLAS	MC GOWN		1153 MAIN ST	ST JOHNSBURY	VT	058199998
-2286	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WATERFORD, WISCONSIN	1974-10-01	0	ROBERT	KACZMAREK		W236S7050 BIG BEND DR	BIG BEND	WI	531039497
-2287	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TOMAH, WISCONSIN	1970-12-01	0	JACQUALINE	SCHULZ		1000 N SUPERIOR AVE	TOMAH	WI	546609998
-2288	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LIBBY, MONTANA	1970-12-01	0	MICHAEL	DAY		518 MAIN AVE	LIBBY	MT	599239998
-2289	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	UNION CITY, INDIANA	1970-12-01	0	MARK	WILLIS		803 STATE RT 571	DAYTON	OH	453909087
-2290	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PITTSFIELD, NEW HAMPSHIRE	1970-12-01	0	JOSEPH	PARENT		2 ELM ST	PITTSFIELD	NH	032633300
-2291	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FRANKLIN, NEW HAMPSHIRE	1970-12-01	0	DORIS	CORLISS		65 FRANKLIN ST	FRANKLIN	NH	032351606
-2292	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOWEAQUA, ILLINOIS	1970-12-01	0	ROBERT	DUEZ		1440 N MAIN ST	MOWEAQUA	IL	625503603
+2284	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANVILLE, RHODE ISLAND	1970-12-01		DENISE	SAVARD		30 RAILROAD ST	MANVILLE	RI	028389998
+2285	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ST JOHNSBURY, VERMONT	1970-12-01		DOUGLAS	MC GOWN		1153 MAIN ST	ST JOHNSBURY	VT	058199998
+2286	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WATERFORD, WISCONSIN	1974-10-01		ROBERT	KACZMAREK		W236S7050 BIG BEND DR	BIG BEND	WI	531039497
+2287	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TOMAH, WISCONSIN	1970-12-01		JACQUALINE	SCHULZ		1000 N SUPERIOR AVE	TOMAH	WI	546609998
+2288	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LIBBY, MONTANA	1970-12-01		MICHAEL	DAY		518 MAIN AVE	LIBBY	MT	599239998
+2289	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	UNION CITY, INDIANA	1970-12-01		MARK	WILLIS		803 STATE RT 571	DAYTON	OH	453909087
+2290	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PITTSFIELD, NEW HAMPSHIRE	1970-12-01		JOSEPH	PARENT		2 ELM ST	PITTSFIELD	NH	032633300
+2291	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FRANKLIN, NEW HAMPSHIRE	1970-12-01		DORIS	CORLISS		65 FRANKLIN ST	FRANKLIN	NH	032351606
+2292	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOWEAQUA, ILLINOIS	1970-12-01		ROBERT	DUEZ		1440 N MAIN ST	MOWEAQUA	IL	625503603
 2293	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	4	ANNETTE	BARTH		121 LABREE AVENUE NORTH	THIEF RIVER FALLS	MN	567010271
-2294	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ADA, MINNESOTA	1970-12-01	0	JAZMYN	MILLER		114 4TH AVE W	ADA	MN	565109998
-2295	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TWIN CITIES, MINNESOTA	1970-12-01	0	DANIEL	OSMEK		3031 QUEBEC AVE S	MINNEAPOLIS	MN	554263252
-2296	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WARREN, MINNESOTA	1970-12-01	0	AMY	BARTELS		715 N CENTRAL ST	WARREN	MN	567621007
-2297	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	REDWOOD FALLS, MINNESOTA	1970-12-01	0	NANCY	SCHULTZ		204 EAST 4TH ST	REDWOOD FALLS	MN	562831616
+2294	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ADA, MINNESOTA	1970-12-01		JAZMYN	MILLER		114 4TH AVE W	ADA	MN	565109998
+2295	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TWIN CITIES, MINNESOTA	1970-12-01		DANIEL	OSMEK		3031 QUEBEC AVE S	MINNEAPOLIS	MN	554263252
+2296	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WARREN, MINNESOTA	1970-12-01		AMY	BARTELS		715 N CENTRAL ST	WARREN	MN	567621007
+2297	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	REDWOOD FALLS, MINNESOTA	1970-12-01		NANCY	SCHULTZ		204 EAST 4TH ST	REDWOOD FALLS	MN	562831616
 2298	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	13	DAVE	GRUNERT		27 SO GERMAN	NEW ULM	MN	56073    
 2299	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	46	CLIFFORD	KONIK		2020 KNUELL ST	MANITOWOC	WI	542201116
-2300	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLINTONVILLE,WISCONSIN	1970-12-01	0	JOSEPH	ENOCH JR		2 N MAIN ST	CLINTONVILLE	WI	549299998
+2300	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLINTONVILLE,WISCONSIN	1970-12-01		JOSEPH	ENOCH JR		2 N MAIN ST	CLINTONVILLE	WI	549299998
 2301	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	128	ROBERT	DIEHL		142 N MAIN ST	MANSFIELD	OH	449027668
-2302	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	POMEROY, OHIO	1970-12-01	0	AMBER	BROWN		212 E 2ND ST	POMEROY	OH	457699800
-2303	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BOLIVAR, TENNESSEE	1977-08-01	0	SUSAN	JETER		118 E MARKET ST	BOLIVAR	TN	380082366
+2302	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	POMEROY, OHIO	1970-12-01		AMBER	BROWN		212 E 2ND ST	POMEROY	OH	457699800
+2303	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BOLIVAR, TENNESSEE	1977-08-01		SUSAN	JETER		118 E MARKET ST	BOLIVAR	TN	380082366
 2304	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	6	KERRY	KENNEDY		300 N. CENTER	BONHAM	TX	754182716
-2305	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FALLS CITY, NEBRASKA	1970-12-01	0	JOAN	OLIVER		1520 HARLAN ST	FALLS CITY	NE	683552678
-2306	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COZAD, NEBRASKA	1970-12-01	0	CLAY	ETHERTON		102 E 9TH ST	COZAD	NE	691309998
-2307	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLAY CENTER, NEBRASKA	1970-12-01	0	PAUL	HOELTING		120 S ALEXANDER AVE	CLAY CENTER	NE	689339998
-2308	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AURORA, NEBRASKA	1970-12-01	0	BRUCE	HALL		1105 L ST	AURORA	NE	688189998
-2309	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEWPORT, NEW HAMPSHIRE	1970-12-01	0	DONALD	HEMINGWAY		354 BRADFORD RD	NEWPORT	NH	037731932
-2310	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GORHAM, NEW HAMSHIRE	1970-12-01	0	JANINE	PROVENCHER		165 MAIN ST	GORHAM	NH	035819998
+2305	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FALLS CITY, NEBRASKA	1970-12-01		JOAN	OLIVER		1520 HARLAN ST	FALLS CITY	NE	683552678
+2306	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COZAD, NEBRASKA	1970-12-01		CLAY	ETHERTON		102 E 9TH ST	COZAD	NE	691309998
+2307	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLAY CENTER, NEBRASKA	1970-12-01		PAUL	HOELTING		120 S ALEXANDER AVE	CLAY CENTER	NE	689339998
+2308	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AURORA, NEBRASKA	1970-12-01		BRUCE	HALL		1105 L ST	AURORA	NE	688189998
+2309	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEWPORT, NEW HAMPSHIRE	1970-12-01		DONALD	HEMINGWAY		354 BRADFORD RD	NEWPORT	NH	037731932
+2310	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GORHAM, NEW HAMSHIRE	1970-12-01		JANINE	PROVENCHER		165 MAIN ST	GORHAM	NH	035819998
 2311	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	8	DAWN	HORTON	C/O POST OFFICE	140 BROAD STREET	CLAREMONT	NH	03743    
-2312	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SIDNEY, MONTANA	1970-12-01	0	KATALIN	CAMMILLERI		PO BOX 965	SIDNEY	MT	592700965
-2313	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PLENTYWOOD, MONTANA	1970-12-01	0	GREG	FELLON		302 N MAIN ST	PLENTYWOOD	MT	592549998
-2314	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BOONVILLE, INDIANA	1970-12-01	0	VACANT	VACANT		214 W LOCUST ST	BOONVILLE	IN	476019998
-2315	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOOPESTON, ILLINOIS	1970-12-01	0	WAYNE	LITHGOW		211 GILBERT ST	ROSSVILLE	IL	609631127
+2312	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SIDNEY, MONTANA	1970-12-01		KATALIN	CAMMILLERI		PO BOX 965	SIDNEY	MT	592700965
+2313	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PLENTYWOOD, MONTANA	1970-12-01		GREG	FELLON		302 N MAIN ST	PLENTYWOOD	MT	592549998
+2314	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BOONVILLE, INDIANA	1970-12-01		VACANT	VACANT		214 W LOCUST ST	BOONVILLE	IN	476019998
+2315	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOOPESTON, ILLINOIS	1970-12-01		WAYNE	LITHGOW		211 GILBERT ST	ROSSVILLE	IL	609631127
 2316	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	8	JONATHON	BEGAN	PO BOX 1374		GULFPORT	MS	39502    
-2317	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINDHAM OHIO	1970-12-01	0	KENNETH	SELL		PO BOX 411	WINDHAM	OH	442880411
-2318	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DREW, MISSISSIPPI	1970-12-01	0	GEORGE	BRELAND		1115 HW 32	DREW	MS	387379531
+2317	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINDHAM OHIO	1970-12-01		KENNETH	SELL		PO BOX 411	WINDHAM	OH	442880411
+2318	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DREW, MISSISSIPPI	1970-12-01		GEORGE	BRELAND		1115 HW 32	DREW	MS	387379531
 2319	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	130	BRIAN	GOURILIS	P O BOX 345		SPRINGFIELD	OH	455010345
 2320	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1991-05-01	76	Tory	Johnson	PO BOX 1112		MARRERO	LA	700731112
-2321	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ANACONDA, MONTANA	1970-12-01	0	CHARLES	WELLS		218 MAIN ST	ANACONDA	MT	597119998
-2322	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	IRON RIVER, MICHIGAN	1970-12-01	0	TIMOTHY	WAITE		425 W GENESSEE ST	IRON RIVER	MI	499359998
-2323	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRUSH, COLORADO	1970-12-01	0	RICHARD	HOLMES		329 PRINCETON ST	BRUSH	CO	807231620
-2324	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PORT ST JOE, FLORIDA	1970-12-01	0	GROVER	ANDREWS		502 GARRISON AVE	PORT ST JOE	FL	324569998
-2325	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLLINSVILLE, VIRGINIA	1970-12-01	0	BASHIR	ELLIOTT		228 E CHURCH ST	ROCKY MOUNT	VA	241511503
-2326	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAMDEN, OHIO	1975-11-01	0	VACANT	VACANT		32 W CENTRAL AVE	CAMDEN	OH	453119998
+2321	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ANACONDA, MONTANA	1970-12-01		CHARLES	WELLS		218 MAIN ST	ANACONDA	MT	597119998
+2322	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	IRON RIVER, MICHIGAN	1970-12-01		TIMOTHY	WAITE		425 W GENESSEE ST	IRON RIVER	MI	499359998
+2323	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRUSH, COLORADO	1970-12-01		RICHARD	HOLMES		329 PRINCETON ST	BRUSH	CO	807231620
+2324	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PORT ST JOE, FLORIDA	1970-12-01		GROVER	ANDREWS		502 GARRISON AVE	PORT ST JOE	FL	324569998
+2325	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLLINSVILLE, VIRGINIA	1970-12-01		BASHIR	ELLIOTT		228 E CHURCH ST	ROCKY MOUNT	VA	241511503
+2326	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAMDEN, OHIO	1975-11-01		VACANT	VACANT		32 W CENTRAL AVE	CAMDEN	OH	453119998
 2327	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	458	TIA	WILSON	SUITE 104	6910 HAYVENHURST AVENUE	VAN NUYS	CA	914064633
-2328	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CASHMERE, WASHINGTON	1970-12-01	0	ARNOLD	JONES		3105 TAMARACK PL	WENATCHEE	WA	988018814
-2329	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DEPOSIT, NEW YORK	1970-12-01	0	DONALD	RHODES III		8 DEAN ST	DEPOSIT	NY	137549998
+2328	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CASHMERE, WASHINGTON	1970-12-01		ARNOLD	JONES		3105 TAMARACK PL	WENATCHEE	WA	988018814
+2329	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DEPOSIT, NEW YORK	1970-12-01		DONALD	RHODES III		8 DEAN ST	DEPOSIT	NY	137549998
 2330	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	29	KEN	NICKERSON	PO BOX 312		KEARNEY	NE	688480312
-2331	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HONEOYE FALLS, NEW YORK	1970-12-01	0	KIM	NEDER CAREY		39 W MAIN ST	HONEOYE FALLS	NY	144729998
-2332	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WYMORE, NEBRASKA	1970-12-01	0	JERRY	GRUMMERT		1208 S 7TH ST	BEATRICE	NE	683104907
-2333	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VALENTINE, NEBRASKA	1970-12-01	0	LYNN	SCHAEFER		1100 E 10TH ST	VALENTINE	NE	692011671
-2334	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ORD, NEBRASKA	1970-12-01	0	KEVIN	SHELDON		1630 L ST	ORD	NE	688629998
-2335	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OGALLALA. NEBRASKA	1970-12-01	0	LORIE	ONEIL		475 ROAD EAST 90	OGALLALA	NE	691535509
-2336	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GOTHENBURG, NEBRASKA	1970-12-01	0	KEN	EDSON		210 20TH ST.	GOTHENBURG	NE	691381249
+2331	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HONEOYE FALLS, NEW YORK	1970-12-01		KIM	NEDER CAREY		39 W MAIN ST	HONEOYE FALLS	NY	144729998
+2332	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WYMORE, NEBRASKA	1970-12-01		JERRY	GRUMMERT		1208 S 7TH ST	BEATRICE	NE	683104907
+2333	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VALENTINE, NEBRASKA	1970-12-01		LYNN	SCHAEFER		1100 E 10TH ST	VALENTINE	NE	692011671
+2334	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ORD, NEBRASKA	1970-12-01		KEVIN	SHELDON		1630 L ST	ORD	NE	688629998
+2335	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OGALLALA. NEBRASKA	1970-12-01		LORIE	ONEIL		475 ROAD EAST 90	OGALLALA	NE	691535509
+2336	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GOTHENBURG, NEBRASKA	1970-12-01		KEN	EDSON		210 20TH ST.	GOTHENBURG	NE	691381249
 2337	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	3	Phil	Bentley	313		Erwin	TN	37650    
-2338	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SANDERSVILLE, GEORGIA	1970-12-01	0	LILLIE	LATIMORE		205 W CHURCH ST	SANDERSVILLE	GA	310829998
-2339	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOGAN, OHIO	1970-12-01	0	ASA	GRAVES		80 N MARKET ST	LOGAN	OH	431389998
-2340	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARTHAGE, TENNESSEE	1970-12-01	0	VACANT	VACANT		115 MAIN ST N	CARTHAGE	TN	370309998
-2341	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COON RAPIDS, IOWA	1976-09-01	0	THOMAS	BEDARD		507 MAIN ST	COON RAPIDS	IA	500586400
-2342	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WALSENBURG, COLORADO	1970-12-01	0	RONALD	WILKINS		323 E 7TH ST	WALSENBURG	CO	810892105
+2338	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SANDERSVILLE, GEORGIA	1970-12-01		LILLIE	LATIMORE		205 W CHURCH ST	SANDERSVILLE	GA	310829998
+2339	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOGAN, OHIO	1970-12-01		ASA	GRAVES		80 N MARKET ST	LOGAN	OH	431389998
+2340	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARTHAGE, TENNESSEE	1970-12-01		VACANT	VACANT		115 MAIN ST N	CARTHAGE	TN	370309998
+2341	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COON RAPIDS, IOWA	1976-09-01		THOMAS	BEDARD		507 MAIN ST	COON RAPIDS	IA	500586400
+2342	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WALSENBURG, COLORADO	1970-12-01		RONALD	WILKINS		323 E 7TH ST	WALSENBURG	CO	810892105
 2343	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ILLINOIS	1970-12-01	15100	JOHN	COOKSEY		17962 MONROE ROAD	JOHNSON CITY	IL	629512334
-2344	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLARKSVILLE, TEXAS	1970-12-01	0	RHONDA	MCENTIRE		403 N WALNUT ST	CLARKSVILLE	TX	754269998
-2345	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MALAD CITY, IDAHO	1970-12-01	0	DAVID	WILLIAMS		224 SAMARIA LN	MALAD CITY	ID	832521069
-2346	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRATT, KANSAS	1970-12-01	0	STAN	BATES		202 E 3RD ST	PRATT	KS	671249998
-2347	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GARWOOD, NEW JERSEY	1970-12-01	0	VACANT	VACANT		300 SOUTH AVE	GARWOOD	NJ	070279998
+2344	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLARKSVILLE, TEXAS	1970-12-01		RHONDA	MCENTIRE		403 N WALNUT ST	CLARKSVILLE	TX	754269998
+2345	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MALAD CITY, IDAHO	1970-12-01		DAVID	WILLIAMS		224 SAMARIA LN	MALAD CITY	ID	832521069
+2346	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRATT, KANSAS	1970-12-01		STAN	BATES		202 E 3RD ST	PRATT	KS	671249998
+2347	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GARWOOD, NEW JERSEY	1970-12-01		VACANT	VACANT		300 SOUTH AVE	GARWOOD	NJ	070279998
 2348	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	9	ELLIOTT	LARSON	PO BOX 242		FORT ATKINSON	WI	535380242
 2349	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	16	ROGER	SANDS	P.O. BOX 622		SEBRING	FL	338710622
-2350	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HUDSON, WISCONSIN	1970-12-01	0	DEE	RAEBEL		PO BOX 9998	HUDSON	WI	540169998
-2351	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CANTON, SOUTH DAKOTA	1970-12-01	0	DEAN	ROTHENBERGER		315 E 5TH ST	CANTON	SD	570139998
-2352	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FARMER CITY, ILLINOIS	1970-12-01	0	ROBERT	SCARBROUGH		110 E GREEN ST	FARMER CITY	IL	618429998
-2353	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRAIRIE DU SAC, WISCONSIN	1970-12-01	0	ANDREW	ARNTSEN		285 WASHINGTON ST	PRAIRIE DU SAC	WI	535789998
-2354	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BIG STONE GAP, VIRGINIA	1970-12-01	0	SIDNEY	FLANARY JR		322 WOOD AVE	BIG STONE GAP	VA	242199998
-2355	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STAPLES, MINNESOTA	1970-12-01	0	MICHAEL	KENNEDY		229 4TH ST NE	STAPLES	MN	564792427
-2356	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MUNISING, MICHIGAN	1970-12-01	0	LORI	STEWART		220 ELM AVE	MUNISING	MI	498629998
-2357	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DRUMRIGHT, OKLAHOMA	1970-12-01	0	MICHAEL	WRIGHT		721 HOLMES AVE	CUSHING	OK	740234703
-2358	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HICKSVILLE, OHIO	1970-12-01	0	DAVID	BETZ		110 E EDGERTON ST	HICKSVILLE	OH	435261484
-2359	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RANDLEMAN, NORTH CAROLINA	1970-12-01	0	DAVID	ALLRED		3018 WOW RD	RANDLEMAN	NC	273177961
-2360	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOVINGTON, NM	1970-12-01	0	FEDERICO	MARQUEZ		203 E AVENUE D	LOVINGTON	NM	882609998
-2361	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KETCHIKAN, ALASKA	1970-12-01	0	TIMOTHY	ROYER		P O BOX 7712	KETCHIKAN	AK	999012712
-2362	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOREST, MISSISSIPPI	1970-12-01	0	JOHN	MCCAIN		313 E SECOND ST	FOREST	MS	390749998
-2363	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PONCHATOULA, LOUISIANA	1970-12-01	0	JOHN	LABEE SR		275 N 5TH ST	PONCHATOULA	LA	704549998
-2364	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DUBLIN, TEXAS	1970-12-01	0	VACANT	VACANT		222 N PATRICK ST	DUBLIN	TX	764469998
-2365	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RAYMONDVILLE, TEXAS	1970-12-01	0	REYMUNDO	CANO		858 NORMAN AVE	RAYMONDVILLE	TX	785803158
-2366	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EPHRATA, WASHINGTON	1970-12-01	0	MICHELE	WARD		119 1ST AVE NW	EPHRATA	WA	988234270
-2367	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAKEFIELD, MICHIGAN	1970-12-01	0	MICHAEL	BEISE		1202 PLYMOUTH RD	WAKEFIELD	MI	499689462
-2368	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOUISVILLE, GEORGIA	1970-12-01	0	MICHAEL	NEWSOME		131 W BROAD ST	LOUISVILLE	GA	304349998
-2369	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GENEVA, NEBRASKA	1970-12-01	0	DEBRA	BARBUR		212 N 9TH ST	GENEVA	NE	683619998
-2370	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CENTRALIA, MISSOURI	1970-12-01	0	CECIL	NUTT		13761 E 51ST ST	TULSA	OK	741346725
-2371	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FULTON, MISSISSIPPI	1970-12-01	0	KATHY	HENDRIX		307 W LIN ST	FULTON	MS	388432227
-2372	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHITESBURG, KENTUCKY	1970-12-01	0	VIRNEL	JOHNSON		528 WB HOLLOW	JENKINS	KY	415379147
-2373	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHATSWORTH, GEORGIA	1970-12-01	0	NANCY	DAVIS		120 W FORT ST	CHATSWORTH	GA	307059998
-2374	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALMA, GEORGIA	1970-12-01	0	ASHLEY	BATTON		206 E 8TH ST	ALMA	GA	315102504
-2375	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LA PLATA, MISSOURI	1970-12-01	0	JORDAN	GARCIA		102 E SANDERS ST	LA PLATA	MO	635499998
+2350	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HUDSON, WISCONSIN	1970-12-01		DEE	RAEBEL		PO BOX 9998	HUDSON	WI	540169998
+2351	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CANTON, SOUTH DAKOTA	1970-12-01		DEAN	ROTHENBERGER		315 E 5TH ST	CANTON	SD	570139998
+2352	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FARMER CITY, ILLINOIS	1970-12-01		ROBERT	SCARBROUGH		110 E GREEN ST	FARMER CITY	IL	618429998
+2353	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRAIRIE DU SAC, WISCONSIN	1970-12-01		ANDREW	ARNTSEN		285 WASHINGTON ST	PRAIRIE DU SAC	WI	535789998
+2354	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BIG STONE GAP, VIRGINIA	1970-12-01		SIDNEY	FLANARY JR		322 WOOD AVE	BIG STONE GAP	VA	242199998
+2355	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STAPLES, MINNESOTA	1970-12-01		MICHAEL	KENNEDY		229 4TH ST NE	STAPLES	MN	564792427
+2356	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MUNISING, MICHIGAN	1970-12-01		LORI	STEWART		220 ELM AVE	MUNISING	MI	498629998
+2357	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DRUMRIGHT, OKLAHOMA	1970-12-01		MICHAEL	WRIGHT		721 HOLMES AVE	CUSHING	OK	740234703
+2358	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HICKSVILLE, OHIO	1970-12-01		DAVID	BETZ		110 E EDGERTON ST	HICKSVILLE	OH	435261484
+2359	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RANDLEMAN, NORTH CAROLINA	1970-12-01		DAVID	ALLRED		3018 WOW RD	RANDLEMAN	NC	273177961
+2360	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOVINGTON, NM	1970-12-01		FEDERICO	MARQUEZ		203 E AVENUE D	LOVINGTON	NM	882609998
+2361	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KETCHIKAN, ALASKA	1970-12-01		TIMOTHY	ROYER		P O BOX 7712	KETCHIKAN	AK	999012712
+2362	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOREST, MISSISSIPPI	1970-12-01		JOHN	MCCAIN		313 E SECOND ST	FOREST	MS	390749998
+2363	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PONCHATOULA, LOUISIANA	1970-12-01		JOHN	LABEE SR		275 N 5TH ST	PONCHATOULA	LA	704549998
+2364	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DUBLIN, TEXAS	1970-12-01		VACANT	VACANT		222 N PATRICK ST	DUBLIN	TX	764469998
+2365	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RAYMONDVILLE, TEXAS	1970-12-01		REYMUNDO	CANO		858 NORMAN AVE	RAYMONDVILLE	TX	785803158
+2366	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EPHRATA, WASHINGTON	1970-12-01		MICHELE	WARD		119 1ST AVE NW	EPHRATA	WA	988234270
+2367	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAKEFIELD, MICHIGAN	1970-12-01		MICHAEL	BEISE		1202 PLYMOUTH RD	WAKEFIELD	MI	499689462
+2368	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOUISVILLE, GEORGIA	1970-12-01		MICHAEL	NEWSOME		131 W BROAD ST	LOUISVILLE	GA	304349998
+2369	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GENEVA, NEBRASKA	1970-12-01		DEBRA	BARBUR		212 N 9TH ST	GENEVA	NE	683619998
+2370	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CENTRALIA, MISSOURI	1970-12-01		CECIL	NUTT		13761 E 51ST ST	TULSA	OK	741346725
+2371	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FULTON, MISSISSIPPI	1970-12-01		KATHY	HENDRIX		307 W LIN ST	FULTON	MS	388432227
+2372	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHITESBURG, KENTUCKY	1970-12-01		VIRNEL	JOHNSON		528 WB HOLLOW	JENKINS	KY	415379147
+2373	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHATSWORTH, GEORGIA	1970-12-01		NANCY	DAVIS		120 W FORT ST	CHATSWORTH	GA	307059998
+2374	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALMA, GEORGIA	1970-12-01		ASHLEY	BATTON		206 E 8TH ST	ALMA	GA	315102504
+2375	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LA PLATA, MISSOURI	1970-12-01		JORDAN	GARCIA		102 E SANDERS ST	LA PLATA	MO	635499998
 2376	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TALLULAH BRANCH	1970-12-01	8	DAVID	WILLIAMS	P O BOX 123	131 CHICAGO ST	TALLULAH	LA	712840123
-2377	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ONANCOOK, VIRGINIA	1970-12-01	0	VACANT	VACANT		35 MARKET ST	ONANCOCK	VA	234171900
-2378	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOREST CITY, NORTH CAROLINA	1976-08-01	0	KEVIN	HAMRICK		2812 COLLEGE FARM RD	MOORESBORO	NC	281149725
-2379	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTICELLO, FLORIDA	1970-12-01	0	MARK	RUSINKO		17928 78TH RD N	LOXAHATCHEE	FL	334702953
-2380	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DUNKIRK, OHIO	1970-12-01	0	STEPHEN	BAHN		16723 COUNTY ROAD 8	ARLINGTON	OH	458149708
-2381	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTGOMERY CITY, MISSOURI	1970-12-01	0	GEORGE	BOES		404 N STURGEON ST	MONTGOMERY CITY	MO	633619998
-2382	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VANDALIA, MISSOURI	1970-12-01	0	JASON	ERDEL		401 S MAIN ST	VANDALIA	MO	633829998
-2383	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STURGIS, SOUTH DAKOTA	1970-12-01	0	RICKY	ENGLE		820 KINSHIP RD	STURGIS	SD	577859998
-2384	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAIRO, GEORGIA	1970-12-01	0	CARLTON	HEARD		2076 TALLAHASSEE HWY	BAINBRIDGE	GA	398197754
-2385	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ADEL, GEORGIA	1970-12-01	0	STEVEN	KING		757 SELLARS RD	HAHIRA	GA	316325427
-2386	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COVINGTON, INDIANA	1970-12-01	0	ANDREA	STOVER		418 LIBERTY ST	COVINGTON	IN	479328998
+2377	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ONANCOOK, VIRGINIA	1970-12-01		VACANT	VACANT		35 MARKET ST	ONANCOCK	VA	234171900
+2378	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOREST CITY, NORTH CAROLINA	1976-08-01		KEVIN	HAMRICK		2812 COLLEGE FARM RD	MOORESBORO	NC	281149725
+2379	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTICELLO, FLORIDA	1970-12-01		MARK	RUSINKO		17928 78TH RD N	LOXAHATCHEE	FL	334702953
+2380	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DUNKIRK, OHIO	1970-12-01		STEPHEN	BAHN		16723 COUNTY ROAD 8	ARLINGTON	OH	458149708
+2381	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTGOMERY CITY, MISSOURI	1970-12-01		GEORGE	BOES		404 N STURGEON ST	MONTGOMERY CITY	MO	633619998
+2382	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VANDALIA, MISSOURI	1970-12-01		JASON	ERDEL		401 S MAIN ST	VANDALIA	MO	633829998
+2383	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STURGIS, SOUTH DAKOTA	1970-12-01		RICKY	ENGLE		820 KINSHIP RD	STURGIS	SD	577859998
+2384	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAIRO, GEORGIA	1970-12-01		CARLTON	HEARD		2076 TALLAHASSEE HWY	BAINBRIDGE	GA	398197754
+2385	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ADEL, GEORGIA	1970-12-01		STEVEN	KING		757 SELLARS RD	HAHIRA	GA	316325427
+2386	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COVINGTON, INDIANA	1970-12-01		ANDREA	STOVER		418 LIBERTY ST	COVINGTON	IN	479328998
 2387	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	2	HEATHER	MURRY		609 LIBERTY STREET	SWAINSBORO	GA	30401    
-2388	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAMPBELLSVILLE, KENTUCKY	1970-12-01	0	ROY	ABBOTT		1079 SUMMERSVILLE RD	GREENSBURG	KY	427438950
-2389	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MILBANK, SOUTH DAKOTA	1970-12-01	0	TERESA	SPORS		222 E 3RD AVE	MILBANK	SD	572529998
-2390	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AMERICAN FORK, UTAH	1970-12-01	0	GLENDA	BROWN		748 N 500 W	AMERICAN FORK	UT	840031196
-2391	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VIENNA, GEORGIA	1970-12-01	0	DAVID	LEE		PO BOX 464	VIENNA	GA	310920464
-2392	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WASHINGTON, GEORGIA	1970-12-01	0	DONALD	NUNNALLY		PO BOX 1422	WASHINGTON	GA	306735242
-2393	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRAFTON, NORTH DAKOTA	1970-12-01	0	GUY	DEMERS		15481 COUNTY ROAD 11	GRAFTON	ND	582378806
-2394	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARRISON, ARKANSAS	1970-12-01	0	DEREK	KEETER		4480 TURNBURY DR	HARRISON	AR	726016359
-2395	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KAHOKA, MISSOURI	1970-12-01	0	KARLA	FULLER		635 VALLEY AVE	KAHOKA	MO	634451178
+2388	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAMPBELLSVILLE, KENTUCKY	1970-12-01		ROY	ABBOTT		1079 SUMMERSVILLE RD	GREENSBURG	KY	427438950
+2389	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MILBANK, SOUTH DAKOTA	1970-12-01		TERESA	SPORS		222 E 3RD AVE	MILBANK	SD	572529998
+2390	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AMERICAN FORK, UTAH	1970-12-01		GLENDA	BROWN		748 N 500 W	AMERICAN FORK	UT	840031196
+2391	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VIENNA, GEORGIA	1970-12-01		DAVID	LEE		PO BOX 464	VIENNA	GA	310920464
+2392	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WASHINGTON, GEORGIA	1970-12-01		DONALD	NUNNALLY		PO BOX 1422	WASHINGTON	GA	306735242
+2393	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRAFTON, NORTH DAKOTA	1970-12-01		GUY	DEMERS		15481 COUNTY ROAD 11	GRAFTON	ND	582378806
+2394	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARRISON, ARKANSAS	1970-12-01		DEREK	KEETER		4480 TURNBURY DR	HARRISON	AR	726016359
+2395	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KAHOKA, MISSOURI	1970-12-01		KARLA	FULLER		635 VALLEY AVE	KAHOKA	MO	634451178
 2396	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	7	Jeanan	Hall	PO BOX 604		DELTA	CO	814160604
-2397	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARO, MICHIGAN	1970-12-01	0	BEVERLY	TIETZ		210 W LINCOLN ST	CARO	MI	487239998
-2398	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CADIZ, OHIO	1970-12-01	0	VACANT	VACANT		100 E SOUTH ST	CADIZ	OH	439079998
+2397	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CARO, MICHIGAN	1970-12-01		BEVERLY	TIETZ		210 W LINCOLN ST	CARO	MI	487239998
+2398	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CADIZ, OHIO	1970-12-01		VACANT	VACANT		100 E SOUTH ST	CADIZ	OH	439079998
 2399	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	19	david	morse		607 baker lake rd	clinton	AR	72031    
-2400	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VERMILLION, SOUTH DAKOTA	1970-12-01	0	BRUCE	SCHILD		16 COURT ST	VERMILLION	SD	570699998
-2401	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROKEN BOW, NEBRASKA	1970-12-01	0	ANTHONY	RISTOV		741 S D ST	BROKEN BOW	NE	688229998
-2402	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NORTON, KANSAS	1970-12-01	0	MARY	POSSON		340 W LINCOLN ST	NORTON	KS	676541942
+2400	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VERMILLION, SOUTH DAKOTA	1970-12-01		BRUCE	SCHILD		16 COURT ST	VERMILLION	SD	570699998
+2401	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BROKEN BOW, NEBRASKA	1970-12-01		ANTHONY	RISTOV		741 S D ST	BROKEN BOW	NE	688229998
+2402	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NORTON, KANSAS	1970-12-01		MARY	POSSON		340 W LINCOLN ST	NORTON	KS	676541942
 2403	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	12	Nathan	Slentz	PO BOX 1475		LINCOLNTON	NC	280931475
 2404	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	7	JAMES	TINGLEY		300 N 10TH	CENTERVILLE	IA	52544    
-2405	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DELEON, TEXAS	1970-12-01	0	PAUL	ROBERTS		2508 BIRCH LN	BURLESON	TX	760282459
-2406	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELLIJAY, GEORGIA	1970-12-01	0	DOUG	DOVELL		801 INDUSTRIAL BLVD	ELLIJAY	GA	305403917
-2407	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAMBURG, ARKANSAS	1970-12-01	0	GLORIA	GULLEDGE		203 E ADAMS ST	HAMBURG	AR	716469998
+2405	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DELEON, TEXAS	1970-12-01		PAUL	ROBERTS		2508 BIRCH LN	BURLESON	TX	760282459
+2406	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELLIJAY, GEORGIA	1970-12-01		DOUG	DOVELL		801 INDUSTRIAL BLVD	ELLIJAY	GA	305403917
+2407	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAMBURG, ARKANSAS	1970-12-01		GLORIA	GULLEDGE		203 E ADAMS ST	HAMBURG	AR	716469998
 2408	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	5	charles	coss		679 COMMERCIAL STREET	MINGO JUNCTION	OH	439389998
-2409	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHURUBUSCO, INDIANA	1970-12-01	0	MARY	SCHRADER		123 S MAIN ST	CHURUBUSCO	IN	467239998
-2410	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VIDALIA, LOUISIANA	1970-12-01	0	JAMES	KEATING JR		1000 CARTER ST	VIDALIA	LA	713739998
-2411	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHELBY, MONTANA	1970-12-01	0	ZANE	ZELL		327 8TH AVE N	SHELBY	MT	594741832
-2412	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AJO, ARIZONA	1970-12-01	0	MARGARITA	DAVID		20 N PLAZA ST	AJO	AZ	853219998
-2413	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATWATER, CALIFORNIA	1970-12-01	0	LINDSEY	HOYT		1599 BROADWAY AVE	ATWATER	CA	953019998
+2409	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHURUBUSCO, INDIANA	1970-12-01		MARY	SCHRADER		123 S MAIN ST	CHURUBUSCO	IN	467239998
+2410	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VIDALIA, LOUISIANA	1970-12-01		JAMES	KEATING JR		1000 CARTER ST	VIDALIA	LA	713739998
+2411	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SHELBY, MONTANA	1970-12-01		ZANE	ZELL		327 8TH AVE N	SHELBY	MT	594741832
+2412	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AJO, ARIZONA	1970-12-01		MARGARITA	DAVID		20 N PLAZA ST	AJO	AZ	853219998
+2413	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATWATER, CALIFORNIA	1970-12-01		LINDSEY	HOYT		1599 BROADWAY AVE	ATWATER	CA	953019998
 2414	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	8	Alex	JENSEN	PO BOX 463		SPEARFISH	SD	577830463
-2415	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEVADA, IOWA	1970-12-01	0	GLEN	MILLER		437 K AVE	NEVADA	IA	502011824
-2416	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DYERSBURG, TENNESSE	1970-12-01	0	MARVIN	MARTIN		1109 GENTRY ST	DYERSBURG	TN	380245859
-2417	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PINEVILLE, KENTUCKY	1970-12-01	0	JIMMY	WILDER II		111 S WALNUT ST	PINEVILLE	KY	409779998
-2418	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHADRON, NEBRASKA	1970-12-01	0	RICHARD	BATES		278 MAIN ST	CHADRON	NE	693372356
-2419	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST POINT, GEORGIA	1970-12-01	0	BEVERLY	COREANO		729 4TH AVE	WEST POINT	GA	318331593
-2420	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ST MARIES, IDAHO	1970-12-01	0	TERESA	KRAACK		PO BOX 272	HARRISON	ID	838330272
-2421	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLINTON, OKLAHOMA	1970-12-01	0	KAREN	ROBERTSON		225166 E 800 RD	PUTNAM	OK	736591009
-2422	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PELZER, SOUTH CAROLINA	1970-12-01	0	DOUGLAS	HELTON		816 CEDAR ROCK CHURCH RD	EASLEY	SC	296407829
-2423	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRUNDIDGE, ALABAMA	1970-12-01	0	DEVIUS	GREEN		129 N MAIN ST	BRUNDIDGE	AL	360109998
-2424	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CUTHBERT, GEORGIA	1970-12-01	0	MICHAEL	GARRETT		23 COURT ST	CUTHBERT	GA	398409998
-2425	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PHILADELPHIA, MISSISSIPPI	1970-12-01	0	JOHN	MCFARLAND		1 GOVERNMENT ST	PHILADELPHIA	MS	393509998
-2426	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TOLEDO, OREGON	1970-12-01	0	CAROLE	MCGOVERN		147 NW 1ST ST	TOLEDO	OR	973919998
-2427	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOULTON, ALABAMA	1970-12-01	0	JAMIE	MILLER		14645 COURT ST	MOULTON	AL	356501203
-2428	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KENTWOOD, LOUISIANA	1970-12-01	0	SANDRA	KLIESCH		4830 HWY 38	KENTWOOD	LA	704447971
-2429	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RIO VISTA, CALIFORNIA	1970-12-01	0	CHARLES	HOLMES JR		647 CALIFORNIA ST	RIO VISTA	CA	945711614
-2430	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALBANY, INDIANA	1970-12-01	0	JULIE	SMITH		230 E STATE ST	ALBANY	IN	473209998
-2431	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BAYPORT, MINNESOTA	1970-12-01	0	VACANT	VACANT		209 3RD ST N	BAYPORT	MN	550031028
-2432	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOAB, UTAH	1974-10-01	0	JENIFER	GRAHAM		50 E 100 N	MOAB	UT	845324500
-2433	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLUEFIELD, VIRGINIA	1970-12-01	0	JAMES	BOYD		414 TAZEWELL AVE	BLUEFIELD	VA	246051723
-2434	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST HELENA, ARKANSAS	1970-12-01	0	ANGENETTE	SMITH		221 N SEBASTION	WEST HELENA	AR	723909998
-2435	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ST IGNACE, MICHIGAN	1970-12-01	0	PRESTON	ALLERS		310 S STATE ST	ST IGNACE	MI	497819998
-2436	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANY, LOUISIANA	1970-12-01	0	ANDREW	REMEDIES		962 GEOGHAGAN RD	MANY	LA	714497399
-2437	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DALLAS, NORTH CAROLINA	1970-12-01	0	GREGORY	CARTER		113 PRINCESS LN	DALLAS	NC	280341303
-2438	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KEYTESVILLE, MISSOURI	1970-12-01	0	CHARLES	WESTHUES		811 7TH ST	GLASGOW	MO	652541103
-2439	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SCOTLAND NECK, NORTH CAROLIN	1970-12-01	0	DONALD	VINSON		1015 MAIN ST	SCOTLAND NECK	NC	278741113
-2440	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRANDVIEW, WASHINGTON	1970-12-01	0	CHRISTOPHER	DOMINGUEZ		10381 VAN BELLE RD	SUNNYSIDE	WA	989449231
-2441	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEWBERN, TENNESSEE	1970-12-01	0	BRADLEY	ING		105 BIFFLE RD	NEWBERN	TN	380595265
-2442	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WOLF POINT, MONTANA	1970-12-01	0	VACANT	VACANT		131 FRONT ST	WOLF POINT	MT	592019998
-2443	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FERRIDAY, LOUISIANA	1970-12-01	0	TAMESHALA	THOMAS		999 1ST ST	FERRIDAY	LA	713342856
-2444	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DUNKIRK, INDIANA	1970-12-01	0	MICHAEL	RIGNEY		123 W COMMERCE ST	DUNKIRK	IN	473369998
-2445	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GOODLAND, KANSAS	1970-12-01	0	CARMEN	STUDER		1310 SYRACUSE ST	GOODLAND	KS	677352520
-2446	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DAYTON, WASHINGTON	1970-12-01	0	LOUISE	WAGGONER		202 S 2ND ST	DAYTON	WA	993289998
-2447	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KIOWA, KANSAS	1970-12-01	0	LINDA	PULLIAM		602 MAIN ST	KIOWA	KS	670709998
-2448	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PAINTSVILLE, KENTUCKY 	1970-12-01	0	THERESA	CONLEY		100 FEDERAL DR	PAINTSVILLE	KY	412409997
-2449	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VILLA RICA, GEORGIA	1970-12-01	0	CAROLYN	BACKERS		3684 HIGHWAY 101 N	ROCKMART	GA	301535373
-2450	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PENNINGTON GAP, VIRGINIA	1978-10-01	0	CLYDE	FORD JR		PO BOX 777	DRYDEN	VA	242430777
-2451	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEBSTER, SOUTH DAKOTA	1970-12-01	0	RANDEL	MOUNT		517 W 7TH ST	WEBSTER	SD	572741740
-2452	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DELCAMBRE, LOUISIANA	1970-12-01	0	RENELL	ROMERO		209 S SHORT ST	DELCAMBRE	LA	705284227
-2453	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ASHVILLE, OHIO	1970-12-01	0	MICHELLE	CHERUBINI		8434 WINCHESTER RD	CARROLLTON	OH	431129545
-2454	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE CITY, MINNESOTA	1970-12-01	0	LAURA	MIELKE		71860 COUNTY ROAD 9	LAKE CITY	MN	550415638
-2455	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WATERTOWN, TENNESSEE	1970-12-01	0	KRISTIE	CANTRELL		601 E MAIN ST	WATERTOWN	TN	371849998
-2456	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SOPERTON, GEORGIA	1970-12-01	0	SYLVIA	MOBLEY		5059 S THIRD ST	SOPERTON	GA	304579998
+2415	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEVADA, IOWA	1970-12-01		GLEN	MILLER		437 K AVE	NEVADA	IA	502011824
+2416	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DYERSBURG, TENNESSE	1970-12-01		MARVIN	MARTIN		1109 GENTRY ST	DYERSBURG	TN	380245859
+2417	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PINEVILLE, KENTUCKY	1970-12-01		JIMMY	WILDER II		111 S WALNUT ST	PINEVILLE	KY	409779998
+2418	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHADRON, NEBRASKA	1970-12-01		RICHARD	BATES		278 MAIN ST	CHADRON	NE	693372356
+2419	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST POINT, GEORGIA	1970-12-01		BEVERLY	COREANO		729 4TH AVE	WEST POINT	GA	318331593
+2420	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ST MARIES, IDAHO	1970-12-01		TERESA	KRAACK		PO BOX 272	HARRISON	ID	838330272
+2421	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLINTON, OKLAHOMA	1970-12-01		KAREN	ROBERTSON		225166 E 800 RD	PUTNAM	OK	736591009
+2422	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PELZER, SOUTH CAROLINA	1970-12-01		DOUGLAS	HELTON		816 CEDAR ROCK CHURCH RD	EASLEY	SC	296407829
+2423	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRUNDIDGE, ALABAMA	1970-12-01		DEVIUS	GREEN		129 N MAIN ST	BRUNDIDGE	AL	360109998
+2424	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CUTHBERT, GEORGIA	1970-12-01		MICHAEL	GARRETT		23 COURT ST	CUTHBERT	GA	398409998
+2425	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PHILADELPHIA, MISSISSIPPI	1970-12-01		JOHN	MCFARLAND		1 GOVERNMENT ST	PHILADELPHIA	MS	393509998
+2426	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TOLEDO, OREGON	1970-12-01		CAROLE	MCGOVERN		147 NW 1ST ST	TOLEDO	OR	973919998
+2427	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOULTON, ALABAMA	1970-12-01		JAMIE	MILLER		14645 COURT ST	MOULTON	AL	356501203
+2428	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KENTWOOD, LOUISIANA	1970-12-01		SANDRA	KLIESCH		4830 HWY 38	KENTWOOD	LA	704447971
+2429	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RIO VISTA, CALIFORNIA	1970-12-01		CHARLES	HOLMES JR		647 CALIFORNIA ST	RIO VISTA	CA	945711614
+2430	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALBANY, INDIANA	1970-12-01		JULIE	SMITH		230 E STATE ST	ALBANY	IN	473209998
+2431	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BAYPORT, MINNESOTA	1970-12-01		VACANT	VACANT		209 3RD ST N	BAYPORT	MN	550031028
+2432	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOAB, UTAH	1974-10-01		JENIFER	GRAHAM		50 E 100 N	MOAB	UT	845324500
+2433	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BLUEFIELD, VIRGINIA	1970-12-01		JAMES	BOYD		414 TAZEWELL AVE	BLUEFIELD	VA	246051723
+2434	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST HELENA, ARKANSAS	1970-12-01		ANGENETTE	SMITH		221 N SEBASTION	WEST HELENA	AR	723909998
+2435	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ST IGNACE, MICHIGAN	1970-12-01		PRESTON	ALLERS		310 S STATE ST	ST IGNACE	MI	497819998
+2436	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANY, LOUISIANA	1970-12-01		ANDREW	REMEDIES		962 GEOGHAGAN RD	MANY	LA	714497399
+2437	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DALLAS, NORTH CAROLINA	1970-12-01		GREGORY	CARTER		113 PRINCESS LN	DALLAS	NC	280341303
+2438	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KEYTESVILLE, MISSOURI	1970-12-01		CHARLES	WESTHUES		811 7TH ST	GLASGOW	MO	652541103
+2439	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SCOTLAND NECK, NORTH CAROLIN	1970-12-01		DONALD	VINSON		1015 MAIN ST	SCOTLAND NECK	NC	278741113
+2440	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRANDVIEW, WASHINGTON	1970-12-01		CHRISTOPHER	DOMINGUEZ		10381 VAN BELLE RD	SUNNYSIDE	WA	989449231
+2441	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEWBERN, TENNESSEE	1970-12-01		BRADLEY	ING		105 BIFFLE RD	NEWBERN	TN	380595265
+2442	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WOLF POINT, MONTANA	1970-12-01		VACANT	VACANT		131 FRONT ST	WOLF POINT	MT	592019998
+2443	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FERRIDAY, LOUISIANA	1970-12-01		TAMESHALA	THOMAS		999 1ST ST	FERRIDAY	LA	713342856
+2444	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DUNKIRK, INDIANA	1970-12-01		MICHAEL	RIGNEY		123 W COMMERCE ST	DUNKIRK	IN	473369998
+2445	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GOODLAND, KANSAS	1970-12-01		CARMEN	STUDER		1310 SYRACUSE ST	GOODLAND	KS	677352520
+2446	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DAYTON, WASHINGTON	1970-12-01		LOUISE	WAGGONER		202 S 2ND ST	DAYTON	WA	993289998
+2447	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KIOWA, KANSAS	1970-12-01		LINDA	PULLIAM		602 MAIN ST	KIOWA	KS	670709998
+2448	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PAINTSVILLE, KENTUCKY 	1970-12-01		THERESA	CONLEY		100 FEDERAL DR	PAINTSVILLE	KY	412409997
+2449	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VILLA RICA, GEORGIA	1970-12-01		CAROLYN	BACKERS		3684 HIGHWAY 101 N	ROCKMART	GA	301535373
+2450	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PENNINGTON GAP, VIRGINIA	1978-10-01		CLYDE	FORD JR		PO BOX 777	DRYDEN	VA	242430777
+2451	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEBSTER, SOUTH DAKOTA	1970-12-01		RANDEL	MOUNT		517 W 7TH ST	WEBSTER	SD	572741740
+2452	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DELCAMBRE, LOUISIANA	1970-12-01		RENELL	ROMERO		209 S SHORT ST	DELCAMBRE	LA	705284227
+2453	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ASHVILLE, OHIO	1970-12-01		MICHELLE	CHERUBINI		8434 WINCHESTER RD	CARROLLTON	OH	431129545
+2454	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE CITY, MINNESOTA	1970-12-01		LAURA	MIELKE		71860 COUNTY ROAD 9	LAKE CITY	MN	550415638
+2455	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WATERTOWN, TENNESSEE	1970-12-01		KRISTIE	CANTRELL		601 E MAIN ST	WATERTOWN	TN	371849998
+2456	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SOPERTON, GEORGIA	1970-12-01		SYLVIA	MOBLEY		5059 S THIRD ST	SOPERTON	GA	304579998
 2457	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	71	TARAH	LEBSACK		71 MAGNOLIA ST. UNIT 1	CASPER	WY	82604    
 2458	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	884	JASON	SHAPIRO	P.O. BOX 17278		HONOLULU	HI	968170278
 2459	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	2	MARK	RATLIFF		1430 FRONT STREET	RICHLANDS	VA	24641    
-2460	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PEEBLES, OHIO	1970-12-01	0	JOSHUA	GEESLIN		184 N MAIN ST	PEEBLES	OH	456601296
-2461	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GALVA, ILLINOIS	1970-12-01	0	TAMI	DOBBELS		116 EXCHANGE ST	GALVA	IL	614349800
+2460	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PEEBLES, OHIO	1970-12-01		JOSHUA	GEESLIN		184 N MAIN ST	PEEBLES	OH	456601296
+2461	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GALVA, ILLINOIS	1970-12-01		TAMI	DOBBELS		116 EXCHANGE ST	GALVA	IL	614349800
 2462	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	516	Andrew	Zuniga	4550 WEST 90th TERRACE	4550 WEST 90th TERRACE	Prairie Village	KS	662072307
-2463	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JACKSON, GEORGIA	1970-12-01	0	STEPHEN	BELLAMY		461 E 2ND ST	JACKSON	GA	302339998
+2463	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JACKSON, GEORGIA	1970-12-01		STEPHEN	BELLAMY		461 E 2ND ST	JACKSON	GA	302339998
 2464	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	39	DERENDA	LUCAS	P. O. BOX 191		AMORY	MS	388210191
-2465	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PIPESTONE, MINNESOTA	1970-12-01	0	ROBERT	BUFFINGTON		202 S HIAWATHA AVE	PIPESTONE	MN	561641879
-2466	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DILLON, MONTANA	1970-12-01	0	MARY	GILMAN		117 S IDAHO ST	DILLON	MT	597259998
-2467	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CORNELIA, GEORGIA	1970-12-01	0	DUDLEY	SANDERS		5522 OLD HIGHWAY 441N	BALDWIN	GA	305113012
-2468	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHESTERFIELD, SOUTH CAROLINA	1970-12-01	0	BRUCE	DELANEY		200 E MAIN ST	CHESTERFIELD	SC	297091718
-2469	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ABINGDON, ILLINOIS	1970-12-01	0	CELENE	DULEY		123 W MEEK ST	ABINGDON	IL	614109998
-2470	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LE SUEUR, MINNESOTA	1970-12-01	0	SUSAN	REID		202 N MAIN ST	LE SUEUR	MN	560581805
-2471	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LEMMON, SOUTH DAKOTA	1970-12-01	0	FREDERICK	BUBBERS		1112 3RD AVE W	LEMMON	SD	576382209
-2472	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MADISON, INDIANA	1970-12-01	0	JASON	BISWELL		207 JEFFERSON ST	MADISON	IN	472509998
-2473	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHATTAHOOCHEE, FLORIDA	1976-01-01	0	JEANETTE	MOORE		116 W WASHINGTON ST	CHATTAHOOCHEE	FL	323249998
-2474	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CANTON MISSOURI	1970-12-01	0	TERRY	MOON		300 CONSTANTZ DR	CANTON	MO	634351212
-2475	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRANDENBURG, KENTUCKY	1970-12-01	0	JAMES	MCDANIEL		269 EL SHACKLETT CT	BRANDENBURG	KY	401088907
-2476	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LINCOLN CITY, OREGON	1970-12-01	0	MARILYN	NOLAN		2731 SW DUNE AVE	LINCOLN CITY	OR	973671566
-2477	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MC RAE, GEORGIA	1970-12-01	0	KIMBERLY	LOWE		23 S SECOND AVE	MC RAE	GA	310559998
-2478	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONROEVILLE, ALABAMA	1970-12-01	0	ROBERT	GRANT		137 HIGHLAND AVE	MONROEVILLE	AL	364602157
-2479	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLUMBIA, KENTUCKY	1970-12-01	0	JOEY	TOPPING		691 FAIRPLAY RD	COLUMBIA	KY	427288710
-2480	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GOLDEN MEADOW, LOUISIANA	1970-12-01	0	MARY	HEBERT		109 HOTARD ST	BOURG	LA	703435413
-2481	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MADISON, NORTH CAROLINA	1970-12-01	0	CHAD	ROBERTS		302 HIGHWAY ST	MADISON	NC	270251673
-2482	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARION, KENTUCKY	1970-12-01	0	JEREMIAH	POINDEXTER		PO BOX 95	MARION	KY	420640095
-2483	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KEMMERER, WYOMING	1976-07-01	0	VACANT	VACANT		318 SAPPHIRE ST	KEMMERER	WY	831019998
-2484	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MADISON, FLORIDA	1970-12-01	0	TAMIKKA	WILLIAMS		197 SW PINCKNEY ST	MADISON	FL	323409998
+2465	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PIPESTONE, MINNESOTA	1970-12-01		ROBERT	BUFFINGTON		202 S HIAWATHA AVE	PIPESTONE	MN	561641879
+2466	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DILLON, MONTANA	1970-12-01		MARY	GILMAN		117 S IDAHO ST	DILLON	MT	597259998
+2467	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CORNELIA, GEORGIA	1970-12-01		DUDLEY	SANDERS		5522 OLD HIGHWAY 441N	BALDWIN	GA	305113012
+2468	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHESTERFIELD, SOUTH CAROLINA	1970-12-01		BRUCE	DELANEY		200 E MAIN ST	CHESTERFIELD	SC	297091718
+2469	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ABINGDON, ILLINOIS	1970-12-01		CELENE	DULEY		123 W MEEK ST	ABINGDON	IL	614109998
+2470	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LE SUEUR, MINNESOTA	1970-12-01		SUSAN	REID		202 N MAIN ST	LE SUEUR	MN	560581805
+2471	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LEMMON, SOUTH DAKOTA	1970-12-01		FREDERICK	BUBBERS		1112 3RD AVE W	LEMMON	SD	576382209
+2472	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MADISON, INDIANA	1970-12-01		JASON	BISWELL		207 JEFFERSON ST	MADISON	IN	472509998
+2473	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHATTAHOOCHEE, FLORIDA	1976-01-01		JEANETTE	MOORE		116 W WASHINGTON ST	CHATTAHOOCHEE	FL	323249998
+2474	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CANTON MISSOURI	1970-12-01		TERRY	MOON		300 CONSTANTZ DR	CANTON	MO	634351212
+2475	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRANDENBURG, KENTUCKY	1970-12-01		JAMES	MCDANIEL		269 EL SHACKLETT CT	BRANDENBURG	KY	401088907
+2476	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LINCOLN CITY, OREGON	1970-12-01		MARILYN	NOLAN		2731 SW DUNE AVE	LINCOLN CITY	OR	973671566
+2477	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MC RAE, GEORGIA	1970-12-01		KIMBERLY	LOWE		23 S SECOND AVE	MC RAE	GA	310559998
+2478	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONROEVILLE, ALABAMA	1970-12-01		ROBERT	GRANT		137 HIGHLAND AVE	MONROEVILLE	AL	364602157
+2479	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLUMBIA, KENTUCKY	1970-12-01		JOEY	TOPPING		691 FAIRPLAY RD	COLUMBIA	KY	427288710
+2480	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GOLDEN MEADOW, LOUISIANA	1970-12-01		MARY	HEBERT		109 HOTARD ST	BOURG	LA	703435413
+2481	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MADISON, NORTH CAROLINA	1970-12-01		CHAD	ROBERTS		302 HIGHWAY ST	MADISON	NC	270251673
+2482	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARION, KENTUCKY	1970-12-01		JEREMIAH	POINDEXTER		PO BOX 95	MARION	KY	420640095
+2483	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KEMMERER, WYOMING	1976-07-01		VACANT	VACANT		318 SAPPHIRE ST	KEMMERER	WY	831019998
+2484	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MADISON, FLORIDA	1970-12-01		TAMIKKA	WILLIAMS		197 SW PINCKNEY ST	MADISON	FL	323409998
 2485	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	12	Daniel	Tysver	PO BOX 602		LAKEWALES	FL	338590602
-2486	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAVANNAH, MISSOURI	1970-12-01	0	MELVIN	SCOTT		507 W MAIN ST	SAVANNAH	MO	644859998
-2487	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOULTON, IOWA	1970-12-01	0	GARY	HARRIS		601 S MAIN ST	MOULTON	IA	525721337
-2488	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GETTYSBURG, SOUTH DAKOTA	1978-11-01	0	BARBARA	BAUER		110 N EXENE ST	GETTYSBURG	SD	574429998
-2489	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MT SHASTA, CALIFORNIA	1986-06-01	0	TREVOR	MUELRATH		15616 MOUNTAIN CT	WEED	CA	960949302
-2490	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MYRTYLE POINT, OREGON	1975-12-01	0	THERESA	DE LONG		514 ASH ST	MYRTLE POINT	OR	974581033
-2491	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GALLIPOLIS, OHIO	1975-12-01	0	CLINTON	DEAN		PO BOX 1061	GALLIPOLIS	OH	456311061
-2492	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PIKEVILLE, KENTUCKY	1975-12-01	0	RONALD	COLLINS		864 STATE HIGHWAY 194 W	PIKEVILLE	KY	415016443
+2486	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAVANNAH, MISSOURI	1970-12-01		MELVIN	SCOTT		507 W MAIN ST	SAVANNAH	MO	644859998
+2487	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOULTON, IOWA	1970-12-01		GARY	HARRIS		601 S MAIN ST	MOULTON	IA	525721337
+2488	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GETTYSBURG, SOUTH DAKOTA	1978-11-01		BARBARA	BAUER		110 N EXENE ST	GETTYSBURG	SD	574429998
+2489	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MT SHASTA, CALIFORNIA	1986-06-01		TREVOR	MUELRATH		15616 MOUNTAIN CT	WEED	CA	960949302
+2490	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MYRTYLE POINT, OREGON	1975-12-01		THERESA	DE LONG		514 ASH ST	MYRTLE POINT	OR	974581033
+2491	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GALLIPOLIS, OHIO	1975-12-01		CLINTON	DEAN		PO BOX 1061	GALLIPOLIS	OH	456311061
+2492	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PIKEVILLE, KENTUCKY	1975-12-01		RONALD	COLLINS		864 STATE HIGHWAY 194 W	PIKEVILLE	KY	415016443
 2493	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OKLAHOMA	1974-09-01	2226	ERIC	BEU		221 S EAGLE LANE	OKLAHOMA CITY	OK	731284209
 2494	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MISSOURI	1975-08-01	6220	KYLE	TURNER		1562 MENDELL DRIVE	UNIVERSITY CITY	MO	63130    
-2495	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CONRAD, MONTANA	1974-12-01	0	EDWARD	KRAUSE		509 S MARYLAND	CONRAD	MT	594252512
+2495	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CONRAD, MONTANA	1974-12-01		EDWARD	KRAUSE		509 S MARYLAND	CONRAD	MT	594252512
 2496	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WILMETTE-KENILWORTH	1976-02-01	52	Nathan	Carter	PO  BOX 8112		WILMETTE	IL	60043    
 2497	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	39	conrad	ellaga	P O BOX 1383		MONTEREY	CA	939421383
-2498	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DRESDEN, TENNESSEE	1974-07-01	0	JOE	HATLER		717 BILLINGSBY RD	DRESDEN	TN	382251953
-2499	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEWMAN, CALIFORNIA	1970-12-01	0	MARVIN	RICE JR		1313 MAIN ST	NEWMAN	CA	953609998
-2500	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRANITE FALLS, MINNESOTA	1970-12-01	0	TERESA	QUINTAL		120 7TH AVE	GRANITE FALLS	MN	562411506
-2501	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CALDWELL, TEXAS	1970-12-01	0	MELISSIA	KOVAR		8941 COUNTY ROAD 247	CALDWELL	TX	778368236
-2502	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LINDSAY, OKLAHOMA	1970-12-01	0	CHAD	HEAVIN		3860 COUNTY STREET 2920	BRADLEY	OK	730119754
-2503	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JONESVILLE, LOUISIANA	1976-02-01	0	VACANT	VACANT		902 FIRST ST	JONESVILLE	LA	713439998
-2504	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHURCH POINT, LOUISIANA	1976-02-01	0	RAQUEL	COURVILLE		739 S MAIN ST	CHURCH POINT	LA	705259998
-2505	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JACKSON, KENTUCKY	1976-02-01	0	JOHN	TURNER II		80 PARSON DR	JACKSON	KY	413399615
-2506	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TOMPKINSVILLE, KENTUCKY	1976-02-01	0	RONNIE	STINSON		1730 AVONDALE RD	GAMALIEL	KY	421409213
-2507	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARPER, KANSAS	1976-02-01	0	AARON	PATTERSON		901 CENTRAL	HARPER	KS	670581112
-2508	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATWOOD, KANSAS	1976-02-01	0	MEGHAN	ANDERSON		501 MAIN ST	ATWOOD	KS	677309998
-2509	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAVERLY, IOWA	1976-02-01	0	DAVID	PETERSEN		708 1ST AVE SW	WAVERLY	IA	506772902
-2510	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELDORO IOWA	1976-02-01	0	MARK	ANGEN		1911 BYRON AVE	WATERLOO	IA	507021801
-2511	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CORNING, IOWA	1976-02-01	0	JAY	LITTLE		608 7TH ST	CORNING	IA	508419998
-2512	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOGAN, IOWA	1976-02-01	0	LEE	SCHECHINGER		1304 DURANT ST	HARLAN	IA	515371234
-2513	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOUNT AYR, IOWA	1976-02-01	0	VACANT	VACANT		202 W MADISON ST	MOUNT AYR	IA	508549998
-2514	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLEBROOK, NEW HAMPSHIRE	1978-09-01	0	VACANT	VACANT		21 PARSONS ST	COLEBROOK	NH	035769998
-2515	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GIBSON CITY, ILLINOIS	1976-02-01	0	DAVID	MASKO		508 COUNTY ROAD 2800 N	FISHER	IL	618438528
-2516	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROYSTON, GEORGIA	1976-02-01	0	MICHAEL	RAGSDALE		4864 PROSPECT RD	TOCCOA	GA	305774893
-2517	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LENOX, IOWA	1976-02-01	0	MICHAEL	HALLIGAN		110 W TEMPLE ST	LENOX	IA	508511248
-2518	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EXCELSIOR SPRINGS, MISSOURI	1975-12-01	0	WILLIAM	SQUIRE		515 SAINT LOUIS AVE	EXCELSIOR SPRINGS	MO	640249998
-2519	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLQUITT, GEORGIA	1976-02-01	0	JOYCE	GLASS		553 HENLEY RD	COLQUITT	GA	398376512
-2520	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BAXLEY, GEORGIA	1976-02-01	0	DONNA	MOODY		301 CLYDE RD	BAXLEY	GA	315138976
-2521	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLARENDON, ARKANSAS	1976-02-01	0	TERRY	HACKELTON		208 N MAIN ST	CLARENDON	AR	720292012
-2522	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	REED CITY, MICHIGAN	1976-02-01	0	PAUL	SHEWAN		243 W SLOSSON AVE	REED CITY	MI	496771121
-2523	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE ODESSA, MICHIGAN	1976-02-01	0	RYNE	MUSBACH		907 4TH AVE	LAKE ODESSA	MI	488499998
-2524	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOMER, MICHIGAN	1976-03-01	0	BRI SHON	CALDWELL		110 W MAIN ST	HOMER	MI	492451024
-2525	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BAD AXE, MICHIGAN	1976-02-01	0	VACANT	VACANT		133 N HANSELMAN ST	BAD AXE	MI	484139998
-2526	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MILAN, ILLINOIS	1976-04-01	0	RICHARD	STOUT		467 44TH AVE CT	EAST MOLINE	IL	612444254
-2527	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARTFORD, ILLINOIS	1976-02-01	0	NORMA	REILLEY		194 BENDER AVE	E ALTON	IL	620242043
-2528	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHITEFIELD, NEW HAMSHIRE	1976-02-01	0	MARGARET	COREY		26 JEFFERSON RD	WHITEFIELD	NH	035989998
-2529	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RED CLOUD, NEBRASKA	1976-02-01	0	RICHARD	ROSE		903 18TH AVE	FRANKLIN	NE	689391805
-2530	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AINSWORTH, NEBRASKA	1976-02-01	0	MAYNARD	HARR		PO BOX 4	AINSWORTH	NE	692100004
-2531	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAMILTON, MONTANA	1976-02-01	0	KARLA	GIESE		3189 BUGLI LN	GLASGOW	MT	598706803
-2532	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GLASGOW, MONTANA	1976-02-01	0	LELAND	MONSON		933 2ND AVE S	GLASGOW	MT	592302212
-2533	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LELAND, MISSISSIPPI	1976-02-01	0	ARAMIN	TOSSES		PO BOX 811	LELAND	MS	387560811
-2534	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	APPLETON, MINNESOTA	1976-02-01	0	DAVID	MOE		9035 50TH ST NW	MILAN	MN	562623001
-2535	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EAST HOLDEN, MAINE	1976-02-01	0	VACANT	VACANT		966 MAIN RD	EAST HOLDEN	ME	044299998
+2498	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DRESDEN, TENNESSEE	1974-07-01		JOE	HATLER		717 BILLINGSBY RD	DRESDEN	TN	382251953
+2499	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEWMAN, CALIFORNIA	1970-12-01		MARVIN	RICE JR		1313 MAIN ST	NEWMAN	CA	953609998
+2500	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRANITE FALLS, MINNESOTA	1970-12-01		TERESA	QUINTAL		120 7TH AVE	GRANITE FALLS	MN	562411506
+2501	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CALDWELL, TEXAS	1970-12-01		MELISSIA	KOVAR		8941 COUNTY ROAD 247	CALDWELL	TX	778368236
+2502	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LINDSAY, OKLAHOMA	1970-12-01		CHAD	HEAVIN		3860 COUNTY STREET 2920	BRADLEY	OK	730119754
+2503	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JONESVILLE, LOUISIANA	1976-02-01		VACANT	VACANT		902 FIRST ST	JONESVILLE	LA	713439998
+2504	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHURCH POINT, LOUISIANA	1976-02-01		RAQUEL	COURVILLE		739 S MAIN ST	CHURCH POINT	LA	705259998
+2505	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	JACKSON, KENTUCKY	1976-02-01		JOHN	TURNER II		80 PARSON DR	JACKSON	KY	413399615
+2506	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TOMPKINSVILLE, KENTUCKY	1976-02-01		RONNIE	STINSON		1730 AVONDALE RD	GAMALIEL	KY	421409213
+2507	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARPER, KANSAS	1976-02-01		AARON	PATTERSON		901 CENTRAL	HARPER	KS	670581112
+2508	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATWOOD, KANSAS	1976-02-01		MEGHAN	ANDERSON		501 MAIN ST	ATWOOD	KS	677309998
+2509	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAVERLY, IOWA	1976-02-01		DAVID	PETERSEN		708 1ST AVE SW	WAVERLY	IA	506772902
+2510	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELDORO IOWA	1976-02-01		MARK	ANGEN		1911 BYRON AVE	WATERLOO	IA	507021801
+2511	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CORNING, IOWA	1976-02-01		JAY	LITTLE		608 7TH ST	CORNING	IA	508419998
+2512	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LOGAN, IOWA	1976-02-01		LEE	SCHECHINGER		1304 DURANT ST	HARLAN	IA	515371234
+2513	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MOUNT AYR, IOWA	1976-02-01		VACANT	VACANT		202 W MADISON ST	MOUNT AYR	IA	508549998
+2514	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLEBROOK, NEW HAMPSHIRE	1978-09-01		VACANT	VACANT		21 PARSONS ST	COLEBROOK	NH	035769998
+2515	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GIBSON CITY, ILLINOIS	1976-02-01		DAVID	MASKO		508 COUNTY ROAD 2800 N	FISHER	IL	618438528
+2516	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROYSTON, GEORGIA	1976-02-01		MICHAEL	RAGSDALE		4864 PROSPECT RD	TOCCOA	GA	305774893
+2517	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LENOX, IOWA	1976-02-01		MICHAEL	HALLIGAN		110 W TEMPLE ST	LENOX	IA	508511248
+2518	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EXCELSIOR SPRINGS, MISSOURI	1975-12-01		WILLIAM	SQUIRE		515 SAINT LOUIS AVE	EXCELSIOR SPRINGS	MO	640249998
+2519	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	COLQUITT, GEORGIA	1976-02-01		JOYCE	GLASS		553 HENLEY RD	COLQUITT	GA	398376512
+2520	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BAXLEY, GEORGIA	1976-02-01		DONNA	MOODY		301 CLYDE RD	BAXLEY	GA	315138976
+2521	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLARENDON, ARKANSAS	1976-02-01		TERRY	HACKELTON		208 N MAIN ST	CLARENDON	AR	720292012
+2522	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	REED CITY, MICHIGAN	1976-02-01		PAUL	SHEWAN		243 W SLOSSON AVE	REED CITY	MI	496771121
+2523	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LAKE ODESSA, MICHIGAN	1976-02-01		RYNE	MUSBACH		907 4TH AVE	LAKE ODESSA	MI	488499998
+2524	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOMER, MICHIGAN	1976-03-01		BRI SHON	CALDWELL		110 W MAIN ST	HOMER	MI	492451024
+2525	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BAD AXE, MICHIGAN	1976-02-01		VACANT	VACANT		133 N HANSELMAN ST	BAD AXE	MI	484139998
+2526	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MILAN, ILLINOIS	1976-04-01		RICHARD	STOUT		467 44TH AVE CT	EAST MOLINE	IL	612444254
+2527	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARTFORD, ILLINOIS	1976-02-01		NORMA	REILLEY		194 BENDER AVE	E ALTON	IL	620242043
+2528	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHITEFIELD, NEW HAMSHIRE	1976-02-01		MARGARET	COREY		26 JEFFERSON RD	WHITEFIELD	NH	035989998
+2529	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RED CLOUD, NEBRASKA	1976-02-01		RICHARD	ROSE		903 18TH AVE	FRANKLIN	NE	689391805
+2530	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AINSWORTH, NEBRASKA	1976-02-01		MAYNARD	HARR		PO BOX 4	AINSWORTH	NE	692100004
+2531	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAMILTON, MONTANA	1976-02-01		KARLA	GIESE		3189 BUGLI LN	GLASGOW	MT	598706803
+2532	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GLASGOW, MONTANA	1976-02-01		LELAND	MONSON		933 2ND AVE S	GLASGOW	MT	592302212
+2533	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LELAND, MISSISSIPPI	1976-02-01		ARAMIN	TOSSES		PO BOX 811	LELAND	MS	387560811
+2534	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	APPLETON, MINNESOTA	1976-02-01		DAVID	MOE		9035 50TH ST NW	MILAN	MN	562623001
+2535	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EAST HOLDEN, MAINE	1976-02-01		VACANT	VACANT		966 MAIN RD	EAST HOLDEN	ME	044299998
 2536	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1976-02-01	2	TIMOTHY	O'CONNOR		1020 4TH AVE E	MOBRIDGE	SD	576011403
-2537	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LORIS, SOUTH CAROLINA	1976-02-01	0	GARY	MASI		382 CAROLINA HCKORY	LORIS	SC	295697361
-2538	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GREAT FALLS, SOUTH CAROLINA	1976-02-01	0	DOMINIQUE	BAXLEY		649 DEARBORN ST	GREAT FALLS	SC	290551649
-2539	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLOVER, SOUTH CAROLINA	1976-02-01	0	LORANE	GOLDING		913 BETHEL ST	CLOVER	SC	297100019
-2540	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PORT ALLEGANY, PENNSYLVANIA	1976-02-01	0	DARRELL	ANTRIM		1128 E MILL ST	PORT ALLEGANY	PA	167435124
-2541	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EUDORA, ARKANSAS	1976-02-01	0	DAVID	NUTTER		166 GREENBRIER RD	HAMBURG	AR	716468974
-2542	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ONEONTA, ALABAMA	1976-02-01	0	RAYNE	JARRETT		333 7TH ST N	ONEONTA	AL	351211572
-2543	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAPE CHARLES, VIRGINIA	1976-02-01	0	TIMOTHY	HARCLERODE		299 RANDOLPH AVE	CAPE CHARLES	VA	233109998
-2544	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FRANKLIN, VIRGINIA	1976-02-01	0	MICHAEL	HATFIELD		519 N MAIN ST	FRANKLIN	VA	238519998
-2545	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST UNION, OHIO	1976-02-01	0	TERRY	MOORE		117 E NORTH ST	WEST UNION	OH	456931099
-2546	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VALE, OREGON	1976-02-01	0	VIRGINIA	STEPHEN		997 JANETA AVE	NYSSA	OR	979135320
-2547	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAYRE, OKLAHOMA	1976-02-01	0	DYLAN	DRINNON		630 E BENTON AVE	SAYRE	OK	736621902
-2548	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BELHAVEN, NORTH CAROLINA	1976-02-01	0	MARVIN	SMITH		614 W OLD COUNTY RD	BELHAVEN	NC	278109998
-2549	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW BREMEN, OHIO	1976-02-01	0	SUSAN	VASQUEZ		911 W 2ND ST	DELPHOS	OH	458331618
-2550	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SULPHUR, OKLAHOMA	1976-02-01	0	RALPH	GILBERT		23521 N COUNTY ROAD 3290	WYNNEWOOD	OK	730989129
-2551	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OXFORD, NORTH CAROLINA	1976-02-01	0	AISHA	CHRISTIAN		144 MAIN ST	OXFORD	NC	275659998
-2552	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WELLSTON, OHIO	1976-02-01	0	TED	ADAMS		101 E BROADWAY ST	WELLSTON	OH	456921273
-2553	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RANGER, TEXAS	1976-03-01	0	DELLA	CAREY		202 N AUSTIN ST	RANGER	TX	764709998
-2554	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STOCKTON, ILLINOIS	1976-02-01	0	JENNIFER	ARAND		201 W RAILROAD AVE	STOCKTON	IL	610851588
-2555	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	POWELL, WYOMING	1976-02-01	0	CALVIN	JOHNSTON		270 N BENT ST	POWELL	WY	824359998
-2556	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCKDALE, TEXAS	1976-02-01	0	REBECCA	NINK		234 ACKERMAN ST	ROCKDALE	TX	765679998
-2557	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	POST, TEXAS	1976-02-01	0	MICHAEL	CLEMMONS		202 W MAIN ST	POST	TX	793569998
-2558	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPENCER, VIRGINIA	1976-02-01	0	DARRYL	PATTERSON		4109 COOPERS MOUNTAIN RD	MARTINSVILLE	VA	241128621
-2559	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TAZEWELL, VIRGINIA	1976-02-01	0	HARRY	SHEETS JR		200 W MAIN ST	TAZEWELL	VA	246519998
-2560	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BELLE FOURCHE, SOUTH DAKOTA	1976-02-01	0	RYAN	LANGE		804 STATE ST	BELLE FOURCHE	SD	577179998
-2610	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCK VALLEY, IOWA	1970-12-01	0	AMY	BOSLER		1501 MAIN ST	ROCK VALLEY	IA	512476400
-2561	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OCONTO FALLS, WISCONSIN	1976-02-01	0	RICHARD	CARROLL		8168 GRAY LAKE RD	OCONTO FALLS	WI	541549507
-2562	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GALAX, VIRGINIA	1976-02-01	0	STEPHEN	BREWSTER		200 E GRAYSON ST	GALAX	VA	243339998
-2563	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STRASBURG, VIRGINIA	1976-02-01	0	ROBERT	SPIKER JR		423 SYCAMORE LN	MAURERTOWN	VA	226441940
-2564	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LULING, TEXAS	1976-02-01	0	MICHAEL	BASSETT		296 DAVIS RANCH RD	JOHNSON CITY	TX	786364170
-2565	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SELMER, TENNESSEE	1976-02-01	0	TODD	PARKER		150 HOUSTON AVE	SELMER	TN	383759998
-2566	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTEREY, TENNESSEE	1976-02-01	0	CHRISTOPHER	ORRAND		429 1ST AVE N	BAXTER	TN	385444414
-2567	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MC KENZIE, TENNESSEE	1976-02-01	0	JAMES	PUTMAN		PO BOX 309	MC KENZIE	TN	382010309
-2568	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LA FOLLETTE, TENNESSEE	1976-02-01	0	DEWAYNE	KITTS		119 S TENNESSEE AVE	LA FOLLETTE	TN	377663604
-2569	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ETOWAH, TENNESSEE	1976-02-01	0	J	COOPER		254 TOOMEY ST	ETOWAH	TN	373311737
-2570	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LEXINGTON, ILLINOIS	1978-09-01	0	TRACY	HUDDLESTUN		1101 E OLVIE ST	BLOOMINGTON	IL	617015550
-2571	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ARABI, LOUISIANA	1977-08-01	0	VACANT	VACANT		748 MEHLE ST	ARABI	LA	700321100
-2572	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LANGDON, NORTH DAKOTA	1977-08-01	0	DARRELL	FOX		323 8TH AVE	LANGDON	ND	582499998
-2573	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OLIVE BRANCH, MISSISSIPPI	1977-08-01	0	TERRY	ADAMS		8850 MIDSOUTH DR	OLIVE BRANCH	MS	386549998
-2574	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ARCOLA, ILLINOIS	1977-08-01	0	CHARLES	CONN		443 E WASHINGTON ST	ARCOLA	IL	619101735
-2575	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SNOW HILL, NORTH CAROLINA	1977-01-01	0	CRYSTAL	GOODING		911 SE SECOND ST	SNOW HILL	NC	285801634
-2576	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANCHESTER, KENTUCKY	1976-08-01	0	JULIUS	HACKER		309 CLAY COUNTY SHOPPING CTR	MANCHESTER	KY	409629998
-2577	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARKS, MISSISSIPPI	1981-09-01	0	PEGGY	GADDY		PO BOX 177	MARKS	MS	386460177
-2578	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRESCOOT, WISCONSIN	1976-08-01	0	PAUL	PETERS		295 15TH ST W	HASTINGS	MN	550332731
-2579	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLE ELUM, WASHINGTON	1976-08-01	0	JENNIFER	OERTLI		305 E 1ST ST	CLE ELUM	WA	989229998
-2580	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STEVENSVILLE, MICHIGAN	1976-03-01	0	GLENDA	WINNELL		4628 VISTA DR	BRIDGMAN	MI	491069358
-2581	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TAYLORSVILLE, NORTH CAROLINA	1976-05-01	0	RICHARD	FEIMSTER		121 PARKER FEIMSTER LN	STONY POINT	NC	286789137
-2582	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SEVIERVILLE, TENNESSEE	1982-07-01	0	IAN	LIMERICK		245 RIVER VALLEY CIR	SEVIERVILLE	TN	378625265
+2537	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LORIS, SOUTH CAROLINA	1976-02-01		GARY	MASI		382 CAROLINA HCKORY	LORIS	SC	295697361
+2538	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GREAT FALLS, SOUTH CAROLINA	1976-02-01		DOMINIQUE	BAXLEY		649 DEARBORN ST	GREAT FALLS	SC	290551649
+2539	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLOVER, SOUTH CAROLINA	1976-02-01		LORANE	GOLDING		913 BETHEL ST	CLOVER	SC	297100019
+2540	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PORT ALLEGANY, PENNSYLVANIA	1976-02-01		DARRELL	ANTRIM		1128 E MILL ST	PORT ALLEGANY	PA	167435124
+2541	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EUDORA, ARKANSAS	1976-02-01		DAVID	NUTTER		166 GREENBRIER RD	HAMBURG	AR	716468974
+2542	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ONEONTA, ALABAMA	1976-02-01		RAYNE	JARRETT		333 7TH ST N	ONEONTA	AL	351211572
+2543	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAPE CHARLES, VIRGINIA	1976-02-01		TIMOTHY	HARCLERODE		299 RANDOLPH AVE	CAPE CHARLES	VA	233109998
+2544	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FRANKLIN, VIRGINIA	1976-02-01		MICHAEL	HATFIELD		519 N MAIN ST	FRANKLIN	VA	238519998
+2545	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST UNION, OHIO	1976-02-01		TERRY	MOORE		117 E NORTH ST	WEST UNION	OH	456931099
+2546	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VALE, OREGON	1976-02-01		VIRGINIA	STEPHEN		997 JANETA AVE	NYSSA	OR	979135320
+2547	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SAYRE, OKLAHOMA	1976-02-01		DYLAN	DRINNON		630 E BENTON AVE	SAYRE	OK	736621902
+2548	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BELHAVEN, NORTH CAROLINA	1976-02-01		MARVIN	SMITH		614 W OLD COUNTY RD	BELHAVEN	NC	278109998
+2549	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW BREMEN, OHIO	1976-02-01		SUSAN	VASQUEZ		911 W 2ND ST	DELPHOS	OH	458331618
+2550	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SULPHUR, OKLAHOMA	1976-02-01		RALPH	GILBERT		23521 N COUNTY ROAD 3290	WYNNEWOOD	OK	730989129
+2551	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OXFORD, NORTH CAROLINA	1976-02-01		AISHA	CHRISTIAN		144 MAIN ST	OXFORD	NC	275659998
+2552	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WELLSTON, OHIO	1976-02-01		TED	ADAMS		101 E BROADWAY ST	WELLSTON	OH	456921273
+2553	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	RANGER, TEXAS	1976-03-01		DELLA	CAREY		202 N AUSTIN ST	RANGER	TX	764709998
+2554	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STOCKTON, ILLINOIS	1976-02-01		JENNIFER	ARAND		201 W RAILROAD AVE	STOCKTON	IL	610851588
+2555	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	POWELL, WYOMING	1976-02-01		CALVIN	JOHNSTON		270 N BENT ST	POWELL	WY	824359998
+2556	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCKDALE, TEXAS	1976-02-01		REBECCA	NINK		234 ACKERMAN ST	ROCKDALE	TX	765679998
+2557	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	POST, TEXAS	1976-02-01		MICHAEL	CLEMMONS		202 W MAIN ST	POST	TX	793569998
+2558	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPENCER, VIRGINIA	1976-02-01		DARRYL	PATTERSON		4109 COOPERS MOUNTAIN RD	MARTINSVILLE	VA	241128621
+2559	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TAZEWELL, VIRGINIA	1976-02-01		HARRY	SHEETS JR		200 W MAIN ST	TAZEWELL	VA	246519998
+2560	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BELLE FOURCHE, SOUTH DAKOTA	1976-02-01		RYAN	LANGE		804 STATE ST	BELLE FOURCHE	SD	577179998
+2561	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OCONTO FALLS, WISCONSIN	1976-02-01		RICHARD	CARROLL		8168 GRAY LAKE RD	OCONTO FALLS	WI	541549507
+2562	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GALAX, VIRGINIA	1976-02-01		STEPHEN	BREWSTER		200 E GRAYSON ST	GALAX	VA	243339998
+2563	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STRASBURG, VIRGINIA	1976-02-01		ROBERT	SPIKER JR		423 SYCAMORE LN	MAURERTOWN	VA	226441940
+2564	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LULING, TEXAS	1976-02-01		MICHAEL	BASSETT		296 DAVIS RANCH RD	JOHNSON CITY	TX	786364170
+2565	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SELMER, TENNESSEE	1976-02-01		TODD	PARKER		150 HOUSTON AVE	SELMER	TN	383759998
+2566	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MONTEREY, TENNESSEE	1976-02-01		CHRISTOPHER	ORRAND		429 1ST AVE N	BAXTER	TN	385444414
+2567	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MC KENZIE, TENNESSEE	1976-02-01		JAMES	PUTMAN		PO BOX 309	MC KENZIE	TN	382010309
+2568	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LA FOLLETTE, TENNESSEE	1976-02-01		DEWAYNE	KITTS		119 S TENNESSEE AVE	LA FOLLETTE	TN	377663604
+2569	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ETOWAH, TENNESSEE	1976-02-01		J	COOPER		254 TOOMEY ST	ETOWAH	TN	373311737
+2570	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LEXINGTON, ILLINOIS	1978-09-01		TRACY	HUDDLESTUN		1101 E OLVIE ST	BLOOMINGTON	IL	617015550
+2571	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ARABI, LOUISIANA	1977-08-01		VACANT	VACANT		748 MEHLE ST	ARABI	LA	700321100
+2572	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LANGDON, NORTH DAKOTA	1977-08-01		DARRELL	FOX		323 8TH AVE	LANGDON	ND	582499998
+2573	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OLIVE BRANCH, MISSISSIPPI	1977-08-01		TERRY	ADAMS		8850 MIDSOUTH DR	OLIVE BRANCH	MS	386549998
+2574	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ARCOLA, ILLINOIS	1977-08-01		CHARLES	CONN		443 E WASHINGTON ST	ARCOLA	IL	619101735
+2575	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SNOW HILL, NORTH CAROLINA	1977-01-01		CRYSTAL	GOODING		911 SE SECOND ST	SNOW HILL	NC	285801634
+2576	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANCHESTER, KENTUCKY	1976-08-01		JULIUS	HACKER		309 CLAY COUNTY SHOPPING CTR	MANCHESTER	KY	409629998
+2577	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARKS, MISSISSIPPI	1981-09-01		PEGGY	GADDY		PO BOX 177	MARKS	MS	386460177
+2578	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PRESCOOT, WISCONSIN	1976-08-01		PAUL	PETERS		295 15TH ST W	HASTINGS	MN	550332731
+2579	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLE ELUM, WASHINGTON	1976-08-01		JENNIFER	OERTLI		305 E 1ST ST	CLE ELUM	WA	989229998
+2580	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STEVENSVILLE, MICHIGAN	1976-03-01		GLENDA	WINNELL		4628 VISTA DR	BRIDGMAN	MI	491069358
+2581	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TAYLORSVILLE, NORTH CAROLINA	1976-05-01		RICHARD	FEIMSTER		121 PARKER FEIMSTER LN	STONY POINT	NC	286789137
+2582	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SEVIERVILLE, TENNESSEE	1982-07-01		IAN	LIMERICK		245 RIVER VALLEY CIR	SEVIERVILLE	TN	378625265
 2583	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1981-09-01	5	PATRICIA	WAHL	PO BOX 356		NORWALK	IA	502110356
-2584	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MATAMORAS, PENNSYLVANIA	1981-09-01	0	JOSEPH	BISS		6 PENNSYLVANIA AVE	MATAMORAS	PA	183369998
-2585	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WILLISTON, FLORIDA	1980-09-01	0	JAMES	MARTIN		PO BOX 1458	CHIEFLAND	FL	326441458
+2584	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MATAMORAS, PENNSYLVANIA	1981-09-01		JOSEPH	BISS		6 PENNSYLVANIA AVE	MATAMORAS	PA	183369998
+2585	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WILLISTON, FLORIDA	1980-09-01		JAMES	MARTIN		PO BOX 1458	CHIEFLAND	FL	326441458
 2586	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1981-05-01	788	NANCY	NORMAN		1310 N OXFORD AVE	PASADENA	CA	911043140
-2587	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GREYBULL, WYOMING	1980-09-01	0	BARBARA	WIRTZBERGER		401 GREYBULL	GREYBULL	WY	824262059
-2588	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NAVASTOTA, TEXAS	1980-09-01	0	CHERYL	LOVINGS		3531 PALOMA RIDGE DR	COLLEGE STATION	TX	778456341
-2589	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HERNANDO, MISSISSIPPI	1980-09-01	0	SONYA	POUNDERS		12 W COMMERCE ST	HERNANDO	MS	386329998
-2590	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FRENCHTOWN, NEW JERSEY	1978-09-01	0	GERARD	LOFTUS		16 TRENTON AVE	FRENCHTOWN	NJ	088259998
-2591	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAMERON, TEXAS	1978-09-01	0	VACANT	VACANT		202 W 2ND ST	CAMERON	TX	765209998
+2587	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GREYBULL, WYOMING	1980-09-01		BARBARA	WIRTZBERGER		401 GREYBULL	GREYBULL	WY	824262059
+2588	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NAVASTOTA, TEXAS	1980-09-01		CHERYL	LOVINGS		3531 PALOMA RIDGE DR	COLLEGE STATION	TX	778456341
+2589	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HERNANDO, MISSISSIPPI	1980-09-01		SONYA	POUNDERS		12 W COMMERCE ST	HERNANDO	MS	386329998
+2590	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FRENCHTOWN, NEW JERSEY	1978-09-01		GERARD	LOFTUS		16 TRENTON AVE	FRENCHTOWN	NJ	088259998
+2591	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CAMERON, TEXAS	1978-09-01		VACANT	VACANT		202 W 2ND ST	CAMERON	TX	765209998
 2592	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1983-06-01	20	ROBERT D. JR	BARKER		905 S. GARNETT ST.	HENDERSON	NC	275364574
 2593	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1983-07-01	33	TREVOR	DUENAS	P.O.BOX 24112	489 ARMY DRIVE	BARRIGADA	GU	96913    
 2594	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1983-07-01	26	Jamtgaard	Joanna	PO BOX 2803		GILLETTE	WY	827172803
-2595	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHAMBERLAIN, SOUTH DAKOTA	1982-07-01	0	DONNA	KNIPPLING		24832 345TH AVE	CHAMBERLAIN	SD	573256018
-2596	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VILLE PLATTE, LOUISIANA	1982-07-01	0	MICHAEL	JOUBERT		100 W MAGNOLIA ST	VILLE PLATTE	LA	705864554
-2597	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NOCONA, TEXAS	1982-07-01	0	JONATHAN	DAUGHTRY		196 UNDERWOOD RD	NOCONA	TX	762556044
-2598	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KANAB, UTAH	1992-08-01	0	LESLIE	EDDY		39 S MAIN ST	KANAB	UT	847414300
-2599	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CUSTER, SOUTH DAKOTA	1991-08-01	0	CHARLES	LEHMANN		643 MOUNT RUSHMORE RD	CUSTER	SD	577309998
-2600	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VILLISCA, IOWA	1991-08-01	0	AMANDA	BROWN		500 S 3RD AVE	VILLISCA	IA	508649998
-2601	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAGERSTOWN, INDIANA	1989-10-01	0	CHAD	EARLY		10466 FRANKLIN RD	HAGERSTOWN	IN	473469793
+2595	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHAMBERLAIN, SOUTH DAKOTA	1982-07-01		DONNA	KNIPPLING		24832 345TH AVE	CHAMBERLAIN	SD	573256018
+2596	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VILLE PLATTE, LOUISIANA	1982-07-01		MICHAEL	JOUBERT		100 W MAGNOLIA ST	VILLE PLATTE	LA	705864554
+2597	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NOCONA, TEXAS	1982-07-01		JONATHAN	DAUGHTRY		196 UNDERWOOD RD	NOCONA	TX	762556044
+2598	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	KANAB, UTAH	1992-08-01		LESLIE	EDDY		39 S MAIN ST	KANAB	UT	847414300
+4047	PAINTERS AFL-CIO	PAT		1970-12-01	162	SHANNON	ALBANO		585 AERO DRIVE	CHEEKTOWAGA	NY	14225    
+2599	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CUSTER, SOUTH DAKOTA	1991-08-01		CHARLES	LEHMANN		643 MOUNT RUSHMORE RD	CUSTER	SD	577309998
+2600	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VILLISCA, IOWA	1991-08-01		AMANDA	BROWN		500 S 3RD AVE	VILLISCA	IA	508649998
+2601	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAGERSTOWN, INDIANA	1989-10-01		CHAD	EARLY		10466 FRANKLIN RD	HAGERSTOWN	IN	473469793
 2602	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1987-09-01	7	ROMILIO	SUMERA	P.O. BOX 2136		KODIAK	AK	996152136
-2603	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	THERMOPOLIS, WYOMING	1986-10-01	0	BARBARA	MUNGER		340 COYOTE RUN	THERMOPOLIS	WY	824439497
+2603	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	THERMOPOLIS, WYOMING	1986-10-01		BARBARA	MUNGER		340 COYOTE RUN	THERMOPOLIS	WY	824439497
 2604	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	288865	NICOLE	RHINE	LETTER CARRIERS BLDG RM 712	100 INDIANA AVE N.W.	WASHINGTON	DC	20001    
-2605	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALTURAS, CALIFORNIA	1996-08-08	0	KAROL	DEWALT		240 N MAIN ST	ALTURAS	CA	961014047
+2605	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALTURAS, CALIFORNIA	1996-08-08		KAROL	DEWALT		240 N MAIN ST	ALTURAS	CA	961014047
 2606	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DISTRICT SOUTHEAST MISSOURI	1994-05-12	198	MATTHEW	POBST	315		CAPE GIRARDEAU	MO	63701    
 2607	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1983-07-01	126	DENISE	SERNA	LETTER CARRIERS NATL ASN	9201 WILSHIRE BLVD STE 106	BEVERLY HILLS	CA	902105513
-2608	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	UNIONTOWN, OHIO	1976-02-01	0	VACANT	VACANT		11230 CLEVELAND AVE NW	UNIONTOWN	OH	446859998
-2609	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	REDFIELD, SOUTH DAKOTA	1970-12-01	0	JEFFREY	WALDNER		130 CLARKE ST	HITCHCOCK	SD	573482010
-2611	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DERMOTT, ARKANSAS	1970-12-01	0	BRANDON	BOATNER		413 S CONNARD ST	DERMOTT	AR	716382408
-2612	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATTICA, INDIANA	1970-12-01	0	RITA	REYNOLDS		107 E MAIN ST	ATTICA	IN	479181337
-2613	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WASECA, MINNESOTA	1970-12-01	0	SHERRY	ANDERSON		114 SECOND ST NE	WASECA	MN	560932902
-2614	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST LIBERTY, KENTUCKY	2000-07-11	0	HERSHALL	WILLIAMS		PO BOX 323	WEST LIBERTY	KY	414720323
-2615	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MIDDLESBORO, KENTUCKY	1976-08-01	0	DAVID	LUNTSFORD		PO BOX 98	HARROGATE	TN	377520098
-2616	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GLENNVILLE, GEORGIA	1970-12-01	0	ROBERT	VAN DYKE		5579 LOVES CHAPEL RD	GLENNVILLE	GA	304276734
+2608	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	UNIONTOWN, OHIO	1976-02-01		VACANT	VACANT		11230 CLEVELAND AVE NW	UNIONTOWN	OH	446859998
+2609	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	REDFIELD, SOUTH DAKOTA	1970-12-01		JEFFREY	WALDNER		130 CLARKE ST	HITCHCOCK	SD	573482010
+2610	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROCK VALLEY, IOWA	1970-12-01		AMY	BOSLER		1501 MAIN ST	ROCK VALLEY	IA	512476400
+2611	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DERMOTT, ARKANSAS	1970-12-01		BRANDON	BOATNER		413 S CONNARD ST	DERMOTT	AR	716382408
+2612	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ATTICA, INDIANA	1970-12-01		RITA	REYNOLDS		107 E MAIN ST	ATTICA	IN	479181337
+2613	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WASECA, MINNESOTA	1970-12-01		SHERRY	ANDERSON		114 SECOND ST NE	WASECA	MN	560932902
+2614	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WEST LIBERTY, KENTUCKY	2000-07-11		HERSHALL	WILLIAMS		PO BOX 323	WEST LIBERTY	KY	414720323
+2615	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MIDDLESBORO, KENTUCKY	1976-08-01		DAVID	LUNTSFORD		PO BOX 98	HARROGATE	TN	377520098
+2616	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GLENNVILLE, GEORGIA	1970-12-01		ROBERT	VAN DYKE		5579 LOVES CHAPEL RD	GLENNVILLE	GA	304276734
 2617	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	6	Shayla	Muir	374		VERNAL	UT	840780374
-2618	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PATUXENT RIVER, MARYLAND	1970-12-01	0	DONNA	KNOTT		20648 OLD SAW MILL LN	LEONARDTOWN	MD	206505750
-2619	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AMBOY, ILLINOIS	1970-12-01	0	DONALD	NEWMAN		1213 CHICAGO AVE	DIXON	IL	610213903
-2620	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAMILTON, TEXAS	1976-02-01	0	GREG	SHIRHALL		162 LANGFORD COVE RD	EVANT	TX	765259703
+2618	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PATUXENT RIVER, MARYLAND	1970-12-01		DONNA	KNOTT		20648 OLD SAW MILL LN	LEONARDTOWN	MD	206505750
+2619	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	AMBOY, ILLINOIS	1970-12-01		DONALD	NEWMAN		1213 CHICAGO AVE	DIXON	IL	610213903
+2620	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAMILTON, TEXAS	1976-02-01		GREG	SHIRHALL		162 LANGFORD COVE RD	EVANT	TX	765259703
 2621	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	3	MICHELLE	HILL		203 N MAIN ST	VASSAR	MI	48768    
 2622	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NEW MEXICO	1970-12-01	1800	GLORIA E	BAROS		3639 TOWER RD SW	ALBUQUERQUE	NM	871213333
 2623	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	6	Curtis	Butcher		134 EAST 1ST	JEROME	ID	83338    
-2624	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOGANSVILLE, GEORGIA	1970-12-01	0	JOHN	LESLIE		608 W BOYD RD	HOGANSVILLE	GA	302301002
-2625	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANGUM, OKLAHOMA	1970-12-01	0	KRISTIE	JAMES		101 S PENNSYLVANIA AVE	MANGUM	OK	735549998
-2626	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BOSCOBEL, WISCONSIN	1970-12-01	0	DOUGLAS	JOHNSON		607 E KANSAS ST	BOSCOBEL	WI	538051120
-2627	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WORLAND, WYOMING	1970-12-01	0	TONI	KAPPTIE		119 N 7TH ST	WORLAND	WY	824019998
-2628	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRILLION, WISCONSIN	1974-10-01	0	ALICE	HETTMANN		3857 LANGES CORNERS RD	DE PERE	WI	541159744
-2629	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WATONGA, OKLAHOMA	1970-12-01	0	LYNDON	JOHNSON		1002 N PROUTY AVE	WATONGA	OK	737721626
-2630	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EDINA, MISSOURI	1970-12-01	0	ROBERTA	OBERDAHLHOFF		107 S 2ND ST	EDINA	MO	635379997
-2631	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OSBORNE, KANSAS	1970-12-01	0	SARAH	SUMPTER		223 W MAIN ST	OSBORNE	KS	674739998
-2632	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINDSOR, NORTH CAROLINA	1970-12-01	0	EUGENE	PRICE JR		133 US 17 N	WINDSOR	NC	279838625
-2633	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAVRE DE GRACE, MARYLAND	1970-12-01	0	SANDRA	CASSADY		3510 FARM RD	ABERDEEN	MD	210011231
-2634	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELKTON, MARYLAND	1970-12-01	0	JOEY	EDWARDS		137 W MAIN ST	ELKTON	MD	219219998
-2635	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PARSONS, TENNESSEE	1970-12-01	0	JOSH	BIVENS		137 PERCY KING RD	PARSONS	TN	383633430
-2636	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STEVENSVILLE, MONTANA	1970-12-01	0	JOSHUA	DOWNING		701 MAIN ST	STEVENSVILLE	MT	598709998
-2637	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLINTON, SC	1970-12-01	0	RONALD	SWINDLER		351 NEW HAMPSHIRE CIR	CLINTON	SC	293254549
-2638	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DECATUR, INDIANA	1970-12-01	0	KEVIN	HATHAWAY		115 RILEY MEADOWS DR	DELPHI	IN	469231821
-2639	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EMMETT, IDAHO	1970-12-01	0	MICHAEL	CARROLL		521 E MAIN ST	EMMETT	ID	836179998
-2640	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TABOR CITY, NORTH CAROLINA	1970-12-01	0	ARTHUR	THOMPSON		200 E 5TH ST	TABOR CITY	NC	284632102
-2641	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HEARNE, TEXAS	1970-12-01	0	KEVIN	CHARANZA		600 W 1ST ST	HEARNE	TX	778599998
-2642	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINNEMUCCA, NEVADA	1970-12-01	0	PAULINE	GRIMM		9005 S HERSCHELL RD	WINNEMUCCA	NV	894455305
-2643	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WOODRUFF, SOUTH CAROLINA	1970-12-01	0	JOHNNY	MORTON		130 CASEY RD	WOODRUFF	SC	293889643
-2644	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRINNELL, IOWA	1970-12-01	0	ROBERT	STEWART		1515 PENROSE ST	GRINNELL	IA	501121204
-2645	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SOUTH SIOUX CITY, NEBRASKA	1970-12-01	0	AARON	CRUZ		1837 S MAPLE ST	SIOUX CITY	IA	511062619
-2646	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ENTERPRISE, OREGON	1970-12-01	0	VACANT	VACANT		201 W NORTH ST	ENTERPRISE	OR	978289998
-2647	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAYNESBORO, GEORGIA	1970-12-01	0	DAVID	MCMILLAN JR		240 E 6TH ST	WAYNESBORO	GA	308309998
-2648	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPARTA, GEORGIA	1986-11-01	0	CHARLES	DAVIS		129 JOHNNY BRITT RD	SPARTA	GA	310873015
-2649	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALPINE, TEXAS	1980-09-01	0	ARMANDO	MATA		902 S HARRISON ST	ALPINE	TX	798307320
-2650	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LIVINGSTON, TENNESSEE	1970-12-01	0	MARILYN	GORE		105 S COURT SQ	LIVINGSTON	TN	385709998
-2651	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STEWARTVILLE, MINNESOTA	1970-12-01	0	PETER	BRUENING		120 2ND ST SE	STEWARTVILLE	MN	559761306
-2652	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ABERDEEN, MISSISSIPPI	1970-12-01	0	CHARLES	WHITE		9376 HIGHWAY 9 N	BLUE SPRINGS	MS	388288125
-2653	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MCCOLL, SOUTH CAROLINA	1970-12-01	0	BRENDA	BARFIELD		201 N MAIN ST	MC COLL	SC	295709998
-2654	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOT SPRINGS, SOUTH DAKOTA	1976-05-01	0	JEFFERY	BEOUGHER		337 N 17TH ST	HOT SPRINGS	SD	577471317
-2655	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TRAVELERS REST S CAROLINA	1976-02-01	0	VACANT	VACANT		400 S MAIN ST	TRAVELERS REST	SC	296909998
-2656	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GLENCOE, MINNESOTA	1970-12-01	0	GREGORY	COPAS		905 11TH ST	GLENCOE	MN	553362308
-2657	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARLAN, IOWA	1970-12-01	0	DANIEL	EVANS		1209 7TH ST	HARLAN	IA	515379998
-2658	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAVANA, FLORIDA	1976-02-01	0	LARRY	SALTERS		585 RED FERN RD	HAVANA	FL	323334411
-2659	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VERONIA, OREGON	1970-12-01	0	CHARLES	LOOSLI		716 JEFFERSON AVE	VERNONIA	OR	970647064
-2660	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOREST CITY, PENNSYLVANIA	1970-12-01	0	CHERYL	CARACHILO		176 LAKEVIEW AVE	GREENFIELD TOWNSHIP	PA	184073733
-2661	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHRISTIANA, PENNSYLVANIA	1970-12-01	0	BRENDA	MARSHALL		19 N BRIDGE ST	CHRISTIANA	PA	175099998
-2662	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARLETTE, MICHIGAN	1970-12-01	0	MICHAEL	HOWARD		2984 FENNER ST	MARLETTE	MI	484539998
-2663	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VIROQUA, WISCONSIN	1970-12-01	0	TAMMIE	HALVERSON		119 E JEFFERSON ST	VIROQUA	WI	546651614
-2664	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NW RICHMOND, WISCONSIN	1970-12-01	0	ROBIN	LAWSON		430 S KNOWLES AVE	NEW RICHMOND	WI	540171733
-2665	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DURAND, WISCONSIN	1970-12-01	0	RICHARD	BROMMER		N747 850TH ST	MONDOVI	WI	547558809
-2666	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROANOKE, ALABAMA	1970-12-01	0	GREGORY	BENEFIELD		1028 GAMBLE RD	FRANKLIN	GA	302177136
-2667	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLARION, PENNSYLVANIA	1970-12-01	0	RUSSELL	WEAVER II		2526 PAINT MILLS RD	SHIPPENVILLE	PA	162545830
-2668	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WILLIAMSTOWN, KENTUCKY	1986-10-01	0	REBECCA	MCCASKEY		205 N MAIN ST	WILLIAMSTOWN	KY	410979998
-2669	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CROSWELL, MICHIGAN	1970-12-01	0	KEVIN	INGLES		104 N HOWARD AVE	CROSWELL	MI	484229998
-2670	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PULASKI, VIRGINIA	1970-12-01	0	ROY	DICKERSON JR		5458 ERIN DR	DUBLIN	VA	240843806
-2671	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EMPORIA, VIRGINIA	1970-12-01	0	RONALD	WYCHE		6612 WATCHLIGHT RD	RICHMOND	VA	232346100
-2672	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPENCERVILLE, OHIO	1970-12-01	0	ROGER	MC MICHAEL		06502 KOSSUTH AMANDA RD	SPENCERVILLE	OH	458879331
-2673	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DELHI, NEW YORK	1970-12-01	0	CARL	MORGANSTERN		11489 TURNPIKE RD	EAST MEREDITH	NY	137571229
-2674	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BUNKIE, LOUISIANA	1970-12-01	0	LEON	BAILEY		1659 AUDUBON DR	ALEXANDRIA	LA	713014008
+2624	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOGANSVILLE, GEORGIA	1970-12-01		JOHN	LESLIE		608 W BOYD RD	HOGANSVILLE	GA	302301002
+2625	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MANGUM, OKLAHOMA	1970-12-01		KRISTIE	JAMES		101 S PENNSYLVANIA AVE	MANGUM	OK	735549998
+2626	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BOSCOBEL, WISCONSIN	1970-12-01		DOUGLAS	JOHNSON		607 E KANSAS ST	BOSCOBEL	WI	538051120
+2627	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WORLAND, WYOMING	1970-12-01		TONI	KAPPTIE		119 N 7TH ST	WORLAND	WY	824019998
+2628	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BRILLION, WISCONSIN	1974-10-01		ALICE	HETTMANN		3857 LANGES CORNERS RD	DE PERE	WI	541159744
+2629	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WATONGA, OKLAHOMA	1970-12-01		LYNDON	JOHNSON		1002 N PROUTY AVE	WATONGA	OK	737721626
+2630	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EDINA, MISSOURI	1970-12-01		ROBERTA	OBERDAHLHOFF		107 S 2ND ST	EDINA	MO	635379997
+2631	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	OSBORNE, KANSAS	1970-12-01		SARAH	SUMPTER		223 W MAIN ST	OSBORNE	KS	674739998
+2632	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINDSOR, NORTH CAROLINA	1970-12-01		EUGENE	PRICE JR		133 US 17 N	WINDSOR	NC	279838625
+2633	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAVRE DE GRACE, MARYLAND	1970-12-01		SANDRA	CASSADY		3510 FARM RD	ABERDEEN	MD	210011231
+2634	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ELKTON, MARYLAND	1970-12-01		JOEY	EDWARDS		137 W MAIN ST	ELKTON	MD	219219998
+2635	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PARSONS, TENNESSEE	1970-12-01		JOSH	BIVENS		137 PERCY KING RD	PARSONS	TN	383633430
+2636	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STEVENSVILLE, MONTANA	1970-12-01		JOSHUA	DOWNING		701 MAIN ST	STEVENSVILLE	MT	598709998
+2637	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLINTON, SC	1970-12-01		RONALD	SWINDLER		351 NEW HAMPSHIRE CIR	CLINTON	SC	293254549
+2638	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DECATUR, INDIANA	1970-12-01		KEVIN	HATHAWAY		115 RILEY MEADOWS DR	DELPHI	IN	469231821
+2639	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EMMETT, IDAHO	1970-12-01		MICHAEL	CARROLL		521 E MAIN ST	EMMETT	ID	836179998
+2640	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TABOR CITY, NORTH CAROLINA	1970-12-01		ARTHUR	THOMPSON		200 E 5TH ST	TABOR CITY	NC	284632102
+2641	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HEARNE, TEXAS	1970-12-01		KEVIN	CHARANZA		600 W 1ST ST	HEARNE	TX	778599998
+2642	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WINNEMUCCA, NEVADA	1970-12-01		PAULINE	GRIMM		9005 S HERSCHELL RD	WINNEMUCCA	NV	894455305
+2643	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WOODRUFF, SOUTH CAROLINA	1970-12-01		JOHNNY	MORTON		130 CASEY RD	WOODRUFF	SC	293889643
+2644	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRINNELL, IOWA	1970-12-01		ROBERT	STEWART		1515 PENROSE ST	GRINNELL	IA	501121204
+2645	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SOUTH SIOUX CITY, NEBRASKA	1970-12-01		AARON	CRUZ		1837 S MAPLE ST	SIOUX CITY	IA	511062619
+2646	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ENTERPRISE, OREGON	1970-12-01		VACANT	VACANT		201 W NORTH ST	ENTERPRISE	OR	978289998
+2647	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WAYNESBORO, GEORGIA	1970-12-01		DAVID	MCMILLAN JR		240 E 6TH ST	WAYNESBORO	GA	308309998
+2648	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPARTA, GEORGIA	1986-11-01		CHARLES	DAVIS		129 JOHNNY BRITT RD	SPARTA	GA	310873015
+2649	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ALPINE, TEXAS	1980-09-01		ARMANDO	MATA		902 S HARRISON ST	ALPINE	TX	798307320
+2650	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	LIVINGSTON, TENNESSEE	1970-12-01		MARILYN	GORE		105 S COURT SQ	LIVINGSTON	TN	385709998
+2651	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	STEWARTVILLE, MINNESOTA	1970-12-01		PETER	BRUENING		120 2ND ST SE	STEWARTVILLE	MN	559761306
+2652	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ABERDEEN, MISSISSIPPI	1970-12-01		CHARLES	WHITE		9376 HIGHWAY 9 N	BLUE SPRINGS	MS	388288125
+2653	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MCCOLL, SOUTH CAROLINA	1970-12-01		BRENDA	BARFIELD		201 N MAIN ST	MC COLL	SC	295709998
+2654	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HOT SPRINGS, SOUTH DAKOTA	1976-05-01		JEFFERY	BEOUGHER		337 N 17TH ST	HOT SPRINGS	SD	577471317
+2655	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	TRAVELERS REST S CAROLINA	1976-02-01		VACANT	VACANT		400 S MAIN ST	TRAVELERS REST	SC	296909998
+2656	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GLENCOE, MINNESOTA	1970-12-01		GREGORY	COPAS		905 11TH ST	GLENCOE	MN	553362308
+2657	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HARLAN, IOWA	1970-12-01		DANIEL	EVANS		1209 7TH ST	HARLAN	IA	515379998
+2658	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAVANA, FLORIDA	1976-02-01		LARRY	SALTERS		585 RED FERN RD	HAVANA	FL	323334411
+2659	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VERONIA, OREGON	1970-12-01		CHARLES	LOOSLI		716 JEFFERSON AVE	VERNONIA	OR	970647064
+2660	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	FOREST CITY, PENNSYLVANIA	1970-12-01		CHERYL	CARACHILO		176 LAKEVIEW AVE	GREENFIELD TOWNSHIP	PA	184073733
+2661	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CHRISTIANA, PENNSYLVANIA	1970-12-01		BRENDA	MARSHALL		19 N BRIDGE ST	CHRISTIANA	PA	175099998
+2662	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MARLETTE, MICHIGAN	1970-12-01		MICHAEL	HOWARD		2984 FENNER ST	MARLETTE	MI	484539998
+2663	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	VIROQUA, WISCONSIN	1970-12-01		TAMMIE	HALVERSON		119 E JEFFERSON ST	VIROQUA	WI	546651614
+2664	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	NW RICHMOND, WISCONSIN	1970-12-01		ROBIN	LAWSON		430 S KNOWLES AVE	NEW RICHMOND	WI	540171733
+2665	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DURAND, WISCONSIN	1970-12-01		RICHARD	BROMMER		N747 850TH ST	MONDOVI	WI	547558809
+2666	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	ROANOKE, ALABAMA	1970-12-01		GREGORY	BENEFIELD		1028 GAMBLE RD	FRANKLIN	GA	302177136
+2667	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CLARION, PENNSYLVANIA	1970-12-01		RUSSELL	WEAVER II		2526 PAINT MILLS RD	SHIPPENVILLE	PA	162545830
+2668	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WILLIAMSTOWN, KENTUCKY	1986-10-01		REBECCA	MCCASKEY		205 N MAIN ST	WILLIAMSTOWN	KY	410979998
+2669	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CROSWELL, MICHIGAN	1970-12-01		KEVIN	INGLES		104 N HOWARD AVE	CROSWELL	MI	484229998
+2670	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	PULASKI, VIRGINIA	1970-12-01		ROY	DICKERSON JR		5458 ERIN DR	DUBLIN	VA	240843806
+2671	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	EMPORIA, VIRGINIA	1970-12-01		RONALD	WYCHE		6612 WATCHLIGHT RD	RICHMOND	VA	232346100
+2672	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	SPENCERVILLE, OHIO	1970-12-01		ROGER	MC MICHAEL		06502 KOSSUTH AMANDA RD	SPENCERVILLE	OH	458879331
+2673	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	DELHI, NEW YORK	1970-12-01		CARL	MORGANSTERN		11489 TURNPIKE RD	EAST MEREDITH	NY	137571229
+2674	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BUNKIE, LOUISIANA	1970-12-01		LEON	BAILEY		1659 AUDUBON DR	ALEXANDRIA	LA	713014008
 2675	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	8	MELINDA	TRIVETT		421 PELHAM ROAD NORTH	JACKSONVILLE	AL	36265    
-2676	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRANBURY, TEXAS	1970-12-01	0	BRETT	QUILLIN		530 N CROCKETT ST	GRANBURY	TX	760489998
+2676	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GRANBURY, TEXAS	1970-12-01		BRETT	QUILLIN		530 N CROCKETT ST	GRANBURY	TX	760489998
 2677	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	10	JENNIFER	KEIM	P.O. BOX 1125	212 2ND ST SW	JAMESTOWN	ND	584011125
 2678	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	0	JOAN	CRUGNALE		800 OAKLAND AVE UNIT B1	CRANSTON	RI	02920    
 2679	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1976-02-01	77	VICTOR	WILLIAMS	PO BOX 254		ROSWELL	GA	300770254
-2680	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAZLEHURST, GEORGIA	1970-12-01	0	GILBERT	REED JR		PO BOX 816	HAZLEHURST	GA	315390816
-2681	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHEATON, MINNESOTA	1970-12-01	0	VACANT	VACANT		1107 BROADWAY	WHEATON	MN	562969998
-2682	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MILLER, SOUTH DAKOTA	1974-11-01	0	BRADLEY	MARESKA		1008 8TH AVE W	MOBRIDGE	SD	576011509
-2683	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MCCONNELLSBURG, PENNSYLVANIA	1970-12-01	0	JASON	HENRY		115 E MAPLE ST	MC CONNELLSBURG	PA	172339998
-2684	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BOWLING GREEN, MISSOURI	1970-12-01	0	PATRICIA	MILLER		PO BOX 177	FRANKFORD	MO	634410177
+2680	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	HAZLEHURST, GEORGIA	1970-12-01		GILBERT	REED JR		PO BOX 816	HAZLEHURST	GA	315390816
+2681	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	WHEATON, MINNESOTA	1970-12-01		VACANT	VACANT		1107 BROADWAY	WHEATON	MN	562969998
+2682	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MILLER, SOUTH DAKOTA	1974-11-01		BRADLEY	MARESKA		1008 8TH AVE W	MOBRIDGE	SD	576011509
+2683	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	MCCONNELLSBURG, PENNSYLVANIA	1970-12-01		JASON	HENRY		115 E MAPLE ST	MC CONNELLSBURG	PA	172339998
+2684	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	BOWLING GREEN, MISSOURI	1970-12-01		PATRICIA	MILLER		PO BOX 177	FRANKFORD	MO	634410177
 2685	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	CENTRAL COUNTY RLCA	2011-09-27	132	HETHER	FORSTEN		382 South Main St	Solon	ME	04979    
 2686	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC		1970-12-01	6	jerry	martian		23754 461a ave 103	wentworth	SD	57075    
-2687	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GROVETON, NEW HAMSHIRE	1970-12-01	0	JANA	MARSHALL		59 CHURCH ST	GROVETON	NH	035824224
+2687	LETTER CARRIERS, NATL ASN, AFL-CIO	NALC	GROVETON, NEW HAMSHIRE	1970-12-01		JANA	MARSHALL		59 CHURCH ST	GROVETON	NH	035824224
 2688	LETTER CARRIERS, RURAL, IND	RLCA	PECAN VALLEY	1970-12-01	83	BRENDA	DARNELL		347 PRIVATE ROAD 4435	TALPA	TX	768825739
 2689	LETTER CARRIERS, RURAL, IND	RLCA	PANHANDLE ASSOCIATION	1970-12-01	37	Freida	Hartman		15740 FM 1056	WELLINGTON	TX	79095    
 2690	LETTER CARRIERS, RURAL, IND	RLCA	LOWER RIO GRANDE VALLEY	1970-12-01	357	ALICIA	CANTU		201 SAN IGNACIO AVE	SAN JUAN	TX	78589    
@@ -14488,6 +14763,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 3063	LETTER CARRIERS, RURAL, IND	RLCA	SOUTH CAROLINA	1970-12-01	3242	Scarlett	Nunn	PO BOX 486		WAGENER	SC	291640486
 3064	LETTER CARRIERS, RURAL, IND	RLCA		1970-12-01	347	GARY	SCHUSTER		183 NEWS STREET	JACKSONVILLE	FL	322117830
 3065	LETTER CARRIERS, RURAL, IND	RLCA	SWIFT COUNTY	1970-12-01	18	BRADLEY	SKARSTEN		405 20TH ST NW	BENSON	MN	56215    
+4048	PAINTERS AFL-CIO	PAT		1970-12-01	373	ERIC	BASSI		404 NEBRASKA ST	VALLEJO	CA	945903878
 3066	LETTER CARRIERS, RURAL, IND	RLCA	SOUTHEAST	1970-12-01	558	Nancy	MARSH		8891 CANEZARO RD	MARINGOUIN	LA	70757    
 3067	LETTER CARRIERS, RURAL, IND	RLCA		1970-12-01	525	Dianne	Daley		716 E Ashland St	Brockton	MA	02302    
 3068	LETTER CARRIERS, RURAL, IND	RLCA		1970-12-01	378	JASON	DOLE		930 PIPER RD	WEST SPRINGFIELD	MA	01089    
@@ -14646,6 +14922,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 3221	LETTER CARRIERS, RURAL, IND	RLCA	AUSTIN-WALLER-WASHINGTON (TX)	1975-11-01	192	LINDA	ROGERS	P O BOX 396		CHAPPELL HILL	TX	774260396
 3222	LETTER CARRIERS, RURAL, IND	RLCA		1975-10-01	466	CARLA	DEDDEN		742 WARDS CORNER RD.	LOVELAND	OH	451408740
 3223	LETTER CARRIERS, RURAL, IND	RLCA	MCDOWELL-MT MITCHELL (NC) 	1975-10-01	159	CHRISTINE	LANEY		231 EPLEY DRIVE	MARION	NC	28752    
+4107	SAG-AFTRA	SAGAFTRA	PORTLAND	2014-08-22	951	SEAN	TAYLOR		811 FIRST ST SUITE 626	SEATTLE	WA	98104    
 3224	LETTER CARRIERS, RURAL, IND	RLCA	MACON/SMITH/TROUSDALE CO. RLCA	1975-10-01	50	GARY	WILDER		455 EAST MAIN ST	RED BOILING SPRINGS	TN	371502323
 3225	LETTER CARRIERS, RURAL, IND	RLCA	COLONIAL AREA ASSOCIATION	1975-09-01	184	David	Morales		1412 W Ocean View Ave #B	Norfolk	VA	235031015
 3226	LETTER CARRIERS, RURAL, IND	RLCA	AMHERST-APPOMATTOX-CAMPBELL-LYNCHBRG (VA)	1975-08-01	148	MELISSA	MAYHEW		1116 Westchester Dr	LYNCHBURG	VA	24502    
@@ -14702,7 +14979,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 3277	LETTER CARRIERS, RURAL, IND	RLCA		1990-11-01	378	LOIS	TRIPLETT	2133		SAINT AUGUSTINE	FL	320852133
 3278	LETTER CARRIERS, RURAL, IND	RLCA	PUTNAM/WESTCHESTER COUNTY	1990-10-01	152	Charmae	Sykes	30 Lee Avenue	30	Putnam Valley	NY	10579    
 3279	LETTER CARRIERS, RURAL, IND	RLCA	LAUDERDALE COUNTY	1994-07-21	32	Jane Ann	Sammons		6650 State Hwy 88	Friendship	TN	38034    
-3835	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		2007-01-29	7	WILLIAM	SHEME		41 RuUTH ST	GRAFTON	WV	26354    
 3280	LETTER CARRIERS, RURAL, IND	RLCA	BRAZOS VALLEY	1993-11-01	50	ADDIE	BETTENCOURT		4430 NO. STATE HIGHWAY 208	Colorado City	TX	795122606
 3281	LETTER CARRIERS, RURAL, IND	RLCA	ROUGHRIDERS ASN	1993-11-01	55	Teresa	Sillivan		7501 Bonita Park Dr.	TEXARKANA	AR	718549368
 3282	LETTER CARRIERS, RURAL, IND	RLCA	WEST VIRGINIA	1990-02-01	75	Randy	Anderson		1304 7th Street	Moundsville, WV	WV	260412015
@@ -14974,7 +15250,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 3548	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	142	DANIEL	VAN DYNE		5086 W OLIVE AVE	FRESNO	CA	937229056
 3549	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	12	Travis	Allaband		178 Tobacco Rd	Camden	DE	19934    
 3550	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	53	THOMAS	KIRBY		205 N. BITTERSWEET LN.	MUNCIE	IN	473043730
-3551	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	82	JASON	MCCOWN	PO BOX 42		DILLER	NE	68342    
 3552	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	21	MICHAEL	MURTAUGH		2280 WATCHFIELD DRIVE	SOUTH PARK	PA	151298976
 3553	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	26	CODY	BRANDT		9813 W COUNTY RD 900 N	ROYAL CENTER	IN	46978    
 3554	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	97	NICHOLAS	BENIGNO		2110 COUNTY RD 69	ALLIANCE	NE	69301    
@@ -15088,6 +15363,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 3662	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	108	FREDERICK	BESS		4117 GRAND STREET	COLUMBIA	SC	292036655
 3663	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	250	DALBERTA	DUNN		11 E PROVIDENCE RD	YEADON	PA	19050    
 3664	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	24	CODY	RICE		1009 S ELM ST	SHENANDOAH	IA	51601    
+4165	PLUMBERS AFL-CIO	PPF		1970-12-01	245	GREG	GOVE		3 GREGORY DRIVE	S BURLINGTON	VT	054036061
 3665	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	53	MICHAEL	GILBERT		676 BANNERS CORNER RD	CASTLEWOOD	VA	24224    
 3666	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	32	KEVIN	REGISTER		84 GOOD HOPE CIRCLE	NAYLOR	GA	31641    
 3667	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	31	David	Joslin Jr		327 Rod and Gun Club Rd	Unadilla	NY	13849    
@@ -15258,6 +15534,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 3832	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		2000-06-26	18	BRYAN	WALKER		846 26th Ave	VERO BEACH	FL	32960    
 3833	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	8	BENJAMIN	CUARA		5364 CENTRAL AVE	PORTAGE	IN	46368    
 3834	MAINTENANCE OF WAY EMPLS, IBT 	BMWE	BMWED UNIFIED SYSTEM DIVISION	2007-04-10	5731	TONY	CARDWELL		333 EAST BROADWAY	MAYFIELD	KY	42066    
+3835	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		2007-01-29	7	WILLIAM	SHEME		41 RuUTH ST	GRAFTON	WV	26354    
 3836	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		1970-12-01	53	STEVEN	NETTLES		160 SUMMER DR	WALTERBORO	SC	29488    
 3837	MAINTENANCE OF WAY EMPLS, IBT 	BMWE	BESSEMER & LAKE ERIE	1970-12-01	24	MATTHEW	NIES		279 HOLYOKE ROAD	BUTLER	PA	16001    
 3838	MAINTENANCE OF WAY EMPLS, IBT 	BMWE		2005-03-11	62	BRIAN	DIEHN		1606 COUNTY RD 0	JUNCTION CITY	WI	544439438
@@ -15315,7 +15592,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 3890	MUSICIANS AFL-CIO	AFM		1970-12-01	639	CHRISTINA	OTTAVIANO		551 DUTCH VALLEY ROAD N E	ATLANTA	GA	303245303
 3891	MUSICIANS AFL-CIO	AFM		1970-12-01	219	DAVID	ANGUS	SUITE #370	875 EAST MAIN STREET	ROCHESTER	NY	146052747
 3892	MUSICIANS AFL-CIO	AFM		1970-12-01	46	JAY	BLUMENTHAL	c/o AFM of the US & CANADA	1501 BROADWAY, 9TH FLOOR	NEW YORK	NY	10036    
-3893	MUSICIANS AFL-CIO	AFM		1970-12-01	0	ROBINSON	DOUG		1202 E. OAK STREET	PHOENIX	AZ	85006    
+3893	MUSICIANS AFL-CIO	AFM		1970-12-01		ROBINSON	DOUG		1202 E. OAK STREET	PHOENIX	AZ	85006    
 3894	MUSICIANS AFL-CIO	AFM		1970-12-01	61	Wayne	Fox		10842 Jonestown Road	Jonestown	PA	17038    
 3895	MUSICIANS AFL-CIO	AFM		1970-12-01	96	JOSEPH	DEMKO	3609		CHATTANOOGA	TN	374040609
 3896	MUSICIANS AFL-CIO	AFM		1970-12-01	553	PAUL	FRANKENFELD	ROOM 1200	644 LINN STREET	CINCINNATI	OH	452031742
@@ -15406,7 +15683,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 3981	OFFICE AND PROFESSIONAL EMPLS AFL-CIO	OPEIU		1970-12-01	6123	MARIANNE	GIORDANO	214	6136 MISSION GORGE ROAD	SAN DIEGO	CA	92120    
 3982	OFFICE AND PROFESSIONAL EMPLS AFL-CIO	OPEIU		1970-12-01	350	CATHY	WITTENBROOK		1209 Lowell Street	Elyria	OH	44035    
 3983	OFFICE AND PROFESSIONAL EMPLS AFL-CIO	OPEIU		1970-12-01	44	BASCHKI	ROBERTSON	306 WORTH ST		ITHACA	NY	14850    
-3984	OFFICE AND PROFESSIONAL EMPLS AFL-CIO	OPEIU		1998-11-12	0	Michael	Bodinsky		42 Broadway    Suite 1201	New York	NY	100043829
+3984	OFFICE AND PROFESSIONAL EMPLS AFL-CIO	OPEIU		1998-11-12		Michael	Bodinsky		42 Broadway    Suite 1201	New York	NY	100043829
 3985	OFFICE AND PROFESSIONAL EMPLS AFL-CIO	OPEIU		1970-12-01	10	Julie	Hunter	SUITE E	5400 GLENSIDE DR	RICHMOND	VA	23228    
 3986	OFFICE EMPLOYEES CARPENTERS IND	UNAFF		1977-01-01	12	PATRICIA	SCHNEIDER		1704 DEVNEY DR	ALTOONA	WI	547202582
 3987	OHIO NURSES EMPLOYEE ASSOCIATION	UNAFF		1989-11-01	18	Dominic	Mendiola		3760 Ridge Mill Dr.	Hilliard	OH	43026    
@@ -15469,8 +15746,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4044	PAINTERS AFL-CIO	PAT		1970-12-01	1272	JONATHAN	HAWKINS	SUITE 105	1701 WHITNEY MESA DRIVE	HENDERSON	NV	890142056
 4045	PAINTERS AFL-CIO	PAT		1970-12-01	680	THOMAS	MACKENZIE		11105 N E SANDY BLVD	PORTLAND	OR	972202555
 4046	PAINTERS AFL-CIO	PAT		1970-12-01	293	David	Filla	2501 59TH ST		ST LOUIS	MO	63110    
-4047	PAINTERS AFL-CIO	PAT		1970-12-01	162	SHANNON	ALBANO		585 AERO DRIVE	CHEEKTOWAGA	NY	14225    
-4048	PAINTERS AFL-CIO	PAT		1970-12-01	373	ERIC	BASSI		404 NEBRASKA ST	VALLEJO	CA	945903878
 4049	PAINTERS AFL-CIO	PAT		1970-12-01	12512	ROBERT	WILLIAMS III		2705 CONSTITUTION DR	LIVERMORE	CA	945519206
 4050	PAINTERS AFL-CIO	PAT	DISTRICT COUNCIL 6	1970-12-01	42	PAINTERS	LOCAL 1103	PO BOX 1141		CHARDON	OH	440241141
 4051	PAINTERS AFL-CIO	PAT		1970-12-01	379	MIKE	DAILEY		2510 MARKET STREET, SUITE 5	PASCAGOULA	MS	39567    
@@ -15529,7 +15804,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4104	SAG-AFTRA	SAGAFTRA	CHICAGO	2014-08-22	4849	ERIC	CHAUDRON	SUITE 650	1 EAST ERIE STREET	CHICAGO	IL	60611    
 4105	SAG-AFTRA	SAGAFTRA	ATLANTA	2014-08-22	2915	MELISSA	GOODMAN	BLDG 2	3565 PIEDMONT RD NE STE 720	ATLANTA	GA	30305    
 4106	SAG-AFTRA	SAGAFTRA	ARIZONA-UTAH	2014-08-22	1119	LISHA	BROCK	SUITE 700	5000 QUORUM DRIVE	Dallas	TX	75254    
-4107	SAG-AFTRA	SAGAFTRA	PORTLAND	2014-08-22	951	SEAN	TAYLOR		811 FIRST ST SUITE 626	SEATTLE	WA	98104    
 4108	SAG-AFTRA	SAGAFTRA	NASHVILLE	2014-08-22	1562	RICHARD	VAN SYCKLE		1108 17TH AVENUE SOUTH	NASHVILLE	TN	37212    
 4109	PHYSICAL PLANT EMPLOYEES UNION	UNAFF		1970-12-01	14	Johnny	Cain	PO BOX 720 (Physical Plant)		SPRINGFIELD	OH	455010720
 4110	PLASTERERS AND CEMENT MASONS AFL-CIO	OPCM		1970-12-01	123	David	Gentille		22 AMFLEX DRIVE	CRANSTON	RI	029212021
@@ -15580,15 +15854,13 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4155	PLUMBERS AFL-CIO	PPF		1970-12-01	621	DONALD	SWEETEN JR.		14002 MCNULTY ROAD	PHILADELPHIA	PA	191543023
 4156	PLUMBERS AFL-CIO	PPF		1970-12-01	545	DAVID T.	NEWELL	PO BOX 261	3203 NORTH FRONTAGE RD	VICKSBURG	MS	39181    
 4157	PLUMBERS AFL-CIO	PPF		1970-12-01	1037	ANTHONY	NOVELLO		1916 W CHAPMAN AVENUE	ORANGE	CA	92868    
+4158	PLUMBERS AFL-CIO	PPF		1970-12-01	1669	MATT	LIENEN		4600 46TH STREET	ROCK ISLAND	IL	612017143
 4159	PLUMBERS AFL-CIO	PPF		1970-12-01	759	W. CARL	GREGORY		2447 ORLANDO CENTRAL PKWY	ORLANDO	FL	32809    
 4160	PLUMBERS AFL-CIO	PPF		1970-12-01	353	Kevin	Cruso		1237 PASS ROAD	GULFPORT	MS	395016234
 4161	PLUMBERS AFL-CIO	PPF		1970-12-01	811	SEAN	WYATT		17100 EAST 32ND PLACE	AURORA	CO	80011    
 4162	PLUMBERS AFL-CIO	PPF		1970-12-01	1027	GREGORY	LEWIS		1305 N. NIAGARA ST.	BURBANK	CA	915051999
 4163	PLUMBERS AFL-CIO	PPF		1970-12-01	728	MARK	TERRILL		1200 E SECOND ST	DAYTON	OH	45403    
 4164	PLUMBERS AFL-CIO	PPF		1970-12-01	1223	ERIC	COONS		225 BEN ALLEN ROAD	NASHVILLE	TN	37207    
-4165	PLUMBERS AFL-CIO	PPF		1970-12-01	245	GREG	GOVE		3 GREGORY DRIVE	S BURLINGTON	VT	054036061
-4166	PLUMBERS AFL-CIO	PPF		1970-12-01	3995	JEFF	OWEN		597 MONSTER ROAD SW	RENTON	WA	980572974
-4167	PLUMBERS AFL-CIO	PPF		1970-12-01	303	D.  MICHAEL	DOOLAN		116 HARVEY CT	EAST PEORIA	IL	61611    
 4168	PLUMBERS AFL-CIO	PPF		1970-12-01	796	STANTON	BONNELL	#215	655 S Orcas St	Seattle	WA	98108    
 4169	PLUMBERS AFL-CIO	PPF		1970-12-01	429	Randy	Frye		2404 South Roan Street	Johnson City	TN	37601    
 4170	PLUMBERS AFL-CIO	PPF		1970-12-01	372	Neal	Hurm		3128 ALVEY PARK DRIVE WEST	OWENSBORO	KY	42303    
@@ -15646,6 +15918,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4222	POSTAL WORKERS, AMERICAN, AFL-CIO	APWU	CROSSETT	1974-09-01	4	KAREN	BRUNSON	333	312 MAIN ST	CROSSETT	AR	716350333
 4223	POSTAL WORKERS, AMERICAN, AFL-CIO	APWU	LONG ISLAND NEW YORK AREA	1985-10-01	900	Peter	Furgiuele		300 EASTERN PARKWAY	FARMINGDALE	NY	117352714
 4224	POSTAL WORKERS, AMERICAN, AFL-CIO	APWU	MAINE	1976-03-01	165	RUDOLPH	DIMILLO		91 DEERING RUN	PORTLAND	ME	04103    
+4572	TRANSIT UNION AFL-CIO	ATU		1970-12-01	5541	MARY	LONGORIA		1801 N E COUCH ST	PORTLAND	OR	972323054
 4225	POSTAL WORKERS, AMERICAN, AFL-CIO	APWU	VIRGINIA	1976-03-01	3596	Robin	Chambers	P O Box 16		Mount Vernon	VA	221210016
 4226	POSTAL WORKERS, AMERICAN, AFL-CIO	APWU	IDAHO	1976-03-01	140	JAMES	CORRELL	PO BOX 6991		BOISE	ID	837076991
 4227	POSTAL WORKERS, AMERICAN, AFL-CIO	APWU	ARKANSAS	1976-03-01	317	LARRY	SMITH	P.O. BOX 181118		FT SMITH	AR	72918    
@@ -15844,6 +16117,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4420	STATE COUNTY AND MUNI EMPLS AFL-CIO	AFSCME		1995-05-15	634	KIM	ATHANASIADIAS		3001 WALNUT ST	PHILA	PA	191043414
 4421	STATE COUNTY AND MUNI EMPLS AFL-CIO	AFSCME	DC	1995-05-16	8963	VANESSA	FLEMINGS	9TH FLOOR	3001 WALNUT STREET	PHILADELPHIA	PA	191043414
 4422	STATE COUNTY AND MUNI EMPLS AFL-CIO	AFSCME	OAPSE LOCAL 790 -- FIRST STUDENT -- AFSCME LOCAL 4	1997-04-21	103	CYNTHIA	STULL		1242 ROOT ROAD	LORAIN	OH	44052    
+4573	TRANSIT UNION AFL-CIO	ATU		1991-04-01	320	LYNETTE	JONES		3491 HARLEM ROAD	CHEEKTOWAGA	NY	14225    
 4423	STATE COUNTY AND MUNI EMPLS AFL-CIO	AFSCME	CSEA -- BETHPAGE UFSD CAFETERIA EMPLOYEES	1995-09-13	19	Nicole	Meeks		143 WASHINGTON AVE	ALBANY	NY	12210    
 4424	STATE COUNTY AND MUNI EMPLS AFL-CIO	AFSCME	CSEA 1000	2004-06-23	34	Nicole	Meeks		143 WASHINGTON AVE	Albany	NY	12210    
 4425	STATE COUNTY AND MUNI EMPLS AFL-CIO	AFSCME	COMMUNITY SOCIAL AGENCY EMPLOYEES	1970-12-01	542	Vicki	Lyons		36700 Indiana Rd	New Boston	MI	48164    
@@ -15881,7 +16155,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4457	TEACHERS AFL-CIO	AFT	BECKER AT LEICESTER FACULTY FEDERATION	2017-12-28	17	Peixing	Jiang		5 Chestnut Hill Lane	Worcester	MA	01609    
 4458	TEACHERS AFL-CIO	AFT	STAND UP FOR GRADUATE STUDENT EMPLOYEES	2020-10-06	443	KEENAN	WILDER		356 SMITH STREET	PROVIDENCE	RI	02908    
 4459	TEACHERS AFL-CIO	AFT	AFT NEW JERSEY	1978-10-01	18513	DONNA	CHIERA		720 KING GEORGES ROAD	FORDS	NJ	08863    
-4509	TEACHERS AFL-CIO	AFT	ST. VINCENTS FED. OF DAY CARE PROV.	2002-11-19	26	Karen	Snyder	P.O. Box 104451		Jefferson City	MO	65110    
 4460	TEACHERS AFL-CIO	AFT	HEALTH PROFESSIONALS & ALLIED EMPLOYEES	1977-02-01	12366	Deborah	White		110 KINDERKAMACK ROAD	EMERSON	NJ	07630    
 4461	TEACHERS AFL-CIO	AFT	FWMMHC_CSCTE	2020-11-19	30	PATRICK	SHOURD		1232 E. 6TH AVE	HELENA	MT	59601    
 4462	TEACHERS AFL-CIO	AFT	AMERICAN FEDERATION OF TEACHERS	2020-11-11	276	ANNA	NEIGHBOR		601 NORTH 12TH STREET	PHILADELPHIA	PA	19123    
@@ -15931,6 +16204,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4506	TEACHERS AFL-CIO	AFT	UNITED   CENTER   EMPLOYEES   ASSN.	2003-10-22	120	MEGAN	HERNANDEZ	PO BOX 405		COMMACK	NY	117250405
 4507	TEACHERS AFL-CIO	AFT	ACADEMY TEACHER'S ASSOCIATION	2003-04-10	58	PATRICK	MULLANEY	CHRISTIAN BROTHERS ACADEMY	6245 RANDALL ROAD	DEWITT	NY	132142500
 4508	TEACHERS AFL-CIO	AFT	STATE FEDERATION	2003-03-25	4237	Deborah	Snell		121 Park Avenue, Suite 10	Williston	VT	05495    
+4509	TEACHERS AFL-CIO	AFT	ST. VINCENTS FED. OF DAY CARE PROV.	2002-11-19	26	Karen	Snyder	P.O. Box 104451		Jefferson City	MO	65110    
 4510	TEACHERS AFL-CIO	AFT	TUGSA	2002-11-05	278	Nicole	Zalewski	1816 CHESTNUT STREET		PHILADELPHIA	PA	19103    
 4511	TEACHERS AFL-CIO	AFT	COLUMBIA FACULTY UNION	2011-01-19	468	SUSAN	VAN VEEN	1309B	600 S MICHIGAN	CHICAGO	IL	60605    
 4512	TEACHERS AFL-CIO	AFT	LONGY FACULTY UNION	2011-03-18	36	JOHN	MORRISON		78 GREAT ROAD	MAYNARD	MA	01754    
@@ -15967,7 +16241,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4543	TEACHERS AFL-CIO	AFT	WESTCHESTER FEDERATION OF VISITING NURSES, NYSUT	2017-12-28	65	ANDREA	GAVIN		1311 MAMARONECK AVENUE	WHITE PLAINS	NY	10605    
 4544	KYOSHI KAI	UNAFF		1984-11-01	31	KYOMI	ANTHONY		299 MONROE ST	NEW BRITAIN	CT	060521741
 4545	TEAMSTERS	IBT		2019-04-12	13033	KATHLEEN	BRENNAN		433 NORTH SIERRA WAY	SAN BERNARDINO	CA	924104831
-4546	TEAMSTERS	IBT		1970-12-01	0	ESTEBAN	LUA		22 EAST FIFTH STREET	WATSONVILLE	CA	95076    
+4546	TEAMSTERS	IBT		1970-12-01		ESTEBAN	LUA		22 EAST FIFTH STREET	WATSONVILLE	CA	95076    
 4547	TEAMSTERS	IBT	INDIANA MAILERS UNION	1988-07-01	67	Jeffrey	Combs		849 S Meridian St	Indianapolis	IN	46225    
 4548	TRABAJADORES DE ESTACIONAMIENTO IND	UNAFF		1970-12-01	60	RAFAEL	MARQUEZ	HC-61 BOX 4859		TRUJILLO ALTO	PR	00976    
 4549	AMERICAN TRAIN DISPATCHERS	ATDA	SUNRAIL SYSTEM COMMITTE	2016-10-24	9	TRACY	BAINUM		610 TRENIA ANN LN	ORANGE CITY	FL	327635500
@@ -15993,8 +16267,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4569	TRANSIT UNION AFL-CIO	ATU		2008-04-23	862	LUPE	CARRANZA	SUITE 205	11706 RAMONA BLVD.	EL MONTE	CA	91732    
 4570	TRANSIT UNION AFL-CIO	ATU		1992-11-01	33	LINDA	BUONANDUCCI		1340 MAIN STREET	SOUTH WINDSOR	CT	060742451
 4571	TRANSIT UNION AFL-CIO	ATU		1970-12-01	195669	KENNETH	KIRK		10000 NEW HAMPSHIRE AVENUE	SILVER SPRING	MD	20903    
-4572	TRANSIT UNION AFL-CIO	ATU		1970-12-01	5541	MARY	LONGORIA		1801 N E COUCH ST	PORTLAND	OR	972323054
-4573	TRANSIT UNION AFL-CIO	ATU		1991-04-01	320	LYNETTE	JONES		3491 HARLEM ROAD	CHEEKTOWAGA	NY	14225    
 4574	TRANSIT UNION AFL-CIO	ATU		1970-12-01	13349	MICHAEL	CORDIELLO		20 North Central Avenue	Valley Stream	NY	11580    
 4575	TRANSIT UNION AFL-CIO	ATU		1970-12-01	51	BELINDA	BLOCK	ROOM 204	101 S. FAIRFAX AVE	SIOUX FALLS	SD	57103    
 4576	TRANSIT UNION AFL-CIO	ATU		1970-12-01	1685	RONALD	GIZA		196 ORCHARD PARK RD	WEST SENECA	NY	14224    
@@ -16085,9 +16357,10 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4661	UTILITY WORKERS AFL-CIO	UWU	UNITED GAS WORKERS LOCAL 69	1970-12-01	847	RYAN	PAYNE	P.O. BOX 873		BRIDGEPORT	WV	263300873
 4662	UTILITY WORKERS AFL-CIO	UWU		1970-12-01	20	PETER	MONACO		61 ELM AVENUE	GLEN COVE	NY	115423130
 4663	UTILITY WORKERS AFL-CIO	UWU		2010-12-16	760	JEFFREY	MELVIN		515 PITTSBURGH MILLS CIRCLE	TARENTUM	PA	150843832
+4664	UTILITY WORKERS AFL-CIO	UWU		1986-09-01	11	Craig	Goucher		293 Sunrise Dr.	Henreyville	PA	18332    
 4665	UTILITY WORKERS AFL-CIO	UWU	MARTINSBURG	2000-11-14	50	TRAVIS	BECK		1 NORTHGATE SQUARE - #208	GREENSBURG	PA	15601    
 4666	UTILITY WORKERS COUNCIL	UWNE		1970-12-01	160	THOMAS	NORRIS		170 MORGAN RD	WHITINSVILLE	MA	01588    
-4667	UTILITY WORKERS COUNCIL	UWNE		1970-12-01	0	JOSEPH	ARCUDI	BUW COUNCIL	120 BAY STATE DRIVE	BRAINTREE	MA	02184    
+4667	UTILITY WORKERS COUNCIL	UWNE		1970-12-01		JOSEPH	ARCUDI	BUW COUNCIL	120 BAY STATE DRIVE	BRAINTREE	MA	02184    
 4668	UTILITY WORKERS COUNCIL	UWNE		1970-12-01	36	MICHAEL	CORMIER	PO BOX 222		FITCHBURG	MA	014200222
 4669	UTILITY WORKERS COUNCIL	UWNE		1970-12-01	471	WALTER	TROMBLY		1300 JEFFERSON BLVD	WARWICK	RI	02886    
 4670	VARIETY ARTISTS AAAA AFL-CIO	AGVA		1970-12-01	1262	SUSANNE K.	DORIS		363 SEVENTH AVE 17TH FLOOR	NEW YORK	NY	100013904
@@ -16134,7 +16407,6 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4711	PENNSYLVANIA STATE EDUCATION ASSN	UNAFF	PHOENIXVILLE EDUCATIONAL SUPPORT PERSONNEL ASN	2011-06-17	115	ELIZABETH	EHLINGER		547 NUTT ROAD	PHOENIXVILLE	PA	19460    
 4712	SECURITY OPERATIONS SPECIALIST ASSN	UNAFF	SOSA	2007-01-29	189	CARL	ETTER		1138 EAST BUTTE ROAD	MENAN	ID	834345123
 4713	CALIFORNIA NURSES ASSOCIATION	UNAFF		1970-12-01	116018	DONALD	NIELSEN		155 GRAND AVENUE, SUITE 100	OAKLAND	CA	946123721
-4764	WESTERLY	UNAFF	LOCAL 5075  RHODE ISLAND	1993-12-01	245	MELISSA	WEBER		4 LORRAINE ROAD	WESTERLY	RI	02891    
 4714	UNION OF PROFESSIONAL REPRESENTATIV	UNAFF	LOCAL 21 PROFESSIONAL STAFF	2007-06-13	19	Timothy	Mathews	UPR C/OIFPTE LOCAL 21 2ND FL	1167 MISSION ST, STE 200	SAN FRANCISCO	CA	94103    
 4715	TEMPLE UNIVERSITY HOSPITAL 	UNAFF	ALLIED HEALTH PROFESSIONALS	2008-06-09	659	KAREN	D'ADAMO		5 Cheswyck Cir	Horsham	PA	190441112
 4716	AMERICAN MARITIME OFFICERS UNION	UNAFF	TRANSPORTATION & SERVICE EMPLOYEES	1975-12-01	130	JOSEPH	GREMELSBACKER	PO BOX 66	601 S FEDERAL HIGHWAY	DANIA BEACH	FL	33004    
@@ -16184,7 +16456,8 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4760	ASSOCIATION OF AVIATION TRAINING PROFESSIONALS	AOATP		2019-04-17	75	John	McMillan	P O BOX 1971		TRAVIS AFB	CA	94535    
 4761	KAUAI PARAMEDICS ASSOCIATION	UNAFF	LOCAL R 6002	2003-11-04	63	Fujimoto	Dwight	PO BOX 1888		LIHUE	HI	967661888
 4762	ALLIED INTERNATIONAL BUILDING TRADES UNION	AIBTU		2020-04-13	5	THOMAS	HARRIS		1422 E 71ST PL	CHICAGO	IL	60619    
-4763	ASSOCIATION OF CATHOLIC TEACHERS	UNAFF	LOCAL 1776	1975-10-01	0	Frank	Costantini		3070 BRISTOL PIKE SUITE 101	BENSALEM	PA	190205364
+4763	ASSOCIATION OF CATHOLIC TEACHERS	UNAFF	LOCAL 1776	1975-10-01		Frank	Costantini		3070 BRISTOL PIKE SUITE 101	BENSALEM	PA	190205364
+4764	WESTERLY	UNAFF	LOCAL 5075  RHODE ISLAND	1993-12-01	245	MELISSA	WEBER		4 LORRAINE ROAD	WESTERLY	RI	02891    
 4765	INDUSTRIAL WORKERS OF THE WORLD	IWW	TACOMA	2020-01-31	32	MARCUS  A	BARTLETT	P O BOX 9284		TACOMA	WA	98409    
 4766	INDUSTRIAL WORKERS OF THE WORLD	IWW	BOSTON GMB	2020-09-18	98	TOBIAS	MARCH	APT #1	402 PUTNAM AVE	CAMBRIDGE	MA	021394608
 4767	INDUSTRIAL WORKERS OF THE WORLD	IWW	SOCIAL JUSTICE EDUCATION MOVEMENT	2020-10-05	23	Max	Hoiland		2709 Emerson Ave. S	MINNEAPOLIS	MN	55408    
@@ -16212,7 +16485,7 @@ COPY public.unions (id, union_name, abbr, unit, est_date, members, first_name, l
 4789	INDUSTRIAL WORKERS OF THE WORLD	IWW	DETROIT	2016-09-02	91	Austen	Campbell-Fox	P O BOX 32236		DETROIT	MI	48232    
 4790	INDUSTRIAL WORKERS OF THE WORLD	IWW	PHOENIX GMB	2021-07-02	51	NICHOLAS	HAENNY		2261 E KATHLEEN RD	PHOENIX	AZ	85022    
 4791	INDUSTRIAL WORKERS OF THE WORLD	IWW	WORCESTER GMB	2021-07-02	18	ANDREW	BURNS		45 CARDINAL LANE	WINCHENDON	MA	01475    
-4792	INDUSTRIAL WORKERS OF THE WORLD	IWW	SALT LAKE IWW	2021-06-22	0	WILL	GIES-BARTON		276 E. COMMONWEALTH AVENUE	SALT LAKE CITY	UT	84115    
+4792	INDUSTRIAL WORKERS OF THE WORLD	IWW	SALT LAKE IWW	2021-06-22		WILL	GIES-BARTON		276 E. COMMONWEALTH AVENUE	SALT LAKE CITY	UT	84115    
 4793	INDUSTRIAL WORKERS OF THE WORLD	IWW	SAN DIEGO GMB	2021-05-19	38	ERIC	CHAMBERLIN	P.O. BOX 882226		SAN DIEGO	CA	921682226
 4794	INDUSTRIAL WORKERS OF THE WORLD	IWW	TUCSON	2020-08-21	20	John Daniel	Cochran	64001	1700 E Roger R.	Tucson	AZ	85728    
 4795	INDUSTRIAL WORKERS OF THE WORLD	IWW	WEST VIRGINIA	2020-08-19	45	Anthony	Schnelle		4 West Street	Bridgeport	OH	43912    

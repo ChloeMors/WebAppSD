@@ -43,6 +43,10 @@ def get_unions():
     members = flask.request.args.get('members')
     if not name:
         name = ''
+    if not state_abbr:
+        state_abbr = ''
+    if not city:
+        city = ''
     name = name.upper()
     query = """SELECT * FROM unions
             WHERE unions.region LIKE '%{}%'
@@ -50,7 +54,7 @@ def get_unions():
             AND unions.union_name LIKE '%{}%'""".format(state_abbr, city, name)
     if members == 'max':
         query = query + """ AND unions.members > 1000000"""
-    elif members != 'default':
+    elif members != 'default' and members is not None:
         query = query + """ AND unions.members < {}""".format(members)
     query = query + ';'
     union_list = []
