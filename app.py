@@ -19,7 +19,7 @@ app.register_blueprint(api.api, url_prefix='/api')
 def home():
     return flask.render_template('index.html')
 
-@app.route('/search_unions')
+@app.route('/search_unions', strict_slashes=False)
 def search_unions():
     return flask.render_template('search_unions.html')
 
