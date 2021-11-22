@@ -206,8 +206,8 @@ function initializeMap() {
                                 highlightOnHover: true, // You can disable the color change on hover
                                 popupTemplate: hoverPopupTemplate, // call this to obtain the HTML for the hover popup
                                 borderColor: '#eeeeee', // state/country border color
-                                highlightFillColor: '#337AFF', // color when you hover on a state/country
-                                highlightBorderColor: '#000000', // border color when you hover on a state/country
+                                highlightFillColor: '#a50000' //'#337AFF', // color when you hover on a state/country
+                                //highlightBorderColor: '#eeeeee' // border color when you hover on a state/country*/
                             }
                           });
 }
@@ -238,4 +238,4 @@ function onUnionLoad(first_load) {
     } 
     let elementUnions = document.getElementById('submit_button_unions');
     elementUnions.onclick = onSubmitButtonUnionsClicked;
-}
+    }
