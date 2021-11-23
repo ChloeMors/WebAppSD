@@ -37,7 +37,7 @@ function loadStates() {
     .then(function(states) {
         let stateDropDown = document.getElementById('state_selector')
         // should be able to set options Body to '' once its actually working
-        let optionsBody = '<option value="">-</option>'
+        let optionsBody = ''
         let page_diff = ''
         if (document.title == "Search Strikes") {
             page_diff = 'state'
@@ -265,6 +265,7 @@ function onStateClick(geography) {
 }
 
 function onUnionLoad(first_load) {
+    loadStates()
     if (first_load) {
         var hash = window.location.hash.substring(1);
         document.getElementById('state_selector').value = hash;
