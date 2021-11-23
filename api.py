@@ -165,6 +165,7 @@ def get_cases():
     '''
     state_abbr = flask.request.args.get('state_abbr')
     name = flask.request.args.get('name_query')
+    case_number = flask.request.args.get('case_number')
     if not name:
         name = ''
     if not state_abbr:
@@ -173,7 +174,11 @@ def get_cases():
     state_abbr = state_abbr.upper()
     query = """SELECT * FROM cases
             WHERE cases.territory LIKE '%{}%'
-            AND cases.case_name ILIKE '%{}%';""".format(state_abbr, name)
+            AND cases.case_name ILIKE '%{}%'""".format(state_abbr, name)
+    if case_number:
+        query = query + """AND cases.case_number = '{}'""".format(case_number)
+    query = query + ';'
+    
     case_list = []
     try:
         connection = get_connection()

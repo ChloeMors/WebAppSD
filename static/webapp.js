@@ -104,10 +104,11 @@ function onSubmitButtonCasesClicked() {
     let stateSelector = document.getElementById('state_selector');
     let state = stateSelector.value;
     let nameSelector = document.getElementById('by_name');
-    // does the below line need to be nameSelector.value
     let name = by_name.value;
+    let caseNumberSelector = document.getElementById('by_case_number');
+    let case_number = by_case_number.value;
     let url = 'http://localhost:5000/api/cases/?state_abbr='
-                + state + '&name_query=' + name ;
+                + state + '&name_query=' + name + '&case_number=' + case_number;
 
     fetch(url, {method: 'get'})
 
@@ -140,7 +141,6 @@ function onSubmitButtonCasesClicked() {
         console.log(error);
     });
 }
-
 function onSubmitButtonStrikesClicked() {
     let stateSelector = document.getElementById('state_selector');
     let state = stateSelector.value;
