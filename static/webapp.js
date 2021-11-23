@@ -45,7 +45,7 @@ function loadStates() {
             page_diff = 'abbr'
         }
         for (let k = 0; k < states.length; k++) {
-            let state = state[k]
+            let state = states[k]
             optionsBody += '<option value="' + state[page_diff] + '">' + state['state'] + '</option>'
         }
         stateDropDown.innerHTML = optionsBody
