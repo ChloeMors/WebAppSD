@@ -28,10 +28,30 @@ def get_connection():
 def get_help():
     return flask.render_template('help.html')
 
-# Do these routes need to match the app routes?
-# this query currently supports state search only, not the industry or name search
-# this dataset doesnt even have industry
-# also, name matches to name not abbr
+@api.route('/states')
+def get_states():
+    print("querying")
+    query = """SELECT * FROM states"""
+    states = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query)
+        for row in cursor:
+            state = {'abbr': row[0],
+                    'state': row[1]}
+            states.append(state)
+        cursor.close()
+        connection.close()
+        if states == []:
+            state = {'abbr':"broken", 'state':"broken"}
+            states = [state]
+        print(states)
+    except Exception as e:
+        print(e, file=sys.stderr)
+    return json.dumps(states)
+
+
 @api.route('/unions/') 
 def get_unions():
     '''

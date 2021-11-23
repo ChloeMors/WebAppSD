@@ -40,6 +40,16 @@ CREATE TABLE public.cases (
 
 
 --
+-- Name: states; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.states (
+    abbr text,
+    state text
+);
+
+
+--
 -- Name: strikes; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -11383,6 +11393,65 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 11292	Union de Tronquistas de Puerto Rico, Local 901, IBT (B. Fernandez y Hermanos, Inc.)	24-CB-002815	San Juan	PR	12/21/2010		Region 12, Tampa, Florida	Open		
 11293	NBC Universal	02-UC-000625	new york	NY	12/20/2010		Region 02, New York, New York	Open		
 11294	Caterpillar, Inc.	33-CA-016156	East Peoria	IL	12/08/2010		Region 25, Indianapolis, Indiana	Open		
+\.
+
+
+--
+-- Data for Name: states; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.states (abbr, state) FROM stdin;
+	-
+AL	Alabama 
+AK	Alaska 
+AZ	Arizona 
+AR	Arkansas 
+CA	California 
+CO	Colorado 
+CT	Connecticut 
+DE	Delaware 
+FL	Florida 
+GA	Georgia 
+HI	Hawaii 
+ID	Idaho 
+IL	Illinois 
+IN	Indiana 
+IA	Iowa 
+KS	Kansas 
+KY	Kentucky 
+LA	Louisiana 
+ME	Maine 
+MD	Maryland 
+MA	Massachusetts 
+MI	Michigan 
+MN	Minnesota 
+MS	Mississippi 
+MO	Missouri 
+MT	Montana 
+NE	Nebraska 
+NV	Nevada 
+NH	New Hampshire 
+NJ	New Jersey 
+NM	New Mexico 
+NY	New York 
+NC	North Carolina
+ND	North Dakota
+OH	Ohio
+OK	Oklahoma
+OR	Oregon
+PA	Pennsylvania
+RI	Rhode Island
+SC	South Carolina
+SD	South Dakota
+TN	Tennessee
+TX	Texas
+UT	Utah
+VT	Vermont
+VA	Virginia
+WA	Washington
+WV	West Virginia
+WI	Wisconsin
+WY	Wyoming
 \.
 
 

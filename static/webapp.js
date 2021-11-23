@@ -19,11 +19,40 @@ function initialize() {
             onUnionLoad(false)
         }
     } else if (document.title == 'Search Strikes') {
+        loadStates()
         elementStrike.onclick = onSubmitButtonStrikesClicked;
     } else if (document.title == 'Search Cases') {
         elementCases.onclick = onSubmitButtonCasesClicked;
     }
     // This is where we should insert the states and industries into the drop downs
+}
+
+function loadStates() {
+    
+    let url = 'http://localhost:5000/api/states'
+    fetch(url, {method: 'get'})
+
+    .then((response) => response.json())
+
+    .then(function(states) {
+        let stateDropDown = document.getElementById('state_selector')
+        let optionsBody = '<option value="">-</option>'
+        let page_diff = ''
+        if (document.title == "Search Strikes") {
+            page_diff = 'state'
+        } else {
+            page_diff = 'abbr'
+        }
+        for (let k = 0; k < states.length; k++) {
+            let state = state[k]
+            optionsBody += '<option value="' + state[page_diff] + '">' + state['state'] + '</option>'
+        }
+        stateDropDown.innerHTML = optionsBody
+    })
+
+    .catch(function(error) {
+        console.log(error);
+    });
 }
 
 // how do we specify how this works on all the different pages?
@@ -122,12 +151,7 @@ function onSubmitButtonStrikesClicked() {
     // would it be better to use if statements to only append relevant sections
     let url = 'http://localhost:5000/api/strikes/?state='
                 + state + '&industry=' + industry + '&company=' + company + '&end=' + endDate;
-    //if (document.querySelector('endDate').checked) {
-    //    url = url 
-    //            }
-    // The below two lines do not get called so im assuming this isnt getting called
-    //let resultsElement = document.getElementById('matching_strikes');
-    //resultsElement.innerHTML = "Hello";
+    
     fetch(url, {method: 'get'})
 
     .then((response) => response.json())
@@ -145,6 +169,9 @@ function onSubmitButtonStrikesClicked() {
                     var end_date_string  = 'present'
                 } else {
                     var end_date_string  = strike['end_date']
+                }
+                if (strike['participants'] == 'None'){
+                    strike['participants'] = 'No data'
                 }
                 selectorBody += '<b>' + strike['employer'] + '</b><br>Number of Participants: ' + strike['participants']
                 + '<br>Started on ' + strike['start_date']+ ' to ' + end_date_string + '<br> Demands: ' + strike['demands'] 
