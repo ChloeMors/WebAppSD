@@ -89,20 +89,20 @@ def get_unions():
 @api.route('/strikes/') 
 def get_strikes():
     '''
-    /strikes/?[state_abbr=state_abbr][industry=industry][end=end][company=company]
+    /strikes/?[state=state][industry=industry][end=end][company=company]
     '''
     # NOTE currently the data set uses full state names not state abbreviations - this needs to be fixed
-    state_abbr = flask.request.args.get('state_abbr')
+    state = flask.request.args.get('state')
     industry = flask.request.args.get('industry')
     end = flask.request.args.get('end')
     company = flask.request.args.get('company')
-    if not state_abbr:
-        state_abbr = ''
+    if not state:
+        state = ''
     query = """SELECT * FROM strikes
-            WHERE strikes.state LIKE '%{}%'""".format(state_abbr)
+            WHERE strikes.state LIKE '%{}%'""".format(state)
     if industry:
         query = query + "AND strikes.industry LIKE '%{}%'".format(industry)
-    if end:
+    if end == "true":
         query = query + "AND strikes.end_date LIKE '%{}%'".format('None')
     if company:
         query = query + "AND strikes.employer ILIKE '%{}%'".format(company)

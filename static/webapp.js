@@ -6,11 +6,6 @@
 window.onload = initialize;
 
 function initialize() {
-    
-    
-    // The following funciton call does not ever occur on the strikes page. 
-    // It works if the above lines are commented out but not otherwise
-    // and i dont know why
     let elementStrike = document.getElementById('submit_button_strikes');
     let elementCases = document.getElementById('submit_button_cases');
     
@@ -119,15 +114,17 @@ function onSubmitButtonStrikesClicked() {
     let industrySelector = document.getElementById('Industry');
     let industry = industrySelector.value;
     let endDateCheck = document.getElementById('endDate')
-    let endDate = endDateCheck.value;
+    let endDate = endDateCheck.checked;
     let companySelector = document.getElementById('by_name')
     let company = companySelector.value;
     // Below the url references the api url, not the app - which is right 
     // because we need to request the data from the api ??
     // would it be better to use if statements to only append relevant sections
-    let url = 'http://localhost:5000/api/strikes/?state_abbr='
-                + state + '&industry=' + industry + '&end=' + endDate + '&company=' + company;
-
+    let url = 'http://localhost:5000/api/strikes/?state='
+                + state + '&industry=' + industry + '&company=' + company + '&end=' + endDate;
+    //if (document.querySelector('endDate').checked) {
+    //    url = url 
+    //            }
     // The below two lines do not get called so im assuming this isnt getting called
     //let resultsElement = document.getElementById('matching_strikes');
     //resultsElement.innerHTML = "Hello";
