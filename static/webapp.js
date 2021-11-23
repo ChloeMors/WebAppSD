@@ -36,6 +36,7 @@ function loadStates() {
 
     .then(function(states) {
         let stateDropDown = document.getElementById('state_selector')
+        // should be able to set options Body to '' once its actually working
         let optionsBody = '<option value="">-</option>'
         let page_diff = ''
         if (document.title == "Search Strikes") {
@@ -53,6 +54,9 @@ function loadStates() {
     .catch(function(error) {
         console.log(error);
     });
+    // shouldnt need this?
+    let elementStrike = document.getElementById('submit_button_strikes');
+    elementStrike.onclick = onSubmitButtonStrikesClicked;
 }
 
 // how do we specify how this works on all the different pages?
