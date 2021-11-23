@@ -13,64 +13,84 @@ function initialize() {
         onIndexLoad();
         initializeMap();
     } else if (document.title == 'Search Unions') {
+        // load states
         if (window.location.hash){
             onUnionLoad(true)
         } else {
             onUnionLoad(false)
         }
     } else if (document.title == 'Search Strikes') {
-        loadStates()
+        loadStates();
+        loadStrikeIndustries()
         elementStrike.onclick = onSubmitButtonStrikesClicked;
     } else if (document.title == 'Search Cases') {
+        // load regions
         elementCases.onclick = onSubmitButtonCasesClicked;
     }
-    // This is where we should insert the states and industries into the drop downs
+    
 }
 
+function loadStrikeIndustries() {
+    // base url
+    let url = 'http://localhost:5000/api/strike_industries'
+    fetch(url, {method: 'get'})
+
+    .then((response) => response.json())
+
+    .then(function(industries) {
+        let industryDropDown = document.getElementById('Industry');
+        let optionsBody = '<option value="">-</option>';
+        for (let k = 0; k < industries.length; k++) {
+            let industry = industries[k];
+            optionsBody += '<option value="' + industry + '">' + industry + '</option>';
+        }
+        industryDropDown.innerHTML = optionsBody;
+    })
+
+    .catch(function(error) {
+        console.log(error);
+    });
+}
 function loadStates() {
-    
+    // base url
     let url = 'http://localhost:5000/api/states'
     fetch(url, {method: 'get'})
 
     .then((response) => response.json())
 
     .then(function(states) {
-        let stateDropDown = document.getElementById('state_selector')
-        // should be able to set options Body to '' once its actually working
-        let optionsBody = ''
-        let page_diff = ''
+        let stateDropDown = document.getElementById('state_selector');
+        let optionsBody = '<option value="">-</option>';
+        let page_diff = 'abbr';
         if (document.title == "Search Strikes") {
-            page_diff = 'state'
+            page_diff = 'state';
         } else {
-            page_diff = 'abbr'
+            page_diff = 'abbr';
         }
         for (let k = 0; k < states.length; k++) {
-            let state = states[k]
-            optionsBody += '<option value="' + state[page_diff] + '">' + state['state'] + '</option>'
+            let state = states[k];
+            optionsBody += '<option value="' + state[page_diff] + '">' + state['state'] + '</option>';
         }
-        stateDropDown.innerHTML = optionsBody
+        stateDropDown.innerHTML = optionsBody;
     })
 
     .catch(function(error) {
         console.log(error);
     });
-    // shouldnt need this?
-    let elementStrike = document.getElementById('submit_button_strikes');
-    elementStrike.onclick = onSubmitButtonStrikesClicked;
 }
 
-// how do we specify how this works on all the different pages?
+
 function onSubmitButtonUnionsClicked() {
     let stateSelector = document.getElementById('state_selector');
     let state = stateSelector.value;
     let citySelector = document.getElementById('by_city');
     let city = citySelector.value;
     let nameSelector = document.getElementById('by_name');
+    // nameselector vs by_name
     let name = by_name.value;
     let membersSelector = document.getElementById('members_selector');
     let members = membersSelector.value;
-    // Below the url references the api url, not the app - which is right 
-    // because we need to request the data from the api ??
+    // base url
     let url = 'http://localhost:5000/api/unions/?state_abbr='
                 + state + '&city=' + city + '&name_query=' + name + '&members=' + members;
 
@@ -105,8 +125,10 @@ function onSubmitButtonCasesClicked() {
     let state = stateSelector.value;
     let nameSelector = document.getElementById('by_name');
     let name = by_name.value;
+    // id vs selector
     let caseNumberSelector = document.getElementById('by_case_number');
     let case_number = by_case_number.value;
+    // base url
     let url = 'http://localhost:5000/api/cases/?state_abbr='
                 + state + '&name_query=' + name + '&case_number=' + case_number;
 
@@ -150,9 +172,7 @@ function onSubmitButtonStrikesClicked() {
     let endDate = endDateCheck.checked;
     let companySelector = document.getElementById('by_name')
     let company = companySelector.value;
-    // Below the url references the api url, not the app - which is right 
-    // because we need to request the data from the api ??
-    // would it be better to use if statements to only append relevant sections
+    //base url
     let url = 'http://localhost:5000/api/strikes/?state='
                 + state + '&industry=' + industry + '&company=' + company + '&end=' + endDate;
     
@@ -190,6 +210,7 @@ function onSubmitButtonStrikesClicked() {
     });
 }
 function onIndexLoad(){
+    // base url
     let url = 'http://localhost:5000/api/strikes/';
     fetch(url, {method: 'get'})
 
@@ -221,13 +242,7 @@ function onIndexLoad(){
         console.log(error);
     });
 }
-/*
-var extraStateInfo = {
-    MN: {population: 5640000, jeffhaslivedthere: true, fillColor: '#2222aa'},
-    CA: {population: 39500000, jeffhaslivedthere: true, fillColor: '#2222aa'},
-    NM: {population: 2100000, jeffhaslivedthere: false, fillColor: '#2222aa'},
-    OH: {population: 0, jeffhaslivedthere: false, fillColor: '#aa2222'}
-};*/
+
 function initializeMap() {
     var map = new Datamap({ element: document.getElementById('map-container'), // where in the HTML to put the map
                             scope: 'usa', // which map?
@@ -265,12 +280,13 @@ function onStateClick(geography) {
 }
 
 function onUnionLoad(first_load) {
-    loadStates()
+    
     if (first_load) {
         var hash = window.location.hash.substring(1);
         document.getElementById('state_selector').value = hash;
         onSubmitButtonUnionsClicked();
     } 
+    
     let elementUnions = document.getElementById('submit_button_unions');
     elementUnions.onclick = onSubmitButtonUnionsClicked;
     }

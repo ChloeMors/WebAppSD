@@ -30,7 +30,6 @@ def get_help():
 
 @api.route('/states')
 def get_states():
-    print("querying")
     query = """SELECT * FROM states"""
     states = []
     try:
@@ -38,19 +37,37 @@ def get_states():
         cursor = connection.cursor()
         cursor.execute(query)
         for row in cursor:
-            state = {'abbr': row[0],
-                    'state': row[1]}
+            state = {'abbr': row[0].strip(),
+                    'state': row[1].strip()}
             states.append(state)
         cursor.close()
         connection.close()
-        if states == []:
-            state = {'abbr':"broken", 'state':"broken"}
-            states = [state]
-        print(states)
     except Exception as e:
         print(e, file=sys.stderr)
     return json.dumps(states)
 
+@api.route('/strike_industries')
+def get_strike_industries():
+    query = """SELECT DISTINCT strikes.industry FROM strikes"""
+    industries = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query)
+        for row in cursor:
+            industry = row[0]
+            industry = industry.split(',')
+            print(industry)
+            for item in industry:
+                item = item.strip()
+                if item not in industries:
+                    industries.append(item)
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+    industries.sort()
+    return json.dumps(industries)
 
 @api.route('/unions/') 
 def get_unions():
@@ -99,7 +116,6 @@ def get_unions():
             union_list.append(union)
         cursor.close()
         connection.close()
-        #print(union_list)
         if union_list == []:
             union_list = ["None"]
     except Exception as e:
@@ -111,7 +127,6 @@ def get_strikes():
     '''
     /strikes/?[state=state][industry=industry][end=end][company=company]
     '''
-    # NOTE currently the data set uses full state names not state abbreviations - this needs to be fixed
     state = flask.request.args.get('state')
     industry = flask.request.args.get('industry')
     end = flask.request.args.get('end')

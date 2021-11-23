@@ -11401,7 +11401,6 @@ COPY public.cases (id, case_name, case_number, city, territory, date_filed, date
 --
 
 COPY public.states (abbr, state) FROM stdin;
-	-
 AL	Alabama 
 AK	Alaska 
 AZ	Arizona 
