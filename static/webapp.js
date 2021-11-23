@@ -76,6 +76,7 @@ function onSubmitButtonCasesClicked() {
     let stateSelector = document.getElementById('state_selector');
     let state = stateSelector.value;
     let nameSelector = document.getElementById('by_name');
+    // does the below line need to be nameSelector.value
     let name = by_name.value;
     let url = 'http://localhost:5000/api/cases/?state_abbr='
                 + state + '&name_query=' + name ;
@@ -117,10 +118,15 @@ function onSubmitButtonStrikesClicked() {
     let state = stateSelector.value;
     let industrySelector = document.getElementById('Industry');
     let industry = industrySelector.value;
+    let endDateCheck = document.getElementById('endDate')
+    let endDate = endDateCheck.value;
+    let companySelector = document.getElementById('by_name')
+    let company = companySelector.value;
     // Below the url references the api url, not the app - which is right 
     // because we need to request the data from the api ??
+    // would it be better to use if statements to only append relevant sections
     let url = 'http://localhost:5000/api/strikes/?state_abbr='
-                + state + '&industry=' + industry;
+                + state + '&industry=' + industry + '&end=' + endDate + '&company=' + company;
 
     // The below two lines do not get called so im assuming this isnt getting called
     //let resultsElement = document.getElementById('matching_strikes');

@@ -20,6 +20,10 @@
                 with the company, number of participants, 
                 worker demands, and the location of the strike.</p>
             <div id="input_form"><p>
+                <label for="endDate">Check to show only strikes in progress</label>
+                <input type="checkbox" id="endDate" name="endDate" value="true"><br>
+                <label for="By Name">Company name:</label><br>
+                <input type="text" id="by_name" name="By Name"><br>
                 <label for="State">State:</label><br>
                 <select name="State" id="state_selector">
                     <!-- fill in below with js-->
@@ -86,8 +90,8 @@
                     <option value="Administrative">Administrative and Support and Waste Management</option>
                     <option value="Manufacturing">Manufacturing</option>
                     <option value="Transportation">Transportation and Warehousing</option>
-                </select>
-                <br><br>
+                </select><br>
+                <br>
                 <input class ="button" type="submit" id="submit_button_strikes" value="Submit">
             </p>
             </div>
