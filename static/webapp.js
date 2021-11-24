@@ -13,26 +13,23 @@ function initialize() {
         onIndexLoad();
         initializeMap();
     } else if (document.title == 'Search Unions') {
-        // load states
-        if (window.location.hash){
-            onUnionLoad(true)
-        } else {
-            onUnionLoad(false)
-        }
+        loadStates();
+        let elementUnions = document.getElementById('submit_button_unions');
+        elementUnions.onclick = onSubmitButtonUnionsClicked;
     } else if (document.title == 'Search Strikes') {
         loadStates();
         loadStrikeIndustries()
         elementStrike.onclick = onSubmitButtonStrikesClicked;
     } else if (document.title == 'Search Cases') {
-        // load regions
+        loadRegions();
+        loadStates();
         elementCases.onclick = onSubmitButtonCasesClicked;
     }
     
 }
 
 function loadStrikeIndustries() {
-    // base url
-    let url = 'http://localhost:5000/api/strike_industries'
+    let url = getAPIBaseURL() + '/strike_industries'
     fetch(url, {method: 'get'})
 
     .then((response) => response.json())
@@ -52,8 +49,7 @@ function loadStrikeIndustries() {
     });
 }
 function loadStates() {
-    // base url
-    let url = 'http://localhost:5000/api/states'
+    let url = getAPIBaseURL() + '/states'
     fetch(url, {method: 'get'})
 
     .then((response) => response.json())
@@ -69,9 +65,42 @@ function loadStates() {
         }
         for (let k = 0; k < states.length; k++) {
             let state = states[k];
+            
             optionsBody += '<option value="' + state[page_diff] + '">' + state['state'] + '</option>';
         }
         stateDropDown.innerHTML = optionsBody;
+
+        // Placing this piece here feels less than ideal, we cannot make the map
+        // autofill the state search on the union page without it.
+        // Prior to loading the states in with JavaScript, this was not an issue.
+        if (document.title == 'Search Unions' && window.location.hash){
+            setState();
+            onSubmitButtonUnionsClicked();
+        }
+    })
+
+    
+
+    .catch(function(error) {
+        console.log(error);
+    });
+}
+
+function loadRegions() {
+    let url = getAPIBaseURL() + '/regions'
+    fetch(url, {method: 'get'})
+
+    .then((response) => response.json())
+
+    .then(function(regions) {
+        let regionsDropDown = document.getElementById('region_selector')
+        // should be able to set options Body to '' once its actually working
+        let optionsBody = '<option value="default">-</option>'
+        for (let k = 0; k < regions.length; k++) {
+            let region = regions[k]
+            optionsBody += '<option value="' + regions[k] + '">' + regions[k] + '</option>'
+        }
+        regionsDropDown.innerHTML = optionsBody
     })
 
     .catch(function(error) {
@@ -90,9 +119,9 @@ function onSubmitButtonUnionsClicked() {
     let name = by_name.value;
     let membersSelector = document.getElementById('members_selector');
     let members = membersSelector.value;
-    // base url
-    let url = 'http://localhost:5000/api/unions/?state_abbr='
+    let url = getAPIBaseURL() + '/unions/?state_abbr=' 
                 + state + '&city=' + city + '&name_query=' + name + '&members=' + members;
+
 
     fetch(url, {method: 'get'})
 
@@ -125,12 +154,12 @@ function onSubmitButtonCasesClicked() {
     let state = stateSelector.value;
     let nameSelector = document.getElementById('by_name');
     let name = by_name.value;
-    // id vs selector
     let caseNumberSelector = document.getElementById('by_case_number');
     let case_number = by_case_number.value;
-    // base url
-    let url = 'http://localhost:5000/api/cases/?state_abbr='
-                + state + '&name_query=' + name + '&case_number=' + case_number;
+    let regionSelector = document.getElementById('region_selector');
+    let region = regionSelector.value;
+    let url = getAPIBaseURL() + '/cases/?state_abbr='
+                + state + '&name_query=' + name + '&case_number=' + case_number + '&region=' + region;
 
     fetch(url, {method: 'get'})
 
@@ -173,7 +202,7 @@ function onSubmitButtonStrikesClicked() {
     let companySelector = document.getElementById('by_name')
     let company = companySelector.value;
     //base url
-    let url = 'http://localhost:5000/api/strikes/?state='
+    let url = getAPIBaseURL() + '/strikes/?state='
                 + state + '&industry=' + industry + '&company=' + company + '&end=' + endDate;
     
     fetch(url, {method: 'get'})
@@ -211,7 +240,7 @@ function onSubmitButtonStrikesClicked() {
 }
 function onIndexLoad(){
     // base url
-    let url = 'http://localhost:5000/api/strikes/';
+    let url = getAPIBaseURL() + '/strikes/';
     fetch(url, {method: 'get'})
 
     .then((response) => response.json())
@@ -244,25 +273,20 @@ function onIndexLoad(){
 }
 
 function initializeMap() {
-    var map = new Datamap({ element: document.getElementById('map-container'), // where in the HTML to put the map
-                            scope: 'usa', // which map?
-                            projection: 'equirectangular', // what map projection? 'mercator' is also an option
-                            done: onMapDone, // once the map is loaded, call this function
-                            /*data: extraStateInfo, // here's some data that will be used by the popup template*/
+    var map = new Datamap({ element: document.getElementById('map-container'),
+                            scope: 'usa', 
+                            projection: 'equirectangular', 
+                            done: onMapDone,
                             fills: { defaultFill: '#999999' },
                             geographyConfig: {
-                                //popupOnHover: false, // You can disable the hover popup
-                                highlightOnHover: true, // You can disable the color change on hover
-                                popupTemplate: hoverPopupTemplate, // call this to obtain the HTML for the hover popup
-                                borderColor: '#eeeeee', // state/country border color
-                                highlightFillColor: '#a50000' //'#337AFF', // color when you hover on a state/country
-                                //highlightBorderColor: '#eeeeee' // border color when you hover on a state/country*/
+                                highlightOnHover: true,
+                                popupTemplate: hoverPopupTemplate,
+                                borderColor: '#eeeeee',
+                                highlightFillColor: '#a50000'
                             }
                           });
 }
 
-// This gets called once the map is drawn, so you can set various attributes like
-// state/country click-handlers, etc.
 function onMapDone(dataMap) {
     dataMap.svg.selectAll('.datamaps-subunit').on('click', onStateClick);
 }
@@ -279,14 +303,20 @@ function onStateClick(geography) {
     window.location.href = '/search_unions#' + geography.id;
 }
 
-function onUnionLoad(first_load) {
-    
-    if (first_load) {
-        var hash = window.location.hash.substring(1);
-        document.getElementById('state_selector').value = hash;
-        onSubmitButtonUnionsClicked();
-    } 
-    
-    let elementUnions = document.getElementById('submit_button_unions');
-    elementUnions.onclick = onSubmitButtonUnionsClicked;
-    }
+function setState(){
+    var hash = window.location.hash.substring(1);
+    document.getElementById('state_selector').value = hash;
+}
+
+// Returns the base URL of the API, onto which endpoint
+// components can be appended.
+// Kudos to Shreya Nair and Elliot Nair for this bit of 
+// code. We realized this was a better idea than 
+// what we originally had during code review
+function getAPIBaseURL() {
+    let baseURL = window.location.protocol
+                    + '//' + window.location.hostname
+                    + ':' + window.location.port
+                    + '/api';
+    return baseURL;
+}

@@ -173,14 +173,16 @@ def get_strikes():
         print(e, file=sys.stderr)
     return json.dumps(strike_list)
 
+
 @api.route('/cases/') 
 def get_cases():
     '''
-    /cases/?[state_abbr=state_abbr][name_query=name_query]
+    /cases/?[state_abbr=state_abbr][name_query=name_query][case_number=case_number][region=region]
     '''
     state_abbr = flask.request.args.get('state_abbr')
     name = flask.request.args.get('name_query')
     case_number = flask.request.args.get('case_number')
+    region = flask.request.args.get('region')
     if not name:
         name = ''
     if not state_abbr:
@@ -192,6 +194,9 @@ def get_cases():
             AND cases.case_name ILIKE '%{}%'""".format(state_abbr, name)
     if case_number:
         query = query + """AND cases.case_number = '{}'""".format(case_number)
+    if region:
+        if region != 'default':
+            query = query + """AND cases.region LIKE '%{}%'""".format(region)
     query = query + ';'
     
     case_list = []
@@ -218,4 +223,20 @@ def get_cases():
             case_list = ["None"]
     except Exception as e:
         print(e, file=sys.stderr)
-    return json.dumps(case_list)
+    return json.dumps(case_list)    
+
+@api.route('/regions')
+def get_regions():
+    query = """SELECT DISTINCT region FROM cases"""
+    regions = []
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+        cursor.execute(query)
+        for row in cursor:
+            regions.append(row[0][11:])
+        cursor.close()
+        connection.close()
+    except Exception as e:
+        print(e, file=sys.stderr)
+    return json.dumps(regions)
