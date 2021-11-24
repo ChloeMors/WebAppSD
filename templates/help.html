@@ -11,7 +11,12 @@
     <p>state_abbr (Optional, default: '') -- return only unions located
 	within this state <br>
     name_query (Optional, default: '') -- return only unions whose name
-	contains this string</p>
+	contains this string<br>
+    city (Optional, default: '') -- return only unions located
+	within this city <br>
+    members (Optional, default: '') -- return only unions whose number of members
+	is less than this integer. If 'max' is inputted, returns unions with
+    greater than 1,000,000 members.</p>
 
 <h2>REPONSE: a JSON list of dictionaries, each representing one union. Dictionaries
 have the following fields:</h2><p>
@@ -46,10 +51,14 @@ have the following fields:</h2><p>
 <h1>REQUEST:  /strikes</h1>
 
 <h2>GET parameters:</h2><p>
-    state_abbr (Optional, default: '') -- return only strikes located
-	within this state<br>
+    state (Optional, default: '') -- return only strikes located
+	within this state. Use the full state name for this option.<br>
     name_query (Optional, default: '') -- return only strikes whose company
-	contains this string</p>
+	contains this string<br>
+    industry (Optional, default: '') -- return only strikes whose workers
+    are within this industry<br>
+    end 
+    </p>
 
 <h2>REPONSE:</h2><p>
     id  -- (INTEGER) the ID of the strike in our database<br>
@@ -91,7 +100,11 @@ have the following fields:</h2><p>
         <p>state_abbr (Optional, default: '') -- return only cases located
         within this state <br>
         name_query (Optional, default: '') -- return only cases against companies
-        whose name includes this string</p>
+        whose name includes this string<br>
+        case_number (Optional, default: '') -- return the case matching this 
+        judicial case number.
+        region (Optional, default: '') -- returns cases being tried within 
+        a particular court region, i.e. Boston, MA </p>
     
     <h2>REPONSE: a JSON list of dictionaries, each representing one case. Dictionaries
     have the following fields:</h2><p>
@@ -126,6 +139,18 @@ have the following fields:</h2><p>
          "date_closed": "", "region": "Region 31, Los Angeles, California", "current_status": "Open", 
          "reason_closed": "", "representative": ""}]</p>
 
+         <h1>REQUEST: /states</h1>
+         <h2>No parameters. This endpoint exists for use loading dropdown menus.<br>
+        Returns a list of all states/territories represented within the database.</h2>
+
+        <h1>Request: /regions</h1>
+        <h2>No parameters. This endpoint exists for use loading dropdown menus.<br>
+        Returns a list of all judicial regions represented within the database.</h2>
+
+        <h1>REQUEST: /strike_industries</h1>
+        <h2>No parameters. This endpoint exists for use loading dropdown menus.<br>
+        Returns a list of all industries for which their is/has been a strike represented
+        within the database.</h2>
 
     
 </body>
