@@ -69,15 +69,15 @@ function loadStates() {
         // This switch case is necessary due to differences in how API
         // handles state name vs. abbreviations
         if (document.title == "Search Strikes") {
-            page_diff = 'state';
+            pageDiff = 'state';
         } else {
-            page_diff = 'abbr';
+            pageDiff = 'abbr';
         }
 
         for (let k = 0; k < states.length; k++) {
             let state = states[k];
             
-            optionsBody += '<option value="' + state[page_diff] + '">' + state['state'] + '</option>';
+            optionsBody += '<option value="' + state[pageDiff] + '">' + state['state'] + '</option>';
         }
 
         stateDropDown.innerHTML = optionsBody;
