@@ -4,13 +4,12 @@ DATA: Includes datasets describing unions (by location, name, etc.), ongoing and
 (company, locations, participants, etc.), and labor cases that have been filed against a given 
 corporation (company, violations, etc.)
 
-FEATURES CURRENTLY WORKING:
-- Union search by name and state
-- Strike search by state and industry
-- Case search by name and state
+STATUS
+- Homepage shows recent strikes and an interactive map
+- clicking on a state in the map will direct you to union search for that state
+- Union search by name, city, state, and number of members
+- Strike search by company name, state, industry, and progress status
+- Case search by company name, case number, state, and region
 
-FEATURES NOT YET WORKING:
-- Union search by industry - we are still working to refine our data set to support this feature
-- Home page map that allows user to click to navigate to page dedicated to a given state
-    - each state page will include map, unions in the state, and companies with violations 
-    against them
+NOTES:
+- We are using three databases. They are not related. 
