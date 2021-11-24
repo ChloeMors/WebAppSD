@@ -84,20 +84,27 @@ def get_unions():
     if not city:
         city = ''
     name = name.upper()
+    name_clause = '%' + name + '%'
+    state_clause = '%' + state_abbr + '%'
+    city_clause = '%' + city + '%'
+    list_to_tuple = [state_clause,city_clause,name_clause]
     query = """SELECT * FROM unions
-            WHERE unions.region LIKE '%{}%'
-            AND unions.city ILIKE '%{}%'
-            AND unions.union_name LIKE '%{}%'""".format(state_abbr, city, name)
+            WHERE unions.region LIKE %s
+            AND unions.city ILIKE %s
+            AND unions.union_name LIKE %s"""
     if members == 'max':
         query = query + """ AND unions.members > 1000000"""
     elif members != 'default' and members is not None:
-        query = query + """ AND unions.members < {}""".format(members)
+        query = query + """ AND unions.members < %s"""
+        list_to_tuple.append(members)
     query = query + ';'
+    tuple_to_execute = tuple(list_to_tuple)
     union_list = []
+
     try:
         connection = get_connection()
         cursor = connection.cursor()
-        cursor.execute(query)
+        cursor.execute(query, tuple_to_execute)
         for row in cursor:
             union = {'id': row[0],
                     'union_name': row[1],
@@ -132,20 +139,32 @@ def get_strikes():
     company = flask.request.args.get('company')
     if not state:
         state = ''
+    if not company:
+        company = ''
+    if not industry:
+        industry = ''
+    state_clause = '%' + state + '%'
+    industry_clause = '%' + industry + '%'
+    company_clause = '%' + company + '%'
+    list_to_tuple = [state_clause]
     query = """SELECT * FROM strikes
-            WHERE strikes.state LIKE '%{}%'""".format(state)
+            WHERE strikes.state LIKE %s"""
     if industry:
-        query = query + "AND strikes.industry LIKE '%{}%'".format(industry)
+        query = query + "AND strikes.industry LIKE %s"
+        list_to_tuple.append(industry_clause)
     if end == "true":
-        query = query + "AND strikes.end_date LIKE '%{}%'".format('None')
+        query = query + "AND strikes.end_date LIKE 'None'"
     if company:
-        query = query + "AND strikes.employer ILIKE '%{}%'".format(company)
+        query = query + "AND strikes.employer ILIKE %s"
+        list_to_tuple.append(company_clause)
     query = query + ';'
+    tuple_to_execute = tuple(list_to_tuple)
     strike_list = [] 
+
     try:
         connection = get_connection()
         cursor = connection.cursor()
-        cursor.execute(query)
+        cursor.execute(query, tuple_to_execute)
         for row in cursor:
             strike = {"id":row[0], 
                     "employer":row[1],  
@@ -186,23 +205,37 @@ def get_cases():
         name = ''
     if not state_abbr:
         state_abbr =''
+    if not case_number:
+        case_number = ''
+    if not region:
+        region = ''
     name = name.upper()
     state_abbr = state_abbr.upper()
+    name_clause = '%' + name + '%'
+    state_clause = '%' + state_abbr + '%'
+    case_number_clause = '%' + case_number + '%'
+    region_clause = '%' + region + '%'
+
+    list_to_tuple = [state_clause, name_clause]
     query = """SELECT * FROM cases
-            WHERE cases.territory LIKE '%{}%'
-            AND cases.case_name ILIKE '%{}%'""".format(state_abbr, name)
+            WHERE cases.territory LIKE %s
+            AND cases.case_name ILIKE %s"""
     if case_number:
-        query = query + """AND cases.case_number = '{}'""".format(case_number)
+        query = query + """ AND cases.case_number LIKE %s"""
+        list_to_tuple.append(case_number_clause)
     if region:
         if region != 'default':
-            query = query + """AND cases.region LIKE '%{}%'""".format(region)
+            query = query + """AND cases.region LIKE %s"""
+            list_to_tuple.append(region_clause)
     query = query + ';'
     
+    tuple_to_execute = tuple(list_to_tuple)
     case_list = []
+
     try:
         connection = get_connection()
         cursor = connection.cursor()
-        cursor.execute(query)
+        cursor.execute(query, tuple_to_execute)
         for row in cursor:
             case = {'id': row[0],
                     'case_name': row[1],
