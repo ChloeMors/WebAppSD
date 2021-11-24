@@ -41,7 +41,7 @@ function loadStrikeIndustries() {
     .then((response) => response.json())
 
     .then(function(industries) {
-        let industryDropDown = document.getElementById('Industry');
+        let industryDropDown = document.getElementById('industry');
         let optionsBody = '<option value="">-</option>';
         for (let k = 0; k < industries.length; k++) {
             let industry = industries[k];
@@ -209,9 +209,9 @@ function onSubmitButtonCasesClicked() {
 function onSubmitButtonStrikesClicked() {
     let stateSelector = document.getElementById('state_selector');
     let state = stateSelector.value;
-    let industrySelector = document.getElementById('Industry');
+    let industrySelector = document.getElementById('industry');
     let industry = industrySelector.value;
-    let endDateCheck = document.getElementById('endDate')
+    let endDateCheck = document.getElementById('end_date')
     let endDate = endDateCheck.checked;
     let companySelector = document.getElementById('by_name')
     let company = companySelector.value;

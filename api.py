@@ -57,7 +57,6 @@ def get_strike_industries():
         for row in cursor:
             industry = row[0]
             industry = industry.split(',')
-            print(industry)
             for item in industry:
                 item = item.strip()
                 if item not in industries:
@@ -72,7 +71,7 @@ def get_strike_industries():
 @api.route('/unions/') 
 def get_unions():
     '''
-    /unions/?[state_abbr=state_abbr][city=city][name_query=name_query]
+    /unions/?[state_abbr=state_abbr][city=city][name_query=name_query][members=members]
     '''
     state_abbr = flask.request.args.get('state_abbr')
     name = flask.request.args.get('name_query')
