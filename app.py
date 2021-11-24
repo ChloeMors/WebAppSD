@@ -29,12 +29,12 @@ def search_unions():
     '''Renders the Search Unions page'''
     return flask.render_template('search_unions.html')
 
-@app.route('/search_cases') 
+@app.route('/search_cases', strict_slashes=False) 
 def search_cases():
     '''Renders the Search Cases page.'''
     return flask.render_template('search_cases.html')
 
-@app.route('/search_strikes') 
+@app.route('/search_strikes', strict_slashes=False) 
 def search_strikes():
     '''Renders the Search Strikes page.'''
     return flask.render_template('search_strikes.html')
