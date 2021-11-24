@@ -57,7 +57,6 @@ def get_strike_industries():
         for row in cursor:
             industry = row[0]
             industry = industry.split(',')
-            print(industry)
             for item in industry:
                 item = item.strip()
                 if item not in industries:
